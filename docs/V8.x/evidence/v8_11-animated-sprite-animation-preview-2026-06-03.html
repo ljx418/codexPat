@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>V8.11 Animated Sprite Preview</title>
+  <style>
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, sans-serif; background: #f6f7f8; color: #17202a; }
+    main { padding: 28px; }
+    h1 { font-size: 24px; margin: 0 0 8px; }
+    p { margin: 0 0 24px; color: #53606d; }
+    .grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    figure { margin: 0; background: #fff; border: 1px solid #d9dee5; border-radius: 8px; padding: 14px; min-height: 230px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+    img { width: 160px; height: 160px; object-fit: contain; background: repeating-conic-gradient(#f1f3f5 0% 25%, #ffffff 0% 50%) 50% / 24px 24px; border: 1px solid #e4e8ee; }
+    figcaption { margin-top: 12px; font-size: 15px; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>V8.11 Animated Sprite Preview</h1>
+    <p>Local generated multi-frame sprite fixture. No provider execution.</p>
+    <section class="grid">
+          <figure>
+            <img alt="idle" data-frames="../../../fixtures/manual/v8_11/animated_sprite_pack/idle-000.png|../../../fixtures/manual/v8_11/animated_sprite_pack/idle-001.png|../../../fixtures/manual/v8_11/animated_sprite_pack/idle-002.png|../../../fixtures/manual/v8_11/animated_sprite_pack/idle-003.png" src="../../../fixtures/manual/v8_11/animated_sprite_pack/idle-000.png" />
+            <figcaption>idle</figcaption>
+          </figure>
+        
+          <figure>
+            <img alt="thinking" data-frames="../../../fixtures/manual/v8_11/animated_sprite_pack/thinking-000.png|../../../fixtures/manual/v8_11/animated_sprite_pack/thinking-001.png|../../../fixtures/manual/v8_11/animated_sprite_pack/thinking-002.png|../../../fixtures/manual/v8_11/animated_sprite_pack/thinking-003.png" src="../../../fixtures/manual/v8_11/animated_sprite_pack/thinking-000.png" />
+            <figcaption>thinking</figcaption>
+          </figure>
+        
+          <figure>
+            <img alt="running" data-frames="../../../fixtures/manual/v8_11/animated_sprite_pack/running-000.png|../../../fixtures/manual/v8_11/animated_sprite_pack/running-001.png|../../../fixtures/manual/v8_11/animated_sprite_pack/running-002.png|../../../fixtures/manual/v8_11/animated_sprite_pack/running-003.png" src="../../../fixtures/manual/v8_11/animated_sprite_pack/running-000.png" />
+            <figcaption>running</figcaption>
+          </figure>
+        
+          <figure>
+            <img alt="success" data-frames="../../../fixtures/manual/v8_11/animated_sprite_pack/success-000.png|../../../fixtures/manual/v8_11/animated_sprite_pack/success-001.png|../../../fixtures/manual/v8_11/animated_sprite_pack/success-002.png|../../../fixtures/manual/v8_11/animated_sprite_pack/success-003.png" src="../../../fixtures/manual/v8_11/animated_sprite_pack/success-000.png" />
+            <figcaption>success</figcaption>
+          </figure>
+        
+          <figure>
+            <img alt="warning" data-frames="../../../fixtures/manual/v8_11/animated_sprite_pack/warning-000.png|../../../fixtures/manual/v8_11/animated_sprite_pack/warning-001.png|../../../fixtures/manual/v8_11/animated_sprite_pack/warning-002.png|../../../fixtures/manual/v8_11/animated_sprite_pack/warning-003.png" src="../../../fixtures/manual/v8_11/animated_sprite_pack/warning-000.png" />
+            <figcaption>warning</figcaption>
+          </figure>
+        
+          <figure>
+            <img alt="error" data-frames="../../../fixtures/manual/v8_11/animated_sprite_pack/error-000.png|../../../fixtures/manual/v8_11/animated_sprite_pack/error-001.png|../../../fixtures/manual/v8_11/animated_sprite_pack/error-002.png|../../../fixtures/manual/v8_11/animated_sprite_pack/error-003.png" src="../../../fixtures/manual/v8_11/animated_sprite_pack/error-000.png" />
+            <figcaption>error</figcaption>
+          </figure>
+        
+          <figure>
+            <img alt="need_input" data-frames="../../../fixtures/manual/v8_11/animated_sprite_pack/need_input-000.png|../../../fixtures/manual/v8_11/animated_sprite_pack/need_input-001.png|../../../fixtures/manual/v8_11/animated_sprite_pack/need_input-002.png|../../../fixtures/manual/v8_11/animated_sprite_pack/need_input-003.png" src="../../../fixtures/manual/v8_11/animated_sprite_pack/need_input-000.png" />
+            <figcaption>need_input</figcaption>
+          </figure>
+        
+          <figure>
+            <img alt="sleeping" data-frames="../../../fixtures/manual/v8_11/animated_sprite_pack/sleeping-000.png|../../../fixtures/manual/v8_11/animated_sprite_pack/sleeping-001.png|../../../fixtures/manual/v8_11/animated_sprite_pack/sleeping-002.png|../../../fixtures/manual/v8_11/animated_sprite_pack/sleeping-003.png" src="../../../fixtures/manual/v8_11/animated_sprite_pack/sleeping-000.png" />
+            <figcaption>sleeping</figcaption>
+          </figure>
+        </section>
+  </main>
+  <script>
+    const images = [...document.querySelectorAll('img[data-frames]')];
+    let index = 0;
+    setInterval(() => {
+      index += 1;
+      for (const img of images) {
+        const frames = img.dataset.frames.split('|');
+        img.src = frames[index % frames.length];
+      }
+    }, 125);
+  </script>
+</body>
+</html>

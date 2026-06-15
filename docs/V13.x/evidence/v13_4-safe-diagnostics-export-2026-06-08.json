@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "6.1",
+  "productName": "Agent Desktop Pet",
+  "version": "0.1.0",
+  "platform": "macos",
+  "buildFlavor": "local_unsigned",
+  "localBridge": {
+    "enabled": true,
+    "listenAddress": "127.0.0.1:17321",
+    "queueLength": 1,
+    "queueCapacity": 32
+  },
+  "runtime": {
+    "muted": false,
+    "instanceCount": 3,
+    "importedPackCount": 1
+  },
+  "lastEventSummary": {
+    "acceptedLevel": "success",
+    "acceptedSourceKind": "codex",
+    "rejectedReasonCode": "none"
+  },
+  "safetyBoundary": {
+    "eventBodies": "excluded",
+    "localFiles": "excluded",
+    "userInputs": "excluded",
+    "credentials": "excluded"
+  }
+}

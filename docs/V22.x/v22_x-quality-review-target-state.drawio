@@ -1,0 +1,46 @@
+<mxfile host="app.diagrams.net" modified="2026-06-15T00:00:00.000Z" agent="Codex" version="24.7.17" type="device">
+  <diagram id="v22-quality-review" name="V22 质量审核门禁总览">
+    <mxGraphModel dx="1800" dy="1100" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="V22 资产质量审核与拒绝门禁：防止丑资产、弱动作、坏结果进入桌宠" style="rounded=1;whiteSpace=wrap;html=1;fontSize=28;fontStyle=1;fillColor=#1f2937;fontColor=#ffffff;strokeColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="1720" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="current" value="当前架构缺口&#xa;&#xa;V21 已能产出候选动作包：&#xa;• 多路线生成 / 本地 rig / provider 输出&#xa;• 8 动作覆盖&#xa;• 基础漂移和帧检测&#xa;&#xa;但用户验收发现：&#xa;• 技术通过 ≠ 好看&#xa;• 丑猫仍可能被写成 passed&#xa;• 动作弱、表情差、同质化严重&#xa;• 缺少强制拒绝和重试建议" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;spacing=16;fillColor=#fff7ed;strokeColor=#f97316;" vertex="1" parent="1">
+          <mxGeometry x="50" y="140" width="400" height="360" as="geometry"/>
+        </mxCell>
+        <mxCell id="target" value="V22 目标架构&#xa;&#xa;Photo / Provider / Local Route Output&#xa;↓&#xa;Candidate Asset Store&#xa;↓&#xa;Normalization&#xa;↓&#xa;Technical QA Gate&#xa;↓&#xa;Motion QA Gate&#xa;↓&#xa;Visual Quality Review Gate&#xa;↓&#xa;Approved Asset Registry&#xa;↓&#xa;Isolated Preview&#xa;↓&#xa;Target Apply / Rollback" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;align=center;verticalAlign=middle;spacing=16;fillColor=#ecfeff;strokeColor=#0891b2;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="140" width="430" height="500" as="geometry"/>
+        </mxCell>
+        <mxCell id="plan" value="开发计划&#xa;&#xa;V22.0 Scope Freeze&#xa;V22.1 Candidate Quality Schema&#xa;V22.2 Technical QA Gate&#xa;V22.3 Motion QA Gate&#xa;V22.4 Visual Review UX Contract&#xa;V22.5 Retry / Route Guidance&#xa;V22.6 Approved-only Apply Enforcement&#xa;V22.7 Final Gate" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;spacing=16;fillColor=#eef2ff;strokeColor=#6366f1;" vertex="1" parent="1">
+          <mxGeometry x="980" y="140" width="360" height="360" as="geometry"/>
+        </mxCell>
+        <mxCell id="milestones" value="里程碑&#xa;&#xa;M0 文档/claim/drawio 冻结&#xa;M1 状态与 reasonCode 可验证&#xa;M2 结构坏包被拒绝&#xa;M3 弱动作/漂移/闪帧被拒绝&#xa;M4 丑资产可人工拒绝&#xa;M5 多次失败给出下一步建议&#xa;M6 只有 approved 可应用&#xa;M7 HTML 展示通过与拒绝样例" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;spacing=16;fillColor=#f0fdf4;strokeColor=#22c55e;" vertex="1" parent="1">
+          <mxGeometry x="1390" y="140" width="360" height="360" as="geometry"/>
+        </mxCell>
+        <mxCell id="qa1" value="技术 QA 拒绝&#xa;• missing_core_action&#xa;• blank / transparent frame&#xa;• off-canvas&#xa;• background / watermark&#xa;• URL / path / script unsafe field" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;align=left;verticalAlign=top;spacing=14;fillColor=#fef2f2;strokeColor=#ef4444;" vertex="1" parent="1">
+          <mxGeometry x="50" y="560" width="360" height="220" as="geometry"/>
+        </mxCell>
+        <mxCell id="qa2" value="动作 QA 拒绝&#xa;• motion_amplitude_too_low&#xa;• frame_delta_too_large&#xa;• loop_closure_failed&#xa;• identity_drift_detected&#xa;• 动作一眼看不懂" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;align=left;verticalAlign=top;spacing=14;fillColor=#fefce8;strokeColor=#eab308;" vertex="1" parent="1">
+          <mxGeometry x="450" y="700" width="360" height="220" as="geometry"/>
+        </mxCell>
+        <mxCell id="qa3" value="审美 / 人工审核&#xa;• cat_not_cute_enough&#xa;• style_inconsistent&#xa;• template-like / 机械感强&#xa;• 不像可安装桌宠&#xa;• 用户可拒绝并要求换路线" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;align=left;verticalAlign=top;spacing=14;fillColor=#fdf2f8;strokeColor=#db2777;" vertex="1" parent="1">
+          <mxGeometry x="850" y="700" width="360" height="220" as="geometry"/>
+        </mxCell>
+        <mxCell id="exit" value="验收门槛 / 出门条件&#xa;&#xa;必须证明：&#xa;1. 已知丑资产被拒绝&#xa;2. 弱动作/闪帧/漂移包被拒绝&#xa;3. rejected 不能进入图库或应用&#xa;4. repeated failure 显示更换照片或换路线建议&#xa;5. approved 候选包可预览并只应用到目标猫&#xa;6. rollback 保留上一套可见资产&#xa;7. final HTML 同时展示通过样例和拒绝样例&#xa;&#xa;禁止声明：Petdex parity、provider verified、任意猫自动生成 ready、3D ready、production release ready" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;spacing=18;fillColor=#ffffff;strokeColor=#111827;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1250" y="560" width="500" height="360" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow1" edge="1" parent="1" source="current" target="target" style="endArrow=block;html=1;rounded=0;strokeWidth=3;strokeColor=#64748b;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow2" edge="1" parent="1" source="target" target="plan" style="endArrow=block;html=1;rounded=0;strokeWidth=3;strokeColor=#64748b;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="arrow3" edge="1" parent="1" source="plan" target="milestones" style="endArrow=block;html=1;rounded=0;strokeWidth=3;strokeColor=#64748b;">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

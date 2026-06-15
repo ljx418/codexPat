@@ -1,0 +1,71 @@
+{
+  "ok": true,
+  "status": "passed",
+  "reasonCode": "route_a_passed",
+  "routeId": "route_a_keypose",
+  "safeSource": "sample_2-minimax-motion-sheet-1.jpeg",
+  "packId": "v21-route-a-keypose-orange-tabby",
+  "actionCount": 8,
+  "contactSheetFile": "route-a-contact-sheet.jpg",
+  "petJsonFile": "pet.json",
+  "qa": {
+    "nonblankPassed": true,
+    "offCanvasPassed": true,
+    "loopClosurePassed": true,
+    "motionAmplitudePassed": true,
+    "sameCatPassed": true,
+    "sameCatReason": "single provider output sample used for all actions",
+    "backgroundPassed": true,
+    "backgroundReason": "corner alpha residue below threshold after local background mask",
+    "actionFrameCounts": {
+      "idle": 6,
+      "thinking": 6,
+      "running": 6,
+      "success": 3,
+      "warning": 3,
+      "error": 3,
+      "need_input": 3,
+      "sleeping": 6
+    },
+    "loopClosure": {
+      "idle": 0.0,
+      "thinking": 0.0,
+      "running": 0.0,
+      "success": 0,
+      "warning": 0,
+      "error": 0,
+      "need_input": 0,
+      "sleeping": 0.0
+    },
+    "motionAmplitude": {
+      "idle": 32.0,
+      "thinking": 26.46,
+      "running": 71.15,
+      "success": 27.0,
+      "warning": 51.0,
+      "error": 50.0,
+      "need_input": 27.5,
+      "sleeping": 21.5
+    },
+    "alphaCoverage": {
+      "idle": 0.1067,
+      "thinking": 0.0989,
+      "running": 0.1654,
+      "success": 0.1812,
+      "warning": 0.1937,
+      "error": 0.1062,
+      "need_input": 0.1067,
+      "sleeping": 0.1231
+    },
+    "cornerOpaqueRatio": {
+      "idle": 0.0046,
+      "thinking": 0.0086,
+      "running": 0.0065,
+      "success": 0.015,
+      "warning": 0.0083,
+      "error": 0.0102,
+      "need_input": 0.0036,
+      "sleeping": 0.006
+    }
+  }
+}

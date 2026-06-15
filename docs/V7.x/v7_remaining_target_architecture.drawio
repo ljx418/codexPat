@@ -1,0 +1,66 @@
+<mxfile host="app.diagrams.net" modified="2026-06-01T00:00:00.000Z" agent="Codex" version="24.7.17">
+  <diagram id="v7-remaining-target-architecture" name="V7 Remaining Target Architecture">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="title" value="V7.13-V7.15 Remaining Target Architecture&#xa;Scoped personalized asset orchestration, visual QA, and evidence-matched final gate" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontStyle=1;fontSize=18;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="1480" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="photo" value="Local Photo / User Traits&#xa;no default upload" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="60" y="160" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="privacy" value="PhotoPrivacyBoundary&#xa;no raw photo persistence by default" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="250" y="160" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="traits" value="TraitApprovalSession&#xa;safe user-approved traits" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="480" y="160" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="provider" value="PromptPack / ProviderConsentBoundary&#xa;explicit consent, redacted credential state" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="710" y="150" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="staging" value="GeneratedAssetStaging&#xa;validation before runtime" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="980" y="160" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="validation" value="ManifestValidator + GLTFDeepScanner&#xa;reject URI/path/script/raw-payload risks" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="150" width="250" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="import" value="AssetImportService&#xa;app-managed storage only" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="250" y="330" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="activation" value="PerPetInstanceActivation&#xa;target only, no default fallback" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+          <mxGeometry x="480" y="330" width="210" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="resolver" value="CatActionResolver&#xa;safe action IDs" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="730" y="330" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="registry" value="RendererRegistry&#xa;safe renderer kind" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="950" y="330" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="qa" value="RuntimeVisualQA&#xa;nonblank, bounded, action-distinguishable" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="320" width="230" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="evidence" value="EvidenceCollector&#xa;sanitized reports and screenshots" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="650" y="500" width="220" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="forbidden" value="Forbidden data: raw photo bytes, EXIF/GPS, provider credential, raw provider response, prompt text in renderer payload, token, Authorization, full local path, workspace/config path, raw manifest or GLTF chunks" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="660" width="1360" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="claims" value="Claim boundary: V7.13-V7.15 can pass only scoped tested paths. Automatic photo-to-3D requires real photo input + real 3D provider output + GLTF scan + runtime mapping + V7.14 visual QA." style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="790" width="1360" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="photo" target="privacy"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e2" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="privacy" target="traits"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e3" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="traits" target="provider"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e4" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="provider" target="staging"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e5" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="staging" target="validation"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e6" style="endArrow=block;html=1;rounded=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="validation" target="import"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1335" y="280" /><mxPoint x="345" y="280" /></Array></mxGeometry></mxCell>
+        <mxCell id="e7" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="import" target="activation"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e8" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="activation" target="resolver"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e9" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="resolver" target="registry"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e10" style="endArrow=block;html=1;rounded=0;" edge="1" parent="1" source="registry" target="qa"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e11" style="endArrow=block;html=1;rounded=0;exitX=0.5;exitY=1;entryX=0.5;entryY=0;" edge="1" parent="1" source="qa" target="evidence"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="1285" y="460" /><mxPoint x="760" y="460" /></Array></mxGeometry></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

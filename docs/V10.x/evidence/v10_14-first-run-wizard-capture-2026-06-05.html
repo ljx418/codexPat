@@ -1,0 +1,9 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><title>V10.14 first-run wizard capture</title>
+<style>body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:0;background:#f6f8fb;color:#172033}.wrap{max-width:1040px;margin:32px auto;padding:0 20px}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card{background:white;border:1px solid #d8dee8;border-radius:8px;padding:16px}.badge{display:inline-block;background:#e0f2fe;color:#0369a1;border-radius:999px;padding:4px 8px;font-size:12px;font-weight:700}code{display:block;margin-top:10px;padding:10px;border:1px solid #d8dee8;border-radius:6px;background:#f8fafc;overflow-wrap:anywhere}</style></head>
+<body><main class="wrap"><h1>V10.14 First-run Wizard Evidence</h1><p><span class="badge">passed smoke</span></p><section class="grid">
+<article class="card"><h2>Default pet path</h2><p>Visible pet in <=3 user actions: choose pack, click default path, observe test reaction.</p></article>
+<article class="card"><h2>Codex work-cat path</h2><p>Visible target reaction in <=5 user actions: choose pack, create Codex work-cat, observe success reaction.</p></article>
+<article class="card"><h2>Unsupported boundary</h2><p>Already-open Codex window automatic monitoring remains unsupported.</p></article>
+</section><h2>Recommended JSONL wrapper</h2><code>node packages/petctl/dist/cli.js codex session start --mode exec --monitor jsonl --name &quot;Codex Work Cat&quot; -- codex exec --json &quot;&lt;task&gt;&quot;</code></main></body></html>

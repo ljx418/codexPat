@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>V15.2 Drag Physics Capture</title>
+  <style>
+    body { margin: 0; font-family: Inter, system-ui, sans-serif; background: #f8fafc; color: #172033; }
+    main { max-width: 1180px; margin: 0 auto; padding: 32px; }
+    h1 { margin: 0 0 8px; font-size: 30px; }
+    .summary { margin: 0 0 24px; color: #475569; }
+    .grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+    .phase-card { border: 1px solid #dbe3ef; border-radius: 12px; background: #fff; min-height: 230px; padding: 16px; display: grid; place-items: center; text-align: center; }
+    .phase-card h2 { margin: 10px 0 4px; font-size: 18px; }
+    .phase-card p { margin: 0; color: #0f766e; }
+    .phase-card small { color: #64748b; line-height: 1.4; }
+    .pet-figure { width: 112px; height: 112px; border-radius: 34px; background: linear-gradient(160deg, #ffd28b, #f97316); display: grid; place-items: center; color: #111827; box-shadow: 0 18px 30px rgba(249, 115, 22, 0.22); transform-origin: 50% 92%; }
+    .ears { font-size: 14px; transform: translateY(-10px); }
+    .face { font-size: 24px; }
+    .body { width: 54px; height: 16px; border-radius: 999px; background: rgba(255,255,255,0.42); }
+    [data-action="drag_grabbed"] .pet-figure { transform: translateY(-8px) rotate(-4deg) scale(1.03); }
+    [data-action="dragging"] .pet-figure { animation: drag 0.8s ease-in-out infinite; }
+    [data-action="drag_release"] .pet-figure { transform: translateY(-3px) rotate(1deg) scale(1.02); }
+    [data-action="drag_land"] .pet-figure { animation: land 0.7s ease-out 1; }
+    @keyframes drag { 0%,100% { transform: translateY(-3px) rotate(-3deg); } 50% { transform: translateY(-12px) rotate(3deg); } }
+    @keyframes land { 0% { transform: translateY(-8px); } 55% { transform: translateY(5px) scale(0.98); } 100% { transform: translateY(0); } }
+    .checks { margin-top: 24px; display: grid; gap: 8px; }
+    .checks li { background: #ecfdf5; border: 1px solid #bbf7d0; border-radius: 8px; padding: 10px 12px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>V15.2 Drag Physics Capture</h1>
+    <p class="summary">Deterministic local capture for grabbed → dragging → release → land. This is evidence for V15.2 only and does not claim final V15 passed.</p>
+    <section class="grid">
+    <article class="phase-card" data-action="idle">
+      <div class="pet-figure"><span class="ears">▲ ▲</span><span class="face">●ω●</span><span class="body"></span></div>
+      <h2>Before</h2>
+      <p><code>idle</code></p>
+      <small>cat sits at persisted position</small>
+    </article>
+  
+    <article class="phase-card" data-action="drag_grabbed">
+      <div class="pet-figure"><span class="ears">▲ ▲</span><span class="face">●ω●</span><span class="body"></span></div>
+      <h2>Grabbed</h2>
+      <p><code>drag_grabbed</code></p>
+      <small>small lift before native window drag</small>
+    </article>
+  
+    <article class="phase-card" data-action="dragging">
+      <div class="pet-figure"><span class="ears">▲ ▲</span><span class="face">●ω●</span><span class="body"></span></div>
+      <h2>Dragging</h2>
+      <p><code>dragging</code></p>
+      <small>looping drag posture while window follows pointer</small>
+    </article>
+  
+    <article class="phase-card" data-action="drag_release">
+      <div class="pet-figure"><span class="ears">▲ ▲</span><span class="face">●ω●</span><span class="body"></span></div>
+      <h2>Release</h2>
+      <p><code>drag_release</code></p>
+      <small>release transition starts after drag ends</small>
+    </article>
+  
+    <article class="phase-card" data-action="drag_land">
+      <div class="pet-figure"><span class="ears">▲ ▲</span><span class="face">●ω●</span><span class="body"></span></div>
+      <h2>Land</h2>
+      <p><code>drag_land</code></p>
+      <small>land / settle before returning to base state</small>
+    </article>
+  </section>
+    <ul class="checks">
+      <li>Native drag ghost guard: enabled by CSS, dragstart/selectstart prevention, and draggable=false sprite frames.</li>
+      <li>Position persistence path: Tauri WindowEvent::Moved saves position; runtime reads final position after drag.</li>
+      <li>State boundary: drag micro-interaction snapshots emit zero PetEvent and write zero CatStateMachine updates.</li>
+    </ul>
+  </main>
+</body>
+</html>

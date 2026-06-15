@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<title>V18.3 Identity-locked Action Preview</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,sans-serif;margin:24px;background:#f6f2e8;color:#20242a}
+.hero{display:grid;grid-template-columns:240px 1fr;gap:18px;align-items:center;margin-bottom:20px}
+.hero img{width:220px;border-radius:18px;background:#fff;border:1px solid #ddd}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.card{background:#fff;border:1px solid #ddd;border-radius:12px;padding:10px}
+.preview{display:grid;grid-template-columns:repeat(3,1fr);gap:4px}
+.preview img{width:100%;aspect-ratio:1/1;object-fit:contain;background:#fafafa;border-radius:8px}
+.label{font-weight:700;margin-top:8px}
+small{color:#667085}
+</style>
+<body>
+<section class="hero">
+  <img src="canonical/identity-source.png" alt="canonical identity source">
+  <div>
+    <h1>V18.3 Identity-locked Action Preview</h1>
+    <p>All actions are locally assembled from one canonical provider-generated cat identity source. This prevents the previous issue where separate provider calls made different actions look like different cats.</p>
+    <p><strong>Identity source hash:</strong> 40620ed30e01ce3c</p>
+  </div>
+</section>
+<div class="grid">
+    <article class="card" data-action="idle">
+      <div class="preview">
+        <img src="pack/idle/frame-001.png" alt="idle frame 1">
+        <img src="pack/idle/frame-002.png" alt="idle frame 2">
+        <img src="pack/idle/frame-003.png" alt="idle frame 3">
+      </div>
+      <div class="label">idle</div>
+      <small>same canonical source</small>
+    </article>
+  
+    <article class="card" data-action="thinking">
+      <div class="preview">
+        <img src="pack/thinking/frame-001.png" alt="thinking frame 1">
+        <img src="pack/thinking/frame-002.png" alt="thinking frame 2">
+        <img src="pack/thinking/frame-003.png" alt="thinking frame 3">
+      </div>
+      <div class="label">thinking</div>
+      <small>same canonical source</small>
+    </article>
+  
+    <article class="card" data-action="running">
+      <div class="preview">
+        <img src="pack/running/frame-001.png" alt="running frame 1">
+        <img src="pack/running/frame-002.png" alt="running frame 2">
+        <img src="pack/running/frame-003.png" alt="running frame 3">
+      </div>
+      <div class="label">running</div>
+      <small>same canonical source</small>
+    </article>
+  
+    <article class="card" data-action="success">
+      <div class="preview">
+        <img src="pack/success/frame-001.png" alt="success frame 1">
+        <img src="pack/success/frame-002.png" alt="success frame 2">
+        <img src="pack/success/frame-003.png" alt="success frame 3">
+      </div>
+      <div class="label">success</div>
+      <small>same canonical source</small>
+    </article>
+  
+    <article class="card" data-action="warning">
+      <div class="preview">
+        <img src="pack/warning/frame-001.png" alt="warning frame 1">
+        <img src="pack/warning/frame-002.png" alt="warning frame 2">
+        <img src="pack/warning/frame-003.png" alt="warning frame 3">
+      </div>
+      <div class="label">warning</div>
+      <small>same canonical source</small>
+    </article>
+  
+    <article class="card" data-action="error">
+      <div class="preview">
+        <img src="pack/error/frame-001.png" alt="error frame 1">
+        <img src="pack/error/frame-002.png" alt="error frame 2">
+        <img src="pack/error/frame-003.png" alt="error frame 3">
+      </div>
+      <div class="label">error</div>
+      <small>same canonical source</small>
+    </article>
+  
+    <article class="card" data-action="need_input">
+      <div class="preview">
+        <img src="pack/need_input/frame-001.png" alt="need_input frame 1">
+        <img src="pack/need_input/frame-002.png" alt="need_input frame 2">
+        <img src="pack/need_input/frame-003.png" alt="need_input frame 3">
+      </div>
+      <div class="label">need_input</div>
+      <small>same canonical source</small>
+    </article>
+  
+    <article class="card" data-action="sleeping">
+      <div class="preview">
+        <img src="pack/sleeping/frame-001.png" alt="sleeping frame 1">
+        <img src="pack/sleeping/frame-002.png" alt="sleeping frame 2">
+        <img src="pack/sleeping/frame-003.png" alt="sleeping frame 3">
+      </div>
+      <div class="label">sleeping</div>
+      <small>same canonical source</small>
+    </article>
+  </div>
+</body>
+</html>

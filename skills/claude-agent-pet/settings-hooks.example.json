@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "Notification": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "zsh skills/claude-agent-pet/hooks/notify-pet.sh notification",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  }
+}

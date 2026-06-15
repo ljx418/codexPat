@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>V15.6 Interaction Settings Capture</title>
+  <style>
+    body { margin: 0; font-family: Inter, system-ui, sans-serif; background: #f8fafc; color: #172033; }
+    main { max-width: 1120px; margin: 0 auto; padding: 32px; }
+    h1 { margin: 0 0 8px; font-size: 30px; }
+    .summary { margin: 0 0 24px; color: #475569; }
+    .layout { display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 18px; }
+    section { border: 1px solid #dbe3ef; border-radius: 14px; background: #fff; padding: 20px; }
+    ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+    li { display: flex; justify-content: space-between; gap: 12px; border: 1px solid #e2e8f0; border-radius: 10px; padding: 12px; }
+    li span { color: #64748b; }
+    .preview-buttons { display: flex; flex-wrap: wrap; gap: 8px; }
+    button { border: 1px solid #bfdbfe; border-radius: 999px; background: #eff6ff; color: #1d4ed8; padding: 8px 12px; }
+    .result { margin-top: 18px; border-radius: 12px; background: #ecfdf5; border: 1px solid #bbf7d0; padding: 14px; }
+    code { color: #0f766e; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>V15.6 Interaction Settings Capture</h1>
+    <p class="summary">Deterministic local capture for interaction settings controls, persistence, quiet mode, and isolated preview. This is evidence for V15.6 only and does not claim final V15 passed.</p>
+    <div class="layout">
+      <section>
+        <h2>设置控件</h2>
+        <ul><li><strong>自由走动</strong><span>on/off</span></li><li><strong>鼠标反馈</strong><span>on/off</span></li><li><strong>点击反馈</strong><span>on/off</span></li><li><strong>拖拽物理</strong><span>on/off</span></li><li><strong>安静模式</strong><span>on/off</span></li><li><strong>动作频率</strong><span>低 / 正常 / 活跃</span></li><li><strong>动作强度</strong><span>轻微 / 正常 / 明显</span></li></ul>
+      </section>
+      <section>
+        <h2>互动预览</h2>
+        <div class="preview-buttons"><button>drag</button><button>pointer_near</button><button>pointer_hover</button><button>click</button><button>double_click</button><button>autonomous_walk</button><button>quiet_mode</button></div>
+        <div class="result">
+          <p><strong>Preview sandbox:</strong> zero PetEvent, zero CatStateMachine write, no live PetInstance mutation.</p>
+          <p><strong>Persisted sample:</strong> <code>{&quot;autonomousWalk&quot;:false,&quot;pointerReactions&quot;:false,&quot;clickReactions&quot;:true,&quot;dragPhysics&quot;:true,&quot;quietMode&quot;:true,&quot;interactionFrequency&quot;:&quot;low&quot;,&quot;motionIntensity&quot;:&quot;subtle&quot;}</code></p>
+          <p><strong>Quiet mode:</strong> <code>walk_quiet_mode</code></p>
+        </div>
+      </section>
+    </div>
+  </main>
+</body>
+</html>

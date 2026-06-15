@@ -1,0 +1,125 @@
+{
+  "schemaVersion": "10.6",
+  "packId": "v16-host-image-tool-orange-tabby",
+  "displayName": "V16 Host Image Tool Orange Tabby",
+  "rendererKind": "sprite",
+  "format": "frameSequence",
+  "canvas": {
+    "width": 512,
+    "height": 512
+  },
+  "actions": {
+    "idle": {
+      "frames": [
+        "idle/frame-001.png",
+        "idle/frame-002.png",
+        "idle/frame-003.png",
+        "idle/frame-004.png",
+        "idle/frame-005.png",
+        "idle/frame-006.png"
+      ],
+      "fps": 8,
+      "loop": true,
+      "transient": false,
+      "durationMs": 750,
+      "fallbackActionId": "idle"
+    },
+    "thinking": {
+      "frames": [
+        "thinking/frame-001.png",
+        "thinking/frame-002.png",
+        "thinking/frame-003.png",
+        "thinking/frame-004.png",
+        "thinking/frame-005.png",
+        "thinking/frame-006.png"
+      ],
+      "fps": 8,
+      "loop": true,
+      "transient": false,
+      "durationMs": 750,
+      "fallbackActionId": "idle"
+    },
+    "running": {
+      "frames": [
+        "running/frame-001.png",
+        "running/frame-002.png",
+        "running/frame-003.png",
+        "running/frame-004.png",
+        "running/frame-005.png",
+        "running/frame-006.png"
+      ],
+      "fps": 8,
+      "loop": true,
+      "transient": false,
+      "durationMs": 750,
+      "fallbackActionId": "idle"
+    },
+    "success": {
+      "frames": [
+        "success/frame-001.png",
+        "success/frame-002.png",
+        "success/frame-003.png"
+      ],
+      "fps": 8,
+      "loop": false,
+      "transient": true,
+      "durationMs": 375,
+      "fallbackActionId": "idle"
+    },
+    "warning": {
+      "frames": [
+        "warning/frame-001.png",
+        "warning/frame-002.png",
+        "warning/frame-003.png"
+      ],
+      "fps": 8,
+      "loop": false,
+      "transient": true,
+      "durationMs": 375,
+      "fallbackActionId": "idle"
+    },
+    "error": {
+      "frames": [
+        "error/frame-001.png",
+        "error/frame-002.png",
+        "error/frame-003.png"
+      ],
+      "fps": 8,
+      "loop": false,
+      "transient": true,
+      "durationMs": 375,
+      "fallbackActionId": "idle"
+    },
+    "need_input": {
+      "frames": [
+        "need_input/frame-001.png",
+        "need_input/frame-002.png",
+        "need_input/frame-003.png"
+      ],
+      "fps": 8,
+      "loop": false,
+      "transient": true,
+      "durationMs": 375,
+      "fallbackActionId": "idle"
+    },
+    "sleeping": {
+      "frames": [
+        "sleeping/frame-001.png",
+        "sleeping/frame-002.png",
+        "sleeping/frame-003.png",
+        "sleeping/frame-004.png",
+        "sleeping/frame-005.png",
+        "sleeping/frame-006.png"
+      ],
+      "fps": 8,
+      "loop": true,
+      "transient": false,
+      "durationMs": 750,
+      "fallbackActionId": "idle"
+    }
+  },
+  "license": {
+    "source": "generated-provider",
+    "attribution": "Host ChatGPT/Codex image tool generated orange tabby action sheet"
+  }
+}

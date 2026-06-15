@@ -1,0 +1,88 @@
+{
+  "ok": true,
+  "status": "passed",
+  "reasonCode": "route_c_passed",
+  "routeId": "route_c_local_rig",
+  "safeSource": "\u732b_2.jpg",
+  "packId": "v21-route-c-local-rig-gray-cat",
+  "actionCount": 8,
+  "contactSheetFile": "route-c-contact-sheet.jpg",
+  "petJsonFile": "pet.json",
+  "paletteBucket": {
+    "fur": "sampled_gray_cream",
+    "eye": "olive",
+    "nose": "muted_pink"
+  },
+  "rigParts": [
+    "body",
+    "head",
+    "leftEar",
+    "rightEar",
+    "tail",
+    "frontPaws",
+    "rearPaws",
+    "eyes",
+    "mouth",
+    "whiskers"
+  ],
+  "qa": {
+    "nonblankPassed": true,
+    "offCanvasPassed": true,
+    "loopClosurePassed": true,
+    "motionAmplitudePassed": true,
+    "sameCatPassed": true,
+    "sameCatReason": "single local procedural rig and one sampled palette drive all actions",
+    "backgroundPassed": true,
+    "backgroundReason": "transparent canvas generated locally",
+    "actionFrameCounts": {
+      "idle": 6,
+      "thinking": 6,
+      "running": 6,
+      "success": 3,
+      "warning": 3,
+      "error": 3,
+      "need_input": 3,
+      "sleeping": 6
+    },
+    "loopClosure": {
+      "idle": 0.0,
+      "thinking": 0.0,
+      "running": 0.0,
+      "success": 0,
+      "warning": 0,
+      "error": 0,
+      "need_input": 0,
+      "sleeping": 0.0
+    },
+    "motionAmplitude": {
+      "idle": 8.56,
+      "thinking": 21.0,
+      "running": 33.5,
+      "success": 34.03,
+      "warning": 23.01,
+      "error": 29.0,
+      "need_input": 30.02,
+      "sleeping": 7.0
+    },
+    "alphaCoverage": {
+      "idle": 0.2109,
+      "thinking": 0.2127,
+      "running": 0.2114,
+      "success": 0.2104,
+      "warning": 0.212,
+      "error": 0.215,
+      "need_input": 0.2107,
+      "sleeping": 0.2169
+    },
+    "cornerOpaqueRatio": {
+      "idle": 0.0,
+      "thinking": 0.0,
+      "running": 0.0,
+      "success": 0.0,
+      "warning": 0.0,
+      "error": 0.0,
+      "need_input": 0.0,
+      "sleeping": 0.0
+    }
+  }
+}

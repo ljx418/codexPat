@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agent Desktop Pet 设置页体验优化汇报</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f4f6fa;
+        --panel: #ffffff;
+        --ink: #0f172a;
+        --muted: #64748b;
+        --line: #dbe4ef;
+        --soft: #f8fafc;
+        --blue: #2563eb;
+        --green: #166534;
+        --amber: #854d0e;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family:
+          Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+      }
+
+      main {
+        width: min(1280px, calc(100vw - 40px));
+        margin: 0 auto;
+        padding: 28px 0 42px;
+      }
+
+      header.hero {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        gap: 24px;
+        margin-bottom: 18px;
+      }
+
+      .eyebrow {
+        display: block;
+        margin-bottom: 6px;
+        color: var(--blue);
+        font-size: 11px;
+        font-weight: 850;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2,
+      h3,
+      p {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 30px;
+        line-height: 1.15;
+      }
+
+      .hero p {
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
+      .status-pill {
+        white-space: nowrap;
+        border: 1px solid #bbf7d0;
+        border-radius: 999px;
+        padding: 8px 12px;
+        color: var(--green);
+        background: #f0fdf4;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .grid {
+        display: grid;
+        gap: 14px;
+      }
+
+      .overview {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin-bottom: 16px;
+      }
+
+      .card {
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+        box-shadow: 0 8px 22px rgba(15, 23, 42, 0.04);
+      }
+
+      .metric {
+        padding: 14px;
+      }
+
+      .metric span {
+        display: block;
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 850;
+      }
+
+      .metric strong {
+        display: block;
+        margin-top: 4px;
+        font-size: 24px;
+        line-height: 1.1;
+      }
+
+      .metric small {
+        display: block;
+        margin-top: 8px;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.35;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 240px minmax(0, 1fr);
+        gap: 16px;
+        align-items: start;
+      }
+
+      aside {
+        position: sticky;
+        top: 14px;
+        display: grid;
+        gap: 10px;
+      }
+
+      .rail-card {
+        padding: 12px;
+      }
+
+      .rail-card h2 {
+        margin-bottom: 10px;
+        font-size: 13px;
+      }
+
+      nav {
+        display: grid;
+        gap: 6px;
+      }
+
+      nav a {
+        display: block;
+        border-radius: 6px;
+        padding: 8px 10px;
+        color: #334155;
+        background: transparent;
+        text-decoration: none;
+        font-size: 12px;
+        font-weight: 850;
+      }
+
+      nav a:first-child,
+      nav a:hover {
+        color: #1d4ed8;
+        background: #eff6ff;
+      }
+
+      dl {
+        display: grid;
+        gap: 8px;
+        margin: 0;
+      }
+
+      dl div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        border-bottom: 1px solid #eef2f7;
+        padding-bottom: 8px;
+      }
+
+      dl div:last-child {
+        border-bottom: 0;
+        padding-bottom: 0;
+      }
+
+      dt {
+        color: var(--muted);
+        font-size: 11px;
+        font-weight: 850;
+      }
+
+      dd {
+        margin: 0;
+        font-size: 12px;
+        font-weight: 850;
+      }
+
+      .note {
+        border: 1px solid #fde68a;
+        border-radius: 8px;
+        padding: 10px 11px;
+        color: var(--amber);
+        background: #fffbeb;
+        font-size: 12px;
+        line-height: 1.45;
+        font-weight: 750;
+      }
+
+      .content {
+        min-width: 0;
+        display: grid;
+        gap: 14px;
+      }
+
+      .section {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 18px;
+        padding: 14px 16px;
+      }
+
+      .section h2 {
+        font-size: 15px;
+      }
+
+      .section p {
+        margin-top: 6px;
+        color: var(--muted);
+        font-size: 13px;
+        line-height: 1.45;
+      }
+
+      .button {
+        min-width: 88px;
+        border: 1px solid #cbd5e1;
+        border-radius: 6px;
+        padding: 8px 12px;
+        color: #1f2937;
+        background: #ffffff;
+        font-size: 13px;
+        font-weight: 800;
+        text-align: center;
+      }
+
+      .button.primary {
+        border-color: var(--blue);
+        color: #ffffff;
+        background: var(--blue);
+      }
+
+      .subgrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .detail {
+        padding: 14px;
+      }
+
+      .detail h3 {
+        font-size: 14px;
+      }
+
+      .detail p,
+      .detail li {
+        color: #475569;
+        font-size: 12px;
+        line-height: 1.55;
+      }
+
+      ul {
+        margin: 10px 0 0;
+        padding-left: 18px;
+      }
+
+      .checks {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+
+      .check {
+        padding: 12px;
+      }
+
+      .check strong {
+        display: block;
+        color: var(--green);
+        font-size: 13px;
+      }
+
+      .check span {
+        display: block;
+        margin-top: 4px;
+        color: var(--muted);
+        font-size: 11px;
+        line-height: 1.4;
+      }
+
+      .footer {
+        margin-top: 18px;
+        color: var(--muted);
+        font-size: 12px;
+      }
+
+      @media (max-width: 900px) {
+        main {
+          width: min(100vw - 28px, 760px);
+        }
+
+        header.hero,
+        .section {
+          display: grid;
+        }
+
+        .overview,
+        .layout,
+        .subgrid,
+        .checks {
+          grid-template-columns: 1fr;
+        }
+
+        aside {
+          position: static;
+        }
+
+        nav {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 8px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <div>
+          <span class="eyebrow">Agent Desktop Pet · Settings UX Report</span>
+          <h1>设置页体验优化汇报</h1>
+          <p>本页是 2026-06-05 的本地 HTML 汇报版，用于替代“你手动构建、运行、点击后再看效果”的流程。</p>
+        </div>
+        <span class="status-pill">desktop check/test passed</span>
+      </header>
+
+      <section class="grid overview" aria-label="优化概览">
+        <article class="card metric">
+          <span>本轮目标</span>
+          <strong>工作台化</strong>
+          <small>从长页面堆叠改成概览 + 导航 + 内容流。</small>
+        </article>
+        <article class="card metric">
+          <span>设置入口</span>
+          <strong>5 区</strong>
+          <small>多猫、Codex、本地资产、个性化、诊断。</small>
+        </article>
+        <article class="card metric">
+          <span>验证</span>
+          <strong>99/99</strong>
+          <small>desktop 测试通过，类型检查通过。</small>
+        </article>
+        <article class="card metric">
+          <span>后续汇报</span>
+          <strong>HTML</strong>
+          <small>后续每次汇报用 HTML + 截图证据聚合。</small>
+        </article>
+      </section>
+
+      <section class="layout">
+        <aside>
+          <section class="card rail-card">
+            <h2>常用入口</h2>
+            <nav>
+              <a href="#pets">多猫实例</a>
+              <a href="#codex">Codex 工作猫</a>
+              <a href="#assets">本地资产</a>
+              <a href="#personalization">个性化生成</a>
+              <a href="#diagnostics">诊断</a>
+            </nav>
+          </section>
+          <section class="card rail-card">
+            <h2>当前摘要</h2>
+            <dl>
+              <div><dt>可见猫</dt><dd>运行态读取</dd></div>
+              <div><dt>资产激活</dt><dd>运行态读取</dd></div>
+              <div><dt>事件桥</dt><dd>运行态读取</dd></div>
+              <div><dt>静音</dt><dd>运行态读取</dd></div>
+            </dl>
+          </section>
+          <p class="note">明确提示：already-open Codex window 仍不支持自动监听；推荐 wrapper JSONL 或 managed TUI hooks。</p>
+        </aside>
+
+        <div class="content">
+          <section class="card section">
+            <div>
+              <h2>基础状态</h2>
+              <p>位置、当前状态、队列和声音状态合并到紧凑区域，减少首屏信息噪音。</p>
+            </div>
+            <span class="button">刷新</span>
+          </section>
+
+          <section class="card section" id="pets">
+            <div>
+              <h2>多猫实例</h2>
+              <p>保留创建、显示、隐藏、删除、资产激活等原有能力，但入口位置更清楚。</p>
+            </div>
+            <span class="button primary">创建 Codex 猫</span>
+          </section>
+
+          <section class="grid subgrid">
+            <article class="card detail" id="codex">
+              <h3>Codex 工作猫</h3>
+              <p>把推荐路径、TUI hooks trust 指引和 unsupported 状态放在同一块，降低误解成本。</p>
+              <ul>
+                <li>wrapper-launched exec JSONL：可靠状态映射。</li>
+                <li>managed TUI hooks：需要 /hooks review/trust。</li>
+                <li>already-open window：目前不支持自动监听。</li>
+              </ul>
+            </article>
+            <article class="card detail" id="assets">
+              <h3>本地资产</h3>
+              <p>Sprite 装配、manifest 导入和资产列表仍在同一区域，但通过分区标题和侧边导航降低查找成本。</p>
+              <ul>
+                <li>装配多帧 sprite。</li>
+                <li>导入 manifest。</li>
+                <li>预览和管理资产包。</li>
+              </ul>
+            </article>
+            <article class="card detail" id="personalization">
+              <h3>个性化生成</h3>
+              <p>照片隐私边界、提示词生成、外部 provider 可行性说明保持分离，避免把未 ready 能力误读为已发布。</p>
+            </article>
+            <article class="card detail" id="diagnostics">
+              <h3>诊断</h3>
+              <p>诊断导出仍只包含脱敏摘要，不展示 token、Authorization、raw payload、prompt、命令或完整本地路径。</p>
+            </article>
+          </section>
+
+          <section class="grid checks">
+            <article class="card check">
+              <strong>pnpm --filter desktop check</strong>
+              <span>通过，TypeScript 无错误。</span>
+            </article>
+            <article class="card check">
+              <strong>pnpm --filter desktop test</strong>
+              <span>通过，99 个测试全部通过。</span>
+            </article>
+            <article class="card check">
+              <strong>交付方式调整</strong>
+              <span>后续汇报默认落 HTML 页面并生成截图证据。</span>
+            </article>
+          </section>
+        </div>
+      </section>
+
+      <p class="footer">
+        文件：docs/reports/settings-ux-report-2026-06-05.html。截图证据：docs/reports/evidence/settings-ux-report-2026-06-05.png。
+      </p>
+    </main>
+  </body>
+</html>

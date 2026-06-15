@@ -1,0 +1,394 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>V10.9 manager preview and activation capture</title>
+  <style>
+    body { margin: 0; padding: 24px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f6f8fb; color: #16202a; }
+    h1 { margin: 0 0 10px; font-size: 24px; }
+    .summary { margin: 0 0 18px; padding: 12px 14px; background: #fff; border: 1px solid #d8dee8; border-radius: 8px; }
+    .grid { display: grid; grid-template-columns: repeat(4, minmax(190px, 1fr)); gap: 14px; }
+    .card { padding: 14px; background: #fff; border: 1px solid #d8dee8; border-radius: 8px; }
+    .pet { width: 132px; height: 132px; border: 1px solid #d8dee8; display: grid; place-items: center; background: white; }
+    .pet svg { width: 100%; height: 100%; }
+    dl { display: grid; grid-template-columns: 1fr; gap: 4px; margin: 10px 0 0; font-size: 12px; }
+    dt { font-weight: 700; display: inline; }
+    dd { margin: 0 0 2px; display: inline; color: #435266; }
+  </style>
+</head>
+<body>
+  <h1>V10.9 manager preview and activation capture</h1>
+  <section class="summary">
+    <p>Active: Imported Orange V10 · fallback=work-cat-v1 · restoreDefaultAvailable=true</p>
+    <p>Preview is isolated: acceptedPetEvents=0 · liveStateChanged=false · notify=false · CatStateMachine=false</p>
+  </section>
+  <div class="grid">
+    <section class="card">
+      <h2>idle</h2>
+      <div class="pet"><svg viewBox="0 0 256 256" role="img" aria-label="Idle">
+  <ellipse cx="128" cy="222" rx="58" ry="11" fill="rgba(31, 41, 51, 0.16)"/>
+  <path d="M172 153 C216 136 222 172 181 193" fill="none" stroke="#9A4E20" stroke-width="18" stroke-linecap="round"/><path d="M173 153 C205 144 210 166 182 188" fill="none" stroke="#E88A3A" stroke-width="10" stroke-linecap="round"/>
+  <g transform="translate(128 145) scale(1 1)">
+    <ellipse cx="0" cy="0" rx="55" ry="46" fill="#E88A3A" stroke="#5B3019" stroke-width="3"/>
+    <ellipse cx="-5" cy="12" rx="30" ry="25" fill="#F8D7A0" opacity="0.92"/>
+    <path d="M-36 -16 q14 8 28 0 M-14 -30 q14 9 28 0 M14 -17 q14 8 29 0" stroke="#9A4E20" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.72"/>
+  </g>
+  <ellipse cx="91" cy="194" rx="16" ry="12" fill="#F8D7A0" stroke="#5B3019" stroke-width="2"/>
+  <ellipse cx="161" cy="194" rx="16" ry="12" fill="#F8D7A0" stroke="#5B3019" stroke-width="2"/>
+  <ellipse cx="112" cy="202" rx="15" ry="10" fill="#E88A3A" stroke="#5B3019" stroke-width="2"/>
+  <ellipse cx="145" cy="202" rx="15" ry="10" fill="#E88A3A" stroke="#5B3019" stroke-width="2"/>
+  <g transform="translate(126 82) rotate(0)">
+    <path d="M-39 -24 L-31 -63 L-9 -32 Z" fill="#E88A3A" stroke="#5B3019" stroke-width="3" transform="rotate(0 -30 -38)"/>
+  <path d="M39 -24 L31 -63 L9 -32 Z" fill="#E88A3A" stroke="#5B3019" stroke-width="3" transform="rotate(0 30 -38)"/>
+  <path d="M-32 -32 L-28 -51 L-18 -35 Z" fill="#F7A08C" opacity="0.75"/>
+  <path d="M32 -32 L28 -51 L18 -35 Z" fill="#F7A08C" opacity="0.75"/>
+    <path d="M-45 -15 q0 -34 45 -36 q45 2 45 36 v18 q0 36 -45 39 q-45 -3 -45 -39 z" fill="#E88A3A" stroke="#5B3019" stroke-width="3"/>
+    <path d="M-25 -35 q11 6 22 0 M3 -39 q11 7 23 0" stroke="#9A4E20" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <ellipse cx="-15" cy="12" rx="18" ry="13" fill="#F8D7A0"/>
+    <ellipse cx="15" cy="12" rx="18" ry="13" fill="#F8D7A0"/>
+    <ellipse cx="-19" cy="-8" rx="7" ry="8" fill="#1F2933"/>
+  <ellipse cx="19" cy="-8" rx="7" ry="8" fill="#1F2933"/>
+  <circle cx="-16" cy="-11" r="2" fill="white"/>
+  <circle cx="22" cy="-11" r="2" fill="white"/>
+    <path d="M-3 12 q3 -4 6 0 q-3 5 -6 0" fill="#E86C72" stroke="#5B3019" stroke-width="1.5"/>
+    <path d="M-13 20 q13 11 26 0" stroke="#5B3019" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="-33" cy="17" r="5" fill="#F7A08C" opacity="0.45"/>
+    <circle cx="33" cy="17" r="5" fill="#F7A08C" opacity="0.45"/>
+    <path d="M-19 14 h-31 M-19 20 l-30 8 M19 14 h31 M19 20 l30 8" stroke="#5B3019" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.72"/>
+  </g>
+  
+  
+</svg></div>
+      <dl>
+        <div><dt>coverage</dt><dd>animated</dd></div>
+        <div><dt>reasonCode</dt><dd>action_frames_present</dd></div>
+        <div><dt>renderer</dt><dd>sprite</dd></div>
+        <div><dt>frameCount</dt><dd>8</dd></div>
+        <div><dt>fps</dt><dd>9</dd></div>
+        <div><dt>playback</dt><dd>loop</dd></div>
+      </dl>
+    </section>
+  
+
+    <section class="card">
+      <h2>thinking</h2>
+      <div class="pet"><svg viewBox="0 0 256 256" role="img" aria-label="Thinking">
+  <ellipse cx="128" cy="222" rx="58" ry="11" fill="rgba(31, 41, 51, 0.16)"/>
+  <path d="M172 153 C216 136 222 172 181 193" fill="none" stroke="#9A4E20" stroke-width="18" stroke-linecap="round"/><path d="M173 153 C205 144 210 166 182 188" fill="none" stroke="#E88A3A" stroke-width="10" stroke-linecap="round"/>
+  <g transform="translate(128 146) scale(1 1)">
+    <ellipse cx="0" cy="0" rx="55" ry="46" fill="#E88A3A" stroke="#5B3019" stroke-width="3"/>
+    <ellipse cx="-5" cy="12" rx="30" ry="25" fill="#F8D7A0" opacity="0.92"/>
+    <path d="M-36 -16 q14 8 28 0 M-14 -30 q14 9 28 0 M14 -17 q14 8 29 0" stroke="#9A4E20" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.72"/>
+  </g>
+  <ellipse cx="91" cy="194" rx="16" ry="12" fill="#F8D7A0" stroke="#5B3019" stroke-width="2"/>
+  <ellipse cx="161" cy="194" rx="16" ry="12" fill="#F8D7A0" stroke="#5B3019" stroke-width="2"/>
+  <ellipse cx="112" cy="202" rx="15" ry="10" fill="#E88A3A" stroke="#5B3019" stroke-width="2"/>
+  <ellipse cx="145" cy="202" rx="15" ry="10" fill="#E88A3A" stroke="#5B3019" stroke-width="2"/>
+  <g transform="translate(124 82) rotate(-6)">
+    <path d="M-39 -24 L-31 -63 L-9 -32 Z" fill="#E88A3A" stroke="#5B3019" stroke-width="3" transform="rotate(4 -30 -38)"/>
+  <path d="M39 -24 L31 -63 L9 -32 Z" fill="#E88A3A" stroke="#5B3019" stroke-width="3" transform="rotate(-4 30 -38)"/>
+  <path d="M-32 -32 L-28 -51 L-18 -35 Z" fill="#F7A08C" opacity="0.75"/>
+  <path d="M32 -32 L28 -51 L18 -35 Z" fill="#F7A08C" opacity="0.75"/>
+    <path d="M-45 -15 q0 -34 45 -36 q45 2 45 36 v18 q0 36 -45 39 q-45 -3 -45 -39 z" fill="#E88A3A" stroke="#5B3019" stroke-width="3"/>
+    <path d="M-25 -35 q11 6 22 0 M3 -39 q11 7 23 0" stroke="#9A4E20" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <ellipse cx="-15" cy="12" rx="18" ry="13" fill="#F8D7A0"/>
+    <ellipse cx="15" cy="12" rx="18" ry="13" fill="#F8D7A0"/>
+    <ellipse cx="-21" cy="-8" rx="6" ry="7" fill="#1F2933"/>
+  <ellipse cx="17" cy="-8" rx="6" ry="7" fill="#1F2933"/>
+  <circle cx="-18" cy="-11" r="2" fill="white"/>
+  <circle cx="20" cy="-11" r="2" fill="white"/>
+    <path d="M-3 12 q3 -4 6 0 q-3 5 -6 0" fill="#E86C72" stroke="#5B3019" stroke-width="1.5"/>
+    <path d="M-6 22 q6 3 12 0" stroke="#5B3019" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="-33" cy="17" r="5" fill="#F7A08C" opacity="0.45"/>
+    <circle cx="33" cy="17" r="5" fill="#F7A08C" opacity="0.45"/>
+    <path d="M-19 14 h-31 M-19 20 l-30 8 M19 14 h31 M19 20 l30 8" stroke="#5B3019" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.72"/>
+  </g>
+  <circle cx="178" cy="63" r="7" fill="#F8D7A0" stroke="#5B3019" stroke-width="2"/><circle cx="196" cy="45" r="4" fill="#F8D7A0" stroke="#5B3019" stroke-width="2"/>
+  
+</svg></div>
+      <dl>
+        <div><dt>coverage</dt><dd>animated</dd></div>
+        <div><dt>reasonCode</dt><dd>action_frames_present</dd></div>
+        <div><dt>renderer</dt><dd>sprite</dd></div>
+        <div><dt>frameCount</dt><dd>8</dd></div>
+        <div><dt>fps</dt><dd>9</dd></div>
+        <div><dt>playback</dt><dd>loop</dd></div>
+      </dl>
+    </section>
+  
+
+    <section class="card">
+      <h2>running</h2>
+      <div class="pet"><svg viewBox="0 0 256 256" role="img" aria-label="Running">
+  <ellipse cx="128" cy="222" rx="58" ry="11" fill="rgba(31, 41, 51, 0.16)"/>
+  <path d="M172 151 C220 124 223 186 179 190" fill="none" stroke="#9A4E20" stroke-width="18" stroke-linecap="round"/><path d="M174 151 C209 132 211 176 180 186" fill="none" stroke="#E88A3A" stroke-width="10" stroke-linecap="round"/>
+  <g transform="translate(128 145) scale(1.05 0.96)">
+    <ellipse cx="0" cy="0" rx="55" ry="46" fill="#E88A3A" stroke="#5B3019" stroke-width="3"/>
+    <ellipse cx="-5" cy="12" rx="30" ry="25" fill="#F8D7A0" opacity="0.92"/>
+    <path d="M-36 -16 q14 8 28 0 M-14 -30 q14 9 28 0 M14 -17 q14 8 29 0" stroke="#9A4E20" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.72"/>
+  </g>
+  <ellipse cx="85.4" cy="186" rx="16" ry="12" fill="#F8D7A0" stroke="#5B3019" stroke-width="2"/>
+  <ellipse cx="158" cy="200" rx="16" ry="12" fill="#F8D7A0" stroke="#5B3019" stroke-width="2"/>
+  <ellipse cx="109.9" cy="202" rx="15" ry="10" fill="#E88A3A" stroke="#5B3019" stroke-width="2"/>
+  <ellipse cx="142.2" cy="199.2" rx="15" ry="10" fill="#E88A3A" stroke="#5B3019" stroke-width="2"/>
+  <g transform="translate(130 80) rotate(2)">
+    <path d="M-39 -24 L-31 -63 L-9 -32 Z" fill="#E88A3A" stroke="#5B3019" stroke-width="3" transform="rotate(-1 -30 -38)"/>
+  <path d="M39 -24 L31 -63 L9 -32 Z" fill="#E88A3A" stroke="#5B3019" stroke-width="3" transform="rotate(1 30 -38)"/>
+  <path d="M-32 -32 L-28 -51 L-18 -35 Z" fill="#F7A08C" opacity="0.75"/>
+  <path d="M32 -32 L28 -51 L18 -35 Z" fill="#F7A08C" opacity="0.75"/>
+    <path d="M-45 -15 q0 -34 45 -36 q45 2 45 36 v18 q0 36 -45 39 q-45 -3 -45 -39 z" fill="#E88A3A" stroke="#5B3019" stroke-width="3"/>
+    <path d="M-25 -35 q11 6 22 0 M3 -39 q11 7 23 0" stroke="#9A4E20" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <ellipse cx="-15" cy="12" rx="18" ry="13" fill="#F8D7A0"/>
+    <ellipse cx="15" cy="12" rx="18" ry="13" fill="#F8D7A0"/>
+    <ellipse cx="-19" cy="-8" rx="8" ry="9" fill="#1F2933"/>
+  <ellipse cx="19" cy="-8" rx="8" ry="9" fill="#1F2933"/>
+  <circle cx="-16" cy="-11" r="2" fill="white"/>
+  <circle cx="22" cy="-11" r="2" fill="white"/>
+    <path d="M-3 12 q3 -4 6 0 q-3 5 -6 0" fill="#E86C72" stroke="#5B3019" stroke-width="1.5"/>
+    <ellipse cx="0" cy="23" rx="7" ry="8" fill="#5B3019" opacity="0.9"/><path d="M-10 19 q10 9 20 0" stroke="#5B3019" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="-33" cy="17" r="5" fill="#F7A08C" opacity="0.45"/>
+    <circle cx="33" cy="17" r="5" fill="#F7A08C" opacity="0.45"/>
+    <path d="M-19 14 h-31 M-19 20 l-30 8 M19 14 h31 M19 20 l30 8" stroke="#5B3019" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.72"/>
+  </g>
+  <path d="M31 158 h36 M24 181 h42" stroke="#9A4E20" stroke-width="7" stroke-linecap="round" opacity="0.75"/>
+  
+</svg></div>
+      <dl>
+        <div><dt>coverage</dt><dd>animated</dd></div>
+        <div><dt>reasonCode</dt><dd>action_frames_present</dd></div>
+        <div><dt>renderer</dt><dd>sprite</dd></div>
+        <div><dt>frameCount</dt><dd>8</dd></div>
+        <div><dt>fps</dt><dd>12</dd></div>
+        <div><dt>playback</dt><dd>loop</dd></div>
+      </dl>
+    </section>
+  
+
+    <section class="card">
+      <h2>success</h2>
+      <div class="pet"><svg viewBox="0 0 256 256" role="img" aria-label="Success">
+  <ellipse cx="128" cy="222" rx="58" ry="11" fill="rgba(31, 41, 51, 0.16)"/>
+  <path d="M172 153 C216 136 222 172 181 193" fill="none" stroke="#9A4E20" stroke-width="18" stroke-linecap="round"/><path d="M173 153 C205 144 210 166 182 188" fill="none" stroke="#E88A3A" stroke-width="10" stroke-linecap="round"/>
+  <g transform="translate(128 144) scale(1 1)">
+    <ellipse cx="0" cy="0" rx="55" ry="46" fill="#E88A3A" stroke="#5B3019" stroke-width="3"/>
+    <ellipse cx="-5" cy="12" rx="30" ry="25" fill="#F8D7A0" opacity="0.92"/>
+    <path d="M-36 -16 q14 8 28 0 M-14 -30 q14 9 28 0 M14 -17 q14 8 29 0" stroke="#9A4E20" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.72"/>
+  </g>
+  <ellipse cx="88.9" cy="191" rx="16" ry="12" fill="#F8D7A0" stroke="#5B3019" stroke-width="2"/>
+  <ellipse cx="161" cy="194" rx="16" ry="12" fill="#F8D7A0" stroke="#5B3019" stroke-width="2"/>
+  <ellipse cx="112" cy="202" rx="15" ry="10" fill="#E88A3A" stroke="#5B3019" stroke-width="2"/>
+  <ellipse cx="143.95" cy="200.95" rx="15" ry="10" fill="#E88A3A" stroke="#5B3019" stroke-width="2"/>
+  <g transform="translate(126 80) rotate(2)">
+    <path d="M-39 -24 L-31 -63 L-9 -32 Z" fill="#E88A3A" stroke="#5B3019" stroke-width="3" transform="rotate(-4 -30 -38)"/>
+  <path d="M39 -24 L31 -63 L9 -32 Z" fill="#E88A3A" stroke="#5B3019" stroke-width="3" transform="rotate(4 30 -38)"/>
+  <path d="M-32 -32 L-28 -51 L-18 -35 Z" fill="#F7A08C" opacity="0.75"/>
+  <path d="M32 -32 L28 -51 L18 -35 Z" fill="#F7A08C" opacity="0.75"/>
+    <path d="M-45 -15 q0 -34 45 -36 q45 2 45 36 v18 q0 36 -45 39 q-45 -3 -45 -39 z" fill="#E88A3A" stroke="#5B3019" stroke-width="3"/>
+    <path d="M-25 -35 q11 6 22 0 M3 -39 q11 7 23 0" stroke="#9A4E20" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <ellipse cx="-15" cy="12" rx="18" ry="13" fill="#F8D7A0"/>
+    <ellipse cx="15" cy="12" rx="18" ry="13" fill="#F8D7A0"/>
+    <ellipse cx="-19" cy="-8" rx="8" ry="9" fill="#1F2933"/>
+  <ellipse cx="19" cy="-8" rx="8" ry="9" fill="#1F2933"/>
+  <circle cx="-16" cy="-11" r="2" fill="white"/>
+  <circle cx="22" cy="-11" r="2" fill="white"/>
+    <path d="M-3 12 q3 -4 6 0 q-3 5 -6 0" fill="#E86C72" stroke="#5B3019" stroke-width="1.5"/>
+    <path d="M-13 20 q13 11 26 0" stroke="#5B3019" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="-33" cy="17" r="5" fill="#F7A08C" opacity="0.45"/>
+    <circle cx="33" cy="17" r="5" fill="#F7A08C" opacity="0.45"/>
+    <path d="M-19 14 h-31 M-19 20 l-30 8 M19 14 h31 M19 20 l30 8" stroke="#5B3019" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.72"/>
+  </g>
+  <path d="M177 69 l12 13 28 -34" stroke="#2F9E44" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/><circle cx="78" cy="75" r="5" fill="#F8D7A0"/>
+  
+</svg></div>
+      <dl>
+        <div><dt>coverage</dt><dd>animated</dd></div>
+        <div><dt>reasonCode</dt><dd>action_frames_present</dd></div>
+        <div><dt>renderer</dt><dd>sprite</dd></div>
+        <div><dt>frameCount</dt><dd>4</dd></div>
+        <div><dt>fps</dt><dd>10</dd></div>
+        <div><dt>playback</dt><dd>transient</dd></div>
+      </dl>
+    </section>
+  
+
+    <section class="card">
+      <h2>warning</h2>
+      <div class="pet"><svg viewBox="0 0 256 256" role="img" aria-label="Warning">
+  <ellipse cx="128" cy="222" rx="58" ry="11" fill="rgba(31, 41, 51, 0.16)"/>
+  <path d="M172 153 C216 136 222 172 181 193" fill="none" stroke="#9A4E20" stroke-width="18" stroke-linecap="round"/><path d="M173 153 C205 144 210 166 182 188" fill="none" stroke="#E88A3A" stroke-width="10" stroke-linecap="round"/>
+  <g transform="translate(128 146) scale(1 1)">
+    <ellipse cx="0" cy="0" rx="55" ry="46" fill="#E88A3A" stroke="#5B3019" stroke-width="3"/>
+    <ellipse cx="-5" cy="12" rx="30" ry="25" fill="#F8D7A0" opacity="0.92"/>
+    <path d="M-36 -16 q14 8 28 0 M-14 -30 q14 9 28 0 M14 -17 q14 8 29 0" stroke="#9A4E20" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.72"/>
+  </g>
+  <ellipse cx="91" cy="194" rx="16" ry="12" fill="#F8D7A0" stroke="#5B3019" stroke-width="2"/>
+  <ellipse cx="161" cy="194" rx="16" ry="12" fill="#F8D7A0" stroke="#5B3019" stroke-width="2"/>
+  <ellipse cx="112" cy="202" rx="15" ry="10" fill="#E88A3A" stroke="#5B3019" stroke-width="2"/>
+  <ellipse cx="145" cy="202" rx="15" ry="10" fill="#E88A3A" stroke="#5B3019" stroke-width="2"/>
+  <g transform="translate(126 82) rotate(0)">
+    <path d="M-39 -24 L-31 -63 L-9 -32 Z" fill="#E88A3A" stroke="#5B3019" stroke-width="3" transform="rotate(-9 -30 -38)"/>
+  <path d="M39 -24 L31 -63 L9 -32 Z" fill="#E88A3A" stroke="#5B3019" stroke-width="3" transform="rotate(9 30 -38)"/>
+  <path d="M-32 -32 L-28 -51 L-18 -35 Z" fill="#F7A08C" opacity="0.75"/>
+  <path d="M32 -32 L28 -51 L18 -35 Z" fill="#F7A08C" opacity="0.75"/>
+    <path d="M-45 -15 q0 -34 45 -36 q45 2 45 36 v18 q0 36 -45 39 q-45 -3 -45 -39 z" fill="#E88A3A" stroke="#5B3019" stroke-width="3"/>
+    <path d="M-25 -35 q11 6 22 0 M3 -39 q11 7 23 0" stroke="#9A4E20" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <ellipse cx="-15" cy="12" rx="18" ry="13" fill="#F8D7A0"/>
+    <ellipse cx="15" cy="12" rx="18" ry="13" fill="#F8D7A0"/>
+    <ellipse cx="-19" cy="-8" rx="8" ry="9" fill="#1F2933"/>
+  <ellipse cx="19" cy="-8" rx="8" ry="9" fill="#1F2933"/>
+  <circle cx="-16" cy="-11" r="2" fill="white"/>
+  <circle cx="22" cy="-11" r="2" fill="white"/>
+    <path d="M-3 12 q3 -4 6 0 q-3 5 -6 0" fill="#E86C72" stroke="#5B3019" stroke-width="1.5"/>
+    <path d="M-6 22 q6 3 12 0" stroke="#5B3019" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="-33" cy="17" r="5" fill="#F7A08C" opacity="0.45"/>
+    <circle cx="33" cy="17" r="5" fill="#F7A08C" opacity="0.45"/>
+    <path d="M-19 14 h-31 M-19 20 l-30 8 M19 14 h31 M19 20 l30 8" stroke="#5B3019" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.72"/>
+  </g>
+  <path d="M198 50 l25 47 h-50 z" fill="#F59F00" stroke="#5B3019" stroke-width="3"/><path d="M198 66 v16" stroke="white" stroke-width="6" stroke-linecap="round"/><circle cx="198" cy="90" r="4" fill="white"/>
+  
+</svg></div>
+      <dl>
+        <div><dt>coverage</dt><dd>animated</dd></div>
+        <div><dt>reasonCode</dt><dd>action_frames_present</dd></div>
+        <div><dt>renderer</dt><dd>sprite</dd></div>
+        <div><dt>frameCount</dt><dd>4</dd></div>
+        <div><dt>fps</dt><dd>9</dd></div>
+        <div><dt>playback</dt><dd>transient</dd></div>
+      </dl>
+    </section>
+  
+
+    <section class="card">
+      <h2>error</h2>
+      <div class="pet"><svg viewBox="0 0 256 256" role="img" aria-label="Error">
+  <ellipse cx="128" cy="222" rx="58" ry="11" fill="rgba(31, 41, 51, 0.16)"/>
+  <path d="M172 153 C216 136 222 172 181 193" fill="none" stroke="#9A4E20" stroke-width="18" stroke-linecap="round"/><path d="M173 153 C205 144 210 166 182 188" fill="none" stroke="#E88A3A" stroke-width="10" stroke-linecap="round"/>
+  <g transform="translate(128 149) scale(0.98 1.02)">
+    <ellipse cx="0" cy="0" rx="55" ry="46" fill="#E88A3A" stroke="#5B3019" stroke-width="3"/>
+    <ellipse cx="-5" cy="12" rx="30" ry="25" fill="#F8D7A0" opacity="0.92"/>
+    <path d="M-36 -16 q14 8 28 0 M-14 -30 q14 9 28 0 M14 -17 q14 8 29 0" stroke="#9A4E20" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.72"/>
+  </g>
+  <ellipse cx="91" cy="194" rx="16" ry="12" fill="#F8D7A0" stroke="#5B3019" stroke-width="2"/>
+  <ellipse cx="161" cy="194" rx="16" ry="12" fill="#F8D7A0" stroke="#5B3019" stroke-width="2"/>
+  <ellipse cx="112" cy="202" rx="15" ry="10" fill="#E88A3A" stroke="#5B3019" stroke-width="2"/>
+  <ellipse cx="145" cy="202" rx="15" ry="10" fill="#E88A3A" stroke="#5B3019" stroke-width="2"/>
+  <g transform="translate(126 86) rotate(-4)">
+    <path d="M-39 -24 L-31 -63 L-9 -32 Z" fill="#E88A3A" stroke="#5B3019" stroke-width="3" transform="rotate(8 -30 -38)"/>
+  <path d="M39 -24 L31 -63 L9 -32 Z" fill="#E88A3A" stroke="#5B3019" stroke-width="3" transform="rotate(-8 30 -38)"/>
+  <path d="M-32 -32 L-28 -51 L-18 -35 Z" fill="#F7A08C" opacity="0.75"/>
+  <path d="M32 -32 L28 -51 L18 -35 Z" fill="#F7A08C" opacity="0.75"/>
+    <path d="M-45 -15 q0 -34 45 -36 q45 2 45 36 v18 q0 36 -45 39 q-45 -3 -45 -39 z" fill="#E88A3A" stroke="#5B3019" stroke-width="3"/>
+    <path d="M-25 -35 q11 6 22 0 M3 -39 q11 7 23 0" stroke="#9A4E20" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <ellipse cx="-15" cy="12" rx="18" ry="13" fill="#F8D7A0"/>
+    <ellipse cx="15" cy="12" rx="18" ry="13" fill="#F8D7A0"/>
+    <path d="M-27 -8 q9 7 18 0 M9 -8 q9 7 18 0" stroke="#1F2933" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M-3 12 q3 -4 6 0 q-3 5 -6 0" fill="#E86C72" stroke="#5B3019" stroke-width="1.5"/>
+    <path d="M-9 25 q9 -8 18 0" stroke="#5B3019" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <circle cx="-33" cy="17" r="5" fill="#F7A08C" opacity="0.45"/>
+    <circle cx="33" cy="17" r="5" fill="#F7A08C" opacity="0.45"/>
+    <path d="M-19 14 h-31 M-19 20 l-30 8 M19 14 h31 M19 20 l30 8" stroke="#5B3019" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.72"/>
+  </g>
+  <path d="M184 58 l30 30 M214 58 l-30 30" stroke="#E03131" stroke-width="9" stroke-linecap="round"/>
+  
+</svg></div>
+      <dl>
+        <div><dt>coverage</dt><dd>animated</dd></div>
+        <div><dt>reasonCode</dt><dd>action_frames_present</dd></div>
+        <div><dt>renderer</dt><dd>sprite</dd></div>
+        <div><dt>frameCount</dt><dd>4</dd></div>
+        <div><dt>fps</dt><dd>8</dd></div>
+        <div><dt>playback</dt><dd>urgent</dd></div>
+      </dl>
+    </section>
+  
+
+    <section class="card">
+      <h2>need_input</h2>
+      <div class="pet"><svg viewBox="0 0 256 256" role="img" aria-label="Need Input">
+  <ellipse cx="128" cy="222" rx="58" ry="11" fill="rgba(31, 41, 51, 0.16)"/>
+  <path d="M172 153 C216 136 222 172 181 193" fill="none" stroke="#9A4E20" stroke-width="18" stroke-linecap="round"/><path d="M173 153 C205 144 210 166 182 188" fill="none" stroke="#E88A3A" stroke-width="10" stroke-linecap="round"/>
+  <g transform="translate(128 145) scale(1 1)">
+    <ellipse cx="0" cy="0" rx="55" ry="46" fill="#E88A3A" stroke="#5B3019" stroke-width="3"/>
+    <ellipse cx="-5" cy="12" rx="30" ry="25" fill="#F8D7A0" opacity="0.92"/>
+    <path d="M-36 -16 q14 8 28 0 M-14 -30 q14 9 28 0 M14 -17 q14 8 29 0" stroke="#9A4E20" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.72"/>
+  </g>
+  <ellipse cx="90.3" cy="193" rx="16" ry="12" fill="#F8D7A0" stroke="#5B3019" stroke-width="2"/>
+  <ellipse cx="161" cy="194" rx="16" ry="12" fill="#F8D7A0" stroke="#5B3019" stroke-width="2"/>
+  <ellipse cx="112" cy="202" rx="15" ry="10" fill="#E88A3A" stroke="#5B3019" stroke-width="2"/>
+  <ellipse cx="144.65" cy="201.65" rx="15" ry="10" fill="#E88A3A" stroke="#5B3019" stroke-width="2"/>
+  <g transform="translate(126 81) rotate(2)">
+    <path d="M-39 -24 L-31 -63 L-9 -32 Z" fill="#E88A3A" stroke="#5B3019" stroke-width="3" transform="rotate(-3 -30 -38)"/>
+  <path d="M39 -24 L31 -63 L9 -32 Z" fill="#E88A3A" stroke="#5B3019" stroke-width="3" transform="rotate(3 30 -38)"/>
+  <path d="M-32 -32 L-28 -51 L-18 -35 Z" fill="#F7A08C" opacity="0.75"/>
+  <path d="M32 -32 L28 -51 L18 -35 Z" fill="#F7A08C" opacity="0.75"/>
+    <path d="M-45 -15 q0 -34 45 -36 q45 2 45 36 v18 q0 36 -45 39 q-45 -3 -45 -39 z" fill="#E88A3A" stroke="#5B3019" stroke-width="3"/>
+    <path d="M-25 -35 q11 6 22 0 M3 -39 q11 7 23 0" stroke="#9A4E20" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <ellipse cx="-15" cy="12" rx="18" ry="13" fill="#F8D7A0"/>
+    <ellipse cx="15" cy="12" rx="18" ry="13" fill="#F8D7A0"/>
+    <ellipse cx="-19" cy="-8" rx="7" ry="8" fill="#1F2933"/>
+  <ellipse cx="19" cy="-8" rx="7" ry="8" fill="#1F2933"/>
+  <circle cx="-16" cy="-11" r="2" fill="white"/>
+  <circle cx="22" cy="-11" r="2" fill="white"/>
+    <path d="M-3 12 q3 -4 6 0 q-3 5 -6 0" fill="#E86C72" stroke="#5B3019" stroke-width="1.5"/>
+    <path d="M-6 22 q6 3 12 0" stroke="#5B3019" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <circle cx="-33" cy="17" r="5" fill="#F7A08C" opacity="0.45"/>
+    <circle cx="33" cy="17" r="5" fill="#F7A08C" opacity="0.45"/>
+    <path d="M-19 14 h-31 M-19 20 l-30 8 M19 14 h31 M19 20 l30 8" stroke="#5B3019" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.72"/>
+  </g>
+  <path d="M190 82 q0 -27 19 -27 q17 0 17 15 q0 13 -14 19 q-8 4 -8 17" stroke="#9A4E20" stroke-width="8" fill="none" stroke-linecap="round"/><circle cx="204" cy="121" r="6" fill="#9A4E20"/>
+  
+</svg></div>
+      <dl>
+        <div><dt>coverage</dt><dd>animated</dd></div>
+        <div><dt>reasonCode</dt><dd>action_frames_present</dd></div>
+        <div><dt>renderer</dt><dd>sprite</dd></div>
+        <div><dt>frameCount</dt><dd>4</dd></div>
+        <div><dt>fps</dt><dd>8</dd></div>
+        <div><dt>playback</dt><dd>urgent</dd></div>
+      </dl>
+    </section>
+  
+
+    <section class="card">
+      <h2>sleeping</h2>
+      <div class="pet"><svg viewBox="0 0 256 256" role="img" aria-label="Sleeping">
+  <ellipse cx="128" cy="222" rx="58" ry="11" fill="rgba(31, 41, 51, 0.16)"/>
+  <path d="M165 173 C206 170 205 214 162 210" fill="none" stroke="#9A4E20" stroke-width="18" stroke-linecap="round"/><path d="M166 173 C198 178 196 204 164 207" fill="none" stroke="#E88A3A" stroke-width="10" stroke-linecap="round"/>
+  <g transform="translate(128 156) scale(1.15 0.78)">
+    <ellipse cx="0" cy="0" rx="55" ry="46" fill="#E88A3A" stroke="#5B3019" stroke-width="3"/>
+    <ellipse cx="-5" cy="12" rx="30" ry="25" fill="#F8D7A0" opacity="0.92"/>
+    <path d="M-36 -16 q14 8 28 0 M-14 -30 q14 9 28 0 M14 -17 q14 8 29 0" stroke="#9A4E20" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.72"/>
+  </g>
+  <ellipse cx="104" cy="199" rx="22" ry="12" fill="#F8D7A0" stroke="#5B3019" stroke-width="2"/><ellipse cx="145" cy="200" rx="25" ry="12" fill="#F8D7A0" stroke="#5B3019" stroke-width="2"/>
+  <g transform="translate(101 131) rotate(-7)">
+    <path d="M-39 -24 L-31 -63 L-9 -32 Z" fill="#E88A3A" stroke="#5B3019" stroke-width="3" transform="rotate(0 -30 -38)"/>
+  <path d="M39 -24 L31 -63 L9 -32 Z" fill="#E88A3A" stroke="#5B3019" stroke-width="3" transform="rotate(0 30 -38)"/>
+  <path d="M-32 -32 L-28 -51 L-18 -35 Z" fill="#F7A08C" opacity="0.75"/>
+  <path d="M32 -32 L28 -51 L18 -35 Z" fill="#F7A08C" opacity="0.75"/>
+    <path d="M-45 -15 q0 -34 45 -36 q45 2 45 36 v18 q0 36 -45 39 q-45 -3 -45 -39 z" fill="#E88A3A" stroke="#5B3019" stroke-width="3"/>
+    <path d="M-25 -35 q11 6 22 0 M3 -39 q11 7 23 0" stroke="#9A4E20" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.75"/>
+    <ellipse cx="-15" cy="12" rx="18" ry="13" fill="#F8D7A0"/>
+    <ellipse cx="15" cy="12" rx="18" ry="13" fill="#F8D7A0"/>
+    <path d="M-25 -4 q8 6 16 0 M9 -4 q8 6 16 0" stroke="#1F2933" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <path d="M-3 12 q3 -4 6 0 q-3 5 -6 0" fill="#E86C72" stroke="#5B3019" stroke-width="1.5"/>
+    <path d="M-8 22 q8 4 16 0" stroke="#5B3019" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.7"/>
+    <circle cx="-33" cy="17" r="5" fill="#F7A08C" opacity="0.45"/>
+    <circle cx="33" cy="17" r="5" fill="#F7A08C" opacity="0.45"/>
+    <path d="M-19 14 h-31 M-19 20 l-30 8 M19 14 h31 M19 20 l30 8" stroke="#5B3019" stroke-width="2.5" fill="none" stroke-linecap="round" opacity="0.72"/>
+  </g>
+  
+  <path d="M178 77 h20 l-15 23 h25" stroke="#9A4E20" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+  <circle cx="203" cy="54" r="5" fill="#F8D7A0" stroke="#5B3019" stroke-width="2"/>
+</svg></div>
+      <dl>
+        <div><dt>coverage</dt><dd>animated</dd></div>
+        <div><dt>reasonCode</dt><dd>action_frames_present</dd></div>
+        <div><dt>renderer</dt><dd>sprite</dd></div>
+        <div><dt>frameCount</dt><dd>8</dd></div>
+        <div><dt>fps</dt><dd>7</dd></div>
+        <div><dt>playback</dt><dd>loop</dd></div>
+      </dl>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>V11 最终验收汇总 - Agent Desktop Pet</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --panel: #ffffff;
+      --ink: #172033;
+      --muted: #64748b;
+      --line: #d8dee8;
+      --accent: #2563eb;
+      --ok: #166534;
+      --ok-bg: #dcfce7;
+      --warn-bg: #fff7ed;
+      --warn: #9a3412;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.55;
+    }
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+    .hero {
+      background: #111827;
+      color: white;
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 18px;
+    }
+    .hero p { color: #cbd5e1; max-width: 860px; }
+    h1, h2, h3 { margin: 0 0 10px; line-height: 1.2; }
+    h1 { font-size: 30px; }
+    h2 { font-size: 20px; margin-top: 22px; }
+    h3 { font-size: 15px; }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-weight: 800;
+      font-size: 12px;
+      background: var(--ok-bg);
+      color: var(--ok);
+    }
+    .warn {
+      background: var(--warn-bg);
+      color: var(--warn);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 16px;
+    }
+    .card p { margin: 6px 0 0; color: var(--muted); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+      margin-top: 12px;
+    }
+    th, td {
+      border-bottom: 1px solid #e2e8f0;
+      padding: 10px;
+      text-align: left;
+      vertical-align: top;
+      font-size: 13px;
+    }
+    th { background: #f8fafc; }
+    tr:last-child td { border-bottom: 0; }
+    a { color: var(--accent); text-decoration: none; font-weight: 700; }
+    a:hover { text-decoration: underline; }
+    code {
+      background: #eef2ff;
+      padding: 2px 5px;
+      border-radius: 5px;
+      overflow-wrap: anywhere;
+    }
+    .shot-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 14px;
+      margin-top: 14px;
+    }
+    figure {
+      margin: 0;
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    figure img {
+      display: block;
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      background: #fff;
+      border-bottom: 1px solid var(--line);
+    }
+    figcaption {
+      padding: 10px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .claim {
+      background: #eef6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 14px;
+      margin-top: 12px;
+    }
+    .claim pre {
+      margin: 0;
+      white-space: pre-wrap;
+      overflow-wrap: anywhere;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <p><span class="badge">V11 scoped final accepted</span></p>
+      <h1>Agent Desktop Pet V11 最终验收汇总</h1>
+      <p>本页面汇总 V11 Living Work-Cat Interaction Experience 的最终验收结果、核心能力、证据入口和禁止声明边界。它是阅读入口，不替代原始 smoke / final report。</p>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h3>当前阶段</h3>
+        <p>V11 已完成 scoped final acceptance。</p>
+      </article>
+      <article class="card">
+        <h3>用户可体验</h3>
+        <p>生活化 idle、鼠标交互反馈、8 状态情绪映射、首启活猫、Codex 工作猫路径。</p>
+      </article>
+      <article class="card">
+        <h3>最终门禁</h3>
+        <p>V11.7 evidence gate、回归、安全扫描、claim scan、PRD/spec review 已通过。</p>
+      </article>
+      <article class="card">
+        <h3>仍不声明</h3>
+        <p>不声明 Petdex parity、3D ready、provider verified、production release、Windows/cross-platform。</p>
+      </article>
+    </section>
+
+    <h2>当前完成效果截图</h2>
+    <p>下面是已生成的真实浏览器截图证据，来自 V11 运行态捕获页面和首启捕获页面。它们展示的是当前代码生成的 living work-cat 动作效果，而不是单纯的文字索引。</p>
+    <div class="shot-grid">
+      <figure>
+        <img src="screenshots/v11_5-runtime-capture-page-2026-06-07.png" alt="V11.5 runtime capture showing living cat actions">
+        <figcaption>V11.5 运行态捕获：展示 living idle、dragging、running，以及 8 个核心状态在 1x / 0.75x 下的可见效果。</figcaption>
+      </figure>
+      <figure>
+        <img src="screenshots/v11_5-contact-sheet-page-2026-06-07.png" alt="V11.5 contact sheet showing all living cat frames">
+        <figcaption>V11.5 contact sheet：展示 living-work-cat-v1 多帧动作资产覆盖。</figcaption>
+      </figure>
+      <figure>
+        <img src="screenshots/v11_6-first-run-capture-page-2026-06-07.png" alt="V11.6 first-run delight capture">
+        <figcaption>V11.6 首启体验捕获：展示首次打开时的活猫、状态 demo 和工作猫路径。</figcaption>
+      </figure>
+    </div>
+
+    <div class="card" style="margin-top:14px">
+      <h3>真实桌面截屏复核说明</h3>
+      <p>本轮也尝试了真实 macOS 桌面全屏截图与宠物位置区域截图，文件已保存到 <code>docs/V11.x/evidence/screenshots/</code>。当前截屏没有捕获到浮层宠物窗口，因此这些桌面截图不作为 V11 通过依据；本页面使用运行态捕获和首启捕获截图展示当前已完成的可视效果。</p>
+    </div>
+
+    <h2>允许声明</h2>
+    <div class="claim">
+      <pre>V11 living work-cat interaction experience passed for tested local desktop scenarios.</pre>
+    </div>
+
+    <h2>分阶段验收证据</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>阶段</th>
+          <th>结果</th>
+          <th>核心证明</th>
+          <th>证据文件</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>V11.1 Living Idle</td>
+          <td><span class="badge">passed</span></td>
+          <td>3 分钟多样 idle、阻塞优先级、pointer-near wake、zero PetEvent。</td>
+          <td><a href="v11_1-living-idle-smoke-2026-06-05.md">smoke evidence</a></td>
+        </tr>
+        <tr>
+          <td>V11.2 Pointer Interaction</td>
+          <td><span class="badge">passed</span></td>
+          <td>靠近、离开、点击、双击、拖拽、放下反馈；不写 Agent 状态。</td>
+          <td><a href="v11_2-pointer-interaction-smoke-2026-06-07.md">smoke</a> / <a href="v11_2-pointer-interaction-capture-2026-06-07.html">capture</a></td>
+        </tr>
+        <tr>
+          <td>V11.3 Emotion Layer</td>
+          <td><span class="badge">passed</span></td>
+          <td>8 个核心状态映射到不同情绪表达，renderer input 仅安全字段。</td>
+          <td><a href="v11_3-emotion-layer-smoke-2026-06-07.md">smoke evidence</a></td>
+        </tr>
+        <tr>
+          <td>V11.4 Action Composer</td>
+          <td><span class="badge">passed</span></td>
+          <td>优先级、瞬态 success、防 flicker、rapid-event 最终状态。</td>
+          <td><a href="v11_4-action-composer-smoke-2026-06-07.md">smoke evidence</a></td>
+        </tr>
+        <tr>
+          <td>V11.5 Flagship Pack</td>
+          <td><span class="badge">passed</span></td>
+          <td><code>living-work-cat-v1</code>、contact sheet、runtime capture、side-by-side 视觉证据。</td>
+          <td><a href="v11_5-flagship-living-cat-pack-smoke-2026-06-07.md">smoke</a> / <a href="v11_5-flagship-living-cat-contact-sheet-2026-06-07.html">contact</a> / <a href="v11_5-flagship-living-cat-runtime-capture-2026-06-07.html">runtime</a> / <a href="v11_5-flagship-side-by-side-2026-06-07.html">side-by-side</a></td>
+        </tr>
+        <tr>
+          <td>V11.6 First-Run Delight</td>
+          <td><span class="badge">passed</span></td>
+          <td>首启活猫、本地 demo、Codex 工作猫路径、already-open unsupported 边界。</td>
+          <td><a href="v11_6-first-run-delight-smoke-2026-06-07.md">smoke</a> / <a href="v11_6-first-run-delight-capture-2026-06-07.html">capture</a></td>
+        </tr>
+        <tr>
+          <td>V11.7 Final Gate</td>
+          <td><span class="badge">passed</span></td>
+          <td>证据链、回归、安全扫描、claim scan、PRD/spec review、drawio sync。</td>
+          <td><a href="v11_7-interaction-qa-gate-smoke-2026-06-07.md">gate smoke</a> / <a href="../v11_7-final-acceptance-report.md">final report</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Drawio 审计截图</h2>
+    <div class="shot-grid">
+      <figure>
+        <img src="../v11_drawio_cn_page_1_project_status_2026-06-07.png" alt="V11 项目状态">
+        <figcaption>项目状态：V11 scoped final accepted。</figcaption>
+      </figure>
+      <figure>
+        <img src="../v11_drawio_cn_page_2_architecture_diff_2026-06-07.png" alt="架构差异">
+        <figcaption>目标架构与当前架构差异。</figcaption>
+      </figure>
+      <figure>
+        <img src="../v11_drawio_cn_page_3_remaining_plan_2026-06-07.png" alt="开发与验收计划">
+        <figcaption>V11 开发与验收计划。</figcaption>
+      </figure>
+      <figure>
+        <img src="../v11_drawio_cn_page_4_acceptance_gate_2026-06-07.png" alt="验收门槛">
+        <figcaption>验收门槛与出门条件。</figcaption>
+      </figure>
+    </div>
+
+    <h2>最终回归</h2>
+    <table>
+      <thead>
+        <tr><th>检查项</th><th>结果</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><code>pnpm --filter desktop check</code></td><td><span class="badge">passed</span></td></tr>
+        <tr><td><code>pnpm --filter desktop test</code></td><td><span class="badge">passed</span></td></tr>
+        <tr><td><code>pnpm --filter @agent-desktop-pet/petctl test</code></td><td><span class="badge">passed</span></td></tr>
+        <tr><td><code>cargo check --manifest-path apps/desktop/src-tauri/Cargo.toml</code></td><td><span class="badge">passed</span></td></tr>
+        <tr><td><code>node scripts/v3_1_runtime_smoke.mjs</code></td><td><span class="badge">passed</span></td></tr>
+        <tr><td><code>node scripts/v4_4_managed_session_smoke.mjs</code></td><td><span class="badge">passed</span></td></tr>
+        <tr><td><code>node scripts/v10_13_premium_cat_library_smoke.mjs</code></td><td><span class="badge">passed</span></td></tr>
+        <tr><td><code>node scripts/v10_14_first_run_wizard_smoke.mjs</code></td><td><span class="badge">passed</span></td></tr>
+        <tr><td><code>node scripts/v10_15_built_in_gallery_ux_smoke.mjs</code></td><td><span class="badge">passed</span></td></tr>
+        <tr><td><code>node scripts/v10_16_benchmark_surpass_gate_smoke.mjs</code></td><td><span class="badge">passed</span></td></tr>
+        <tr><td><code>node scripts/v11_1_living_idle_smoke.mjs</code> ... <code>v11_7_interaction_qa_gate_smoke.mjs</code></td><td><span class="badge">passed</span></td></tr>
+      </tbody>
+    </table>
+
+    <h2>禁止声明边界</h2>
+    <div class="claim">
+      <pre>Petdex parity achieved
+3D ready
+automatic photo-to-3D ready
+provider integration verified
+asset marketplace ready
+remote asset loading ready
+production signed release ready
+cross-platform ready
+Windows ready
+all Codex workflows verified
+OS-level Codex window binding ready
+interactive Codex TUI monitoring ready
+per-instance queue ready</pre>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,15 @@
+node_modules/
+.pnpm-store/
+dist/
+target/
+.DS_Store
+**/.DS_Store
+.*.bkp
+**/.*.bkp
+.env
+.env.local
+*.env.local
+
+apps/*/node_modules/
+apps/*/dist/
+apps/*/src-tauri/target/

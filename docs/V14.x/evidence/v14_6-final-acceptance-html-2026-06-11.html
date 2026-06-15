@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <title>V14 最终验收汇报</title>
+  <style>
+    body{margin:0;background:#f6f8fb;color:#172033;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+    main{max-width:1180px;margin:28px auto;padding:0 20px}
+    .hero{background:#111827;color:white;border-radius:14px;padding:24px}
+    .badge{display:inline-block;border-radius:999px;padding:4px 10px;background:#b45309;font-weight:800}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:16px;margin:18px 0}
+    .card{background:white;border:1px solid #d8dee8;border-radius:12px;padding:14px}
+    img{max-width:100%;border-radius:10px;border:1px solid #cfd8e3;background:#eef2f7}
+    table{width:100%;border-collapse:collapse;background:white;border:1px solid #d8dee8;border-radius:10px;overflow:hidden}
+    th,td{border-bottom:1px solid #e5eaf2;padding:9px;text-align:left;vertical-align:top;font-size:13px}
+    th{background:#f8fafc}
+    code,pre{overflow-wrap:anywhere}
+  </style>
+</head>
+<body>
+<main>
+  <section class="hero">
+    <p><span class="badge">V14.6 failed</span></p>
+    <h1>高质量动画宠物图库与稳定资产体验验收</h1>
+    <p>本页嵌入真实桌面截图、宠物区域截图、V14 图库/动画证据摘要。V14 是本地 premium animated pet gallery scoped 验收，不声明 Petdex parity 或 3D ready。</p>
+  </section>
+  <section class="grid">
+    <article class="card"><h2>真实桌面截图</h2><p><code>docs/V12.x/evidence/screenshots/v12_3-real-desktop-2026-06-11.png</code></p><p>missing</p></article>
+<article class="card"><h2>宠物区域截图</h2><p><code>docs/V12.x/evidence/screenshots/v12_3-real-pet-region-2026-06-11.png</code></p><p>missing</p></article>
+<article class="card"><h2>V14 截图汇报</h2><p><code>docs/V14.x/evidence/v14_6-real-desktop-screenshot-2026-06-11.png</code></p><p>missing</p></article>
+<article class="card"><h2>V14 设置/图库截图</h2><p><code>docs/V14.x/evidence/v14_6-settings-window-screenshot-2026-06-11.png</code></p><p>missing</p></article>
+  </section>
+  <section class="card">
+    <h2>核心结果</h2>
+    <table><thead><tr><th>能力</th><th>结果</th></tr></thead><tbody>
+      <tr><td>旗舰动画猫包</td><td>8 core actions + living actions，loop closure / nonblank / controlled SVG checks passed</td></tr>
+      <tr><td>动画稳定性 linter</td><td>loop-open / transparent / off-canvas / unsafe metadata fixtures rejected</td></tr>
+      <tr><td>宠物图库</td><td>12 curated local packs，支持筛选、收藏、预览、安全元数据</td></tr>
+      <tr><td>预览/切换</td><td>isolated preview，zero PetEvent，target-only apply，restore default</td></tr>
+      <tr><td>桌面可见性回归</td><td>V12.7 passed with real desktop screenshots</td></tr>
+      <tr><td>性能基线</td><td>ps_unavailable</td></tr>
+    </tbody></table>
+  </section>
+  <section class="card">
+    <h2>允许声明</h2>
+    <pre>V14 local premium animated pet gallery, stable 2D animation playback, favorites, preview, and one-click switching experience passed for tested local macOS scenarios.</pre>
+    <h2>仍禁止声明</h2>
+    <pre>Petdex parity achieved
+Petdex ecosystem parity achieved
+3D ready
+automatic photo-to-3D ready
+provider integration verified
+remote asset loading ready
+asset marketplace ready
+production signed release ready
+notarized release ready
+auto update ready
+cross-platform ready
+Windows ready
+OS-level Codex window binding ready
+all Codex workflows verified
+MCP ready
+Third-party agent integration verified
+Claude Code integration verified</pre>
+  </section>
+</main>
+</body>
+</html>

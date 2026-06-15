@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>V10 验收成果汇报 - Agent Desktop Pet</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f5f7fb;
+      --panel: #ffffff;
+      --ink: #142033;
+      --muted: #5e6b7d;
+      --line: #d8e0ec;
+      --green: #15803d;
+      --blue: #2563eb;
+      --orange: #c2410c;
+      --red: #b91c1c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      line-height: 1.55;
+    }
+    header {
+      padding: 36px 44px 22px;
+      background: #ffffff;
+      border-bottom: 1px solid var(--line);
+    }
+    h1 {
+      margin: 0 0 10px;
+      font-size: 32px;
+      letter-spacing: 0;
+    }
+    h2 {
+      margin: 0 0 16px;
+      font-size: 22px;
+    }
+    h3 {
+      margin: 0 0 8px;
+      font-size: 17px;
+    }
+    p { margin: 0 0 10px; }
+    main {
+      padding: 28px 44px 48px;
+      display: grid;
+      gap: 22px;
+    }
+    .summary {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 18px;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+    }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: #dcfce7;
+      color: var(--green);
+      font-weight: 700;
+      font-size: 14px;
+    }
+    .claim {
+      padding: 14px 16px;
+      background: #eef6ff;
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      color: #1d4ed8;
+      font-weight: 700;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .checks {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+    }
+    .check {
+      padding: 12px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfdff;
+    }
+    .check strong { display: block; color: var(--green); margin-bottom: 4px; }
+    figure {
+      margin: 0;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      overflow: hidden;
+      background: #fff;
+    }
+    figure img {
+      width: 100%;
+      display: block;
+      background: #f8fafc;
+    }
+    figcaption {
+      padding: 12px 14px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      font-size: 13px;
+    }
+    .evidence-list {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px 18px;
+      margin: 0;
+      padding-left: 18px;
+    }
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+      font-size: 0.92em;
+    }
+    .warn {
+      color: var(--orange);
+      font-weight: 700;
+    }
+    .forbidden {
+      color: var(--red);
+      font-weight: 700;
+    }
+    @media (max-width: 980px) {
+      header, main { padding-left: 18px; padding-right: 18px; }
+      .summary, .grid, .checks, .evidence-list { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>V10 验收成果汇报</h1>
+    <p>项目：Agent Desktop Pet；日期：2026-06-05；范围：V10 product-grade animated 2D work-cat scoped acceptance。</p>
+    <span class="status">验收结论：Passed</span>
+  </header>
+
+  <main>
+    <section class="summary">
+      <article class="panel">
+        <h2>最终允许声明</h2>
+        <p class="claim">V10 product-grade animated 2D work-cat experience passed for tested local bundled work-cat-v1 scenarios.</p>
+        <p>这代表本地内置 <code>work-cat-v1</code> 的 2D 动画工作猫体验已经通过 scoped 验收，包括动作包、运行态动画、微交互、Manager 预览和最终回归。</p>
+      </article>
+      <article class="panel">
+        <h2>仍然不声明</h2>
+        <p><span class="forbidden">不声明</span> Petdex parity、3D ready、automatic photo-to-3D ready、provider integration verified、production signed release ready、cross-platform ready、Windows ready。</p>
+        <p>V10 的结论严格限定在本地 bundled 2D animated work-cat 路径。</p>
+      </article>
+    </section>
+
+    <section class="panel">
+      <h2>本轮自动验收结果</h2>
+      <div class="checks">
+        <div class="check"><strong>Passed</strong><span><code>pnpm --filter desktop check</code></span></div>
+        <div class="check"><strong>Passed</strong><span><code>pnpm --filter desktop test</code>，99 tests</span></div>
+        <div class="check"><strong>Passed</strong><span><code>node scripts/v10_7_work_cat_v1_visual_smoke.mjs</code></span></div>
+        <div class="check"><strong>Passed</strong><span><code>node scripts/v10_9_manager_preview_activation_smoke.mjs</code></span></div>
+        <div class="check"><strong>Passed</strong><span>Desktop health API returned ok</span></div>
+        <div class="check"><strong>Passed</strong><span>Desktop screenshot captured with visible pet</span></div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <figure>
+        <img src="v10_desktop_runtime_running_screenshot_2026-06-05.png" alt="V10 desktop runtime screenshot" />
+        <figcaption>真实桌面截图：Agent Desktop Pet 已启动，桌面猫可见。截图路径：<code>docs/V10.x/evidence/v10_desktop_runtime_running_screenshot_2026-06-05.png</code></figcaption>
+      </figure>
+      <figure>
+        <img src="v10_9-manager-preview-activation-capture-2026-06-04.png" alt="V10.9 manager preview screenshot" />
+        <figcaption>V10.9 Manager 预览：8 个 core actions 均可见，并显示 coverage、reasonCode、renderer、frameCount、fps、playback。</figcaption>
+      </figure>
+      <figure>
+        <img src="v10_7-work-cat-v1-contact-sheet-2026-06-04.png" alt="V10.7 work cat contact sheet" />
+        <figcaption>V10.7 contact sheet：<code>work-cat-v1</code> 覆盖 idle、thinking、running、success、warning、error、need_input、sleeping。</figcaption>
+      </figure>
+      <figure>
+        <img src="v10_7-work-cat-v1-runtime-playback-2026-06-04.png" alt="V10.7 runtime playback screenshot" />
+        <figcaption>V10.7 runtime playback capture：1x 与 0.75x 可见性证据。</figcaption>
+      </figure>
+    </section>
+
+    <section class="panel">
+      <h2>架构与状态证据</h2>
+      <figure>
+        <img src="v10_drawio_sync_snapshot_2026-06-04-final.png" alt="V10 drawio final architecture snapshot" />
+        <figcaption>Drawio final snapshot：目标架构、当前架构差异、开发及验收计划、里程碑、验收门槛与出门条件已同步。</figcaption>
+      </figure>
+    </section>
+
+    <section class="panel">
+      <h2>证据文件清单</h2>
+      <ul class="evidence-list">
+        <li><code>docs/V10.x/v10_x-product-grade-final-acceptance-report.md</code></li>
+        <li><code>docs/V10.x/v10_x-evidence-index.md</code></li>
+        <li><code>docs/V10.x/evidence/v10_7-work-cat-v1-visual-smoke-2026-06-04.md</code></li>
+        <li><code>docs/V10.x/evidence/v10_8-runtime-micro-interaction-smoke-2026-06-04.md</code></li>
+        <li><code>docs/V10.x/evidence/v10_9-manager-preview-activation-smoke-2026-06-04.md</code></li>
+        <li><code>docs/V10.x/evidence/v10_desktop_runtime_running_screenshot_2026-06-05.png</code></li>
+      </ul>
+    </section>
+
+    <section class="panel">
+      <h2>独立审计意见</h2>
+      <p>本轮复验没有发现 High 级规格漂移或虚假验收风险。V10 的能力边界清楚：它已完成本地 bundled 2D 动画工作猫体验，但没有扩展到 Petdex 完全等价、真实 3D 动画、自动 photo-to-3D、provider 集成或生产签名分发。</p>
+      <p class="warn">下一阶段如果继续提升体验，应另起阶段处理更高质量动画资产、骨骼/Rive/Live2D、真实 animated GLTF 或分发体系，不能把这些倒灌到 V10 claim。</p>
+    </section>
+  </main>
+</body>
+</html>

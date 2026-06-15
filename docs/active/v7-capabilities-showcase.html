@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Agent Desktop Pet - V7 Capabilities Showcase</title>
+    <style>
+      :root {
+        color-scheme: light;
+        --bg: #f6f7f9;
+        --panel: #ffffff;
+        --text: #172033;
+        --muted: #667085;
+        --line: #d9e0ea;
+        --accent: #2563eb;
+        --ok: #087443;
+        --warn: #9a5b00;
+        --bad: #b42318;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        color: var(--text);
+        background: var(--bg);
+        font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      }
+
+      main {
+        width: min(1180px, calc(100vw - 32px));
+        margin: 0 auto;
+        padding: 28px 0 56px;
+      }
+
+      header {
+        margin-bottom: 22px;
+      }
+
+      h1 {
+        margin: 0 0 8px;
+        font-size: 32px;
+        line-height: 1.15;
+      }
+
+      h2 {
+        margin: 0 0 14px;
+        font-size: 22px;
+      }
+
+      h3 {
+        margin: 0 0 8px;
+        font-size: 17px;
+      }
+
+      p {
+        margin: 0;
+      }
+
+      .lead {
+        max-width: 900px;
+        color: var(--muted);
+        font-size: 16px;
+      }
+
+      .band {
+        margin-top: 18px;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: var(--panel);
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .grid.two {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .card {
+        padding: 14px;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      .card p,
+      li {
+        color: var(--muted);
+      }
+
+      .tag {
+        display: inline-flex;
+        align-items: center;
+        min-height: 24px;
+        margin: 0 6px 8px 0;
+        padding: 2px 9px;
+        border: 1px solid #bfdbfe;
+        border-radius: 999px;
+        color: #1d4ed8;
+        background: #eff6ff;
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .tag.ok {
+        border-color: #b7e4c7;
+        color: var(--ok);
+        background: #ecfdf3;
+      }
+
+      .tag.warn {
+        border-color: #fedf89;
+        color: var(--warn);
+        background: #fffaeb;
+      }
+
+      .tag.no {
+        border-color: #fecdca;
+        color: var(--bad);
+        background: #fef3f2;
+      }
+
+      ul {
+        margin: 8px 0 0;
+        padding-left: 18px;
+      }
+
+      .evidence {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 14px;
+      }
+
+      figure {
+        margin: 0;
+        overflow: hidden;
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        background: #fff;
+      }
+
+      figure img {
+        display: block;
+        width: 100%;
+        min-height: 220px;
+        object-fit: contain;
+        background: #f8fafc;
+      }
+
+      figcaption {
+        padding: 10px 12px;
+        color: var(--muted);
+        border-top: 1px solid var(--line);
+        font-size: 13px;
+      }
+
+      .matrix {
+        width: 100%;
+        border-collapse: collapse;
+      }
+
+      .matrix th,
+      .matrix td {
+        padding: 10px 12px;
+        border-top: 1px solid var(--line);
+        text-align: left;
+        vertical-align: top;
+      }
+
+      .matrix th {
+        color: #344054;
+        background: #f8fafc;
+        font-size: 13px;
+      }
+
+      .matrix td {
+        color: var(--muted);
+      }
+
+      code {
+        padding: 1px 5px;
+        border-radius: 4px;
+        background: #eef2f7;
+        color: #243b53;
+      }
+
+      a {
+        color: var(--accent);
+        text-decoration: none;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      @media (max-width: 860px) {
+        .grid,
+        .grid.two,
+        .evidence {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Agent Desktop Pet 当前能力总览</h1>
+        <p class="lead">
+          本页汇总截至 V7 scoped Productization Gate 的已验收能力。页面引用本地 evidence 截图和报告，不扩大声明：真实 provider 集成、自动 photo-to-3D、广义 3D ready、生产签名发布仍未就绪。
+        </p>
+      </header>
+
+      <section class="band">
+        <h2>当前结论</h2>
+        <span class="tag ok">V7.0-V7.7 scoped passed</span>
+        <span class="tag ok">本地照片隐私边界</span>
+        <span class="tag ok">本地 traits prompt pack</span>
+        <span class="tag ok">本地导入与运行态映射</span>
+        <span class="tag warn">provider feasibility-only</span>
+        <span class="tag no">非自动 photo-to-3D</span>
+        <span class="tag no">非生产签名发布</span>
+      </section>
+
+      <section class="band">
+        <h2>V7 提供的新能力</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>1. 本地照片隐私边界</h3>
+            <p>用户可选择本地猫照片或只输入 traits。系统只处理安全摘要和用户确认描述，不保存原图、源文件名、EXIF/GPS 或完整路径。</p>
+          </article>
+          <article class="card">
+            <h3>2. Traits 到提示词包</h3>
+            <p>把用户确认的毛色、眼睛、花纹、尾巴、风格等 metadata 转成覆盖 8 个核心动作的本地 prompt pack、manifest 模板和导入清单。</p>
+          </article>
+          <article class="card">
+            <h3>3. 外部生成说明</h3>
+            <p>生成给外部 AI/工具使用的步骤说明、命名规则、license/attribution checklist 和本地导入验证要求；应用默认不上传、不调用 provider。</p>
+          </article>
+          <article class="card">
+            <h3>4. Provider 同意边界</h3>
+            <p>明确 provider 上传/执行/密钥接收默认禁用。当前只通过 feasibility-only 边界，不代表 provider integration verified。</p>
+          </article>
+          <article class="card">
+            <h3>5. Generated Asset Import / GLTF Scan</h3>
+            <p>生成资产必须走本地 manifest import、GLTF/GLB deep scan、外部资源拒绝、未知 required extension 拒绝等验证后才可进入运行态。</p>
+          </article>
+          <article class="card">
+            <h3>6. Per-PetInstance Action Mapping</h3>
+            <p>已验证导入资产可以按 PetInstance 激活，并映射到 idle、thinking、running、success、warning、error、need_input、sleeping 等核心状态。</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="band">
+        <h2>当前项目可用功能</h2>
+        <div class="grid two">
+          <article class="card">
+            <h3>桌宠基础</h3>
+            <ul>
+              <li>Tauri 桌面宠物窗口、透明窗口、拖拽、托盘与设置页。</li>
+              <li>多实例猫管理、创建/重命名/切换 profile/移除。</li>
+              <li>状态机：idle、thinking、running、success、warning、error、need_input、sleeping。</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Codex 工作猫</h3>
+            <ul>
+              <li>Wrapper-launched <code>codex exec --json</code> 的可靠状态映射。</li>
+              <li>Managed TUI hooks 路径，需 <code>/hooks</code> review/trust。</li>
+              <li>Terminal.app candidate binding 和 manual route-test 原型；不等于 already-open 自动监听。</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>资产与渲染</h3>
+            <ul>
+              <li>CSS fallback、sprite、GLTF/Three.js prototype renderer。</li>
+              <li>本地 manifest 导入、预览、重命名、删除、激活到指定 PetInstance。</li>
+              <li>GLTF/GLB deep scan 和 renderer payload 安全边界。</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>开发者/集成</h3>
+            <ul>
+              <li>PetEvent / HTTP / Event Bridge / petctl。</li>
+              <li>MCP adapter minimal localhost bridge smoke 和 third-party contract v3 scoped smoke。</li>
+              <li>诊断导出、doctor、release foundation 和 no-false-green 文档证据链。</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="band">
+        <h2>视觉证据</h2>
+        <div class="evidence">
+          <figure>
+            <img src="../V5.x/evidence/v5_15-imported-orange-tabby-visual-fixture-2026-05-30.png" alt="Imported orange tabby visual fixture" />
+            <figcaption>导入的橘猫视觉资产证据。用于支撑 V5.15 / V7.6 的 imported visual baseline。</figcaption>
+          </figure>
+          <figure>
+            <img src="../V5.x/evidence/v5_3-gltf-render-fixture-2026-05-28.png" alt="GLTF render fixture" />
+            <figcaption>GLTF / Three.js prototype 渲染证据。证明本地 GLTF 渲染路径可用，但不等于广义 3D ready。</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="band">
+        <h2>能力矩阵</h2>
+        <table class="matrix">
+          <thead>
+            <tr>
+              <th>领域</th>
+              <th>当前状态</th>
+              <th>边界</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>上传照片生成 3D</td>
+              <td>不支持自动生成；支持本地照片/traits 生成说明和导入流程。</td>
+              <td>不得声明 automatic photo-to-3D ready。</td>
+            </tr>
+            <tr>
+              <td>Provider 生成</td>
+              <td>feasibility-only consent boundary。</td>
+              <td>没有真实 provider smoke，不得声明 provider integration verified。</td>
+            </tr>
+            <tr>
+              <td>3D 渲染</td>
+              <td>有本地 GLTF prototype 和 scoped evidence。</td>
+              <td>不得声明广义 3D ready、Rive ready、Live2D ready。</td>
+            </tr>
+            <tr>
+              <td>Codex 状态映射</td>
+              <td>Wrapper-managed exec JSONL 和 managed TUI hooks scoped passed。</td>
+              <td>already-open Codex 自动监听、OS-level binding ready、all workflows verified 仍不支持。</td>
+            </tr>
+            <tr>
+              <td>生产分发</td>
+              <td>本地 macOS developer workflow scoped accepted。</td>
+              <td>未达到 production signed release、Windows、cross-platform ready。</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="band">
+        <h2>审计入口</h2>
+        <ul>
+          <li><a href="../V7.7/v7_7-final-acceptance-report.md">V7.7 final acceptance report</a></li>
+          <li><a href="../V7.7/evidence/v7_7-productization-gate-smoke-2026-05-31.md">V7.7 productization gate smoke evidence</a></li>
+          <li><a href="../V7.7/evidence/v7_7-closure-hygiene-audit-2026-05-31.md">V7.7 closure hygiene audit</a></li>
+          <li><a href="../V7.x/v7_x-claim-matrix.md">V7.x claim matrix</a></li>
+          <li><a href="./current-vs-target-gap.md">current vs target gap</a></li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>

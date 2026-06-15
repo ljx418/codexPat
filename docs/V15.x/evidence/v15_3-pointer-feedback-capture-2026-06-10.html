@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>V15.3 Pointer Feedback Capture</title>
+  <style>
+    body { margin: 0; font-family: Inter, system-ui, sans-serif; background: #f8fafc; color: #172033; }
+    main { max-width: 1180px; margin: 0 auto; padding: 32px; }
+    h1 { margin: 0 0 8px; font-size: 30px; }
+    .summary { margin: 0 0 24px; color: #475569; }
+    .grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 14px; }
+    .phase-card { border: 1px solid #dbe3ef; border-radius: 12px; background: #fff; min-height: 230px; padding: 16px; display: grid; place-items: center; text-align: center; }
+    .phase-card h2 { margin: 10px 0 4px; font-size: 18px; }
+    .phase-card p { margin: 0; color: #2563eb; }
+    .phase-card small { color: #64748b; line-height: 1.4; }
+    .pet-figure { width: 112px; height: 112px; border-radius: 34px; background: linear-gradient(160deg, #fed7aa, #fb923c); display: grid; place-items: center; color: #111827; box-shadow: 0 18px 30px rgba(251, 146, 60, 0.22); transform-origin: 50% 92%; }
+    .ears { font-size: 14px; transform: translateY(-10px); }
+    .face { font-size: 24px; }
+    .body { width: 54px; height: 16px; border-radius: 999px; background: rgba(255,255,255,0.42); }
+    [data-action="pointer_look"] .pet-figure { animation: near 0.8s ease-in-out infinite; }
+    [data-action="pointer_ear_twitch"] .pet-figure { animation: hover 1.1s ease-in-out infinite; }
+    [data-action="click_paw"] .pet-figure { animation: click 0.65s ease-out infinite; }
+    [data-action="double_click_jump"] .pet-figure { animation: double 0.9s ease-in-out infinite; }
+    [data-action="error / need_input"] .pet-figure { background: linear-gradient(160deg, #fecaca, #ef4444); animation: urgent 1s ease-in-out infinite; }
+    @keyframes near { 0%,100% { transform: translateY(0) scale(1); } 45% { transform: translateY(-4px) scale(1.03); } }
+    @keyframes hover { 0%,100% { transform: translateY(0) rotate(0deg); } 24% { transform: translateY(-2px) rotate(-1.5deg); } 52% { transform: translateY(-3px) rotate(1.5deg); } }
+    @keyframes click { 0%,100% { transform: translateY(0) scale(1); } 45% { transform: translateY(-8px) scale(1.08); } }
+    @keyframes double { 0%,100% { transform: translateY(0) rotate(0deg); } 30% { transform: translateY(-10px) rotate(-5deg); } 65% { transform: translateY(-5px) rotate(6deg); } }
+    @keyframes urgent { 0%,100% { transform: scale(1); filter: saturate(1); } 50% { transform: scale(1.03); filter: saturate(1.2); } }
+    .checks { margin-top: 24px; display: grid; gap: 8px; }
+    .checks li { background: #eff6ff; border: 1px solid #bfdbfe; border-radius: 8px; padding: 10px 12px; }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>V15.3 Pointer Feedback Capture</h1>
+    <p class="summary">Deterministic local capture for pointer-near, hover, click, double-click, and urgent-state blocking. This is evidence for V15.3 only and does not claim final V15 passed.</p>
+    <section class="grid">
+    <article class="phase-card" data-action="pointer_look">
+      <div class="pet-figure"><span class="ears">▲ ▲</span><span class="face">●ω●</span><span class="body"></span></div>
+      <h2>Pointer near</h2>
+      <p><code>pointer_look</code></p>
+      <small>pet turns attention toward nearby pointer</small>
+    </article>
+  
+    <article class="phase-card" data-action="pointer_ear_twitch">
+      <div class="pet-figure"><span class="ears">▲ ▲</span><span class="face">●ω●</span><span class="body"></span></div>
+      <h2>Hover dwell</h2>
+      <p><code>pointer_ear_twitch</code></p>
+      <small>subtle ear/tail attention after dwell</small>
+    </article>
+  
+    <article class="phase-card" data-action="click_paw">
+      <div class="pet-figure"><span class="ears">▲ ▲</span><span class="face">●ω●</span><span class="body"></span></div>
+      <h2>Click</h2>
+      <p><code>click_paw</code></p>
+      <small>short single-click paw feedback</small>
+    </article>
+  
+    <article class="phase-card" data-action="double_click_jump">
+      <div class="pet-figure"><span class="ears">▲ ▲</span><span class="face">●ω●</span><span class="body"></span></div>
+      <h2>Double click</h2>
+      <p><code>double_click_jump</code></p>
+      <small>stronger double-click reaction, not two click loops</small>
+    </article>
+  
+    <article class="phase-card" data-action="error / need_input">
+      <div class="pet-figure"><span class="ears">▲ ▲</span><span class="face">●ω●</span><span class="body"></span></div>
+      <h2>Urgent block</h2>
+      <p><code>error / need_input</code></p>
+      <small>urgent states keep priority and block pointer override</small>
+    </article>
+  </section>
+    <ul class="checks">
+      <li>Double-click cancels pending single-click playback before triggering the stronger double-click action.</li>
+      <li>Pointer/click feedback emits zero PetEvent and writes zero CatStateMachine updates.</li>
+      <li>Renderer input snapshot contains only safe action, renderer, pack, playback, scale, and visibility fields.</li>
+    </ul>
+  </main>
+</body>
+</html>

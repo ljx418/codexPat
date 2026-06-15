@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>V5.15 Imported Orange Tabby Visual Fixture</title>
+    <style>
+      :root {
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #172033;
+        background: #f8fafc;
+      }
+      body {
+        margin: 0;
+        padding: 24px;
+      }
+      h1 {
+        margin: 0 0 8px;
+        font-size: 28px;
+      }
+      p {
+        margin: 0 0 18px;
+        color: #475569;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+        max-width: 1120px;
+      }
+      .card {
+        min-height: 230px;
+        border: 1px solid #dbe2ea;
+        border-radius: 8px;
+        padding: 14px;
+        background: #ffffff;
+      }
+      .card h2 {
+        margin: 0 0 10px;
+        font-size: 15px;
+      }
+      .frame {
+        display: grid;
+        place-items: center;
+        width: 176px;
+        height: 176px;
+        margin: 0 auto;
+        border-radius: 22px;
+        background: radial-gradient(circle at 50% 44%, rgba(255, 250, 238, 0.95), rgba(255, 226, 180, 0.52));
+      }
+      .scale-075 .frame {
+        width: 132px;
+        height: 132px;
+      }
+      img {
+        display: block;
+        width: 156px;
+        height: 156px;
+        object-fit: contain;
+      }
+      .scale-075 img {
+        width: 117px;
+        height: 117px;
+      }
+      .label {
+        margin-top: 8px;
+        text-align: center;
+        color: #334155;
+        font-size: 13px;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>V5.15 Imported Orange Tabby Visual Fixture</h1>
+    <p>Local imported sprite asset fixture. No remote assets, no provider output, no raw prompts, no local absolute paths.</p>
+    <section class="grid" aria-label="Imported orange tabby core actions at 1x">
+      <article class="card"><h2>Idle</h2><div class="frame"><img src="../../../fixtures/manual/v5_12/orange_tabby_actions/idle.png" alt="" /></div><div class="label">1x</div></article>
+      <article class="card"><h2>Thinking</h2><div class="frame"><img src="../../../fixtures/manual/v5_12/orange_tabby_actions/thinking.png" alt="" /></div><div class="label">1x</div></article>
+      <article class="card"><h2>Running</h2><div class="frame"><img src="../../../fixtures/manual/v5_12/orange_tabby_actions/running.png" alt="" /></div><div class="label">1x</div></article>
+      <article class="card"><h2>Success</h2><div class="frame"><img src="../../../fixtures/manual/v5_12/orange_tabby_actions/success.png" alt="" /></div><div class="label">1x</div></article>
+      <article class="card"><h2>Warning</h2><div class="frame"><img src="../../../fixtures/manual/v5_12/orange_tabby_actions/warning.png" alt="" /></div><div class="label">1x</div></article>
+      <article class="card"><h2>Error</h2><div class="frame"><img src="../../../fixtures/manual/v5_12/orange_tabby_actions/error.png" alt="" /></div><div class="label">1x</div></article>
+      <article class="card"><h2>Need Input</h2><div class="frame"><img src="../../../fixtures/manual/v5_12/orange_tabby_actions/need_input.png" alt="" /></div><div class="label">1x</div></article>
+      <article class="card"><h2>Sleeping</h2><div class="frame"><img src="../../../fixtures/manual/v5_12/orange_tabby_actions/sleeping.png" alt="" /></div><div class="label">1x</div></article>
+    </section>
+    <h1 style="margin-top: 28px;">0.75x Scale Check</h1>
+    <section class="grid scale-075" aria-label="Imported orange tabby distinguishability at 0.75x">
+      <article class="card"><h2>Warning</h2><div class="frame"><img src="../../../fixtures/manual/v5_12/orange_tabby_actions/warning.png" alt="" /></div><div class="label">0.75x</div></article>
+      <article class="card"><h2>Error</h2><div class="frame"><img src="../../../fixtures/manual/v5_12/orange_tabby_actions/error.png" alt="" /></div><div class="label">0.75x</div></article>
+      <article class="card"><h2>Need Input</h2><div class="frame"><img src="../../../fixtures/manual/v5_12/orange_tabby_actions/need_input.png" alt="" /></div><div class="label">0.75x</div></article>
+    </section>
+  </body>
+</html>

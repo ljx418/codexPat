@@ -1,0 +1,150 @@
+{
+  "schemaVersion": "5.8",
+  "packId": "v8-11-animated-orange-tabby",
+  "displayName": "V8.11 Animated Orange Tabby",
+  "rendererKind": "sprite",
+  "license": {
+    "type": "project-fixture",
+    "attribution": "Agent Desktop Pet V8.11 animated sprite fixture"
+  },
+  "assets": {
+    "idle": {
+      "assetId": "idle",
+      "kind": "sprite",
+      "fileName": "idle-000.png",
+      "frameFiles": [
+        "idle-000.png",
+        "idle-001.png",
+        "idle-002.png",
+        "idle-003.png"
+      ],
+      "fps": 8
+    },
+    "thinking": {
+      "assetId": "thinking",
+      "kind": "sprite",
+      "fileName": "thinking-000.png",
+      "frameFiles": [
+        "thinking-000.png",
+        "thinking-001.png",
+        "thinking-002.png",
+        "thinking-003.png"
+      ],
+      "fps": 8
+    },
+    "running": {
+      "assetId": "running",
+      "kind": "sprite",
+      "fileName": "running-000.png",
+      "frameFiles": [
+        "running-000.png",
+        "running-001.png",
+        "running-002.png",
+        "running-003.png"
+      ],
+      "fps": 8
+    },
+    "success": {
+      "assetId": "success",
+      "kind": "sprite",
+      "fileName": "success-000.png",
+      "frameFiles": [
+        "success-000.png",
+        "success-001.png",
+        "success-002.png",
+        "success-003.png"
+      ],
+      "fps": 8
+    },
+    "warning": {
+      "assetId": "warning",
+      "kind": "sprite",
+      "fileName": "warning-000.png",
+      "frameFiles": [
+        "warning-000.png",
+        "warning-001.png",
+        "warning-002.png",
+        "warning-003.png"
+      ],
+      "fps": 8
+    },
+    "error": {
+      "assetId": "error",
+      "kind": "sprite",
+      "fileName": "error-000.png",
+      "frameFiles": [
+        "error-000.png",
+        "error-001.png",
+        "error-002.png",
+        "error-003.png"
+      ],
+      "fps": 8
+    },
+    "need_input": {
+      "assetId": "need_input",
+      "kind": "sprite",
+      "fileName": "need_input-000.png",
+      "frameFiles": [
+        "need_input-000.png",
+        "need_input-001.png",
+        "need_input-002.png",
+        "need_input-003.png"
+      ],
+      "fps": 8
+    },
+    "sleeping": {
+      "assetId": "sleeping",
+      "kind": "sprite",
+      "fileName": "sleeping-000.png",
+      "frameFiles": [
+        "sleeping-000.png",
+        "sleeping-001.png",
+        "sleeping-002.png",
+        "sleeping-003.png"
+      ],
+      "fps": 8
+    }
+  },
+  "actions": {
+    "idle": {
+      "assetId": "idle",
+      "loop": true,
+      "priority": "base"
+    },
+    "thinking": {
+      "assetId": "thinking",
+      "loop": true,
+      "priority": "transient"
+    },
+    "running": {
+      "assetId": "running",
+      "loop": true,
+      "priority": "transient"
+    },
+    "success": {
+      "assetId": "success",
+      "loop": false,
+      "priority": "transient"
+    },
+    "warning": {
+      "assetId": "warning",
+      "loop": false,
+      "priority": "transient"
+    },
+    "error": {
+      "assetId": "error",
+      "loop": false,
+      "priority": "urgent"
+    },
+    "need_input": {
+      "assetId": "need_input",
+      "loop": false,
+      "priority": "urgent"
+    },
+    "sleeping": {
+      "assetId": "sleeping",
+      "loop": true,
+      "priority": "base"
+    }
+  }
+}

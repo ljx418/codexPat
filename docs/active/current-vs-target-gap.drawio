@@ -1,0 +1,37 @@
+<mxfile host="app.diagrams.net" modified="2026-06-15T00:00:00.000Z" agent="Codex" version="24.7.17" type="device">
+  <diagram id="v23-v28-photo-to-2d" name="V23-V28 照片到动画2D产品化">
+    <mxGraphModel dx="1800" dy="1200" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1800" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="V23-V28 照片到 2D 多动作桌宠：从拒绝坏资产到产品化生成闭环" style="rounded=1;whiteSpace=wrap;html=1;fontSize=28;fontStyle=1;fillColor=#1f2937;fontColor=#ffffff;strokeColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="1720" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="current" value="当前架构 / 能力&#xa;&#xa;V22 已完成：&#xa;• 候选包质量门禁&#xa;• 技术 QA / 动作 QA&#xa;• 丑资产人工拒绝&#xa;• approved-only 应用&#xa;• target-only apply / rollback&#xa;&#xa;仍缺：&#xa;• 照片是否适合生成的前置判断&#xa;• 稳定猫特征抽取&#xa;• 多路线自动编排&#xa;• 同猫/动作质量自动评分&#xa;• 普通用户一键向导" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;spacing=16;fillColor=#fff7ed;strokeColor=#f97316;" vertex="1" parent="1">
+          <mxGeometry x="50" y="140" width="390" height="430" as="geometry"/>
+        </mxCell>
+        <mxCell id="target" value="目标架构&#xa;&#xa;Photo Intake UI&#xa;↓&#xa;PhotoSuitabilityGate&#xa;↓&#xa;CatTraitExtractor&#xa;↓&#xa;GenerationRouteOrchestrator&#xa;↓&#xa;Candidate Asset Store&#xa;↓&#xa;SameCat + Motion QA&#xa;↓&#xa;V22 Quality Review Gate&#xa;↓&#xa;8 动作预览&#xa;↓&#xa;目标应用 / 回滚" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;align=center;verticalAlign=middle;spacing=16;fillColor=#ecfeff;strokeColor=#0891b2;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="140" width="420" height="520" as="geometry"/>
+        </mxCell>
+        <mxCell id="routes" value="多路线生成&#xa;&#xa;Route A：provider 关键姿势 → 本地补帧&#xa;Route B：provider 动作表&#xa;Route C：统一身份图 → 本地 2D rig&#xa;Route D：image-to-video → 抽帧&#xa;Route E：保底风格化本地包&#xa;&#xa;原则：不押注单一路线；失败必须有 reasonCode；不能伪造 provider passed。" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;spacing=16;fillColor=#eef2ff;strokeColor=#6366f1;" vertex="1" parent="1">
+          <mxGeometry x="960" y="140" width="390" height="360" as="geometry"/>
+        </mxCell>
+        <mxCell id="accept" value="验收门槛&#xa;&#xa;V23：坏照片前置拒绝&#xa;V24：路线编排有真实候选或诚实 blocked&#xa;V25：同猫/动作/闪帧/闭环 QA&#xa;V26：自动打包 + 8动作预览 + 应用/回滚&#xa;V27：重试预算 + 成本/失败建议&#xa;V28：上传→生成→预览→应用→回滚 HTML 证据&#xa;&#xa;禁止：任意猫自动 ready、provider verified、Petdex parity、3D ready、production release" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;spacing=16;fillColor=#f0fdf4;strokeColor=#22c55e;" vertex="1" parent="1">
+          <mxGeometry x="1390" y="140" width="360" height="500" as="geometry"/>
+        </mxCell>
+        <mxCell id="ux" value="用户最终体验目标&#xa;&#xa;1. 打开设置页&#xa;2. 上传一张猫照片&#xa;3. 系统告诉你这张图适不适合&#xa;4. 自动生成多个候选路线&#xa;5. 只展示 QA 通过的动图预览&#xa;6. 用户确认后应用到目标猫&#xa;7. 不满意一键回滚&#xa;&#xa;用户不需要理解 shell、manifest、provider 原始输出。" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;spacing=16;fillColor=#fdf2f8;strokeColor=#db2777;" vertex="1" parent="1">
+          <mxGeometry x="50" y="720" width="500" height="330" as="geometry"/>
+        </mxCell>
+        <mxCell id="safety" value="安全 / 隐私边界&#xa;&#xa;允许记录：safe photo id、尺寸桶、trait labels、route、reasonCode、safe pack id、截图证据路径。&#xa;&#xa;禁止记录：token、Authorization、raw provider response、raw photo bytes、EXIF/GPS、private filename、full local path、workspace/config path、api-token.json、prompt private text。" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;spacing=16;fillColor=#fef2f2;strokeColor=#ef4444;" vertex="1" parent="1">
+          <mxGeometry x="650" y="720" width="520" height="330" as="geometry"/>
+        </mxCell>
+        <mxCell id="exit" value="出门条件&#xa;&#xa;V28 只能在以下条件满足后 passed：&#xa;• V23-V27 均有 passed/blocked/failed evidence&#xa;• 至少一个候选包 approved&#xa;• V22 门禁仍生效&#xa;• final HTML 嵌入真实预览/截图/接触表&#xa;• 安全扫描通过&#xa;• claim 扫描通过&#xa;&#xa;如所有路线失败：V28 blocked，不能说任意猫自动生成 ready。" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;spacing=16;fillColor=#ffffff;strokeColor=#111827;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1260" y="720" width="490" height="330" as="geometry"/>
+        </mxCell>
+        <mxCell id="a1" edge="1" parent="1" source="current" target="target" style="endArrow=block;html=1;rounded=0;strokeWidth=3;strokeColor=#64748b;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a2" edge="1" parent="1" source="target" target="routes" style="endArrow=block;html=1;rounded=0;strokeWidth=3;strokeColor=#64748b;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a3" edge="1" parent="1" source="routes" target="accept" style="endArrow=block;html=1;rounded=0;strokeWidth=3;strokeColor=#64748b;"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
