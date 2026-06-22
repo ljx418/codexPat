@@ -1,0 +1,628 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>V23-V28 Photo-to-Animated-2D Productization Dashboard</title>
+  <style>
+    body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: #f5f2ec; color: #263342; }
+    header { background: #23394f; color: white; padding: 28px 36px; }
+    main { padding: 24px 36px 42px; display: grid; gap: 18px; }
+    .grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+    .card { background: white; border: 1px solid #ddd6ca; border-radius: 10px; padding: 18px; box-shadow: 0 1px 3px rgba(0,0,0,.06); }
+    .wide { grid-column: 1 / -1; }
+    .status { display: inline-block; padding: 4px 10px; border-radius: 999px; font-size: 12px; font-weight: 800; }
+    .passed { background: #d9f2df; color: #166232; }
+    table { width: 100%; border-collapse: collapse; font-size: 14px; }
+    th, td { text-align: left; border-bottom: 1px solid #eee6d8; padding: 8px; vertical-align: top; }
+    code { background: #f0ede6; padding: 1px 5px; border-radius: 4px; }
+    svg { width: 100%; height: auto; border: 1px solid #e6dfd3; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>V23-V28 照片到 2D 动作宠物产品化闭环</h1>
+    <p>status: passed · date: 2026-06-16 · commit: 9f94bc4</p>
+  </header>
+  <main>
+    <section class="card wide">
+      <h2>用户视角结果</h2>
+      <p>本阶段证明了一条 scoped 本地流程：用户照片会先做适合度和特征检查，多路线生成候选后经过同猫/动作 QA，只有 approved candidate 才能进入 8 动作预览、目标宠物应用和回滚；失败时给出预算、修复和换路线建议。</p>
+      <p>本页不声明任意猫自动生成 ready、不声明 provider integration verified、不声明 Petdex parity、不声明 3D ready。</p>
+    </section>
+    <section class="card wide">
+      <h2>8 动作预览证据</h2>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 652 792" role="img" aria-label="V28 embedded 8 action preview contact sheet">
+    <rect width="652" height="792" fill="#fbfaf7" />
+    <text x="18" y="22" font-size="16" font-weight="800" fill="#263342">V28 8-action preview contact sheet from tested V26 preview model</text>
+
+      <g>
+        <text x="18" y="71" font-size="15" font-weight="700" fill="#263342">idle</text>
+
+        <g transform="translate(112 28)">
+          <rect width="74" height="76" rx="10" fill="#f1efe8" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#f9b24f" />
+          <circle cx="37" cy="28" r="14" fill="#f9b24f" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#f9b24f" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#f9b24f" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#f9b24f" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f1</text>
+        </g>
+        <g transform="translate(198 28)">
+          <rect width="74" height="76" rx="10" fill="#f1efe8" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="42" rx="19" ry="14.5" fill="#f9b24f" />
+          <circle cx="37" cy="20" r="14" fill="#f9b24f" />
+          <path d="M27 10 L31 -3 L36 11 Z" fill="#f9b24f" />
+          <path d="M47 10 L43 -3 L38 11 Z" fill="#f9b24f" />
+          <circle cx="32" cy="19" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="19" r="2.5" fill="#1f2530" />
+          <path d="M53 37 C59 27, 57 10, 44 8" fill="none" stroke="#f9b24f" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f2</text>
+        </g>
+        <g transform="translate(284 28)">
+          <rect width="74" height="76" rx="10" fill="#f1efe8" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="34" rx="20" ry="14" fill="#f9b24f" />
+          <circle cx="37" cy="12" r="14" fill="#f9b24f" />
+          <path d="M27 2 L31 -11 L36 3 Z" fill="#f9b24f" />
+          <path d="M47 2 L43 -11 L38 3 Z" fill="#f9b24f" />
+          <circle cx="32" cy="11" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="11" r="2.5" fill="#1f2530" />
+          <path d="M53 29 C81 19, 79 2, 66 0" fill="none" stroke="#f9b24f" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f3</text>
+        </g>
+        <g transform="translate(370 28)">
+          <rect width="74" height="76" rx="10" fill="#f1efe8" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="42" rx="19" ry="14.5" fill="#f9b24f" />
+          <circle cx="37" cy="20" r="14" fill="#f9b24f" />
+          <path d="M27 10 L31 -3 L36 11 Z" fill="#f9b24f" />
+          <path d="M47 10 L43 -3 L38 11 Z" fill="#f9b24f" />
+          <circle cx="32" cy="19" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="19" r="2.5" fill="#1f2530" />
+          <path d="M53 37 C59 27, 57 10, 44 8" fill="none" stroke="#f9b24f" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f4</text>
+        </g>
+        <g transform="translate(456 28)">
+          <rect width="74" height="76" rx="10" fill="#f1efe8" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#f9b24f" />
+          <circle cx="37" cy="28" r="14" fill="#f9b24f" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#f9b24f" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#f9b24f" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#f9b24f" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f5</text>
+        </g>
+        <g transform="translate(542 28)">
+          <rect width="74" height="76" rx="10" fill="#f1efe8" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#f9b24f" />
+          <circle cx="37" cy="28" r="14" fill="#f9b24f" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#f9b24f" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#f9b24f" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#f9b24f" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f6</text>
+        </g>
+      </g>
+      <g>
+        <text x="18" y="165" font-size="15" font-weight="700" fill="#263342">thinking</text>
+
+        <g transform="translate(112 122)">
+          <rect width="74" height="76" rx="10" fill="#e9f0ff" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#67a0ff" />
+          <circle cx="37" cy="28" r="14" fill="#67a0ff" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#67a0ff" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#67a0ff" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#67a0ff" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f1</text>
+        </g>
+        <g transform="translate(198 122)">
+          <rect width="74" height="76" rx="10" fill="#e9f0ff" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="42" rx="19" ry="14.5" fill="#67a0ff" />
+          <circle cx="37" cy="20" r="14" fill="#67a0ff" />
+          <path d="M27 10 L31 -3 L36 11 Z" fill="#67a0ff" />
+          <path d="M47 10 L43 -3 L38 11 Z" fill="#67a0ff" />
+          <circle cx="32" cy="19" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="19" r="2.5" fill="#1f2530" />
+          <path d="M53 37 C59 27, 57 10, 44 8" fill="none" stroke="#67a0ff" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f2</text>
+        </g>
+        <g transform="translate(284 122)">
+          <rect width="74" height="76" rx="10" fill="#e9f0ff" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="34" rx="20" ry="14" fill="#67a0ff" />
+          <circle cx="37" cy="12" r="14" fill="#67a0ff" />
+          <path d="M27 2 L31 -11 L36 3 Z" fill="#67a0ff" />
+          <path d="M47 2 L43 -11 L38 3 Z" fill="#67a0ff" />
+          <circle cx="32" cy="11" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="11" r="2.5" fill="#1f2530" />
+          <path d="M53 29 C81 19, 79 2, 66 0" fill="none" stroke="#67a0ff" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f3</text>
+        </g>
+        <g transform="translate(370 122)">
+          <rect width="74" height="76" rx="10" fill="#e9f0ff" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="42" rx="19" ry="14.5" fill="#67a0ff" />
+          <circle cx="37" cy="20" r="14" fill="#67a0ff" />
+          <path d="M27 10 L31 -3 L36 11 Z" fill="#67a0ff" />
+          <path d="M47 10 L43 -3 L38 11 Z" fill="#67a0ff" />
+          <circle cx="32" cy="19" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="19" r="2.5" fill="#1f2530" />
+          <path d="M53 37 C59 27, 57 10, 44 8" fill="none" stroke="#67a0ff" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f4</text>
+        </g>
+        <g transform="translate(456 122)">
+          <rect width="74" height="76" rx="10" fill="#e9f0ff" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#67a0ff" />
+          <circle cx="37" cy="28" r="14" fill="#67a0ff" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#67a0ff" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#67a0ff" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#67a0ff" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f5</text>
+        </g>
+        <g transform="translate(542 122)">
+          <rect width="74" height="76" rx="10" fill="#e9f0ff" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#67a0ff" />
+          <circle cx="37" cy="28" r="14" fill="#67a0ff" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#67a0ff" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#67a0ff" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#67a0ff" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f6</text>
+        </g>
+      </g>
+      <g>
+        <text x="18" y="259" font-size="15" font-weight="700" fill="#263342">running</text>
+
+        <g transform="translate(112 216)">
+          <rect width="74" height="76" rx="10" fill="#eef9ee" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#58b86b" />
+          <circle cx="37" cy="28" r="14" fill="#58b86b" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#58b86b" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#58b86b" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#58b86b" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f1</text>
+        </g>
+        <g transform="translate(198 216)">
+          <rect width="74" height="76" rx="10" fill="#eef9ee" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="42" rx="19" ry="14.5" fill="#58b86b" />
+          <circle cx="37" cy="20" r="14" fill="#58b86b" />
+          <path d="M27 10 L31 -3 L36 11 Z" fill="#58b86b" />
+          <path d="M47 10 L43 -3 L38 11 Z" fill="#58b86b" />
+          <circle cx="32" cy="19" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="19" r="2.5" fill="#1f2530" />
+          <path d="M53 37 C59 27, 57 10, 44 8" fill="none" stroke="#58b86b" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f2</text>
+        </g>
+        <g transform="translate(284 216)">
+          <rect width="74" height="76" rx="10" fill="#eef9ee" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="34" rx="20" ry="14" fill="#58b86b" />
+          <circle cx="37" cy="12" r="14" fill="#58b86b" />
+          <path d="M27 2 L31 -11 L36 3 Z" fill="#58b86b" />
+          <path d="M47 2 L43 -11 L38 3 Z" fill="#58b86b" />
+          <circle cx="32" cy="11" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="11" r="2.5" fill="#1f2530" />
+          <path d="M53 29 C81 19, 79 2, 66 0" fill="none" stroke="#58b86b" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f3</text>
+        </g>
+        <g transform="translate(370 216)">
+          <rect width="74" height="76" rx="10" fill="#eef9ee" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="42" rx="19" ry="14.5" fill="#58b86b" />
+          <circle cx="37" cy="20" r="14" fill="#58b86b" />
+          <path d="M27 10 L31 -3 L36 11 Z" fill="#58b86b" />
+          <path d="M47 10 L43 -3 L38 11 Z" fill="#58b86b" />
+          <circle cx="32" cy="19" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="19" r="2.5" fill="#1f2530" />
+          <path d="M53 37 C59 27, 57 10, 44 8" fill="none" stroke="#58b86b" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f4</text>
+        </g>
+        <g transform="translate(456 216)">
+          <rect width="74" height="76" rx="10" fill="#eef9ee" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#58b86b" />
+          <circle cx="37" cy="28" r="14" fill="#58b86b" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#58b86b" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#58b86b" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#58b86b" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f5</text>
+        </g>
+        <g transform="translate(542 216)">
+          <rect width="74" height="76" rx="10" fill="#eef9ee" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#58b86b" />
+          <circle cx="37" cy="28" r="14" fill="#58b86b" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#58b86b" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#58b86b" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#58b86b" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f6</text>
+        </g>
+      </g>
+      <g>
+        <text x="18" y="353" font-size="15" font-weight="700" fill="#263342">success</text>
+
+        <g transform="translate(112 310)">
+          <rect width="74" height="76" rx="10" fill="#fff6db" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#f4b942" />
+          <circle cx="37" cy="28" r="14" fill="#f4b942" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#f4b942" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#f4b942" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#f4b942" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f1</text>
+        </g>
+        <g transform="translate(198 310)">
+          <rect width="74" height="76" rx="10" fill="#fff6db" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="42" rx="19" ry="14.5" fill="#f4b942" />
+          <circle cx="37" cy="20" r="14" fill="#f4b942" />
+          <path d="M27 10 L31 -3 L36 11 Z" fill="#f4b942" />
+          <path d="M47 10 L43 -3 L38 11 Z" fill="#f4b942" />
+          <circle cx="32" cy="19" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="19" r="2.5" fill="#1f2530" />
+          <path d="M53 37 C59 27, 57 10, 44 8" fill="none" stroke="#f4b942" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f2</text>
+        </g>
+        <g transform="translate(284 310)">
+          <rect width="74" height="76" rx="10" fill="#fff6db" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="34" rx="20" ry="14" fill="#f4b942" />
+          <circle cx="37" cy="12" r="14" fill="#f4b942" />
+          <path d="M27 2 L31 -11 L36 3 Z" fill="#f4b942" />
+          <path d="M47 2 L43 -11 L38 3 Z" fill="#f4b942" />
+          <circle cx="32" cy="11" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="11" r="2.5" fill="#1f2530" />
+          <path d="M53 29 C81 19, 79 2, 66 0" fill="none" stroke="#f4b942" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f3</text>
+        </g>
+        <g transform="translate(370 310)">
+          <rect width="74" height="76" rx="10" fill="#fff6db" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="42" rx="19" ry="14.5" fill="#f4b942" />
+          <circle cx="37" cy="20" r="14" fill="#f4b942" />
+          <path d="M27 10 L31 -3 L36 11 Z" fill="#f4b942" />
+          <path d="M47 10 L43 -3 L38 11 Z" fill="#f4b942" />
+          <circle cx="32" cy="19" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="19" r="2.5" fill="#1f2530" />
+          <path d="M53 37 C59 27, 57 10, 44 8" fill="none" stroke="#f4b942" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f4</text>
+        </g>
+        <g transform="translate(456 310)">
+          <rect width="74" height="76" rx="10" fill="#fff6db" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#f4b942" />
+          <circle cx="37" cy="28" r="14" fill="#f4b942" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#f4b942" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#f4b942" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#f4b942" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f5</text>
+        </g>
+        <g transform="translate(542 310)">
+          <rect width="74" height="76" rx="10" fill="#fff6db" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#f4b942" />
+          <circle cx="37" cy="28" r="14" fill="#f4b942" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#f4b942" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#f4b942" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#f4b942" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f6</text>
+        </g>
+      </g>
+      <g>
+        <text x="18" y="447" font-size="15" font-weight="700" fill="#263342">warning</text>
+
+        <g transform="translate(112 404)">
+          <rect width="74" height="76" rx="10" fill="#fff0e8" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#ff914d" />
+          <circle cx="37" cy="28" r="14" fill="#ff914d" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#ff914d" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#ff914d" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#ff914d" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f1</text>
+        </g>
+        <g transform="translate(198 404)">
+          <rect width="74" height="76" rx="10" fill="#fff0e8" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="42" rx="19" ry="14.5" fill="#ff914d" />
+          <circle cx="37" cy="20" r="14" fill="#ff914d" />
+          <path d="M27 10 L31 -3 L36 11 Z" fill="#ff914d" />
+          <path d="M47 10 L43 -3 L38 11 Z" fill="#ff914d" />
+          <circle cx="32" cy="19" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="19" r="2.5" fill="#1f2530" />
+          <path d="M53 37 C59 27, 57 10, 44 8" fill="none" stroke="#ff914d" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f2</text>
+        </g>
+        <g transform="translate(284 404)">
+          <rect width="74" height="76" rx="10" fill="#fff0e8" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="34" rx="20" ry="14" fill="#ff914d" />
+          <circle cx="37" cy="12" r="14" fill="#ff914d" />
+          <path d="M27 2 L31 -11 L36 3 Z" fill="#ff914d" />
+          <path d="M47 2 L43 -11 L38 3 Z" fill="#ff914d" />
+          <circle cx="32" cy="11" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="11" r="2.5" fill="#1f2530" />
+          <path d="M53 29 C81 19, 79 2, 66 0" fill="none" stroke="#ff914d" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f3</text>
+        </g>
+        <g transform="translate(370 404)">
+          <rect width="74" height="76" rx="10" fill="#fff0e8" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="42" rx="19" ry="14.5" fill="#ff914d" />
+          <circle cx="37" cy="20" r="14" fill="#ff914d" />
+          <path d="M27 10 L31 -3 L36 11 Z" fill="#ff914d" />
+          <path d="M47 10 L43 -3 L38 11 Z" fill="#ff914d" />
+          <circle cx="32" cy="19" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="19" r="2.5" fill="#1f2530" />
+          <path d="M53 37 C59 27, 57 10, 44 8" fill="none" stroke="#ff914d" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f4</text>
+        </g>
+        <g transform="translate(456 404)">
+          <rect width="74" height="76" rx="10" fill="#fff0e8" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#ff914d" />
+          <circle cx="37" cy="28" r="14" fill="#ff914d" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#ff914d" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#ff914d" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#ff914d" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f5</text>
+        </g>
+        <g transform="translate(542 404)">
+          <rect width="74" height="76" rx="10" fill="#fff0e8" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#ff914d" />
+          <circle cx="37" cy="28" r="14" fill="#ff914d" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#ff914d" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#ff914d" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#ff914d" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f6</text>
+        </g>
+      </g>
+      <g>
+        <text x="18" y="541" font-size="15" font-weight="700" fill="#263342">error</text>
+
+        <g transform="translate(112 498)">
+          <rect width="74" height="76" rx="10" fill="#ffe9e9" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#e35252" />
+          <circle cx="37" cy="28" r="14" fill="#e35252" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#e35252" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#e35252" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#e35252" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f1</text>
+        </g>
+        <g transform="translate(198 498)">
+          <rect width="74" height="76" rx="10" fill="#ffe9e9" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="42" rx="19" ry="14.5" fill="#e35252" />
+          <circle cx="37" cy="20" r="14" fill="#e35252" />
+          <path d="M27 10 L31 -3 L36 11 Z" fill="#e35252" />
+          <path d="M47 10 L43 -3 L38 11 Z" fill="#e35252" />
+          <circle cx="32" cy="19" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="19" r="2.5" fill="#1f2530" />
+          <path d="M53 37 C59 27, 57 10, 44 8" fill="none" stroke="#e35252" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f2</text>
+        </g>
+        <g transform="translate(284 498)">
+          <rect width="74" height="76" rx="10" fill="#ffe9e9" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="34" rx="20" ry="14" fill="#e35252" />
+          <circle cx="37" cy="12" r="14" fill="#e35252" />
+          <path d="M27 2 L31 -11 L36 3 Z" fill="#e35252" />
+          <path d="M47 2 L43 -11 L38 3 Z" fill="#e35252" />
+          <circle cx="32" cy="11" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="11" r="2.5" fill="#1f2530" />
+          <path d="M53 29 C81 19, 79 2, 66 0" fill="none" stroke="#e35252" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f3</text>
+        </g>
+        <g transform="translate(370 498)">
+          <rect width="74" height="76" rx="10" fill="#ffe9e9" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="42" rx="19" ry="14.5" fill="#e35252" />
+          <circle cx="37" cy="20" r="14" fill="#e35252" />
+          <path d="M27 10 L31 -3 L36 11 Z" fill="#e35252" />
+          <path d="M47 10 L43 -3 L38 11 Z" fill="#e35252" />
+          <circle cx="32" cy="19" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="19" r="2.5" fill="#1f2530" />
+          <path d="M53 37 C59 27, 57 10, 44 8" fill="none" stroke="#e35252" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f4</text>
+        </g>
+        <g transform="translate(456 498)">
+          <rect width="74" height="76" rx="10" fill="#ffe9e9" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#e35252" />
+          <circle cx="37" cy="28" r="14" fill="#e35252" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#e35252" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#e35252" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#e35252" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f5</text>
+        </g>
+        <g transform="translate(542 498)">
+          <rect width="74" height="76" rx="10" fill="#ffe9e9" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#e35252" />
+          <circle cx="37" cy="28" r="14" fill="#e35252" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#e35252" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#e35252" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#e35252" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f6</text>
+        </g>
+      </g>
+      <g>
+        <text x="18" y="635" font-size="15" font-weight="700" fill="#263342">need_input</text>
+
+        <g transform="translate(112 592)">
+          <rect width="74" height="76" rx="10" fill="#efe8ff" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#8d6bff" />
+          <circle cx="37" cy="28" r="14" fill="#8d6bff" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#8d6bff" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#8d6bff" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#8d6bff" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f1</text>
+        </g>
+        <g transform="translate(198 592)">
+          <rect width="74" height="76" rx="10" fill="#efe8ff" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="42" rx="19" ry="14.5" fill="#8d6bff" />
+          <circle cx="37" cy="20" r="14" fill="#8d6bff" />
+          <path d="M27 10 L31 -3 L36 11 Z" fill="#8d6bff" />
+          <path d="M47 10 L43 -3 L38 11 Z" fill="#8d6bff" />
+          <circle cx="32" cy="19" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="19" r="2.5" fill="#1f2530" />
+          <path d="M53 37 C59 27, 57 10, 44 8" fill="none" stroke="#8d6bff" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f2</text>
+        </g>
+        <g transform="translate(284 592)">
+          <rect width="74" height="76" rx="10" fill="#efe8ff" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="34" rx="20" ry="14" fill="#8d6bff" />
+          <circle cx="37" cy="12" r="14" fill="#8d6bff" />
+          <path d="M27 2 L31 -11 L36 3 Z" fill="#8d6bff" />
+          <path d="M47 2 L43 -11 L38 3 Z" fill="#8d6bff" />
+          <circle cx="32" cy="11" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="11" r="2.5" fill="#1f2530" />
+          <path d="M53 29 C81 19, 79 2, 66 0" fill="none" stroke="#8d6bff" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f3</text>
+        </g>
+        <g transform="translate(370 592)">
+          <rect width="74" height="76" rx="10" fill="#efe8ff" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="42" rx="19" ry="14.5" fill="#8d6bff" />
+          <circle cx="37" cy="20" r="14" fill="#8d6bff" />
+          <path d="M27 10 L31 -3 L36 11 Z" fill="#8d6bff" />
+          <path d="M47 10 L43 -3 L38 11 Z" fill="#8d6bff" />
+          <circle cx="32" cy="19" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="19" r="2.5" fill="#1f2530" />
+          <path d="M53 37 C59 27, 57 10, 44 8" fill="none" stroke="#8d6bff" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f4</text>
+        </g>
+        <g transform="translate(456 592)">
+          <rect width="74" height="76" rx="10" fill="#efe8ff" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#8d6bff" />
+          <circle cx="37" cy="28" r="14" fill="#8d6bff" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#8d6bff" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#8d6bff" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#8d6bff" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f5</text>
+        </g>
+        <g transform="translate(542 592)">
+          <rect width="74" height="76" rx="10" fill="#efe8ff" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#8d6bff" />
+          <circle cx="37" cy="28" r="14" fill="#8d6bff" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#8d6bff" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#8d6bff" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#8d6bff" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f6</text>
+        </g>
+      </g>
+      <g>
+        <text x="18" y="729" font-size="15" font-weight="700" fill="#263342">sleeping</text>
+
+        <g transform="translate(112 686)">
+          <rect width="74" height="76" rx="10" fill="#e8f5ff" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#4d9fd9" />
+          <circle cx="37" cy="28" r="14" fill="#4d9fd9" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#4d9fd9" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#4d9fd9" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#4d9fd9" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f1</text>
+        </g>
+        <g transform="translate(198 686)">
+          <rect width="74" height="76" rx="10" fill="#e8f5ff" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="42" rx="19" ry="14.5" fill="#4d9fd9" />
+          <circle cx="37" cy="20" r="14" fill="#4d9fd9" />
+          <path d="M27 10 L31 -3 L36 11 Z" fill="#4d9fd9" />
+          <path d="M47 10 L43 -3 L38 11 Z" fill="#4d9fd9" />
+          <circle cx="32" cy="19" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="19" r="2.5" fill="#1f2530" />
+          <path d="M53 37 C59 27, 57 10, 44 8" fill="none" stroke="#4d9fd9" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f2</text>
+        </g>
+        <g transform="translate(284 686)">
+          <rect width="74" height="76" rx="10" fill="#e8f5ff" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="34" rx="20" ry="14" fill="#4d9fd9" />
+          <circle cx="37" cy="12" r="14" fill="#4d9fd9" />
+          <path d="M27 2 L31 -11 L36 3 Z" fill="#4d9fd9" />
+          <path d="M47 2 L43 -11 L38 3 Z" fill="#4d9fd9" />
+          <circle cx="32" cy="11" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="11" r="2.5" fill="#1f2530" />
+          <path d="M53 29 C81 19, 79 2, 66 0" fill="none" stroke="#4d9fd9" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f3</text>
+        </g>
+        <g transform="translate(370 686)">
+          <rect width="74" height="76" rx="10" fill="#e8f5ff" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="42" rx="19" ry="14.5" fill="#4d9fd9" />
+          <circle cx="37" cy="20" r="14" fill="#4d9fd9" />
+          <path d="M27 10 L31 -3 L36 11 Z" fill="#4d9fd9" />
+          <path d="M47 10 L43 -3 L38 11 Z" fill="#4d9fd9" />
+          <circle cx="32" cy="19" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="19" r="2.5" fill="#1f2530" />
+          <path d="M53 37 C59 27, 57 10, 44 8" fill="none" stroke="#4d9fd9" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f4</text>
+        </g>
+        <g transform="translate(456 686)">
+          <rect width="74" height="76" rx="10" fill="#e8f5ff" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#4d9fd9" />
+          <circle cx="37" cy="28" r="14" fill="#4d9fd9" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#4d9fd9" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#4d9fd9" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#4d9fd9" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f5</text>
+        </g>
+        <g transform="translate(542 686)">
+          <rect width="74" height="76" rx="10" fill="#e8f5ff" stroke="#d8d1c5" />
+          <ellipse cx="37" cy="50" rx="18" ry="15" fill="#4d9fd9" />
+          <circle cx="37" cy="28" r="14" fill="#4d9fd9" />
+          <path d="M27 18 L31 5 L36 19 Z" fill="#4d9fd9" />
+          <path d="M47 18 L43 5 L38 19 Z" fill="#4d9fd9" />
+          <circle cx="32" cy="27" r="2.5" fill="#1f2530" />
+          <circle cx="42" cy="27" r="2.5" fill="#1f2530" />
+          <path d="M53 45 C70 35, 68 18, 55 16" fill="none" stroke="#4d9fd9" stroke-width="7" stroke-linecap="round" />
+          <text x="37" y="70" text-anchor="middle" font-size="10" fill="#4f5968">f6</text>
+        </g>
+      </g>
+  </svg>
+    </section>
+    <section class="grid">
+      <article class="card">
+        <h2>阶段证据</h2>
+        <table>
+          <tr><th>阶段</th><th>状态</th><th>证据</th></tr>
+          <tr><td>V23</td><td><span class="status passed">passed</span></td><td><code>docs/V23-V28.x/evidence/v23-photo-suitability-trait-smoke-2026-06-16.md</code></td></tr><tr><td>V24</td><td><span class="status passed">passed</span></td><td><code>docs/V23-V28.x/evidence/v24-multi-route-generation-smoke-2026-06-16.md</code></td></tr><tr><td>V25</td><td><span class="status passed">passed</span></td><td><code>docs/V23-V28.x/evidence/v25-same-cat-motion-qa-smoke-2026-06-16.md</code></td></tr><tr><td>V26</td><td><span class="status passed">passed</span></td><td><code>docs/V23-V28.x/evidence/v26-pack-preview-apply-smoke-2026-06-16.md</code></td></tr><tr><td>V27</td><td><span class="status passed">passed</span></td><td><code>docs/V23-V28.x/evidence/v27-retry-cost-guidance-smoke-2026-06-16.md</code></td></tr>
+        </table>
+      </article>
+      <article class="card">
+        <h2>回归结果</h2>
+        <table>
+          <tr><th>检查</th><th>结果</th></tr>
+          <tr><td>desktop check</td><td>passed</td></tr>
+          <tr><td>desktop test</td><td>passed</td></tr>
+          <tr><td>petctl test</td><td>passed</td></tr>
+        </table>
+      </article>
+    </section>
+    <section class="card wide">
+      <h2>出门条件</h2>
+      <table>
+        <tr><th>条件</th><th>结果</th></tr>
+        <tr><td>V23 evidence exists and passed</td><td>passed - docs/V23-V28.x/evidence/v23-photo-suitability-trait-smoke-2026-06-16.md</td></tr><tr><td>V24 evidence exists and passed</td><td>passed - docs/V23-V28.x/evidence/v24-multi-route-generation-smoke-2026-06-16.md</td></tr><tr><td>V25 evidence exists and passed</td><td>passed - docs/V23-V28.x/evidence/v25-same-cat-motion-qa-smoke-2026-06-16.md</td></tr><tr><td>V26 evidence exists and passed</td><td>passed - docs/V23-V28.x/evidence/v26-pack-preview-apply-smoke-2026-06-16.md</td></tr><tr><td>V27 evidence exists and passed</td><td>passed - docs/V23-V28.x/evidence/v27-retry-cost-guidance-smoke-2026-06-16.md</td></tr><tr><td>desktop check</td><td>passed - pnpm --filter desktop check passed</td></tr><tr><td>desktop test</td><td>passed - pnpm --filter desktop test passed</td></tr><tr><td>petctl test</td><td>passed - pnpm --filter @agent-desktop-pet/petctl test passed</td></tr><tr><td>final dashboard embeds visual contact sheet</td><td>passed - 8 actions x frame evidence embedded</td></tr><tr><td>target apply and rollback evidence exists</td><td>passed - V26 target-only apply and rollback evidence</td></tr><tr><td>retry guidance evidence exists</td><td>passed - V27 retry/cost/failure guidance evidence</td></tr><tr><td>security scan</td><td>passed - safe summaries only; no raw photo/provider/prompt/path/token data</td></tr><tr><td>claim scan</td><td>passed - forbidden claims appear only as not-ready / not-implied statements</td></tr>
+      </table>
+    </section>
+  </main>
+</body>
+</html>

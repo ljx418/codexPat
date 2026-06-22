@@ -1,0 +1,39 @@
+<mxfile host="app.diagrams.net" modified="2026-06-16T00:00:00.000Z" agent="Codex" version="24.7.17" type="device">
+  <diagram id="v29-petdex-level" name="V29 Petdex级图库与稳定照片生成">
+    <mxGraphModel dx="2000" dy="1300" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="2000" pageHeight="1300" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="V29：追平 Petdex 体验的桌面宠物产品化阶段&#xa;目标：高质量图库 + 稳定照片到 2D 多动作资产 + 一键预览/切换/回滚" style="rounded=1;whiteSpace=wrap;html=1;fontSize=28;fontStyle=1;fillColor=#1f2937;fontColor=#ffffff;strokeColor=#111827;" vertex="1" parent="1">
+          <mxGeometry x="40" y="30" width="1920" height="82" as="geometry"/>
+        </mxCell>
+        <mxCell id="current" value="当前架构 / 已有能力&#xa;&#xa;V23-V28 scoped passed：&#xa;• 照片适合度检查&#xa;• 安全猫特征提取&#xa;• 多路线候选编排&#xa;• 同猫/动作 QA 拒绝&#xa;• approved candidate 打包&#xa;• 8 动作预览&#xa;• target-only apply / rollback&#xa;• retry/cost/failure guidance&#xa;&#xa;仍不足：&#xa;• 图库体验不够像成熟宠物产品&#xa;• 生成质量不够稳定&#xa;• 任意用户图没有 benchmark 级证明&#xa;• 视觉质量不稳定" style="rounded=1;whiteSpace=wrap;html=1;fontSize=17;align=left;verticalAlign=top;spacing=16;fillColor=#fff7ed;strokeColor=#f97316;" vertex="1" parent="1">
+          <mxGeometry x="50" y="150" width="390" height="520" as="geometry"/>
+        </mxCell>
+        <mxCell id="target" value="目标架构&#xa;&#xa;Pet Gallery UX&#xa;↓&#xa;搜索 / 筛选 / 收藏&#xa;↓&#xa;隔离 8 动作预览&#xa;↓&#xa;一键切换目标宠物&#xa;↓&#xa;照片生成向导&#xa;↓&#xa;多路线固定预算生成&#xa;↓&#xa;Quality Gate V2&#xa;↓&#xa;候选排序&#xa;↓&#xa;应用 / 回滚 / 历史记录" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;align=center;verticalAlign=middle;spacing=16;fillColor=#ecfeff;strokeColor=#0891b2;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="490" y="150" width="420" height="560" as="geometry"/>
+        </mxCell>
+        <mxCell id="petdex" value="Petdex 级用户体验门槛&#xa;&#xa;• 打开就能浏览高质量宠物&#xa;• 能筛选、搜索、收藏&#xa;• 未安装前可预览动作&#xa;• 一键安装 / 切换目标宠物&#xa;• 坏资产不能应用&#xa;• 应用后可回滚&#xa;• 用户不需要懂 manifest、shell、provider 原始输出" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;spacing=16;fillColor=#eef2ff;strokeColor=#6366f1;" vertex="1" parent="1">
+          <mxGeometry x="960" y="150" width="430" height="360" as="geometry"/>
+        </mxCell>
+        <mxCell id="photo" value="稳定照片生成门槛&#xa;&#xa;工程定义：&#xa;• 至少 12 张多样猫图 benchmark&#xa;• 固定预算：最多 2 路线 × 每路 2 次修复&#xa;• ≥80% 样本产出 approved 8-action pack&#xa;• 未通过样本必须有用户可执行建议&#xa;&#xa;质量要求：&#xa;同猫、动作幅度、无背景、首尾闭合、帧间连续、1x/0.75x 可读。" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;spacing=16;fillColor=#fdf2f8;strokeColor=#db2777;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="150" width="500" height="430" as="geometry"/>
+        </mxCell>
+        <mxCell id="plan" value="开发及验收计划&#xa;&#xa;V29.0 Scope freeze / benchmark 定义&#xa;V29.1 图库 browse/filter/favorite/preview/switch&#xa;V29.2 12 样本照片 benchmark&#xa;V29.3 Quality Gate V2 + 候选排序&#xa;V29.4 产品化生成向导&#xa;V29.5 高质量默认资产与安装历史&#xa;V29.6 Final gate：HTML 证据、截图、contact sheets、回归、安全、claim scan" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;spacing=16;fillColor=#f0fdf4;strokeColor=#22c55e;" vertex="1" parent="1">
+          <mxGeometry x="50" y="780" width="560" height="360" as="geometry"/>
+        </mxCell>
+        <mxCell id="quality" value="Quality Gate V2&#xa;&#xa;Hard reject：&#xa;• identity drift&#xa;• weak motion&#xa;• bad background / non-transparent residue&#xa;• blank / transparent / off-canvas&#xa;• frame jump / flicker&#xa;• loop closure failure&#xa;• poor 1x/0.75x readability&#xa;&#xa;AestheticRanker 只能给通过项排序，不能覆盖 hard reject。" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;spacing=16;fillColor=#fff7ed;strokeColor=#f59e0b;" vertex="1" parent="1">
+          <mxGeometry x="690" y="780" width="480" height="360" as="geometry"/>
+        </mxCell>
+        <mxCell id="exit" value="出门条件&#xa;&#xa;V29.6 passed 必须同时满足：&#xa;• V29.0-V29.5 evidence 存在&#xa;• Petdex 级图库 UX 通过&#xa;• 12 样本 benchmark ≥80% approved&#xa;• 所有 approved pack 通过 Quality Gate V2&#xa;• QA failed 不能 apply&#xa;• target-only apply / rollback 通过&#xa;• final HTML 嵌入真实截图 / contact sheet&#xa;• security scan + claim scan 通过&#xa;&#xa;否则 V29 blocked。" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;spacing=16;fillColor=#ffffff;strokeColor=#111827;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1240" y="780" width="700" height="360" as="geometry"/>
+        </mxCell>
+        <mxCell id="a1" edge="1" parent="1" source="current" target="target" style="endArrow=block;html=1;rounded=0;strokeWidth=3;strokeColor=#64748b;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a2" edge="1" parent="1" source="target" target="petdex" style="endArrow=block;html=1;rounded=0;strokeWidth=3;strokeColor=#64748b;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a3" edge="1" parent="1" source="petdex" target="photo" style="endArrow=block;html=1;rounded=0;strokeWidth=3;strokeColor=#64748b;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a4" edge="1" parent="1" source="plan" target="quality" style="endArrow=block;html=1;rounded=0;strokeWidth=3;strokeColor=#64748b;"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="a5" edge="1" parent="1" source="quality" target="exit" style="endArrow=block;html=1;rounded=0;strokeWidth=3;strokeColor=#64748b;"><mxGeometry relative="1" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

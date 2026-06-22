@@ -2500,9 +2500,9 @@ function builtInGalleryPanel(instances: PetInstance[], assetPacks: PersonalizedA
     <section class="settings-section built-in-gallery" id="built-in-gallery">
       <div class="settings-section-heading">
         <div>
-          <span class="instance-badge">V14.3 / V14.4</span>
-          <h2>内置猫图库</h2>
-          <p>本地 curated 宠物图库。收藏、筛选和预览不会发送 PetEvent，也不会修改 live 猫状态；激活只保存目标实例的 safe packId。</p>
+          <span class="instance-badge">V29.1 Gallery UX</span>
+          <h2>宠物图库</h2>
+          <p>浏览、筛选、收藏并预览本地动画猫；预览不会发送 PetEvent，也不会修改 live 猫状态。确认后才会把 safe packId 应用到目标猫。</p>
         </div>
         <span class="instance-badge">${galleryViews.length} packs · ${bundledViews.length} bundled · ${importedViews.length} imported</span>
       </div>
@@ -2559,7 +2559,7 @@ function builtInGalleryPanel(instances: PetInstance[], assetPacks: PersonalizedA
       </div>
       <section class="gallery-section" aria-label="Bundled pet packs">
         <div class="gallery-section-heading">
-          <h3>Bundled curated packs</h3>
+          <h3>精选本地猫</h3>
           <span class="instance-badge">${bundledViews.length} local</span>
         </div>
       <div class="gallery-grid">
@@ -2568,7 +2568,7 @@ function builtInGalleryPanel(instances: PetInstance[], assetPacks: PersonalizedA
       </section>
       <section class="gallery-section" aria-label="Imported pet packs">
         <div class="gallery-section-heading">
-          <h3>Imported packs</h3>
+          <h3>已导入资产</h3>
           <span class="instance-badge">${importedViews.length} user local</span>
         </div>
         ${importedViews.length ? `<div class="gallery-grid">${importedViews.map(galleryPackCard).join("")}</div>` : `<p class="diagnostics-empty">尚未导入个性化资产包；导入后会出现在这里并支持收藏、预览、激活和删除。</p>`}
@@ -2576,8 +2576,8 @@ function builtInGalleryPanel(instances: PetInstance[], assetPacks: PersonalizedA
       <article class="asset-preview-panel">
         <header class="guided-output-header">
           <div>
-            <h3>图库预览</h3>
-            <p id="gallery-preview-summary">选择宠物和动作进行隔离预览。</p>
+            <h3>动作预览</h3>
+            <p id="gallery-preview-summary">选择宠物和动作进行隔离预览；这里不会激活到任何猫。</p>
           </div>
           <span class="instance-badge">Preview only</span>
         </header>
@@ -2588,7 +2588,7 @@ function builtInGalleryPanel(instances: PetInstance[], assetPacks: PersonalizedA
             <div id="gallery-current-stage" class="asset-preview-stage" data-preview-mutates-runtime="false" data-preview-accepted-pet-events="0" data-preview-role="current"></div>
           </div>
           <div>
-            <strong>预览宠物</strong>
+            <strong>待切换宠物</strong>
             <div id="gallery-preview-stage" class="asset-preview-stage" data-preview-mutates-runtime="false" data-preview-accepted-pet-events="0" data-preview-role="candidate"></div>
           </div>
         </div>
@@ -2712,9 +2712,7 @@ function galleryPackCard(view: PetGalleryPackView) {
       </header>
       <p>${escapeHtml(view.description)}</p>
       <dl class="asset-pack-meta-grid">
-        <div><dt>Pack ID</dt><dd>${escapeHtml(view.packId)}</dd></div>
-        <div><dt>Renderer</dt><dd>${escapeHtml(view.rendererKind)}</dd></div>
-        <div><dt>Coverage</dt><dd>${escapeHtml(view.coverageState)} · ${escapeHtml(view.reasonCode)}</dd></div>
+        <div><dt>状态</dt><dd>${escapeHtml(view.coverageState)} · ${escapeHtml(view.reasonCode)}</dd></div>
         <div><dt>Style</dt><dd>${escapeHtml(view.style)}</dd></div>
         <div><dt>Color</dt><dd>${escapeHtml(view.color)}</dd></div>
         <div><dt>Motion</dt><dd>${escapeHtml(view.motionLevel)}</dd></div>

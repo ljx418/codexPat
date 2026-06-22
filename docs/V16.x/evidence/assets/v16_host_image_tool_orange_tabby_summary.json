@@ -8,106 +8,118 @@
   "contactSheetFile": "v16_host_image_tool_orange_tabby_contact_sheet.png",
   "petJsonFile": "pet.json",
   "actionCount": 8,
-  "totalFrameCount": 36,
+  "totalFrameCount": 48,
   "actions": {
     "idle": {
       "frameCount": 6,
       "firstFinalDelta": 0.0,
-      "maxAdjacentDelta": 4.9911,
-      "alphaCoverage": 1.0,
+      "maxAdjacentDelta": 14.4681,
+      "alphaCoverage": 0.4678,
       "digests": [
-        "f6062a0ed5ac3d20",
-        "3d529ef15c65f9c1",
-        "aa70561b48d02b25",
-        "3d529ef15c65f9c1",
-        "f6062a0ed5ac3d20",
-        "f6062a0ed5ac3d20"
+        "7f6fd7a161e1cf5f",
+        "527c7ef3b65b4a3c",
+        "ac214172bc3d90b8",
+        "b3e9812ce76ba127",
+        "ad5c2e3ee3d4e1f4",
+        "7f6fd7a161e1cf5f"
       ]
     },
     "thinking": {
       "frameCount": 6,
       "firstFinalDelta": 0.0,
-      "maxAdjacentDelta": 5.0365,
-      "alphaCoverage": 1.0,
+      "maxAdjacentDelta": 24.5144,
+      "alphaCoverage": 0.4615,
       "digests": [
-        "357e373febc5152b",
-        "686596542c29b359",
-        "ba47e1494612884a",
-        "686596542c29b359",
-        "357e373febc5152b",
-        "357e373febc5152b"
+        "292e8e2b600f6419",
+        "a6cc4741595bba49",
+        "5b47353a6f19b15b",
+        "7ae3bb5f7bf64cdd",
+        "8b03cbaa41c942bc",
+        "292e8e2b600f6419"
       ]
     },
     "running": {
       "frameCount": 6,
       "firstFinalDelta": 0.0,
-      "maxAdjacentDelta": 5.5454,
-      "alphaCoverage": 1.0,
+      "maxAdjacentDelta": 24.0978,
+      "alphaCoverage": 0.2805,
       "digests": [
-        "dd791272f36fabb1",
-        "5c856457138f2e06",
-        "ef5444e338ebe6e2",
-        "5c856457138f2e06",
-        "dd791272f36fabb1",
-        "dd791272f36fabb1"
+        "4ab4deed56afa284",
+        "8ddb4b6bfac9a595",
+        "6f851cd9c971046b",
+        "122c87890a193db9",
+        "323b8edb474e9c17",
+        "4ab4deed56afa284"
       ]
     },
     "success": {
-      "frameCount": 3,
+      "frameCount": 6,
       "firstFinalDelta": 0.0,
-      "maxAdjacentDelta": 5.313,
-      "alphaCoverage": 1.0,
+      "maxAdjacentDelta": 38.9209,
+      "alphaCoverage": 0.3324,
       "digests": [
-        "e270546ec39a3548",
-        "f4bd01c603d3e245",
-        "e270546ec39a3548"
+        "d0481a57ba2462c2",
+        "632b6a982356a60f",
+        "0bd098170579c0bb",
+        "fedd5705128bdd83",
+        "104e72630d25273f",
+        "d0481a57ba2462c2"
       ]
     },
     "warning": {
-      "frameCount": 3,
+      "frameCount": 6,
       "firstFinalDelta": 0.0,
-      "maxAdjacentDelta": 5.2503,
-      "alphaCoverage": 1.0,
+      "maxAdjacentDelta": 25.9062,
+      "alphaCoverage": 0.4082,
       "digests": [
-        "a5a759838a0c4e06",
-        "748bcdf4489f23cc",
-        "a5a759838a0c4e06"
+        "215077075f9c9be3",
+        "baae262e9b08526c",
+        "60e6113e494d109e",
+        "705d30dd49eba8aa",
+        "39b41c5ef8db67cb",
+        "215077075f9c9be3"
       ]
     },
     "error": {
-      "frameCount": 3,
+      "frameCount": 6,
       "firstFinalDelta": 0.0,
-      "maxAdjacentDelta": 5.2078,
-      "alphaCoverage": 1.0,
+      "maxAdjacentDelta": 25.5273,
+      "alphaCoverage": 0.3127,
       "digests": [
-        "6616949094f86079",
-        "c8dd19415c1e208a",
-        "6616949094f86079"
+        "6d44bfe4945f9846",
+        "738945e9a8c7ecf5",
+        "28398e56e9898be1",
+        "c354a14133adbfba",
+        "a175240a241eae65",
+        "6d44bfe4945f9846"
       ]
     },
     "need_input": {
-      "frameCount": 3,
+      "frameCount": 6,
       "firstFinalDelta": 0.0,
-      "maxAdjacentDelta": 5.2988,
-      "alphaCoverage": 1.0,
+      "maxAdjacentDelta": 23.2643,
+      "alphaCoverage": 0.3756,
       "digests": [
-        "0440421092209922",
-        "5e65ad6c249a2cb5",
-        "0440421092209922"
+        "e9cb15c63ee51b2a",
+        "52ec11400d0e540c",
+        "9278ead02dede822",
+        "e03ba2b4fac1fccf",
+        "a8244b9b84c6f48d",
+        "e9cb15c63ee51b2a"
       ]
     },
     "sleeping": {
       "frameCount": 6,
       "firstFinalDelta": 0.0,
-      "maxAdjacentDelta": 4.3192,
-      "alphaCoverage": 1.0,
+      "maxAdjacentDelta": 6.3748,
+      "alphaCoverage": 0.2195,
       "digests": [
-        "07c33aa51e9d4e2e",
-        "5a998eb4b26f45b8",
-        "f79aeda8b5a045fc",
-        "5a998eb4b26f45b8",
-        "07c33aa51e9d4e2e",
-        "07c33aa51e9d4e2e"
+        "a32ed5cdc2a0e266",
+        "beb12cb012de50c7",
+        "8295146f58f04cf7",
+        "87ed768c9517864d",
+        "cebd68b3723da821",
+        "a32ed5cdc2a0e266"
       ]
     }
   }

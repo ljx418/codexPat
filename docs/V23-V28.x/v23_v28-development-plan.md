@@ -1,8 +1,8 @@
 # V23-V28 Development Plan
 
-文档状态：planned development plan。  
+文档状态：active development plan；V23-V28 scoped passed。
 阶段主题：Photo-to-Animated-2D Productization Track。  
-当前日期：2026-06-15。
+当前日期：2026-06-16。
 
 ## Scope
 
@@ -14,9 +14,9 @@ without claiming arbitrary-cat automation or provider integration.
 
 | Stage | Name | Development Scope | Output |
 | --- | --- | --- | --- |
-| V23 | Photo Suitability & Trait Extraction | photo selector quality scoring, safe trait summary, better-photo guidance | photo quality gate |
-| V24 | Multi-route Generation Orchestrator | route registry, route budgets, provider/local route attempts, fallback strategy | route orchestrator |
-| V25 | Same-cat & Motion QA | identity consistency, motion amplitude, loop closure, flicker/drift scoring | QA engine |
+| V23 | Photo Suitability & Trait Extraction | photo selector quality scoring, safe trait summary, better-photo guidance | passed scoped: photo quality gate |
+| V24 | Multi-route Generation Orchestrator | route registry, route budgets, provider/local route attempts, fallback strategy | passed scoped: route orchestrator |
+| V25 | Same-cat & Motion QA | identity consistency, motion amplitude, loop closure, flicker/drift scoring | passed scoped: QA engine |
 | V26 | Auto Pack + User Preview | pet.json/frames assembly, 8-action preview, user approval, target apply/rollback | user confirmation flow |
 | V27 | Retry / Cost / Failure Guidance | reasonCode-driven retry, cost/time limits, route switch guidance | controlled retry policy |
 | V28 | Productized Workflow Gate | full wizard, final screenshots/dashboard, regression, claim scan | final scoped acceptance |
@@ -45,5 +45,10 @@ docs/V23-V28.x/evidence/v28-productized-photo-to-2d-dashboard-YYYY-MM-DD.html
 
 ## Go / No-Go
 
-V23 can start after operator accepts this plan.  
-V28 final is No-Go until V23-V27 have passed / blocked / failed evidence.
+V23 passed scoped with `docs/V23-V28.x/evidence/v23-photo-suitability-trait-smoke-2026-06-16.md`.
+V24 passed scoped with `docs/V23-V28.x/evidence/v24-multi-route-generation-smoke-2026-06-16.md`.
+V25 passed scoped with `docs/V23-V28.x/evidence/v25-same-cat-motion-qa-smoke-2026-06-16.md`.
+V26 passed scoped with `docs/V23-V28.x/evidence/v26-pack-preview-apply-smoke-2026-06-16.md`.
+V27 passed scoped with `docs/V23-V28.x/evidence/v27-retry-cost-guidance-smoke-2026-06-16.md`.
+V28 final passed scoped with `docs/V23-V28.x/v28-final-acceptance-report.md`
+and `docs/V23-V28.x/evidence/v28-productized-photo-to-2d-dashboard-2026-06-16.html`.

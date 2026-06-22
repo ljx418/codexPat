@@ -1,13 +1,61 @@
 # Active Acceptance Plan
 
-文档状态：active acceptance index；V23-V28 planned；V22 scoped accepted 是输入基线。  
-当前日期：2026-06-15。
+文档状态：active acceptance index；V30 planned；V29/V23-V28 scoped baselines 是输入基线。
+当前日期：2026-06-17。
 
-## V23-V28 Photo-to-Animated-2D Productization Acceptance
+## V30 Semantic Character Animation Quality Acceptance
 
-V23-V28 is the current planned acceptance track. It proves a tested user-facing
-workflow from local cat photo intake through generation, QA rejection, preview,
-target apply, and rollback. It must continue to use V22 as the quality gate.
+V30 is the current acceptance track. It must prove semantic character animation,
+not just animated images. A candidate fails if it only scales, translates,
+rotates, jitters, or decorates a static image without readable action logic.
+
+| Phase | Gate | Required Evidence | Status |
+| --- | --- | --- | --- |
+| V30.0 | scope freeze | `docs/V30.x/evidence/v30_0-scope-freeze-YYYY-MM-DD.md` | planned |
+| V30.1 | action storyboard and key-pose contract | `docs/V30.x/evidence/v30_1-action-storyboard-YYYY-MM-DD.md` | planned |
+| V30.2 | semantic candidate generation | `docs/V30.x/evidence/v30_2-semantic-candidate-generation-YYYY-MM-DD.md` | planned |
+| V30.3 | motion readability QA | `docs/V30.x/evidence/v30_3-motion-readability-qa-YYYY-MM-DD.md` | planned |
+| V30.4 | old-vs-new preview UX | `docs/V30.x/evidence/v30_4-preview-ux-YYYY-MM-DD.html` | planned |
+| V30.5 | approved target apply and rollback | `docs/V30.x/evidence/v30_5-target-apply-rollback-YYYY-MM-DD.md` | planned |
+| V30.6 | final semantic animation gate | `docs/V30.x/v30-final-acceptance-report.md` | No-Go |
+
+V30.6 can pass only if V30.0-V30.5 evidence exists, at least one 8-action pack
+passes semantic readability QA, the weak transform-only baseline is rejected,
+old-vs-new visual evidence is embedded in HTML, QA failed packs cannot apply,
+target-only apply and rollback pass, and security/claim scans pass.
+
+## V29 Petdex-level Gallery and Stable Photo-to-Animated-2D Acceptance
+
+V29 is the immediate input baseline. It must prove a product-level user
+experience: gallery browse/filter/favorite/preview/switch plus stable
+photo-to-animated-2D generation over a diverse benchmark.
+
+| Phase | Gate | Required Evidence | Status |
+| --- | --- | --- | --- |
+| V29.0 | scope freeze | `docs/V29.x/evidence/v29_0-scope-freeze-YYYY-MM-DD.md` | planned |
+| V29.1 | gallery UX | `docs/V29.x/evidence/v29_1-gallery-ux-smoke-YYYY-MM-DD.md` | planned |
+| V29.2 | photo benchmark | `docs/V29.x/evidence/v29_2-photo-benchmark-smoke-YYYY-MM-DD.md` | planned |
+| V29.3 | quality gate v2 | `docs/V29.x/evidence/v29_3-quality-gate-v2-smoke-YYYY-MM-DD.md` | planned |
+| V29.4 | productized wizard | `docs/V29.x/evidence/v29_4-productized-wizard-smoke-YYYY-MM-DD.md` | planned |
+| V29.5 | asset polish | `docs/V29.x/evidence/v29_5-asset-polish-smoke-YYYY-MM-DD.md` | planned |
+| V29.6 | final gate | `docs/V29.x/v29-final-acceptance-report.md` | No-Go |
+
+V29.6 can pass only if the gallery UX gate passes, the diverse photo benchmark
+reaches the accepted threshold, all accepted candidates pass Quality Gate V2,
+final HTML embeds real visual evidence, and security/claim scans pass.
+
+## V23-V28 Photo-to-Animated-2D Productization Acceptance Baseline
+
+V23-V28 is the accepted baseline acceptance track. V23 has passed scoped evidence for
+local photo suitability and safe trait extraction. V24 has passed scoped
+evidence for route registration, safe candidate metadata, and non-mutating
+orchestration. V25 has passed scoped evidence for same-cat and motion QA
+rejection. V26 has passed scoped evidence for approved-candidate packaging,
+isolated preview, target-only apply, and rollback. V27 has passed scoped
+evidence for retry budgets, repeated-failure repair guidance, provider
+preflight blocking, actionable next steps, and previous-pack preservation. V28
+has passed scoped evidence for the final evidence-matched productized gate. It
+must continue to use V22 as the quality gate.
 
 ```text
 photo
@@ -21,12 +69,12 @@ photo
 
 | Phase | Gate | Required Evidence | Status |
 | --- | --- | --- | --- |
-| V23 | photo suitability and traits | `docs/V23-V28.x/evidence/v23-photo-suitability-trait-smoke-YYYY-MM-DD.md` | planned |
-| V24 | multi-route generation | `docs/V23-V28.x/evidence/v24-multi-route-generation-smoke-YYYY-MM-DD.md` | planned |
-| V25 | same-cat and motion QA | `docs/V23-V28.x/evidence/v25-same-cat-motion-qa-smoke-YYYY-MM-DD.md` | planned |
-| V26 | pack, preview, apply, rollback | `docs/V23-V28.x/evidence/v26-pack-preview-apply-smoke-YYYY-MM-DD.md` | planned |
-| V27 | retry/cost/failure guidance | `docs/V23-V28.x/evidence/v27-retry-cost-guidance-smoke-YYYY-MM-DD.md` | planned |
-| V28 | final evidence-matched gate | `docs/V23-V28.x/v28-final-acceptance-report.md` | No-Go |
+| V23 | photo suitability and traits | `docs/V23-V28.x/evidence/v23-photo-suitability-trait-smoke-2026-06-16.md` | passed scoped |
+| V24 | multi-route generation | `docs/V23-V28.x/evidence/v24-multi-route-generation-smoke-2026-06-16.md` | passed scoped |
+| V25 | same-cat and motion QA | `docs/V23-V28.x/evidence/v25-same-cat-motion-qa-smoke-2026-06-16.md` | passed scoped |
+| V26 | pack, preview, apply, rollback | `docs/V23-V28.x/evidence/v26-pack-preview-apply-smoke-2026-06-16.md` | passed scoped |
+| V27 | retry/cost/failure guidance | `docs/V23-V28.x/evidence/v27-retry-cost-guidance-smoke-2026-06-16.md` | passed scoped |
+| V28 | final evidence-matched gate | `docs/V23-V28.x/v28-final-acceptance-report.md` | passed scoped |
 
 V28 can pass only if V23-V27 evidence exists, at least one approved candidate
 can preview/apply target-only, rollback preserves the previous visible pack,

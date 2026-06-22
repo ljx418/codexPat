@@ -58,48 +58,60 @@
       "frames": [
         "success/frame-001.png",
         "success/frame-002.png",
-        "success/frame-003.png"
+        "success/frame-003.png",
+        "success/frame-004.png",
+        "success/frame-005.png",
+        "success/frame-006.png"
       ],
       "fps": 8,
       "loop": false,
       "transient": true,
-      "durationMs": 375,
+      "durationMs": 750,
       "fallbackActionId": "idle"
     },
     "warning": {
       "frames": [
         "warning/frame-001.png",
         "warning/frame-002.png",
-        "warning/frame-003.png"
+        "warning/frame-003.png",
+        "warning/frame-004.png",
+        "warning/frame-005.png",
+        "warning/frame-006.png"
       ],
       "fps": 8,
       "loop": false,
       "transient": true,
-      "durationMs": 375,
+      "durationMs": 750,
       "fallbackActionId": "idle"
     },
     "error": {
       "frames": [
         "error/frame-001.png",
         "error/frame-002.png",
-        "error/frame-003.png"
+        "error/frame-003.png",
+        "error/frame-004.png",
+        "error/frame-005.png",
+        "error/frame-006.png"
       ],
       "fps": 8,
       "loop": false,
       "transient": true,
-      "durationMs": 375,
+      "durationMs": 750,
       "fallbackActionId": "idle"
     },
     "need_input": {
       "frames": [
         "need_input/frame-001.png",
         "need_input/frame-002.png",
-        "need_input/frame-003.png"
+        "need_input/frame-003.png",
+        "need_input/frame-004.png",
+        "need_input/frame-005.png",
+        "need_input/frame-006.png"
       ],
       "fps": 8,
       "loop": false,
       "transient": true,
-      "durationMs": 375,
+      "durationMs": 750,
       "fallbackActionId": "idle"
     },
     "sleeping": {

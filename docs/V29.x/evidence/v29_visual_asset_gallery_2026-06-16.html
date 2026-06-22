@@ -1,0 +1,370 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>V29 猫图与动作资产可视化汇报</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f6f2ea;
+      --panel: #fffaf2;
+      --ink: #1e2430;
+      --muted: #667085;
+      --line: #ddd4c6;
+      --accent: #d96f32;
+      --accent-2: #3c7c7a;
+      --warn: #9a5b00;
+      --shadow: 0 16px 38px rgba(53, 38, 24, 0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at 20% 0%, #fff7e8 0, var(--bg) 38%, #efe8dc 100%);
+      color: var(--ink);
+      font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    header {
+      padding: 34px 40px 22px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(255, 250, 242, 0.82);
+      backdrop-filter: blur(14px);
+      position: sticky;
+      top: 0;
+      z-index: 5;
+    }
+
+    h1 {
+      margin: 0 0 10px;
+      font-size: clamp(28px, 4vw, 44px);
+      letter-spacing: 0;
+      line-height: 1.08;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin: 0 0 14px;
+      letter-spacing: 0;
+    }
+
+    h3 {
+      margin: 12px 0 6px;
+      font-size: 16px;
+      letter-spacing: 0;
+    }
+
+    p { margin: 0 0 10px; color: var(--muted); }
+
+    main {
+      width: min(1320px, calc(100vw - 48px));
+      margin: 28px auto 56px;
+      display: grid;
+      gap: 28px;
+    }
+
+    section {
+      background: rgba(255, 250, 242, 0.88);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 22px;
+    }
+
+    .summary {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 14px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      border: 1px solid rgba(217, 111, 50, 0.35);
+      background: rgba(217, 111, 50, 0.08);
+      color: #64310f;
+      border-radius: 999px;
+      padding: 7px 11px;
+      font-size: 13px;
+      font-weight: 650;
+    }
+
+    .pill.neutral {
+      border-color: rgba(60, 124, 122, 0.28);
+      background: rgba(60, 124, 122, 0.08);
+      color: #245251;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+      gap: 16px;
+    }
+
+    .grid.small {
+      grid-template-columns: repeat(auto-fit, minmax(138px, 1fr));
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid #eadfce;
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 8px 18px rgba(53, 38, 24, 0.08);
+    }
+
+    .card img, .contact-sheet img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      background: #eee7da;
+    }
+
+    .caption {
+      padding: 10px 12px 12px;
+    }
+
+    .caption strong {
+      display: block;
+      font-size: 14px;
+      color: var(--ink);
+    }
+
+    .caption span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      margin-top: 2px;
+    }
+
+    .contact-sheet {
+      max-width: 760px;
+      margin-bottom: 16px;
+    }
+
+    .contact-sheet img {
+      aspect-ratio: auto;
+      object-fit: contain;
+    }
+
+    .animation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+      gap: 18px;
+    }
+
+    .anim-card {
+      background: #fff;
+      border: 1px solid #eadfce;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 18px rgba(53, 38, 24, 0.08);
+    }
+
+    .anim-stage {
+      position: relative;
+      min-height: 210px;
+      aspect-ratio: 1 / 1;
+      background:
+        linear-gradient(135deg, rgba(60, 124, 122, 0.10), rgba(217, 111, 50, 0.10)),
+        #f5efe5;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+    }
+
+    .anim-stage img {
+      width: 92%;
+      height: 92%;
+      object-fit: contain;
+      image-rendering: auto;
+      filter: drop-shadow(0 12px 16px rgba(46, 32, 18, 0.18));
+    }
+
+    .anim-meta {
+      padding: 12px;
+      display: grid;
+      gap: 8px;
+    }
+
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+
+    .state {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content;
+      min-height: 24px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(60, 124, 122, 0.10);
+      color: var(--accent-2);
+      font-weight: 700;
+      font-size: 12px;
+    }
+
+    .notice {
+      border-left: 4px solid var(--warn);
+      background: rgba(154, 91, 0, 0.08);
+      padding: 12px 14px;
+      border-radius: 10px;
+      color: #5d3a0b;
+    }
+
+    code {
+      background: rgba(30, 36, 48, 0.08);
+      border-radius: 6px;
+      padding: 1px 5px;
+      font-size: 12px;
+    }
+
+    footer {
+      color: var(--muted);
+      font-size: 12px;
+      padding: 0 40px 36px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>V29 猫图与动作资产可视化汇报</h1>
+    <p>把当前项目里的真实猫照片、宿主 imag2 生成补充样本、以及现有 2D 多动作资产放在同一个页面内对照查看。</p>
+    <div class="summary">
+      <span class="pill">真实原图：3 张</span>
+      <span class="pill neutral">宿主 imag2 样本：9 张</span>
+      <span class="pill">可播放动作：8 个 core actions</span>
+      <span class="pill neutral">日期：2026-06-16</span>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>1. 当前真实猫原始图</h2>
+      <p>这些是项目 <code>docs/</code> 内用于真实照片流程验证的三张猫图。</p>
+      <div class="grid">
+        <article class="card">
+          <img src="../../猫.jpg" alt="真实猫原图 1" />
+          <div class="caption"><strong>真实原图 1</strong><span>docs/猫.jpg</span></div>
+        </article>
+        <article class="card">
+          <img src="../../猫_1.jpg" alt="真实猫原图 2" />
+          <div class="caption"><strong>真实原图 2</strong><span>docs/猫_1.jpg</span></div>
+        </article>
+        <article class="card">
+          <img src="../../猫_2.jpg" alt="真实猫原图 3" />
+          <div class="caption"><strong>真实原图 3</strong><span>docs/猫_2.jpg</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. 宿主 imag2 生成补充样本</h2>
+      <p>这些样本用于扩充 V29 mixed benchmark。它们是生成样本，不等同于真实任意用户照片验收通过。</p>
+      <article class="card contact-sheet">
+        <img src="v29_host_imag2_9cat_contact_sheet_2026-06-16.png" alt="宿主 imag2 九猫 contact sheet" />
+        <div class="caption"><strong>九猫 contact sheet</strong><span>用于批量裁切成 9 个单猫样本</span></div>
+      </article>
+      <div class="grid small">
+        <article class="card"><img src="../benchmark-samples/host-imag2/v29_synthetic_1_orange-tabby.png" alt="orange tabby" /><div class="caption"><strong>橘猫</strong><span>synthetic 1</span></div></article>
+        <article class="card"><img src="../benchmark-samples/host-imag2/v29_synthetic_2_gray-shorthair.png" alt="gray shorthair" /><div class="caption"><strong>灰色短毛</strong><span>synthetic 2</span></div></article>
+        <article class="card"><img src="../benchmark-samples/host-imag2/v29_synthetic_3_tuxedo.png" alt="tuxedo" /><div class="caption"><strong>黑白猫</strong><span>synthetic 3</span></div></article>
+        <article class="card"><img src="../benchmark-samples/host-imag2/v29_synthetic_4_white-longhair.png" alt="white longhair" /><div class="caption"><strong>白色长毛</strong><span>synthetic 4</span></div></article>
+        <article class="card"><img src="../benchmark-samples/host-imag2/v29_synthetic_5_calico.png" alt="calico" /><div class="caption"><strong>三花猫</strong><span>synthetic 5</span></div></article>
+        <article class="card"><img src="../benchmark-samples/host-imag2/v29_synthetic_6_brown-tabby.png" alt="brown tabby" /><div class="caption"><strong>棕虎斑</strong><span>synthetic 6</span></div></article>
+        <article class="card"><img src="../benchmark-samples/host-imag2/v29_synthetic_7_cream-shorthair.png" alt="cream shorthair" /><div class="caption"><strong>奶油短毛</strong><span>synthetic 7</span></div></article>
+        <article class="card"><img src="../benchmark-samples/host-imag2/v29_synthetic_8_silver-tabby.png" alt="silver tabby" /><div class="caption"><strong>银虎斑</strong><span>synthetic 8</span></div></article>
+        <article class="card"><img src="../benchmark-samples/host-imag2/v29_synthetic_9_black-stretch.png" alt="black cat stretch" /><div class="caption"><strong>黑猫伸展</strong><span>synthetic 9</span></div></article>
+      </div>
+    </section>
+
+    <section>
+      <h2>3. 当前项目内可播放的 2D 动作资产</h2>
+      <p>下面播放的是当前仓库内 <code>v16-host-image-tool-orange-tabby</code> 的重生成帧序列。每个动作现在都是 6 帧首尾闭合循环，不再只依赖整图放大缩小。</p>
+      <div class="animation-grid" id="animationGrid"></div>
+    </section>
+
+    <section>
+      <h2>4. 当前结论与边界</h2>
+      <div class="notice">
+        <strong>结论：</strong>页面已经能同时展示真实原图、宿主 imag2 生成样本，以及当前可播放的 8 动作 2D 资产。
+        <br />
+        <strong>边界：</strong>这证明项目已有可视化对照和动作帧播放证据，但不等于“任意用户上传一张猫图即可稳定生成高质量动作资产”已经完全通过。V29 final 仍需要真实照片样本覆盖达到门槛后才能放宽声明。
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Generated evidence page: docs/V29.x/evidence/v29_visual_asset_gallery_2026-06-16.html
+  </footer>
+
+  <script>
+    const base = "../../../apps/desktop/src/assets/generated/v16-host-image-tool-orange-tabby/pack";
+    const actions = [
+      ["idle", "Idle", "基础待机循环", 6],
+      ["thinking", "Thinking", "思考状态", 6],
+      ["running", "Running", "执行/运行状态", 6],
+      ["success", "Success", "成功跳跃", 6],
+      ["warning", "Warning", "警告抖动", 6],
+      ["error", "Error", "错误眩晕", 6],
+      ["need_input", "Need Input", "等待用户输入", 6],
+      ["sleeping", "Sleeping", "睡眠循环", 6]
+    ];
+
+    function frameName(index) {
+      return `frame-${String(index).padStart(3, "0")}.png`;
+    }
+
+    function createAnimationCard([actionId, title, description, frameCount]) {
+      const card = document.createElement("article");
+      card.className = "anim-card";
+      const stage = document.createElement("div");
+      stage.className = "anim-stage";
+      const img = document.createElement("img");
+      img.alt = `${title} 动作帧播放`;
+      img.dataset.action = actionId;
+      img.dataset.frameCount = String(frameCount);
+      img.dataset.frameIndex = "1";
+      img.src = `${base}/${actionId}/${frameName(1)}`;
+      stage.appendChild(img);
+
+      const meta = document.createElement("div");
+      meta.className = "anim-meta";
+      meta.innerHTML = `
+        <span class="state">${title}</span>
+        <strong>${description}</strong>
+        <div class="meta-row"><span>actionId</span><code>${actionId}</code></div>
+        <div class="meta-row"><span>帧数</span><span>${frameCount}</span></div>
+        <div class="meta-row"><span>播放方式</span><span>真实 PNG 帧循环</span></div>
+      `;
+      card.append(stage, meta);
+      return card;
+    }
+
+    const grid = document.getElementById("animationGrid");
+    actions.map(createAnimationCard).forEach(card => grid.appendChild(card));
+
+    window.setInterval(() => {
+      document.querySelectorAll("[data-action]").forEach(img => {
+        const action = img.dataset.action;
+        const count = Number(img.dataset.frameCount);
+        const current = Number(img.dataset.frameIndex);
+        const next = current >= count ? 1 : current + 1;
+        img.dataset.frameIndex = String(next);
+        img.src = `${base}/${action}/${frameName(next)}`;
+      });
+    }, 180);
+  </script>
+</body>
+</html>

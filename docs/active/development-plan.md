@@ -1,15 +1,102 @@
 # Active Development Plan
 
-文档状态：active index；V23-V28 planned；V22 scoped accepted 是输入基线。  
-当前日期：2026-06-15。
+文档状态：active index；V30 planned；V29/V23-V28 scoped baselines 是输入基线。
+当前日期：2026-06-17。
 
 ## Current Active Line
 
-V23-V28 is the current planned productization track. It starts from V22 scoped
-accepted quality rejection and adds the missing upstream workflow for ordinary
-users: photo suitability, trait extraction, multi-route generation, same-cat and
-motion QA, automatic packaging, preview, target apply, rollback, retry guidance,
-and a final productized wizard gate.
+V30 is the current active planning track. It starts from the V29 gallery/photo
+generation baseline and fixes the latest visual review finding: generated
+frames can move without being readable, attractive character animation.
+
+V30 target flow:
+
+```text
+Action semantics
+  -> storyboard / key-pose contract
+  -> semantic candidate frame routes
+  -> motion readability QA
+  -> old-vs-new preview
+  -> approved target apply
+  -> rollback
+```
+
+V30 active docs:
+
+- `docs/active/agent_desktop_pet_prd_v30.md`
+- `docs/V30.x/v30-development-plan.md`
+- `docs/V30.x/v30-acceptance-plan.md`
+- `docs/V30.x/v30-target-architecture.md`
+- `docs/V30.x/v30-current-gap-analysis.md`
+- `docs/V30.x/v30-claim-matrix.md`
+- `docs/V30.x/v30-milestones.md`
+- `docs/V30.x/v30-implementation-contract.md`
+- `docs/V30.x/v30-doc-audit.md`
+- `docs/V30.x/v30-target-state.drawio`
+
+V30.0 is the next planned phase. V30.6 remains No-Go until V30.0-V30.5 have
+passed / blocked / failed evidence and at least one semantic 8-action pack
+passes storyboard, motion-readability QA, preview, target apply, and rollback.
+V30 must not claim Petdex parity achieved, automatic photo-to-animation ready
+for arbitrary cats, provider integration verified, 3D readiness, production
+release readiness, Windows readiness, or cross-platform readiness.
+
+## V29 Baseline
+
+V29 is the immediate input baseline. It starts from the V23-V28 scoped
+Photo-to-Animated-2D workflow and raises the exit bar to Petdex-level gallery
+UX plus stable photo-to-animated-2D generation over a diverse local cat photo
+benchmark.
+
+V29 target flow:
+
+```text
+Pet Gallery
+  -> browse / filter / favorite
+  -> isolated 8-action preview
+  -> one-click target switch / rollback
+
+User Cat Photo
+  -> suitability and traits
+  -> fixed-budget route generation
+  -> Quality Gate V2
+  -> ranked candidates
+  -> productized wizard preview/apply/rollback
+```
+
+V29 active docs:
+
+- `docs/active/agent_desktop_pet_prd_v29.md`
+- `docs/V29.x/v29-development-plan.md`
+- `docs/V29.x/v29-detailed-development-and-acceptance-plan.md`
+- `docs/V29.x/v29-acceptance-plan.md`
+- `docs/V29.x/v29-target-architecture.md`
+- `docs/V29.x/v29-current-gap-analysis.md`
+- `docs/V29.x/v29-claim-matrix.md`
+- `docs/V29.x/v29-milestones.md`
+- `docs/V29.x/v29-implementation-contract.md`
+- `docs/V29.x/v29-evidence-index.md`
+- `docs/V29.x/v29-doc-audit.md`
+- `docs/V29.x/v29-target-state.drawio`
+
+V29.0 is the next planned phase. V29.6 remains No-Go until V29.0-V29.5 have
+passed / blocked / failed evidence and the Petdex-level UX plus photo benchmark
+gates pass. V29 must not claim all-cats automatic photo-to-2D readiness,
+provider integration verified, Petdex asset reuse authorization, 3D readiness,
+production release readiness, Windows readiness, or cross-platform readiness.
+
+## V23-V28 Baseline
+
+V23-V28 is the accepted baseline productization track. V23 has passed scoped evidence for
+photo suitability and safe trait extraction. V24 has passed scoped evidence for
+multi-route registration, attempt budgets, safe candidate metadata, and
+non-mutating route states. V25 has passed scoped evidence for same-cat and
+motion QA rejection. V26 has passed scoped evidence for approved-candidate
+automatic packaging, isolated 8-action preview, target-only apply, and
+rollback. V27 has passed scoped evidence for retry budgets, repeated-failure
+repair guidance, provider preflight blocking, actionable next steps, and
+preserving the previous visible pack. V28 has passed scoped evidence with final
+dashboard, regression, security, and claim scans.
 
 V23-V28 target flow:
 
@@ -37,9 +124,16 @@ V23-V28 active docs:
 - `docs/V23-V28.x/v23_v28-implementation-contract.md`
 - `docs/V23-V28.x/v23_v28-evidence-index.md`
 - `docs/V23-V28.x/v23_v28-doc-audit.md`
+- `docs/V23-V28.x/v23_v28-target-state.drawio`
 
-V23-V28 are planned. V28 is No-Go until V23-V27 have passed / blocked / failed
-evidence. This track must not claim Petdex parity, provider integration
+V23 passed scoped with `docs/V23-V28.x/evidence/v23-photo-suitability-trait-smoke-2026-06-16.md`.
+V24 passed scoped with `docs/V23-V28.x/evidence/v24-multi-route-generation-smoke-2026-06-16.md`.
+V25 passed scoped with `docs/V23-V28.x/evidence/v25-same-cat-motion-qa-smoke-2026-06-16.md`.
+V26 passed scoped with `docs/V23-V28.x/evidence/v26-pack-preview-apply-smoke-2026-06-16.md`.
+V27 passed scoped with `docs/V23-V28.x/evidence/v27-retry-cost-guidance-smoke-2026-06-16.md`.
+V28 passed scoped with `docs/V23-V28.x/v28-final-acceptance-report.md` and
+`docs/V23-V28.x/evidence/v28-productized-photo-to-2d-dashboard-2026-06-16.html`.
+This track must not claim Petdex parity, provider integration
 verified, arbitrary-cat automatic photo-to-animation ready, automatic
 photo-to-2D ready for arbitrary cats, 3D ready, production release readiness,
 Windows readiness, or cross-platform readiness.

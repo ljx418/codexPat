@@ -1,7 +1,33 @@
 # Target Architecture
 
-文档状态：macOS-first MVP architecture synced；Phase 6 implementation synced。  
+文档状态：macOS-first MVP architecture synced；V30 semantic animation target appended。
 目标：明确第一版技术边界，避免把后续 MCP、skills、USB、Rive/Live2D/3D、照片自定义混入 MVP。
+
+## 0. Current Active Product Architecture Delta: V30
+
+V30 adds a product-quality animation layer on top of the existing asset system.
+The core architectural change is that an asset can no longer pass because frames
+are nonblank and technically animated. It must pass semantic character animation
+quality:
+
+```text
+Action Semantics Spec
+  -> Storyboard / Key-pose Contract
+  -> Candidate Frame Route
+  -> Frame Normalizer
+  -> Motion Readability QA
+  -> Visual Review Queue
+  -> Isolated Action Preview
+  -> Approved-only Target Apply
+  -> Rollback
+  -> Runtime Sprite Renderer
+```
+
+V30 explicitly rejects “whole-image transform only” motion. The renderer still
+receives only safe action IDs, renderer kind, safe pack IDs, playback intent,
+scale, and visibility. It must not receive raw provider payload, raw photo
+bytes, prompt private text, token, Authorization, full local path, workspace
+path, config path, shell command, or copied Petdex assets.
 
 ## 1. MVP Architecture
 

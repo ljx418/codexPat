@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import { WORK_CAT_V1_ASSET_MANIFEST } from "./bundled-packs/work-cat-v1.manifest";
+import { PREMIUM_CAT_PACKS } from "./bundled-packs/premium-cats-v1";
 import {
   createAssetManagerPackView,
   createManagerActionPreviewViews,
@@ -136,5 +137,46 @@ describe("V6.4 asset manager view model", () => {
     ], ["premium-orange-tabby", "imported-silver"]);
 
     assert.deepEqual(ids, ["premium-orange-tabby"]);
+  });
+
+  it("supports V29.1 gallery UX evidence with curated packs, filters, favorites, and safe previews", () => {
+    const summaries = PREMIUM_CAT_PACKS.map((pack) => ({
+      packId: pack.packId,
+      displayName: pack.displayName,
+      description: pack.description,
+      rendererKind: "sprite" as const,
+      source: "bundled" as const,
+      style: "premium work cat",
+      color: pack.paletteName,
+      motionLevel: "lively" as const,
+      qualityBadge: "curated premium",
+      coverageCount: 8,
+      actionCount: 8,
+      activeInstances: pack.packId === "premium-orange-tabby" ? ["codex_target"] : [],
+      licenseSummary: pack.attribution,
+      validationStatus: "valid",
+      hasLivingActions: false,
+      canDelete: false
+    }));
+
+    const allViews = createPetGalleryPackViews(summaries, ["premium-orange-tabby"]);
+    const favoriteViews = createPetGalleryPackViews(summaries, ["premium-orange-tabby"], {
+      favoriteOnly: true,
+      rendererKind: "sprite"
+    });
+    const orangeViews = createPetGalleryPackViews(summaries, [], { color: "orange tabby" });
+    const previewMetadata = createManagerActionPreviewViews(PREMIUM_CAT_PACKS[0].manifest);
+
+    assert.ok(allViews.length >= 12);
+    assert.equal(favoriteViews.length, 1);
+    assert.equal(favoriteViews[0].packId, "premium-orange-tabby");
+    assert.equal(favoriteViews[0].isFavorite, true);
+    assert.equal(favoriteViews[0].isActive, true);
+    assert.equal(orangeViews.length, 1);
+    assert.equal(allViews.every((view) => view.previewActions.length === 8), true);
+    assert.equal(allViews.every((view) => view.coverageState === "complete"), true);
+    assert.equal(previewMetadata.length, 8);
+    assert.equal(previewMetadata.every((view) => view.rendererKind === "sprite"), true);
+    assert.equal(JSON.stringify({ allViews, favoriteViews, orangeViews, previewMetadata }).includes("/Users/"), false);
   });
 });

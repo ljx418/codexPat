@@ -1,8 +1,8 @@
 # V23-V28 Acceptance Plan
 
-文档状态：planned acceptance plan。  
+文档状态：active acceptance plan；V23-V28 scoped passed。
 阶段主题：Photo-to-Animated-2D Productization Track。  
-当前日期：2026-06-15。
+当前日期：2026-06-16。
 
 ## Acceptance Principle
 
@@ -14,12 +14,12 @@ stable reasonCode.
 
 | Stage | Gate | Required Evidence | Pass Condition |
 | --- | --- | --- | --- |
-| V23 | photo suitability and traits | `v23-photo-suitability-trait-smoke-YYYY-MM-DD.md` | clear cat photo accepted; bad photo blocked with guidance |
-| V24 | multi-route generation | `v24-multi-route-generation-smoke-YYYY-MM-DD.md` | route attempts recorded safely; at least one route produces candidate or all routes blocked honestly |
-| V25 | same-cat and motion QA | `v25-same-cat-motion-qa-smoke-YYYY-MM-DD.md` | identity drift / weak motion / flicker / bad loops rejected |
-| V26 | pack, preview, apply | `v26-pack-preview-apply-smoke-YYYY-MM-DD.md` | approved candidate previews 8 actions and applies target-only; rollback works |
-| V27 | retry and cost controls | `v27-retry-cost-guidance-smoke-YYYY-MM-DD.md` | repeated failure stops under budget and shows actionable guidance |
-| V28 | final productized workflow | `v28-final-acceptance-report.md` + dashboard HTML | upload -> generate -> preview -> apply -> rollback path proven for tested scenarios |
+| V23 | photo suitability and traits | `v23-photo-suitability-trait-smoke-2026-06-16.md` | passed scoped: clear tested local cat photos accepted; bad photo fixtures blocked with guidance |
+| V24 | multi-route generation | `v24-multi-route-generation-smoke-2026-06-16.md` | passed scoped: route attempts recorded safely; local route candidates created; provider routes blocked/unavailable honestly |
+| V25 | same-cat and motion QA | `v25-same-cat-motion-qa-smoke-2026-06-16.md` | passed scoped: identity drift / weak motion / frame delta / bad loops / invisible frames rejected |
+| V26 | pack, preview, apply | `v26-pack-preview-apply-smoke-2026-06-16.md` | passed scoped: approved candidate previews 8 actions and applies target-only; rollback works |
+| V27 | retry and cost controls | `v27-retry-cost-guidance-smoke-2026-06-16.md` | passed scoped: repeated failure stops under budget and shows actionable guidance |
+| V28 | final productized workflow | `v28-final-acceptance-report.md` + dashboard HTML | passed scoped: tested workflow evidence summarized with embedded visual contact sheet |
 
 ## V23 Required Cases
 
@@ -30,6 +30,12 @@ stable reasonCode.
 - complex background marked as risk；
 - safe trait summary contains no raw filename/path/EXIF。
 
+V23 evidence:
+
+```text
+docs/V23-V28.x/evidence/v23-photo-suitability-trait-smoke-2026-06-16.md
+```
+
 ## V24 Required Cases
 
 - route A / B / C / D / E registered；
@@ -37,6 +43,12 @@ stable reasonCode.
 - provider credential missing does not print credential；
 - route output uses safe candidate metadata；
 - failure does not mutate live pet。
+
+V24 evidence:
+
+```text
+docs/V23-V28.x/evidence/v24-multi-route-generation-smoke-2026-06-16.md
+```
 
 ## V25 Required Cases
 
@@ -47,7 +59,23 @@ stable reasonCode.
 - off-canvas / blank / transparent frame rejected；
 - accepted candidate proceeds to V22 visual review。
 
+V25 evidence:
+
+```text
+docs/V23-V28.x/evidence/v25-same-cat-motion-qa-smoke-2026-06-16.md
+```
+
 ## V26 Required Cases
+
+Evidence:
+
+```text
+docs/V23-V28.x/evidence/v26-pack-preview-apply-smoke-2026-06-16.md
+```
+
+Status: passed scoped. V26 proves approved-candidate packaging, isolated
+8-action preview, target-only apply, and rollback. It does not prove V27 retry
+guidance or V28 final productized acceptance.
 
 - pet.json + frames assembled；
 - all 8 actions preview；
@@ -57,6 +85,17 @@ stable reasonCode.
 - rollback restores previous visible pack。
 
 ## V27 Required Cases
+
+Evidence:
+
+```text
+docs/V23-V28.x/evidence/v27-retry-cost-guidance-smoke-2026-06-16.md
+```
+
+Status: passed scoped. V27 proves retry budget enforcement, repeated-failure
+repair guidance, provider consent/credential/disclosure blocking, actionable
+next steps, and previous visible pack preservation. It does not prove V28 final
+productized acceptance.
 
 - per-route attempt budget enforced；
 - total attempt budget enforced；

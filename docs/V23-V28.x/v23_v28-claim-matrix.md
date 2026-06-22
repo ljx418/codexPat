@@ -1,13 +1,12 @@
 # V23-V28 Claim Matrix
 
-文档状态：planned claim matrix。  
-当前日期：2026-06-15。
+文档状态：V23-V28 accepted scoped claim matrix。
+当前日期：2026-06-16。
 
 ## Allowed Claims
 
-The claims below are planned claim boundaries only. They are not acceptance
-evidence and must not be used until the matching phase evidence is marked
-passed.
+The claims below are accepted only at their evidence-matched scoped boundaries.
+They must not be expanded beyond the matching phase evidence.
 
 | Stage | Allowed Claim | Required Evidence |
 | --- | --- | --- |
@@ -16,7 +15,7 @@ passed.
 | V25 | V25 same-cat and motion QA passed for tested candidate assets. | V25 evidence |
 | V26 | V26 auto-pack, preview, target apply, and rollback passed for tested approved candidate assets. | V26 evidence |
 | V27 | V27 retry, cost, and route guidance passed for tested repeated-failure scenarios. | V27 evidence |
-| V28 | V23-V28 photo-to-animated-2D workflow passed for tested local photo intake, multi-route candidate generation, QA rejection, preview, target apply, and rollback scenarios. | V28 final evidence |
+| V28 | V23-V28 photo-to-animated-2D workflow passed for tested local photo intake, multi-route candidate generation, QA rejection, preview, target apply, and rollback scenarios. | `docs/V23-V28.x/v28-final-acceptance-report.md` |
 
 ## Blocked Claims
 

@@ -1,17 +1,17 @@
 # Current vs Target Gap
 
-文档状态：active gap；V23-V28 planned；V22 scoped accepted 是输入基线；Petdex public resources are format/UX references only, not bundled assets。
+文档状态：active gap；V30 planned；V29/V23-V28 scoped baselines 是输入基线；Petdex public resources are format/UX references only, not bundled assets。
 配套图：`current-vs-target-gap.drawio`。  
-当前日期：2026-06-15。
+当前日期：2026-06-17。
 
 ## Active Line
 
 ```text
-Current active status: V23-V28 planned for Photo-to-Animated-2D Productization Track.
-Current active PRD: docs/active/agent_desktop_pet_prd_v23_v28.md.
-V23-V28 target: user photo -> photo suitability -> safe trait extraction -> multi-route generation -> same-cat/motion QA -> V22 quality review gate -> 8-action preview -> target-only apply -> rollback.
-V22 scoped acceptance remains the input baseline: bad candidate assets can be rejected before apply, but V22 does not guarantee that one uploaded cat photo can produce a good animated pet.
-V23-V28 must not claim provider integration verified, arbitrary-cat automatic photo-to-animation ready, automatic photo-to-2D ready for arbitrary cats, low-retry provider reliability for arbitrary cats, Petdex parity, Petdex asset reuse authorization, 3D ready, production release ready, Windows ready, or cross-platform ready.
+Current active status: V30 planned for semantic 2D pet animation quality. V29 Petdex-level gallery/photo benchmark work is the immediate input baseline, but V30 exists because recent visual review found generated frames still look like whole-image transforms rather than intuitive character actions.
+Current active PRD: docs/active/agent_desktop_pet_prd_v30.md.
+V30 target: action semantics -> storyboard/key-pose contract -> semantic candidate generation -> motion readability QA -> old-vs-new preview -> approved target apply -> rollback.
+V29/V23-V28 scoped acceptance remains the input baseline: the pipeline can close and gallery/generation flows exist, but it does not prove that generated actions are attractive, readable character animation.
+V30 must not claim Petdex parity achieved, provider integration verified, automatic photo-to-animation ready for arbitrary cats, Petdex asset reuse authorization, 3D ready, production release ready, Windows ready, or cross-platform ready.
 Historical baselines: V19 local motion sheet scoped passed; V18/V17/V16/V15 and earlier tracks are closed scoped baselines and regression constraints, not current active work.
 V3.x status: closed scoped baseline.
 V4.x status: closed scoped OS-level feasibility / managed session baseline.
@@ -32,13 +32,22 @@ V14.x status: passed scoped for tested local macOS premium animated pet gallery,
 This section is the short automation-facing summary. It overrides any confusion caused by historical baselines below:
 
 ```text
-Current active work: V23-V28 Photo-to-Animated-2D Productization Track planned.
-V23 photo suitability and trait extraction: planned.
-V24 multi-route generation orchestrator: planned.
-V25 same-cat and motion QA: planned.
-V26 auto-pack, preview, target apply, rollback: planned.
-V27 retry/cost/failure guidance: planned.
-V28 productized workflow final gate: No-Go until V23-V27 evidence exists.
+Current active work: V30 Semantic Character Animation Quality Track.
+V30.0 scope freeze: planned.
+V30.1 action storyboard and key-pose contract: planned.
+V30.2 semantic frame candidate generation: planned.
+V30.3 motion readability QA and transform-only rejection: planned.
+V30.4 old-vs-new preview UX with contact sheets and animated playback: planned.
+V30.5 approved semantic pack target apply and rollback: planned.
+V30.6 final gate: No-Go until V30.0-V30.5 evidence exists.
+V29 Petdex-level Gallery and Stable Photo-to-Animated-2D Track: immediate input baseline; it does not prove semantic character animation quality.
+V23-V28 Photo-to-Animated-2D Productization Track: passed scoped and retained as baseline.
+V23 photo suitability and trait extraction: passed scoped with real local photo samples and quality fixtures.
+V24 multi-route generation orchestrator: passed scoped with route registration, budgets, safe candidate metadata, and non-mutating route states.
+V25 same-cat and motion QA: passed scoped with identity drift, weak motion, frame delta, loop, and visibility rejection evidence.
+V26 auto-pack, preview, target apply, rollback: passed scoped with approved-candidate packaging, isolated 8-action preview, target-only apply, and rollback evidence.
+V27 retry/cost/failure guidance: passed scoped with budget, repeated-failure repair, provider gate, and actionable next-step evidence.
+V28 productized workflow final gate: passed scoped with final dashboard, regression, security, and claim scans.
 V22 closure completed scoped and is now the input baseline.
 V22.0 scope freeze: passed.
 V22.1 quality schema: passed.
@@ -60,7 +69,7 @@ V21.7 final gate: passed scoped.
 V20 provider outputs are route inputs, not V21 pass evidence.
 V19 local motion-sheet workflow remains accepted fallback baseline.
 
-V23-V28 planned design docs:
+V23-V28 baseline design docs:
 
 - `docs/active/agent_desktop_pet_prd_v23_v28.md`
 - `docs/V23-V28.x/v23_v28-target-architecture.md`
@@ -75,11 +84,44 @@ V23-V28 planned design docs:
 - `docs/V23-V28.x/v23_v28-doc-audit.md`
 - `docs/V23-V28.x/v23_v28-target-state.drawio`
 
+V30 active design docs:
+
+- `docs/active/agent_desktop_pet_prd_v30.md`
+- `docs/V30.x/v30-target-architecture.md`
+- `docs/V30.x/v30-development-plan.md`
+- `docs/V30.x/v30-acceptance-plan.md`
+- `docs/V30.x/v30-claim-matrix.md`
+- `docs/V30.x/v30-milestones.md`
+- `docs/V30.x/v30-current-gap-analysis.md`
+- `docs/V30.x/v30-implementation-contract.md`
+- `docs/V30.x/v30-doc-audit.md`
+- `docs/V30.x/v30-target-state.drawio`
+
 V22 accepted baseline evidence:
 
 - `docs/V22.x/v22_7-final-acceptance-report.md`
 - `docs/V22.x/evidence/v22_7-quality-review-dashboard-2026-06-15.html`
 - `docs/V22.x/evidence/v22_7-regression-checks-2026-06-15.md`
+
+V23 accepted scoped evidence:
+
+- `docs/V23-V28.x/evidence/v23-photo-suitability-trait-smoke-2026-06-16.md`
+V24 accepted scoped evidence:
+
+- `docs/V23-V28.x/evidence/v24-multi-route-generation-smoke-2026-06-16.md`
+V25 accepted scoped evidence:
+
+- `docs/V23-V28.x/evidence/v25-same-cat-motion-qa-smoke-2026-06-16.md`
+V26 accepted scoped evidence:
+
+- `docs/V23-V28.x/evidence/v26-pack-preview-apply-smoke-2026-06-16.md`
+V27 accepted scoped evidence:
+
+- `docs/V23-V28.x/evidence/v27-retry-cost-guidance-smoke-2026-06-16.md`
+V28 accepted scoped evidence:
+
+- `docs/V23-V28.x/v28-final-acceptance-report.md`
+- `docs/V23-V28.x/evidence/v28-productized-photo-to-2d-dashboard-2026-06-16.html`
 ```
 
 ## Historical Baselines
