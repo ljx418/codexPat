@@ -1,0 +1,50 @@
+{
+  "status": "passed scoped",
+  "date": "2026-06-24",
+  "url": "http://127.0.0.1:1421/",
+  "screenshots": [
+    "01-settings-overview-desktop.png",
+    "02-assets-gallery-preview.png",
+    "03-photo-2d-wizard-entry.png",
+    "04-photo-2d-wizard-modal.png",
+    "05-diagnostics-and-boundaries.png",
+    "06-mobile-settings-overview.png"
+  ],
+  "checks": {
+    "title": "设置与工作猫管理",
+    "overviewCards": 4,
+    "navLinks": 6,
+    "instanceCards": 2,
+    "galleryCards": 15,
+    "assetPreviewVisible": true,
+    "photoWizardVisible": true,
+    "diagnosticsVisible": true,
+    "forbiddenReadyClaimsVisible": true,
+    "forbiddenReadyClaimContext": true,
+    "bodyTextSample": "AGENT DESKTOP PET\n设置与工作猫管理\n\n管理桌宠实例、Codex 工作猫、个性化资产和本地诊断。\n\n静音\n桌宠实例\n2/12\n2 只可见 · 容量正常\n资产包\n1\n1 个已激活到实例\n当前状态\n空闲\n队列 0 · 声音开启\n事件桥\n在线\nAPI 已启用；127.0.0.1:17321；队列 0/32；token 已配置。\n首次上手\n快速创建工作猫\n\n不读 README 也能先看到一只猫。普通桌宠路径不超过 3 步；Codex 工作猫路径不超过 5 步。\n\n1. 先看到一只活猫\n视觉资产\n旗舰橘猫 V2 · premium flagship orange tabby\nLiving Work Cat · warm flagship tabby\n橘子工作猫 · orange tabby\n礼服工作猫 · tuxedo\n银灰工作猫 · silver\n三花工作猫 · calico\n奶油工作猫 · cream\n蓝灰工作猫 · blue gray\n黑曜工作猫 · black\n雪白工作猫 · white\n橘白工作猫 · ginger white\n狸花工作猫 · brown tabby\n丁",
+    "photoWizardModalOpenedDuringScenario": true
+  },
+  "events": [
+    {
+      "type": "console",
+      "level": "debug",
+      "text": "[vite] connecting..."
+    },
+    {
+      "type": "console",
+      "level": "debug",
+      "text": "[vite] connected."
+    },
+    {
+      "type": "console",
+      "level": "debug",
+      "text": "[vite] connecting..."
+    },
+    {
+      "type": "console",
+      "level": "debug",
+      "text": "[vite] connected."
+    }
+  ],
+  "boundary": "browser headless UI smoke with mocked Tauri invoke data; not native desktop overlay acceptance"
+}

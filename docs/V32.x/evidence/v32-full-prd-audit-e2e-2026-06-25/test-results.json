@@ -1,0 +1,395 @@
+{
+  "status": "passed scoped",
+  "date": "2026-06-25",
+  "startedAt": "2026-06-25T03:10:04.480Z",
+  "completedAt": "2026-06-25T03:11:09.255Z",
+  "preflight": {
+    "branch": "main",
+    "head": "a48444a",
+    "remote": [
+      "origin\thttps://github.com/ljx418/codexPat.git (fetch)",
+      "origin\thttps://github.com/ljx418/codexPat.git (push)"
+    ],
+    "statusShort": [
+      "M apps/desktop/package.json",
+      " M apps/desktop/src-tauri/src/bridge/http.rs",
+      " M apps/desktop/src-tauri/src/main.rs",
+      " M apps/desktop/src/assets/minimax-image-provider.test.ts",
+      "MM apps/desktop/src/main.ts",
+      " M docs/README.md",
+      " M docs/V30.x/v30-acceptance-plan.md",
+      " M docs/V30.x/v30-claim-matrix.md",
+      " M docs/V30.x/v30-current-gap-analysis.md",
+      " M docs/V30.x/v30-development-plan.md",
+      " M docs/V30.x/v30-doc-audit.md",
+      " M docs/V30.x/v30-implementation-contract.md",
+      " M docs/V30.x/v30-milestones.md",
+      " M docs/V30.x/v30-target-architecture.md",
+      " M docs/V30.x/v30-target-state.drawio",
+      " M docs/active/acceptance-plan.md",
+      " M docs/active/agent_desktop_pet_prd_v30.md",
+      " M docs/active/current-vs-target-gap.drawio",
+      " M docs/active/current-vs-target-gap.md",
+      " M docs/active/development-plan.md",
+      " M docs/ops/developer-setup.md",
+      " M docs/ops/troubleshooting.md",
+      " M packages/petctl/src/cli.ts",
+      " M packages/petctl/src/codex-bind.ts",
+      " M packages/petctl/src/petctl.test.ts",
+      " M scripts/v30_semantic_animation_gate_smoke.mjs",
+      " M scripts/v3_1_runtime_smoke.mjs",
+      " M scripts/v4_4_managed_session_smoke.mjs",
+      "?? apps/desktop/src-tauri/gen/schemas/windows-schema.json",
+      "?? apps/desktop/src-tauri/icons/icon.ico",
+      "?? apps/desktop/src-tauri/src/bridge/http/",
+      "?? apps/desktop/src-tauri/src/diagnostics.rs",
+      "?? apps/desktop/src-tauri/src/runtime_setup.rs",
+      "?? apps/desktop/src/assets/asset-manager-panel.ts",
+      "?? apps/desktop/src/assets/gallery-controls.ts",
+      "?? apps/desktop/src/assets/photo-2d-wizard-controls.ts",
+      "?? apps/desktop/src/assets/v31-art-quality.test.ts",
+      "?? apps/desktop/src/assets/v31-art-quality.ts",
+      "?? apps/desktop/src/assets/v31-continuation.test.ts",
+      "?? apps/desktop/src/assets/v31-continuation.ts",
+      "?? apps/desktop/src/assets/v32-quality-rescue.test.ts",
+      "?? apps/desktop/src/assets/v32-quality-rescue.ts",
+      "?? apps/desktop/src/runtime-state.ts",
+      "?? apps/desktop/src/tauri-commands.ts",
+      "?? docs/V30.x/evidence/browser-ux-2026-06-24/",
+      "?? docs/V30.x/evidence/post-v30-architecture-remediation-2026-06-23.md",
+      "?? docs/V30.x/evidence/post-v30-browser-ux-acceptance-2026-06-24.html",
+      "?? docs/V30.x/evidence/post-v30-detailed-plan-review-2026-06-23.md",
+      "?? docs/V30.x/evidence/post-v30-doc-coverage-review-2026-06-23.md",
+      "?? docs/V30.x/evidence/post-v30-documentation-development-2026-06-23.md",
+      "?? docs/V30.x/evidence/post-v30-drawio-human-review-sync-2026-06-23.md",
+      "?? docs/V30.x/evidence/post-v30-stage-goals-design-sync-2026-06-23.md",
+      "?? docs/V30.x/evidence/post-v30-v30-full-audit-2026-06-24.md",
+      "?? docs/V30.x/evidence/post-v30_1-pre-execution-audit-2026-06-23.md",
+      "?? docs/V30.x/evidence/post-v30_1-runtime-desktop-smoke-2026-06-23.md",
+      "?? docs/V30.x/evidence/post-v30_1-runtime-desktop-smoke-TEMPLATE.md",
+      "?? docs/V30.x/evidence/post-v30_2-managed-codex-workflow-smoke-2026-06-23.md",
+      "?? docs/V30.x/evidence/post-v30_2-managed-codex-workflow-smoke-TEMPLATE.md",
+      "?? docs/V30.x/evidence/post-v30_2-pre-execution-audit-2026-06-23.md",
+      "?? docs/V30.x/evidence/post-v30_3-architecture-slice-FE-1-command-boundary-2026-06-23.md",
+      "?? docs/V30.x/evidence/post-v30_3-architecture-slice-FE-2-runtime-state-boundary-2026-06-23.md",
+      "?? docs/V30.x/evidence/post-v30_3-architecture-slice-FE-3-asset-manager-boundary-2026-06-23.md",
+      "?? docs/V30.x/evidence/post-v30_3-architecture-slice-FE-4-photo-wizard-boundary-2026-06-23.md",
+      "?? docs/V30.x/evidence/post-v30_3-architecture-slice-FE-5-preview-gallery-boundary-2026-06-23.md",
+      "?? docs/V30.x/evidence/post-v30_3-architecture-slice-TEMPLATE.md",
+      "?? docs/V30.x/evidence/post-v30_4-architecture-slice-RS-1-bridge-route-registry-2026-06-23.md",
+      "?? docs/V30.x/evidence/post-v30_4-architecture-slice-RS-2-bridge-auth-rejection-helpers-2026-06-23.md",
+      "?? docs/V30.x/evidence/post-v30_4-architecture-slice-RS-3-bridge-instance-visibility-handlers-2026-06-23.md",
+      "?? docs/V30.x/evidence/post-v30_4-architecture-slice-RS-4-bridge-event-handlers-validation-2026-06-23.md",
+      "?? docs/V30.x/evidence/post-v30_4-architecture-slice-RS-5-tauri-runtime-setup-2026-06-24.md",
+      "?? docs/V30.x/evidence/post-v30_4-architecture-slice-RS-6-diagnostics-boundary-2026-06-24.md",
+      "?? docs/V30.x/evidence/post-v30_4-rs5-rs6-pre-execution-no-go-2026-06-23.md",
+      "?? docs/V30.x/evidence/post-v30_4-tauri-bridge-slice-closure-2026-06-24.md",
+      "?? docs/V30.x/evidence/post-v30_5-final-remediation-gate-2026-06-24.md",
+      "?? docs/V30.x/evidence/post-v30_5-pre-execution-audit-2026-06-24.md",
+      "?? docs/V30.x/evidence/v30-action-asset-acceptance-2026-06-24.html",
+      "?? docs/V30.x/evidence/v30-action-assets-2026-06-24/",
+      "?? docs/V30.x/evidence/v30-internal-document-review-2026-06-24.md",
+      "?? docs/V30.x/evidence/v30-wsl-baseline-recovery-2026-06-23.md",
+      "?? docs/V30.x/post-v30-acceptance-plan.md",
+      "?? docs/V30.x/post-v30-detailed-development-and-acceptance-plan.md",
+      "?? docs/V30.x/post-v30-milestones.md",
+      "?? docs/V30.x/post-v30-target-architecture.md",
+      "?? docs/V30.x/post-v30_1-runtime-desktop-smoke-development-and-acceptance-plan.md",
+      "?? docs/V30.x/post-v30_2-managed-codex-workflow-smoke-development-and-acceptance-plan.md",
+      "?? docs/V31.x/",
+      "?? docs/V32.x/",
+      "?? docs/active/agent_desktop_pet_prd_post_v30.md",
+      "?? docs/active/agent_desktop_pet_prd_v31.md",
+      "?? docs/active/agent_desktop_pet_prd_v32.md",
+      "?? docs/active/architecture-remediation-plan.md",
+      "?? docs/active/post-v30-evidence-and-scan-checklist.md",
+      "?? docs/active/post-v30-frontend-architecture-slices.md",
+      "?? docs/active/post-v30-managed-codex-smoke-spec.md",
+      "?? docs/active/post-v30-runtime-smoke-spec.md",
+      "?? docs/active/post-v30-tauri-bridge-architecture-slices.md",
+      "?? fixtures/manual/v32_quality_rescue/",
+      "?? scripts/post_v30_action_asset_acceptance.mjs",
+      "?? scripts/post_v30_browser_ux_acceptance.mjs",
+      "?? scripts/v31_0_scope_freeze_smoke.mjs",
+      "?? scripts/v31_1_art_quality_rubric_smoke.mjs",
+      "?? scripts/v31_2_flagship_asset_route_smoke.mjs",
+      "?? scripts/v31_3_visual_review_report_smoke.mjs",
+      "?? scripts/v31_4_layered_rig_route_smoke.mjs",
+      "?? scripts/v31_5_photo_character_route_smoke.mjs",
+      "?? scripts/v31_6_real_data_e2e_acceptance_smoke.mjs",
+      "?? scripts/v31_continuation_smoke.mjs",
+      "?? scripts/v31_stage_smoke.mjs",
+      "?? scripts/v32_full_prd_audit_e2e_report.mjs",
+      "?? scripts/v32_quality_rescue_smoke.mjs"
+    ],
+    "chromeMode": "headless only; no visible browser window or focus-stealing desktop window",
+    "chromeAvailable": true
+  },
+  "prdBaseline": {
+    "primary": "docs/active/agent_desktop_pet_prd_v32.md",
+    "trace": [
+      "docs/active/agent_desktop_pet_prd_v31.md",
+      "docs/active/agent_desktop_pet_prd_v30.md"
+    ],
+    "boundary": "V32 is the active scoped PRD; V31/V30 remain target-experience and semantic-gate references."
+  },
+  "commandResults": [
+    {
+      "id": "desktop_test",
+      "label": "desktop test",
+      "command": "pnpm --filter desktop test",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 4368,
+      "timedOut": false,
+      "summary": "tests pass=277 fail=0",
+      "stdoutTail": "    type: 'test'\n      ...\n    # Subtest: does not let transient success overwrite active error\n    ok 4 - does not let transient success overwrite active error\n      ---\n      duration_ms: 0.055264\n      type: 'test'\n      ...\n    # Subtest: does not let transient success overwrite active need_input\n    ok 5 - does not let transient success overwrite active need_input\n      ---\n      duration_ms: 0.038917\n      type: 'test'\n      ...\n    1..5\nok 51 - V5.0 cat action resolver\n  ---\n  duration_ms: 1.224751\n  type: 'suite'\n  ...\n# Subtest: V11.3 emotion resolver\n    # Subtest: maps all core states to distinct emotion profiles without state mutation\n    ok 1 - maps all core states to distinct emotion profiles without state mutation\n      ---\n      duration_ms: 0.672759\n      type: 'test'\n      ...\n    # Subtest: produces safe renderer input fields only\n    ok 2 - produces safe renderer input fields only\n      ---\n      duration_ms: 0.213404\n      type: 'test'\n      ...\n    1..2\nok 52 - V11.3 emotion resolver\n  ---\n  duration_ms: 1.349079\n  type: 'suite'\n  ...\n# Subtest: V11.4 action composer\n    # Subtest: holds error and need_input above lower-priority visual actions\n    ok 1 - holds error and need_input above lower-priority visual actions\n      ---\n      duration_ms: 0.146053\n      type: 'test'\n      ...\n    # Subtest: treats success and click feedback as transients\n    ok 2 - treats success and click feedback as transients\n      ---\n      duration_ms: 0.093594\n      type: 'test'\n      ...\n    # Subtest: applies higher-priority interrupts and stable rapid-event final states\n    ok 3 - applies higher-priority interrupts and stable rapid-event final states\n      ---\n      duration_ms: 0.094162\n      type: 'test'\n      ...\n    # Subtest: maps pointer and drag micro-interactions to safe action fallbacks\n    ok 4 - maps pointer and drag micro-interactions to safe action fallbacks\n      ---\n      duration_ms: 0.09147\n      type: 'test'\n      ...\n    # Subtest: keeps working states clear when lower-priority ambience is active\n    ok 5 - keeps working states clear when lower-priority ambience is active\n      ---\n      duration_ms: 0.073357\n      type: 'test'\n      ...\n    1..5\nok 53 - V11.4 action composer\n  ---\n  duration_ms: 0.700691\n  type: 'suite'\n  ...\n1..53\n# tests 277\n# suites 53\n# pass 277\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 4096.150954\n",
+      "stderrTail": ""
+    },
+    {
+      "id": "desktop_check",
+      "label": "desktop check",
+      "command": "pnpm --filter desktop check",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 11723,
+      "timedOut": false,
+      "summary": " > desktop@0.1.0 check /mnt/c/workspace/codexpat/apps/desktop > tsc --noEmit ",
+      "stdoutTail": "\n> desktop@0.1.0 check /mnt/c/workspace/codexpat/apps/desktop\n> tsc --noEmit\n\n",
+      "stderrTail": ""
+    },
+    {
+      "id": "petctl_test",
+      "label": "petctl test",
+      "command": "pnpm --filter @agent-desktop-pet/petctl test",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 7302,
+      "timedOut": false,
+      "summary": "tests pass=71 fail=0",
+      "stdoutTail": "  # Subtest: returns sanitized managed session status without raw binding id\n    ok 1 - returns sanitized managed session status without raw binding id\n      ---\n      duration_ms: 0.990731\n      type: 'test'\n      ...\n    # Subtest: marks old managed sessions stale\n    ok 2 - marks old managed sessions stale\n      ---\n      duration_ms: 0.353142\n      type: 'test'\n      ...\n    1..2\nok 8 - petctl codex session status\n  ---\n  duration_ms: 1.4137\n  type: 'suite'\n  ...\n# Subtest: petctl notify\n    # Subtest: does not send http when local validation fails\n    ok 1 - does not send http when local validation fails\n      ---\n      duration_ms: 0.159392\n      type: 'test'\n      ...\n    # Subtest: maps accepted bridge response\n    ok 2 - maps accepted bridge response\n      ---\n      duration_ms: 0.511509\n      type: 'test'\n      ...\n    # Subtest: posts to instance endpoint when instance is set\n    ok 3 - posts to instance endpoint when instance is set\n      ---\n      duration_ms: 0.234929\n      type: 'test'\n      ...\n    # Subtest: rejects invalid instance locally\n    ok 4 - rejects invalid instance locally\n      ---\n      duration_ms: 0.077988\n      type: 'test'\n      ...\n    # Subtest: maps unauthorized response\n    ok 5 - maps unauthorized response\n      ---\n      duration_ms: 0.454511\n      type: 'test'\n      ...\n    1..5\nok 9 - petctl notify\n  ---\n  duration_ms: 1.543742\n  type: 'suite'\n  ...\n# Subtest: petctl attach/list\n    # Subtest: attaches a codex instance\n    ok 1 - attaches a codex instance\n      ---\n      duration_ms: 0.202059\n      type: 'test'\n      ...\n    # Subtest: rejects invalid attach display name locally\n    ok 2 - rejects invalid attach display name locally\n      ---\n      duration_ms: 0.049576\n      type: 'test'\n      ...\n    # Subtest: lists instances\n    ok 3 - lists instances\n      ---\n      duration_ms: 0.127803\n      type: 'test'\n      ...\n    # Subtest: detaches an instance\n    ok 4 - detaches an instance\n      ---\n      duration_ms: 0.184768\n      type: 'test'\n      ...\n    # Subtest: rejects invalid detach instance locally\n    ok 5 - rejects invalid detach instance locally\n      ---\n      duration_ms: 0.056168\n      type: 'test'\n      ...\n    1..5\nok 10 - petctl attach/list\n  ---\n  duration_ms: 0.697542\n  type: 'suite'\n  ...\n1..10\n# tests 71\n# suites 10\n# pass 71\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 3843.085134\n",
+      "stderrTail": ""
+    },
+    {
+      "id": "v30_semantic_smoke",
+      "label": "V30 semantic smoke",
+      "command": "pnpm --filter desktop exec node --import tsx ../../scripts/v30_semantic_animation_gate_smoke.mjs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 1357,
+      "timedOut": false,
+      "summary": "ok=true; status=passed",
+      "stdoutTail": ": true\n      }\n    },\n    \"transformOnlyScore\": \"high\",\n    \"keyPoseDiversityScore\": \"low\",\n    \"semanticChecklistResult\": \"failed\",\n    \"loopClosureResult\": \"passed\",\n    \"adjacentDeltaResult\": \"passed\",\n    \"sameCatResult\": \"passed\"\n  },\n  \"semanticCandidate\": {\n    \"status\": \"passed\",\n    \"candidateId\": \"v30_semantic_candidate\",\n    \"safePackId\": \"flagship-work-cat-v2\",\n    \"routeKind\": \"local_2d_rig\",\n    \"reasonCodes\": [\n      \"semantic_animation_passed\"\n    ],\n    \"actionCoverage\": {\n      \"idle\": true,\n      \"thinking\": true,\n      \"running\": true,\n      \"success\": true,\n      \"warning\": true,\n      \"error\": true,\n      \"need_input\": true,\n      \"sleeping\": true\n    },\n    \"actionScores\": {\n      \"idle\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"low\",\n        \"keyPoseBucket\": \"low\",\n        \"transformOnly\": false\n      },\n      \"thinking\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"medium\",\n        \"keyPoseBucket\": \"medium\",\n        \"transformOnly\": false\n      },\n      \"running\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"medium\",\n        \"keyPoseBucket\": \"medium\",\n        \"transformOnly\": false\n      },\n      \"success\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"medium\",\n        \"keyPoseBucket\": \"medium\",\n        \"transformOnly\": false\n      },\n      \"warning\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"medium\",\n        \"keyPoseBucket\": \"medium\",\n        \"transformOnly\": false\n      },\n      \"error\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"medium\",\n        \"keyPoseBucket\": \"medium\",\n        \"transformOnly\": false\n      },\n      \"need_input\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"medium\",\n        \"keyPoseBucket\": \"medium\",\n        \"transformOnly\": false\n      },\n      \"sleeping\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"low\",\n        \"keyPoseBucket\": \"low\",\n        \"transformOnly\": false\n      }\n    },\n    \"transformOnlyScore\": \"low\",\n    \"keyPoseDiversityScore\": \"medium\",\n    \"semanticChecklistResult\": \"passed\",\n    \"loopClosureResult\": \"passed\",\n    \"adjacentDeltaResult\": \"passed\",\n    \"sameCatResult\": \"passed\"\n  },\n  \"claimScan\": {\n    \"status\": \"passed\",\n    \"scannedFileCount\": 12,\n    \"violations\": []\n  },\n  \"securityScan\": {\n    \"status\": \"passed\",\n    \"forbiddenContentDetected\": false\n  }\n}\n",
+      "stderrTail": ""
+    },
+    {
+      "id": "v31_continuation_smoke",
+      "label": "V31 continuation smoke",
+      "command": "pnpm --filter desktop exec node --import tsx ../../scripts/v31_continuation_smoke.mjs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 2697,
+      "timedOut": false,
+      "summary": "ok=true; status=blocked",
+      "stdoutTail": "{\n  \"ok\": true,\n  \"finalStatus\": \"blocked\",\n  \"outputs\": {\n    \"v31_8\": \"docs/V31.x/evidence/v31_8-repeatable-asset-production-2026-06-24.md\",\n    \"v31_9\": \"docs/V31.x/evidence/v31_9-layered-rig-runtime-route-2026-06-24.md\",\n    \"v31_10\": \"docs/V31.x/evidence/v31_10-photo-sample-set-2026-06-24.md\",\n    \"v31_11\": \"docs/V31.x/evidence/v31_11-photo-action-preview-apply-rollback-2026-06-24.md\",\n    \"v31_12\": \"docs/V31.x/evidence/v31_12-real-data-e2e-2026-06-24.md\",\n    \"v31_13\": \"docs/V31.x/evidence/v31_13-continuation-final-gate-2026-06-24.md\"\n  },\n  \"phaseStatuses\": {\n    \"v31_8\": \"partial\",\n    \"v31_9\": \"blocked\",\n    \"v31_10\": \"partial\",\n    \"v31_11\": \"blocked\",\n    \"v31_12\": \"blocked\"\n  },\n  \"claimScan\": \"passed\",\n  \"securityScan\": \"passed\"\n}\n",
+      "stderrTail": ""
+    },
+    {
+      "id": "v32_quality_smoke",
+      "label": "V32 quality rescue smoke",
+      "command": "pnpm --filter desktop exec node --import tsx ../../scripts/v32_quality_rescue_smoke.mjs",
+      "status": "passed",
+      "exitCode": 0,
+      "durationMs": 35600,
+      "timedOut": false,
+      "summary": "ok=true; status=passed scoped",
+      "stdoutTail": "{\n  \"ok\": true,\n  \"finalStatus\": \"passed scoped\",\n  \"evidencePath\": \"docs/V32.x/evidence/v32_quality_rescue-smoke-2026-06-24.md\",\n  \"finalReportPath\": \"docs/V32.x/v32-final-acceptance-report.md\",\n  \"htmlPath\": \"docs/V32.x/evidence/v32_quality_rescue-report-2026-06-24.html\",\n  \"screenshotStatus\": \"passed\",\n  \"packStatuses\": [\n    {\n      \"safePackId\": \"quality-rescue-tabby-v1\",\n      \"status\": \"passed\"\n    },\n    {\n      \"safePackId\": \"quality-rescue-tuxedo-v1\",\n      \"status\": \"passed\"\n    }\n  ],\n  \"previewApplyStatus\": \"passed\",\n  \"claimScan\": \"passed\",\n  \"securityScan\": \"passed\"\n}\n",
+      "stderrTail": ""
+    }
+  ],
+  "staticAudit": {
+    "conceptChecks": [
+      {
+        "id": "v32_primary_prd",
+        "label": "V32 active scoped PRD",
+        "status": "passed",
+        "files": [
+          "docs/active/agent_desktop_pet_prd_v32.md"
+        ],
+        "missing": []
+      },
+      {
+        "id": "v31_target_experience",
+        "label": "V31 high-quality target experience",
+        "status": "passed",
+        "files": [
+          "docs/active/agent_desktop_pet_prd_v31.md"
+        ],
+        "missing": []
+      },
+      {
+        "id": "v30_semantic_gate",
+        "label": "V30 semantic gate boundary",
+        "status": "passed",
+        "files": [
+          "docs/active/agent_desktop_pet_prd_v30.md"
+        ],
+        "missing": []
+      },
+      {
+        "id": "v32_architecture",
+        "label": "V32 target architecture",
+        "status": "passed",
+        "files": [
+          "docs/V32.x/v32-target-architecture.md"
+        ],
+        "missing": []
+      },
+      {
+        "id": "v32_evidence",
+        "label": "V32 real evidence",
+        "status": "passed",
+        "files": [
+          "docs/V32.x/evidence/v32_quality_rescue-smoke-2026-06-24.md"
+        ],
+        "missing": []
+      }
+    ],
+    "coverage": [
+      {
+        "feature": "V32 local 8-action packs",
+        "status": "passed scoped",
+        "evidence": "v32_quality_rescue_smoke.mjs + v32-quality-rescue.test.ts",
+        "note": "真实 PNG/GIF/contact sheet evidence exists for two named packs."
+      },
+      {
+        "feature": "V31 arbitrary-cat photo-to-action",
+        "status": "blocked scoped",
+        "evidence": "v31_continuation_smoke.mjs",
+        "note": "V31.11/V31.12 remain blocked because no photo-derived action frames passed full closure."
+      },
+      {
+        "feature": "V30 transform-only rejection",
+        "status": "passed scoped",
+        "evidence": "v30_semantic_animation_gate_smoke.mjs",
+        "note": "Weak transform-only candidate is rejected; semantic candidate passes."
+      },
+      {
+        "feature": "Browser settings UX",
+        "status": "passed scoped",
+        "evidence": "Chrome headless screenshot flow",
+        "note": "Settings/gallery/photo wizard/diagnostics paths render with mocked Tauri data."
+      },
+      {
+        "feature": "Native desktop overlay focus/window behavior",
+        "status": "not tested in this report",
+        "evidence": "Prior Post-V30 runtime evidence only",
+        "note": "This report intentionally avoids visible window/focus-stealing automation."
+      }
+    ],
+    "claimScan": {
+      "status": "passed",
+      "scannedFileCount": 9,
+      "violations": []
+    },
+    "securityScan": {
+      "status": "passed",
+      "scannedFileCount": 7,
+      "violations": []
+    },
+    "codeReviewFindings": [
+      {
+        "priority": "Medium",
+        "area": "Photo automation",
+        "finding": "V31/V32 evidence still does not implement arbitrary-cat photo-to-action closure.",
+        "evidence": "V31 continuation smoke reports v31_11/v31_12 blocked; V32 PRD explicitly scopes to named local project-authored packs."
+      },
+      {
+        "priority": "Medium",
+        "area": "Browser UX evidence",
+        "finding": "Headless settings-page screenshots use mocked Tauri data and cannot prove native overlay or real bridge behavior.",
+        "evidence": "The copied post_v30 browser UX evidence uses a mocked Tauri invoke layer and does not open visible desktop windows."
+      },
+      {
+        "priority": "Low",
+        "area": "Documentation age",
+        "finding": "Several V32 generated evidence files are dated 2026-06-24 while this audit report is dated 2026-06-25.",
+        "evidence": "V32 smoke script currently emits its original execution date; this audit records the rerun command result separately."
+      }
+    ]
+  },
+  "browserEvidence": {
+    "status": "passed scoped",
+    "url": "http://127.0.0.1:1421/",
+    "screenshotMode": "Chrome headless only; settings path copied from post_v30_browser_ux_acceptance.mjs evidence generated in this workspace",
+    "screenshots": [
+      {
+        "title": "设置页概览",
+        "path": "docs/V32.x/evidence/v32-full-prd-audit-e2e-2026-06-25/screenshots/01-settings-overview-desktop.png"
+      },
+      {
+        "title": "本地资产与图库预览",
+        "path": "docs/V32.x/evidence/v32-full-prd-audit-e2e-2026-06-25/screenshots/02-assets-gallery-preview.png"
+      },
+      {
+        "title": "照片 2D 向导入口",
+        "path": "docs/V32.x/evidence/v32-full-prd-audit-e2e-2026-06-25/screenshots/03-photo-2d-wizard-entry.png"
+      },
+      {
+        "title": "照片 2D 向导弹窗",
+        "path": "docs/V32.x/evidence/v32-full-prd-audit-e2e-2026-06-25/screenshots/04-photo-2d-wizard-modal.png"
+      },
+      {
+        "title": "诊断与边界",
+        "path": "docs/V32.x/evidence/v32-full-prd-audit-e2e-2026-06-25/screenshots/05-diagnostics-and-boundaries.png"
+      },
+      {
+        "title": "移动视口设置页",
+        "path": "docs/V32.x/evidence/v32-full-prd-audit-e2e-2026-06-25/screenshots/06-mobile-settings-overview.png"
+      },
+      {
+        "title": "V32 动作资产报告",
+        "path": "docs/V32.x/evidence/v32-full-prd-audit-e2e-2026-06-25/screenshots/07-v32-quality-report.png"
+      }
+    ],
+    "checks": {
+      "title": "设置与工作猫管理",
+      "overviewCards": 4,
+      "navLinks": 6,
+      "instanceCards": 2,
+      "galleryCards": 15,
+      "assetPreviewVisible": true,
+      "photoWizardVisible": true,
+      "diagnosticsVisible": true,
+      "forbiddenReadyClaimsVisible": true,
+      "forbiddenReadyClaimContext": true,
+      "bodyTextSample": "AGENT DESKTOP PET\n设置与工作猫管理\n\n管理桌宠实例、Codex 工作猫、个性化资产和本地诊断。\n\n静音\n桌宠实例\n2/12\n2 只可见 · 容量正常\n资产包\n1\n1 个已激活到实例\n当前状态\n空闲\n队列 0 · 声音开启\n事件桥\n在线\nAPI 已启用；127.0.0.1:17321；队列 0/32；token 已配置。\n首次上手\n快速创建工作猫\n\n不读 README 也能先看到一只猫。普通桌宠路径不超过 3 步；Codex 工作猫路径不超过 5 步。\n\n1. 先看到一只活猫\n视觉资产\n旗舰橘猫 V2 · premium flagship orange tabby\nLiving Work Cat · warm flagship tabby\n橘子工作猫 · orange tabby\n礼服工作猫 · tuxedo\n银灰工作猫 · silver\n三花工作猫 · calico\n奶油工作猫 · cream\n蓝灰工作猫 · blue gray\n黑曜工作猫 · black\n雪白工作猫 · white\n橘白工作猫 · ginger white\n狸花工作猫 · brown tabby\n丁",
+      "photoWizardModalOpenedDuringScenario": true,
+      "v32ReportScreenshotCopied": true
+    },
+    "events": [
+      {
+        "type": "console",
+        "level": "debug",
+        "text": "[vite] connecting..."
+      },
+      {
+        "type": "console",
+        "level": "debug",
+        "text": "[vite] connected."
+      },
+      {
+        "type": "console",
+        "level": "debug",
+        "text": "[vite] connecting..."
+      },
+      {
+        "type": "console",
+        "level": "debug",
+        "text": "[vite] connected."
+      }
+    ]
+  },
+  "reportPath": "docs/V32.x/evidence/v32_full_prd_audit_e2e_report_2026-06-25.html",
+  "resultPath": "docs/V32.x/evidence/v32-full-prd-audit-e2e-2026-06-25/test-results.json"
+}

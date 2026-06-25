@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>V32 原始 PRD 全量审计与自动化验收报告</title>
+  <style>
+    body{margin:0;background:#f6f7fb;color:#172033;font-family:"Segoe UI",Arial,sans-serif}
+    main{max-width:1280px;margin:0 auto;padding:28px 22px 60px}
+    header{background:#111827;color:white;border-radius:8px;padding:26px}
+    h1{margin:0 0 10px;font-size:30px;letter-spacing:0} h2{font-size:22px;margin:30px 0 12px;letter-spacing:0} h3{font-size:16px;margin:0 0 8px;letter-spacing:0}
+    p,li{line-height:1.6}.badge{display:inline-block;border-radius:6px;padding:6px 10px;font-weight:800;background:#dcfce7;color:#166534}
+    .boundary{background:#fff7ed;border:1px solid #fed7aa;color:#9a3412;border-radius:8px;padding:14px;margin:16px 0}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.card,.shot{background:white;border:1px solid #d9e0eb;border-radius:8px;padding:14px;box-shadow:0 1px 2px rgba(15,23,42,.05)}
+    .shot img{display:block;width:100%;height:auto;border:1px solid #d9e0eb;border-radius:6px;background:white}
+    table{width:100%;border-collapse:collapse;background:white;border:1px solid #d9e0eb;border-radius:8px;overflow:hidden}th,td{border-bottom:1px solid #d9e0eb;padding:10px;text-align:left;vertical-align:top}th{background:#eef2f7}
+    code{background:#eef2f7;border-radius:4px;padding:2px 5px}.pass{color:#0f766e;font-weight:800}.fail{color:#b91c1c;font-weight:800}.blocked,.warn-text{color:#a16207;font-weight:800}.info-text{color:#0369a1;font-weight:800}
+    pre{background:#0f172a;color:#e5e7eb;border-radius:8px;padding:14px;overflow:auto;font-size:12px}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}main{padding:18px 12px 44px}}
+  </style>
+</head>
+<body><main>
+  <header>
+    <span class="badge">passed scoped</span>
+    <h1>V32 原始 PRD 全量审计与自动化验收报告</h1>
+    <p>日期：2026-06-25。本报告以 V32 active scoped PRD 为主基准，追溯 V31 高质量目标体验和 V30 语义动作门禁。所有截图均由 Chrome headless 生成，未打开可见窗口，未抢占焦点。</p>
+  </header>
+  <section class="boundary"><strong>边界：</strong>本报告最多证明当前仓库中 named local project-authored 2D frameSequence packs、设置页 mock UI 路径和相关回归命令的 scoped 状态。不声明任意猫照片自动生成 ready、provider integration verified、Petdex parity、3D ready、production release ready、Windows ready 或 cross-platform ready。</section>
+
+  <h2>目标架构与当前实现</h2>
+  <div class="grid">
+    <article class="card"><h3>目标架构</h3><p>V32 目标是从 V30 语义门禁和 V31 高质量目标出发，用本地分层 rig / frameSequence 资产、真实帧测量、预览、target-only apply、rollback 和截图证据闭环。</p></article>
+    <article class="card"><h3>当前实现</h3><p>当前实现包含 V32 measured quality gate、两个本地项目自有 8 动作 pack、V30/V31 gate 复用、V26 preview/apply/rollback 复用，以及设置页中的资产、照片向导和诊断入口。</p></article>
+    <article class="card"><h3>未覆盖能力</h3><p>V31 arbitrary-cat photo-to-action 仍 blocked/candidate-only；本报告不证明真实 provider、生产发布、原生窗口焦点或跨平台能力。</p></article>
+  </div>
+
+  <h2>命令回归结果</h2>
+  <table><thead><tr><th>命令</th><th>状态</th><th>耗时</th><th>摘要</th></tr></thead><tbody>
+    <tr><td><code>pnpm --filter desktop test</code></td><td class="pass">passed</td><td>4368 ms</td><td>tests pass=277 fail=0</td></tr>
+    <tr><td><code>pnpm --filter desktop check</code></td><td class="pass">passed</td><td>11723 ms</td><td> &gt; desktop@0.1.0 check /mnt/c/workspace/codexpat/apps/desktop &gt; tsc --noEmit </td></tr>
+    <tr><td><code>pnpm --filter @agent-desktop-pet/petctl test</code></td><td class="pass">passed</td><td>7302 ms</td><td>tests pass=71 fail=0</td></tr>
+    <tr><td><code>pnpm --filter desktop exec node --import tsx ../../scripts/v30_semantic_animation_gate_smoke.mjs</code></td><td class="pass">passed</td><td>1357 ms</td><td>ok=true; status=passed</td></tr>
+    <tr><td><code>pnpm --filter desktop exec node --import tsx ../../scripts/v31_continuation_smoke.mjs</code></td><td class="pass">passed</td><td>2697 ms</td><td>ok=true; status=blocked</td></tr>
+    <tr><td><code>pnpm --filter desktop exec node --import tsx ../../scripts/v32_quality_rescue_smoke.mjs</code></td><td class="pass">passed</td><td>35600 ms</td><td>ok=true; status=passed scoped</td></tr></tbody></table>
+
+  <h2>PRD / 文档概念一致性</h2>
+  <table><thead><tr><th>检查项</th><th>状态</th><th>文件</th></tr></thead><tbody>
+    <tr><td>V32 active scoped PRD</td><td class="pass">passed</td><td>docs/active/agent_desktop_pet_prd_v32.md</td></tr>
+    <tr><td>V31 high-quality target experience</td><td class="pass">passed</td><td>docs/active/agent_desktop_pet_prd_v31.md</td></tr>
+    <tr><td>V30 semantic gate boundary</td><td class="pass">passed</td><td>docs/active/agent_desktop_pet_prd_v30.md</td></tr>
+    <tr><td>V32 target architecture</td><td class="pass">passed</td><td>docs/V32.x/v32-target-architecture.md</td></tr>
+    <tr><td>V32 real evidence</td><td class="pass">passed</td><td>docs/V32.x/evidence/v32_quality_rescue-smoke-2026-06-24.md</td></tr></tbody></table>
+
+  <h2>功能覆盖与真实状态</h2>
+  <table><thead><tr><th>功能点</th><th>状态</th><th>证据</th><th>说明</th></tr></thead><tbody>
+    <tr><td>V32 local 8-action packs</td><td class="pass">passed scoped</td><td>v32_quality_rescue_smoke.mjs + v32-quality-rescue.test.ts</td><td>真实 PNG/GIF/contact sheet evidence exists for two named packs.</td></tr>
+    <tr><td>V31 arbitrary-cat photo-to-action</td><td class="blocked">blocked scoped</td><td>v31_continuation_smoke.mjs</td><td>V31.11/V31.12 remain blocked because no photo-derived action frames passed full closure.</td></tr>
+    <tr><td>V30 transform-only rejection</td><td class="pass">passed scoped</td><td>v30_semantic_animation_gate_smoke.mjs</td><td>Weak transform-only candidate is rejected; semantic candidate passes.</td></tr>
+    <tr><td>Browser settings UX</td><td class="pass">passed scoped</td><td>Chrome headless screenshot flow</td><td>Settings/gallery/photo wizard/diagnostics paths render with mocked Tauri data.</td></tr>
+    <tr><td>Native desktop overlay focus/window behavior</td><td class="blocked">not tested in this report</td><td>Prior Post-V30 runtime evidence only</td><td>This report intentionally avoids visible window/focus-stealing automation.</td></tr></tbody></table>
+
+  <h2>自动化用户路径截图</h2>
+  <div class="grid">
+    <article class="shot"><h3>设置页概览</h3><img src="v32-full-prd-audit-e2e-2026-06-25/screenshots/01-settings-overview-desktop.png" alt="设置页概览 screenshot"><p><code>docs/V32.x/evidence/v32-full-prd-audit-e2e-2026-06-25/screenshots/01-settings-overview-desktop.png</code></p></article>
+    <article class="shot"><h3>本地资产与图库预览</h3><img src="v32-full-prd-audit-e2e-2026-06-25/screenshots/02-assets-gallery-preview.png" alt="本地资产与图库预览 screenshot"><p><code>docs/V32.x/evidence/v32-full-prd-audit-e2e-2026-06-25/screenshots/02-assets-gallery-preview.png</code></p></article>
+    <article class="shot"><h3>照片 2D 向导入口</h3><img src="v32-full-prd-audit-e2e-2026-06-25/screenshots/03-photo-2d-wizard-entry.png" alt="照片 2D 向导入口 screenshot"><p><code>docs/V32.x/evidence/v32-full-prd-audit-e2e-2026-06-25/screenshots/03-photo-2d-wizard-entry.png</code></p></article>
+    <article class="shot"><h3>照片 2D 向导弹窗</h3><img src="v32-full-prd-audit-e2e-2026-06-25/screenshots/04-photo-2d-wizard-modal.png" alt="照片 2D 向导弹窗 screenshot"><p><code>docs/V32.x/evidence/v32-full-prd-audit-e2e-2026-06-25/screenshots/04-photo-2d-wizard-modal.png</code></p></article>
+    <article class="shot"><h3>诊断与边界</h3><img src="v32-full-prd-audit-e2e-2026-06-25/screenshots/05-diagnostics-and-boundaries.png" alt="诊断与边界 screenshot"><p><code>docs/V32.x/evidence/v32-full-prd-audit-e2e-2026-06-25/screenshots/05-diagnostics-and-boundaries.png</code></p></article>
+    <article class="shot"><h3>移动视口设置页</h3><img src="v32-full-prd-audit-e2e-2026-06-25/screenshots/06-mobile-settings-overview.png" alt="移动视口设置页 screenshot"><p><code>docs/V32.x/evidence/v32-full-prd-audit-e2e-2026-06-25/screenshots/06-mobile-settings-overview.png</code></p></article>
+    <article class="shot"><h3>V32 动作资产报告</h3><img src="v32-full-prd-audit-e2e-2026-06-25/screenshots/07-v32-quality-report.png" alt="V32 动作资产报告 screenshot"><p><code>docs/V32.x/evidence/v32-full-prd-audit-e2e-2026-06-25/screenshots/07-v32-quality-report.png</code></p></article></div>
+
+  <h2>代码检视与风险</h2>
+  <table><thead><tr><th>优先级</th><th>区域</th><th>发现</th><th>证据</th></tr></thead><tbody>
+    <tr><td class="warn-text">Medium</td><td>Photo automation</td><td>V31/V32 evidence still does not implement arbitrary-cat photo-to-action closure.</td><td>V31 continuation smoke reports v31_11/v31_12 blocked; V32 PRD explicitly scopes to named local project-authored packs.</td></tr>
+    <tr><td class="warn-text">Medium</td><td>Browser UX evidence</td><td>Headless settings-page screenshots use mocked Tauri data and cannot prove native overlay or real bridge behavior.</td><td>The copied post_v30 browser UX evidence uses a mocked Tauri invoke layer and does not open visible desktop windows.</td></tr>
+    <tr><td class="info-text">Low</td><td>Documentation age</td><td>Several V32 generated evidence files are dated 2026-06-24 while this audit report is dated 2026-06-25.</td><td>V32 smoke script currently emits its original execution date; this audit records the rerun command result separately.</td></tr></tbody></table>
+
+  <h2>Claim / Security Scan</h2>
+  <table><tbody>
+    <tr><th>Claim scan</th><td class="pass">passed</td><td>[]</td></tr>
+    <tr><th>Security scan</th><td class="pass">passed</td><td>[]</td></tr>
+  </tbody></table>
+
+  <h2>浏览器检查原始摘要</h2>
+  <pre>{
+  &quot;title&quot;: &quot;设置与工作猫管理&quot;,
+  &quot;overviewCards&quot;: 4,
+  &quot;navLinks&quot;: 6,
+  &quot;instanceCards&quot;: 2,
+  &quot;galleryCards&quot;: 15,
+  &quot;assetPreviewVisible&quot;: true,
+  &quot;photoWizardVisible&quot;: true,
+  &quot;diagnosticsVisible&quot;: true,
+  &quot;forbiddenReadyClaimsVisible&quot;: true,
+  &quot;forbiddenReadyClaimContext&quot;: true,
+  &quot;bodyTextSample&quot;: &quot;AGENT DESKTOP PET\n设置与工作猫管理\n\n管理桌宠实例、Codex 工作猫、个性化资产和本地诊断。\n\n静音\n桌宠实例\n2/12\n2 只可见 · 容量正常\n资产包\n1\n1 个已激活到实例\n当前状态\n空闲\n队列 0 · 声音开启\n事件桥\n在线\nAPI 已启用；127.0.0.1:17321；队列 0/32；token 已配置。\n首次上手\n快速创建工作猫\n\n不读 README 也能先看到一只猫。普通桌宠路径不超过 3 步；Codex 工作猫路径不超过 5 步。\n\n1. 先看到一只活猫\n视觉资产\n旗舰橘猫 V2 · premium flagship orange tabby\nLiving Work Cat · warm flagship tabby\n橘子工作猫 · orange tabby\n礼服工作猫 · tuxedo\n银灰工作猫 · silver\n三花工作猫 · calico\n奶油工作猫 · cream\n蓝灰工作猫 · blue gray\n黑曜工作猫 · black\n雪白工作猫 · white\n橘白工作猫 · ginger white\n狸花工作猫 · brown tabby\n丁&quot;,
+  &quot;photoWizardModalOpenedDuringScenario&quot;: true,
+  &quot;v32ReportScreenshotCopied&quot;: true
+}</pre>
+</main></body></html>

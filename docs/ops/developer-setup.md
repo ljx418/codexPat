@@ -94,6 +94,39 @@ Windows 仍是后续目标，但当前不做 Windows smoke，不声明 Windows r
 - Microsoft C++ Build Tools。
 - WebView2 Runtime。
 
+## WSL On Windows
+
+当前 Windows 下的 WSL 环境可用于源码阅读、TypeScript 单测、静态检查和
+V30 smoke gate，但这不等于 Windows runtime smoke，也不等于
+cross-platform ready。
+
+WSL 开发注意事项：
+
+- 不要混用 Windows 生成的 `node_modules` 和 WSL 中的 Node/pnpm。
+- 如果 `pnpm`、`tsx` 或 `tsc` 报出无法解析 workspace bin / link 的错误，
+  在 WSL 内重新执行：
+
+```bash
+CI=true pnpm install --frozen-lockfile
+```
+
+- 桌面 runtime 证据必须证明 app 进程和 `127.0.0.1:17321` bridge 真实运行。
+- WSL 中通过 `pnpm --filter desktop test`、`pnpm --filter desktop check`、
+  `pnpm --filter @agent-desktop-pet/petctl test` 和 V30 smoke gate 只能作为
+  静态/单测/脚本基线，不能替代真实桌面烟测。
+
+Post-V30 runtime smoke 前置条件见：
+
+- `docs/active/post-v30-runtime-smoke-spec.md`
+- `docs/active/post-v30-managed-codex-smoke-spec.md`
+
+执行 Post-V30.1 前必须先启动真实 desktop app，并从运行 smoke 的 shell
+确认 `http://127.0.0.1:17321/api/health` 可访问。执行 Post-V30.2 前必须先
+完成 Post-V30.1 或在同一会话中重新证明 bridge 可访问。
+
 ## No False-Green
 
-仅完成源码构建不等于 production release。当前最多声明 macOS-first local workflow 和 V2.0 阶段性能力；未完成 Windows smoke、签名、notarization 和自动更新前，不得声明 cross-platform ready 或 production signed release ready。
+仅完成源码构建或 WSL 测试不等于 production release。当前不得因为单测、
+check 或脚本 smoke 通过而声明 Windows ready、cross-platform ready、
+production signed release ready、provider integration verified、3D ready 或
+任意猫自动生成动作资产 ready。

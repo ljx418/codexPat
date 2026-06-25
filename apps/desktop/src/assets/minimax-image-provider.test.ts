@@ -1,4 +1,6 @@
 import assert from "node:assert/strict";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
 import { describe, it } from "node:test";
 import {
   createMinimaxReferenceImagePrompt,
@@ -85,7 +87,7 @@ describe("V7.9 MiniMax image provider boundary", () => {
       costDisclosureAccepted: true,
       privacyRetentionAccepted: true,
       licenseAttributionAccepted: true,
-      outputFileBase: "/private/tmp/agent-desktop-pet-v7-9-test/minimax-generated-cat-action",
+      outputFileBase: testOutputBase("agent-desktop-pet-v7-9-test", "minimax-generated-cat-action"),
       fetchImpl: async () => new Response(JSON.stringify({
         data: {
           image_base64: [Buffer.alloc(2048, 7).toString("base64")]
@@ -198,7 +200,7 @@ describe("V7.9 MiniMax image provider boundary", () => {
       licenseAttributionAccepted: true,
       referenceImageBytes,
       referenceImageMediaType: "image/jpeg",
-      outputFileBase: "/private/tmp/agent-desktop-pet-v18-i2i-test/minimax-reference-cat-action",
+      outputFileBase: testOutputBase("agent-desktop-pet-v18-i2i-test", "minimax-reference-cat-action"),
       fetchImpl: async (_url, init) => {
         requestBody = String(init?.body ?? "");
         return new Response(JSON.stringify({
@@ -241,7 +243,7 @@ describe("V7.9 MiniMax image provider boundary", () => {
       licenseAttributionAccepted: true,
       referenceImageBytes,
       referenceImageMediaType: "image/jpeg",
-      outputFileBase: "/private/tmp/agent-desktop-pet-v20-url-test/minimax-reference-cat-action",
+      outputFileBase: testOutputBase("agent-desktop-pet-v20-url-test", "minimax-reference-cat-action"),
       fetchImpl: async (url) => {
         if (String(url).includes("image_generation")) {
           return new Response(JSON.stringify({
@@ -273,3 +275,7 @@ describe("V7.9 MiniMax image provider boundary", () => {
     assert.doesNotMatch(JSON.stringify(result), /cdn\.example|generated-cat-motion-sheet|sk-test|Authorization|raw provider response/i);
   });
 });
+
+function testOutputBase(dirName: string, fileBaseName: string) {
+  return join(tmpdir(), dirName, fileBaseName);
+}

@@ -1,9 +1,12 @@
 # V30 Claim Matrix
 
-文档状态：planned claim boundary。
-当前日期：2026-06-17。
+文档状态：scoped passed claim boundary；retained for V30 and Post-V30 remediation。
+当前日期：2026-06-23。
 
 ## Allowed Claims
+
+V30.0-V30.6 passed scoped on 2026-06-17. The allowed claims below are limited
+to the tested local evidence listed in the V30 final acceptance report.
 
 | Scope | Allowed Claim | Evidence Required |
 | --- | --- | --- |

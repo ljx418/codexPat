@@ -47,6 +47,13 @@ lsof -iTCP:17321 -sTCP:LISTEN
 - desktop app 未启动。
 - `127.0.0.1:17321` 未监听。
 - 先启动 `.app` 或 `pnpm --filter desktop tauri dev`。
+- 在 WSL 中运行 `petctl` 时，如果 desktop app 实际运行在 Windows/macOS 侧，
+  需要确认 WSL 能访问对应的 loopback bridge；否则此错误只证明当前环境没有
+  可访问的 desktop bridge，不是产品 runtime 已通过或失败的最终证据。
+- Post-V30.1 runtime smoke 遇到该错误时，按
+  `docs/active/post-v30-runtime-smoke-spec.md` 记录为 `blocked` 或 `failed`：
+  app/GUI/loopback 不可用是 `blocked`，app 已运行且 bridge 可达但行为异常才是
+  `failed`。
 
 `token_missing`
 
@@ -89,6 +96,41 @@ listen EPERM ... /tmp/tsx-*.pipe
 pnpm --filter @agent-desktop-pet/petctl build
 node packages/petctl/dist/cli.js notify --level success --title "distribution smoke"
 ```
+
+## WSL Workspace Links
+
+如果仓库的 `node_modules` 曾由 Windows Node/pnpm 生成，WSL 内可能出现
+`tsx`、`tsc` 或 workspace bin 无法解析的问题。应在 WSL 内重新安装依赖：
+
+```bash
+CI=true pnpm install --frozen-lockfile
+```
+
+不要把这类依赖链接问题记录为 V30、petctl 或 desktop 产品失败。修复后再跑：
+
+```bash
+pnpm --filter desktop test
+pnpm --filter desktop check
+pnpm --filter @agent-desktop-pet/petctl test
+pnpm --filter desktop exec node --import tsx ../../scripts/v30_semantic_animation_gate_smoke.mjs
+```
+
+这些命令通过后只能证明 WSL 下的静态/单测/V30 gate 基线恢复。真实桌面
+runtime 仍需要运行 app 并验证 `127.0.0.1:17321` bridge。
+
+## Post-V30 Smoke Boundaries
+
+Post-V30.1 runtime desktop smoke 必须证明真实 desktop app 和 local bridge。
+Post-V30.2 managed Codex workflow smoke 必须在 Post-V30.1 通过或同会话 bridge
+重新验证后执行。
+
+不要把以下结果当作 runtime smoke 通过：
+
+- 仅 `pnpm --filter desktop test` 通过；
+- 仅 `pnpm --filter desktop check` 通过；
+- 仅 V30 semantic gate 通过；
+- fixture-only Codex workflow 结果；
+- WSL 中无法访问外部 GUI app bridge 时的 `desktop_not_running`。
 
 ## Unsigned macOS App Cannot Open
 

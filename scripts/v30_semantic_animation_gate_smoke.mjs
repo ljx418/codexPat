@@ -566,7 +566,7 @@ function writeHtml(filePath) {
   </script>
 </body>
 </html>`;
-  fs.writeFileSync(filePath, html);
+  fs.writeFileSync(filePath, html.replace(/[ \t]+$/gm, ""));
 }
 
 function renderWeakAction(actionId) {

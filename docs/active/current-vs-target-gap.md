@@ -1,16 +1,23 @@
 # Current vs Target Gap
 
-文档状态：active gap；V30 planned；V29/V23-V28 scoped baselines 是输入基线；Petdex public resources are format/UX references only, not bundled assets。
+文档状态：active gap；V31 partial scoped with continuation planning active；V30 semantic 2D action quality scoped passed；Post-V30 architecture/runtime remediation passed scoped；V29/V23-V28 scoped baselines 是输入基线；Petdex public resources are format/UX references only, not bundled assets。
 配套图：`current-vs-target-gap.drawio`。  
-当前日期：2026-06-17。
+当前日期：2026-06-24。
 
 ## Active Line
 
 ```text
-Current active status: V30 planned for semantic 2D pet animation quality. V29 Petdex-level gallery/photo benchmark work is the immediate input baseline, but V30 exists because recent visual review found generated frames still look like whole-image transforms rather than intuitive character actions.
-Current active PRD: docs/active/agent_desktop_pet_prd_v30.md.
-V30 target: action semantics -> storyboard/key-pose contract -> semantic candidate generation -> motion readability QA -> old-vs-new preview -> approved target apply -> rollback.
-V29/V23-V28 scoped acceptance remains the input baseline: the pipeline can close and gallery/generation flows exist, but it does not prove that generated actions are attractive, readable character animation.
+Current active status: V31 partial scoped for high-quality 2D action assets and arbitrary-cat photo-to-action pipeline, with V31 continuation planning active. V30 scoped passed for semantic 2D pet animation quality on tested local action packs. Post-V30 architecture/runtime remediation has passed scoped as the latest remediation baseline.
+Current active PRD: docs/active/agent_desktop_pet_prd_v31.md.
+Current active V31 docs: docs/V31.x/v31-target-architecture.md, docs/V31.x/v31-development-plan.md, docs/V31.x/v31-acceptance-plan.md, docs/V31.x/v31-milestones.md, docs/V31.x/v31-claim-matrix.md, docs/V31.x/v31-current-gap-analysis.md, docs/V31.x/v31-doc-audit.md, docs/V31.x/v31-detailed-development-and-acceptance-plan.md, docs/V31.x/v31-independent-doc-audit-2026-06-24.md, docs/V31.x/v31_1-art-quality-rubric-spec.md, docs/V31.x/v31_2-flagship-asset-route-spec.md, docs/V31.x/v31_3-visual-review-report-spec.md, docs/V31.x/v31_4-layered-rig-route-spec.md, docs/V31.x/v31_5-photo-to-character-route-spec.md, docs/V31.x/v31_6-e2e-real-data-acceptance-spec.md.
+V30 semantic animation claim boundary: docs/active/agent_desktop_pet_prd_v30.md.
+Current active remediation plan: docs/active/architecture-remediation-plan.md.
+Current active drawio: docs/active/current-vs-target-gap.drawio.
+V31 target flow: V30 semantic gate -> art quality rubric -> high-quality flagship 2D action asset -> layered rig / professional animation route -> photo-to-character-to-action candidate route -> visual evidence / preview / apply / rollback.
+Current V31 visual truth: old simplified SVG cat is rejected; one named local high-quality 8-action asset passed scoped; repeatable production and arbitrary-cat automatic high-quality action generation are not ready.
+V31 continuation flow: V31.7 partial scoped -> V31.8 repeatable asset production -> V31.9 layered rig runtime route -> V31.10 named real photo sample set -> V31.11 photo action preview/apply/rollback -> V31.12 real-data E2E -> V31.13 continuation final gate.
+V30 accepted flow: action semantics -> storyboard/key-pose contract -> semantic candidate generation -> motion readability QA -> old-vs-new preview -> approved target apply -> rollback.
+V29/V23-V28 scoped acceptance remains the input baseline: the pipeline can close and gallery/generation flows exist, but V30 scoped evidence is the first accepted proof that tested weak transform-only action packs are rejected and tested semantic candidates are accepted.
 V30 must not claim Petdex parity achieved, provider integration verified, automatic photo-to-animation ready for arbitrary cats, Petdex asset reuse authorization, 3D ready, production release ready, Windows ready, or cross-platform ready.
 Historical baselines: V19 local motion sheet scoped passed; V18/V17/V16/V15 and earlier tracks are closed scoped baselines and regression constraints, not current active work.
 V3.x status: closed scoped baseline.
@@ -32,14 +39,43 @@ V14.x status: passed scoped for tested local macOS premium animated pet gallery,
 This section is the short automation-facing summary. It overrides any confusion caused by historical baselines below:
 
 ```text
-Current active work: V30 Semantic Character Animation Quality Track.
-V30.0 scope freeze: planned.
-V30.1 action storyboard and key-pose contract: planned.
-V30.2 semantic frame candidate generation: planned.
-V30.3 motion readability QA and transform-only rejection: planned.
-V30.4 old-vs-new preview UX with contact sheets and animated playback: planned.
-V30.5 approved semantic pack target apply and rollback: planned.
-V30.6 final gate: No-Go until V30.0-V30.5 evidence exists.
+Current active work: V31 continuation planning for repeatable high-quality 2D assets and named-sample-set photo-to-action evidence.
+V31.0 docs/drawio planning: passed scoped.
+V31.1 art quality rubric: passed scoped.
+V31.2 flagship high-quality 2D action asset route: passed scoped for one named local asset.
+V31.3 visual review report: passed scoped.
+V31.4 layered rig / professional animation route: passed scoped as route contract.
+V31.5 arbitrary-cat photo-to-character-to-action route: candidate-only scoped.
+V31.6 real-data E2E acceptance: partial scoped.
+V31.7 final gate: partial scoped.
+V31.8 repeatable asset production: planned continuation.
+V31.9 layered rig runtime route: planned continuation.
+V31.10 named real photo sample set: planned continuation.
+V31.11 photo action preview/apply/rollback: planned continuation.
+V31.12 continuation real-data E2E: planned continuation.
+V31.13 continuation final gate: No-Go until V31.8-V31.12 have real evidence.
+Post-V30 Architecture Remediation and Runtime Baseline Hardening passed scoped; further large code movement must be defined by V31 PRD/slice plan and evidence.
+Post-V30.0 fact-source sync and architecture remediation plan: passed scoped.
+Post-V30.1 runtime desktop smoke with app running: passed scoped; docs/V30.x/evidence/post-v30_1-runtime-desktop-smoke-2026-06-23.md records real host-side Tauri bridge, petctl, and runtime smoke evidence.
+Post-V30.2 managed Codex workflow smoke: passed scoped for one local wrapper-launched managed workflow against the running bridge.
+Post-V30.3 architecture debt reduction plan: passed scoped; FE-1 through FE-5 frontend slices have per-slice evidence, PRD/spec review, checks, and scans.
+Post-V30.3 frontend slice input: docs/active/post-v30-frontend-architecture-slices.md.
+Post-V30.4 Rust/Tauri bridge slice input: docs/active/post-v30-tauri-bridge-architecture-slices.md.
+Post-V30.4 Rust/Tauri bridge slices: passed scoped; RS-1 through RS-6 have per-slice evidence, and RS-5/RS-6 passed with real WSL frontend plus Windows Cargo runtime smoke.
+Post-V30.5 final remediation gate: passed scoped; docs/V30.x/evidence/post-v30_5-final-remediation-gate-2026-06-24.md records final regression, real runtime smoke, managed smoke, PRD/spec review, claim scan, and security scan.
+Post-V30/V30 full audit: passed scoped; docs/V30.x/evidence/post-v30-v30-full-audit-2026-06-24.md records PRD-code-docs-function mapping, full regression checks, real runtime E2E, managed smoke, drawio page check, claim scan, security scan, and residual risks.
+Post-V30 shared scan checklist: docs/active/post-v30-evidence-and-scan-checklist.md.
+Post-V30 detailed development and acceptance control plan: docs/V30.x/post-v30-detailed-development-and-acceptance-plan.md.
+Active drawio structure: docs/active/current-vs-target-gap.drawio uses six Chinese pages for target experience, current-to-target architecture, target architecture details, development/acceptance plan, milestones/evidence, and acceptance/exit conditions.
+Documentation completeness is not runtime, managed workflow, refactor, provider, platform, 3D, or production evidence.
+V30 Semantic Character Animation Quality Track: passed scoped.
+V30.0 scope freeze: passed scoped.
+V30.1 action storyboard and key-pose contract: passed scoped.
+V30.2 semantic frame candidate generation: passed scoped.
+V30.3 motion readability QA and transform-only rejection: passed scoped.
+V30.4 old-vs-new preview UX with contact sheets and animated playback: passed scoped.
+V30.5 approved semantic pack target apply and rollback: passed scoped.
+V30.6 final gate: passed scoped for tested local action packs.
 V29 Petdex-level Gallery and Stable Photo-to-Animated-2D Track: immediate input baseline; it does not prove semantic character animation quality.
 V23-V28 Photo-to-Animated-2D Productization Track: passed scoped and retained as baseline.
 V23 photo suitability and trait extraction: passed scoped with real local photo samples and quality fixtures.
@@ -86,7 +122,16 @@ V23-V28 baseline design docs:
 
 V30 active design docs:
 
+- `docs/active/agent_desktop_pet_prd_post_v30.md`
 - `docs/active/agent_desktop_pet_prd_v30.md`
+- `docs/active/architecture-remediation-plan.md`
+- `docs/active/post-v30-runtime-smoke-spec.md`
+- `docs/active/post-v30-managed-codex-smoke-spec.md`
+- `docs/active/post-v30-evidence-and-scan-checklist.md`
+- `docs/V30.x/post-v30-target-architecture.md`
+- `docs/V30.x/post-v30-acceptance-plan.md`
+- `docs/V30.x/post-v30-milestones.md`
+- `docs/active/current-vs-target-gap.drawio`
 - `docs/V30.x/v30-target-architecture.md`
 - `docs/V30.x/v30-development-plan.md`
 - `docs/V30.x/v30-acceptance-plan.md`

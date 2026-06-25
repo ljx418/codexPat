@@ -1,7 +1,7 @@
 # V30 Implementation Contract
 
-文档状态：planned implementation contract。
-当前日期：2026-06-17。
+文档状态：scoped passed implementation contract；retained as V30 data-flow and safety contract。
+当前日期：2026-06-23。
 
 ## Required Data Flow
 

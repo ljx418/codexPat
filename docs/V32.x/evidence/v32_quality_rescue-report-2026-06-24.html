@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>V32 Quality Rescue Report</title>
+  <style>
+    body{margin:0;background:#f6f7fb;color:#172033;font-family:"Segoe UI",Arial,sans-serif}
+    main{max-width:1320px;margin:0 auto;padding:28px}
+    header{background:#111827;color:white;border-radius:8px;padding:24px}
+    h1{margin:0 0 10px;font-size:30px;letter-spacing:0} h2{font-size:22px;margin:28px 0 12px;letter-spacing:0}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:white;border:1px solid #d9e0eb;border-radius:8px;padding:14px}
+    img{display:block;max-width:100%;height:auto;border:1px solid #d9e0eb;border-radius:6px;background:white}
+    table{width:100%;border-collapse:collapse;background:white;border:1px solid #d9e0eb;border-radius:8px;overflow:hidden}td,th{border-bottom:1px solid #d9e0eb;padding:10px;text-align:left;vertical-align:top}th{background:#eef2f7}
+    .pass{color:#0f766e;font-weight:800}.fail{color:#b91c1c;font-weight:800}.partial{color:#a16207;font-weight:800}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body><main>
+  <header><h1>V32 质量救火真实帧验收报告</h1><p>本报告展示本地生成的 2D layered-rig frameSequence 资产、真实 PNG contact sheet/GIF，以及 V30/V31/V32/runtime gate 结果。</p></header>
+  <h2>本地生成资产</h2><div class="grid"><section class="card"><h3>Quality Rescue Tabby V1</h3>
+      <p class="pass">passed</p>
+      <img src="v32_quality-rescue-tabby-v1_contact_sheet_2026-06-24.png" alt="Quality Rescue Tabby V1 contact sheet">
+      <p>v32_quality_rescue_passed</p>
+      <p><a href="v32_quality-rescue-tabby-v1_animation_preview_2026-06-24.gif">GIF preview</a></p>
+    </section><section class="card"><h3>Quality Rescue Tuxedo V1</h3>
+      <p class="pass">passed</p>
+      <img src="v32_quality-rescue-tuxedo-v1_contact_sheet_2026-06-24.png" alt="Quality Rescue Tuxedo V1 contact sheet">
+      <p>v32_quality_rescue_passed</p>
+      <p><a href="v32_quality-rescue-tuxedo-v1_animation_preview_2026-06-24.gif">GIF preview</a></p>
+    </section></div>
+  <h2>门禁结果</h2><table><thead><tr><th>Pack</th><th>Status</th><th>Reason</th></tr></thead><tbody><tr><td>quality-rescue-tabby-v1</td><td>passed</td><td>v32_quality_rescue_passed</td></tr><tr><td>quality-rescue-tuxedo-v1</td><td>passed</td><td>v32_quality_rescue_passed</td></tr></tbody></table>
+  <h2>端到端状态</h2>
+  <table><tbody>
+    <tr><th>V30 semantic</th><td>passed</td><td>semantic_animation_passed</td></tr>
+    <tr><th>V31 art</th><td>passed</td><td>v31_art_quality_passed</td></tr>
+    <tr><th>Preview/apply/rollback</th><td>passed</td><td>pack_assembled, preview_ready, rollback_available, rollback_restored_previous_pack, target_pack_applied</td></tr>
+    <tr><th>Final</th><td class="pass">passed scoped</td><td>仅证明本地 V32 资产质量救火，不证明任意猫照片自动生成。</td></tr>
+  </tbody></table>
+  <h2>边界</h2><p>不声明 Petdex parity、任意猫照片自动生成动作资产 ready、provider integration verified、3D ready、production release ready、Windows ready 或 cross-platform ready。</p>
+</main></body></html>

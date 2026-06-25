@@ -1,0 +1,24 @@
+{
+  "packDefs": [
+    {
+      "packId": "quality-rescue-tabby-v1",
+      "displayName": "Quality Rescue Tabby V1",
+      "palette": "tabby"
+    },
+    {
+      "packId": "quality-rescue-tuxedo-v1",
+      "displayName": "Quality Rescue Tuxedo V1",
+      "palette": "tuxedo"
+    }
+  ],
+  "coreActions": [
+    "idle",
+    "thinking",
+    "running",
+    "success",
+    "warning",
+    "error",
+    "need_input",
+    "sleeping"
+  ]
+}

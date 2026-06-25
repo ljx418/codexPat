@@ -2,6 +2,7 @@
 import { existsSync, mkdtempSync, writeFileSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 
 const DEFAULT_URL = "http://127.0.0.1:17321";
@@ -20,7 +21,7 @@ const SENSITIVE_PATTERNS = [
   "transcript_path"
 ];
 
-const repoRoot = resolve(new URL("..", import.meta.url).pathname);
+const repoRoot = resolve(fileURLToPath(new URL("..", import.meta.url)));
 const petctlBin = process.env.PETCTL_BIN
   ? resolve(process.env.PETCTL_BIN)
   : join(repoRoot, "packages/petctl/dist/cli.js");

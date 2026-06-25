@@ -1,28 +1,161 @@
 # Active Acceptance Plan
 
-文档状态：active acceptance index；V30 planned；V29/V23-V28 scoped baselines 是输入基线。
-当前日期：2026-06-17。
+文档状态：active acceptance index；V32 quality rescue passed scoped；V31 partial scoped with continuation execution blocked scoped；V30 scoped passed；Post-V30 architecture/runtime remediation gates passed scoped；V29/V23-V28 scoped baselines 是输入基线。
+当前日期：2026-06-24。
 
-## V30 Semantic Character Animation Quality Acceptance
+## V32 Quality Rescue 2D Action Assets Acceptance
 
-V30 is the current acceptance track. It must prove semantic character animation,
-not just animated images. A candidate fails if it only scales, translates,
-rotates, jitters, or decorates a static image without readable action logic.
+Current active scoped PRD: `docs/active/agent_desktop_pet_prd_v32.md`.
+
+V32 acceptance proves that the project can generate and validate named local
+project-authored 2D frameSequence packs with visible local motion and real
+visual evidence. It does not prove arbitrary-cat photo automation.
 
 | Phase | Gate | Required Evidence | Status |
 | --- | --- | --- | --- |
-| V30.0 | scope freeze | `docs/V30.x/evidence/v30_0-scope-freeze-YYYY-MM-DD.md` | planned |
-| V30.1 | action storyboard and key-pose contract | `docs/V30.x/evidence/v30_1-action-storyboard-YYYY-MM-DD.md` | planned |
-| V30.2 | semantic candidate generation | `docs/V30.x/evidence/v30_2-semantic-candidate-generation-YYYY-MM-DD.md` | planned |
-| V30.3 | motion readability QA | `docs/V30.x/evidence/v30_3-motion-readability-qa-YYYY-MM-DD.md` | planned |
-| V30.4 | old-vs-new preview UX | `docs/V30.x/evidence/v30_4-preview-ux-YYYY-MM-DD.html` | planned |
-| V30.5 | approved target apply and rollback | `docs/V30.x/evidence/v30_5-target-apply-rollback-YYYY-MM-DD.md` | planned |
-| V30.6 | final semantic animation gate | `docs/V30.x/v30-final-acceptance-report.md` | No-Go |
+| V32.1 | measured quality gate | `apps/desktop/src/assets/v32-quality-rescue.test.ts` | passed scoped |
+| V32.2 | local project-authored generated packs | `fixtures/manual/v32_quality_rescue/quality-rescue-tabby-v1`, `fixtures/manual/v32_quality_rescue/quality-rescue-tuxedo-v1` | passed scoped |
+| V32.3 | integrated V30/V31/V32/runtime smoke | `docs/V32.x/evidence/v32_quality_rescue-smoke-2026-06-24.md` | passed scoped |
+| V32.4 | visual report and screenshot | `docs/V32.x/evidence/v32_quality_rescue-report-2026-06-24.html`, `docs/V32.x/evidence/screenshots/v32_quality_rescue-overview-2026-06-24.png` | passed scoped |
+| V32.5 | final claim/security gate | `docs/V32.x/v32-final-acceptance-report.md` | passed scoped |
 
-V30.6 can pass only if V30.0-V30.5 evidence exists, at least one 8-action pack
-passes semantic readability QA, the weak transform-only baseline is rejected,
-old-vs-new visual evidence is embedded in HTML, QA failed packs cannot apply,
-target-only apply and rollback pass, and security/claim scans pass.
+V32 passed because two named local packs passed measured frame quality,
+semantic action QA, art QA, target-only preview/apply/rollback, claim scan,
+security scan, and real HTML/screenshot evidence. The accepted user-visible
+experience is limited to viewing and applying these tested local packs.
+
+V32 must not claim Petdex parity, arbitrary-cat automatic animation ready,
+automatic photo-to-2D ready for arbitrary cats, provider integration verified,
+3D ready, production signed release ready, Windows ready, cross-platform ready,
+MCP ready, Claude Code integration verified, OS-level Codex window binding
+ready, or all Codex workflows verified.
+
+## V31 High-quality 2D Action Assets Acceptance
+
+Current active PRD: `docs/active/agent_desktop_pet_prd_v31.md`.
+
+V31 acceptance starts from the corrected V30 visual review: the semantic gate
+passed scoped, but the current simplified SVG cat is not accepted as
+high-quality target visual art. V31 must prove visual product quality with real
+screenshots/playback, not with text-only claims.
+
+| Phase | Gate | Required Evidence | Status |
+| --- | --- | --- | --- |
+| V31.0 | scope, docs, drawio | `docs/V31.x/evidence/v31_0-scope-freeze-2026-06-24.md` | passed scoped |
+| V31.1 | art quality rubric | `docs/V31.x/evidence/v31_1-art-quality-rubric-2026-06-24.md` | passed scoped |
+| V31.2 | flagship 2D asset route | `docs/V31.x/evidence/v31_2-flagship-asset-route-2026-06-24.md` | passed scoped |
+| V31.3 | visual review report | `docs/V31.x/evidence/v31_3-visual-review-report-2026-06-24.html` | passed scoped |
+| V31.4 | layered rig / professional animation route | `docs/V31.x/evidence/v31_4-layered-rig-route-2026-06-24.md` | passed scoped as route contract |
+| V31.5 | arbitrary-cat photo route | `docs/V31.x/evidence/v31_5-photo-to-character-route-2026-06-24.md` | candidate-only scoped |
+| V31.6 | real-data E2E acceptance | `docs/V31.x/evidence/v31_6-e2e-real-data-acceptance-2026-06-24.md` | partial scoped |
+| V31.7 | final gate | `docs/V31.x/v31-final-acceptance-report.md` | partial scoped |
+| V31.8 | repeatable asset production | `docs/V31.x/evidence/v31_8-repeatable-asset-production-2026-06-24.md` | partial scoped |
+| V31.9 | layered rig runtime route | `docs/V31.x/evidence/v31_9-layered-rig-runtime-route-2026-06-24.md` | blocked scoped |
+| V31.10 | named photo sample set | `docs/V31.x/evidence/v31_10-photo-sample-set-2026-06-24.md` | partial scoped |
+| V31.11 | photo action preview/apply/rollback | `docs/V31.x/evidence/v31_11-photo-action-preview-apply-rollback-2026-06-24.md` | blocked scoped |
+| V31.12 | continuation real-data E2E | `docs/V31.x/evidence/v31_12-real-data-e2e-2026-06-24.md` | blocked scoped |
+| V31.13 | continuation final gate | `docs/V31.x/evidence/v31_13-continuation-final-gate-2026-06-24.md` | blocked scoped |
+
+V31 final is currently partial scoped: at least one named local high-quality
+flagship 8-action asset passed visual and semantic gates, the final report
+embeds real visual evidence, target-only apply and rollback passed, and the
+arbitrary-cat route is honestly marked candidate-only scoped.
+
+V31 continuation acceptance now has real evidence for V31.8-V31.13, but the
+continuation final gate is blocked scoped. A future pass requires repeatable
+high-quality production, a real layered/professional runtime route, and real
+photo-derived action frames that pass visual QA, semantic QA, preview, apply,
+rollback, claim scan, and security scan.
+
+V31 must not claim Petdex parity, arbitrary-cat automatic animation ready,
+provider integration verified, 3D ready, production release ready, Windows
+ready, cross-platform ready, MCP ready, Claude Code integration verified,
+OS-level Codex window binding ready, or all Codex workflows verified.
+
+V31 execution specs:
+
+- `docs/V31.x/v31-detailed-development-and-acceptance-plan.md`
+- `docs/V31.x/v31_1-art-quality-rubric-spec.md`
+- `docs/V31.x/v31_2-flagship-asset-route-spec.md`
+- `docs/V31.x/v31_3-visual-review-report-spec.md`
+- `docs/V31.x/v31_4-layered-rig-route-spec.md`
+- `docs/V31.x/v31_5-photo-to-character-route-spec.md`
+- `docs/V31.x/v31_6-e2e-real-data-acceptance-spec.md`
+- V31.8-V31.13 continuation evidence specs are controlled by
+  `docs/V31.x/v31-detailed-development-and-acceptance-plan.md` until separate
+  execution specs are created.
+
+## Post-V30 Architecture and Runtime Remediation Acceptance
+
+Post-V30 acceptance keeps V30 claim boundaries intact while making the active
+fact sources, development environment notes, and runtime verification path
+consistent.
+
+Current active PRD: `docs/active/agent_desktop_pet_prd_post_v30.md`.
+Post-V30 target architecture and milestone contracts:
+
+- `docs/V30.x/post-v30-target-architecture.md`
+- `docs/V30.x/post-v30-detailed-development-and-acceptance-plan.md`
+- `docs/V30.x/post-v30-acceptance-plan.md`
+- `docs/V30.x/post-v30-milestones.md`
+
+Current Post-V30 gate decision:
+
+| Phase | Decision | Constraint |
+| --- | --- | --- |
+| Post-V30.1 | passed scoped | real Windows host Tauri runtime, bridge, petctl, and runtime smoke passed |
+| Post-V30.2 | passed scoped | one local wrapper-launched managed workflow smoke passed against the running bridge |
+| Post-V30.3 | passed scoped | FE-1 through FE-5 frontend slices have per-slice evidence, PRD/spec review, checks, and scans |
+| Post-V30.4 | passed scoped | RS-1 through RS-6 have per-slice evidence; RS-5/RS-6 passed with real WSL frontend plus Windows Cargo runtime smoke |
+| Post-V30.5 | passed scoped | final regression, real runtime smoke, managed smoke, PRD/spec review, claim scan, and security scan passed |
+| Post-V30/V30 full audit | passed scoped | PRD-code-docs-function mapping, full regression checks, real runtime E2E, managed smoke, drawio page check, claim scan, and security scan passed with residual risks recorded |
+
+Do not treat documentation completion as proof that runtime desktop smoke,
+managed Codex workflow, frontend refactor, or Tauri bridge refactor has passed.
+
+| Phase | Gate | Required Evidence | Status |
+| --- | --- | --- | --- |
+| Post-V30.0 | fact-source sync and architecture remediation plan | `docs/V30.x/evidence/post-v30-architecture-remediation-2026-06-23.md` | passed scoped |
+| Post-V30.1 | runtime desktop smoke | `docs/V30.x/evidence/post-v30_1-runtime-desktop-smoke-2026-06-23.md` | passed scoped |
+| Post-V30.2 | managed Codex workflow smoke | `docs/V30.x/evidence/post-v30_2-managed-codex-workflow-smoke-2026-06-23.md` | passed scoped |
+| Post-V30.3 | frontend architecture slice specs | `docs/V30.x/evidence/post-v30_3-architecture-slice-FE-1-command-boundary-2026-06-23.md`, `docs/V30.x/evidence/post-v30_3-architecture-slice-FE-2-runtime-state-boundary-2026-06-23.md`, `docs/V30.x/evidence/post-v30_3-architecture-slice-FE-3-asset-manager-boundary-2026-06-23.md`, `docs/V30.x/evidence/post-v30_3-architecture-slice-FE-4-photo-wizard-boundary-2026-06-23.md`, `docs/V30.x/evidence/post-v30_3-architecture-slice-FE-5-preview-gallery-boundary-2026-06-23.md` | passed scoped |
+| Post-V30.4 | Tauri bridge architecture slice specs | RS-1 through RS-6 evidence plus `docs/V30.x/evidence/post-v30_4-tauri-bridge-slice-closure-2026-06-24.md` | passed scoped |
+| Post-V30.5 | final remediation gate | `docs/V30.x/evidence/post-v30_5-final-remediation-gate-2026-06-24.md` | passed scoped |
+| Post-V30/V30 audit | PRD/code/docs/function/E2E audit | `docs/V30.x/evidence/post-v30-v30-full-audit-2026-06-24.md` | passed scoped with residual risks |
+
+Post-V30.0 passed because active docs, V30 docs, README, and ops docs agree
+that V30 is scoped passed and the next active line is remediation, not a new
+provider/photo/3D/product release claim.
+
+Post-V30.1 and later must use:
+
+- `docs/active/post-v30-runtime-smoke-spec.md`
+- `docs/active/post-v30-managed-codex-smoke-spec.md`
+- `docs/active/post-v30-frontend-architecture-slices.md`
+- `docs/active/post-v30-tauri-bridge-architecture-slices.md`
+- `docs/active/post-v30-evidence-and-scan-checklist.md`
+
+## V30 Semantic Character Animation Quality Acceptance
+
+V30 is the latest accepted semantic animation track. It proves semantic
+character animation for tested local action packs, not arbitrary automatic
+asset generation. A candidate fails if it only scales, translates, rotates,
+jitters, or decorates a static image without readable action logic.
+
+| Phase | Gate | Required Evidence | Status |
+| --- | --- | --- | --- |
+| V30.0 | scope freeze | `docs/V30.x/evidence/v30_0-scope-freeze-2026-06-17.md` | passed scoped |
+| V30.1 | action storyboard and key-pose contract | `docs/V30.x/evidence/v30_1-action-storyboard-2026-06-17.md` | passed scoped |
+| V30.2 | semantic candidate generation | `docs/V30.x/evidence/v30_2-semantic-candidate-generation-2026-06-17.md` | passed scoped |
+| V30.3 | motion readability QA | `docs/V30.x/evidence/v30_3-motion-readability-qa-2026-06-17.md` | passed scoped |
+| V30.4 | old-vs-new preview UX | `docs/V30.x/evidence/v30_4-preview-ux-2026-06-17.html` | passed scoped |
+| V30.5 | approved target apply and rollback | `docs/V30.x/evidence/v30_5-target-apply-rollback-2026-06-17.md` | passed scoped |
+| V30.6 | final semantic animation gate | `docs/V30.x/v30-final-acceptance-report.md` | passed scoped |
+
+V30.6 passed because V30.0-V30.5 evidence exists, at least one 8-action pack
+passed semantic readability QA, the weak transform-only baseline was rejected,
+old-vs-new visual evidence was embedded in HTML, QA failed packs could not
+apply, target-only apply and rollback passed, and security/claim scans passed.
 
 ## V29 Petdex-level Gallery and Stable Photo-to-Animated-2D Acceptance
 

@@ -15,6 +15,7 @@ export type CodexBindPreviewOptions = {
   now?: Date;
   storePath?: string;
   spawnImpl?: typeof spawnSync;
+  platform?: NodeJS.Platform;
 };
 
 export type CodexBindConfirmOptions = {
@@ -75,7 +76,8 @@ export async function previewCodexBinding(options: CodexBindPreviewOptions): Pro
   const observedAt = options.now ?? new Date();
   const probe = await runCodexProbe({
     terminal: options.terminal,
-    spawnImpl: options.spawnImpl
+    spawnImpl: options.spawnImpl,
+    platform: options.platform
   });
   if (!probe.ok || !probe.probe) return probe;
 

@@ -21,6 +21,7 @@ docs/
   V3.x/        V3.x 后续开发总计划、子阶段验收标准和最终收口计划
   V4.x/        OS-level Codex window/session binding feasibility planning
   V5.x/        Cat Renderer & Asset System：3D 化、动作资产和高级猫咪体验规划
+  V30.x/       Semantic 2D action quality scoped passed evidence and claim boundary
 ```
 
 ## 推荐阅读路径
@@ -35,29 +36,50 @@ docs/
 
 开发者：
 
-1. `active/development-plan.md`：当前 V4.x active line 和开发边界。
-2. `active/acceptance-plan.md`：当前 V4.x 验收门禁。
-3. `V4.x/v4_x-development-plan.md`：OS-level Codex window/session binding feasibility planning。
-4. `V3.x/v3_x-final-acceptance-report.md`：V3.x closed scoped baseline。
-5. `blueprint/03-pet-event-protocol.md`：PetEvent 协议边界。
-6. `reference/agent-integration-guide.md` 和 `reference/petctl-recipes.md`：agent 接入与命令 cookbook。
+1. `TRANSFER_HANDOFF_2026-06-22.md`：当前接手边界和禁止声明。
+2. `active/current-vs-target-gap.md`：当前实现、V30 scoped pass、Post-V30 active line。
+3. `active/development-plan.md`：当前开发计划和阶段边界。
+4. `active/acceptance-plan.md`：当前验收门禁和证据路径。
+5. `active/agent_desktop_pet_prd_post_v30.md`：当前阶段 PRD。
+6. `active/architecture-remediation-plan.md`：Post-V30 架构整改计划。
+7. `V30.x/post-v30-target-architecture.md`：当前阶段目标架构。
+8. `V30.x/post-v30-acceptance-plan.md`：当前阶段验收计划。
+9. `V30.x/post-v30-milestones.md`：当前阶段项目里程碑。
+10. `V30.x/post-v30-detailed-development-and-acceptance-plan.md`：当前阶段详细开发及验收总控计划。
+11. `active/post-v30-runtime-smoke-spec.md`：Post-V30.1 runtime desktop smoke 执行规格。
+12. `active/post-v30-managed-codex-smoke-spec.md`：Post-V30.2 managed Codex workflow smoke 执行规格。
+13. `active/post-v30-frontend-architecture-slices.md`：Post-V30.3 frontend architecture slice 执行前规格。
+14. `active/post-v30-tauri-bridge-architecture-slices.md`：Post-V30.4 Tauri / HTTP bridge slice 执行前规格。
+15. `active/post-v30-evidence-and-scan-checklist.md`：Post-V30 evidence、PRD/spec review、claim/security scan 清单。
+16. `V30.x/v30-final-acceptance-report.md`：V30 scoped passed 的最终依据。
+17. `V30.x/evidence/v30-wsl-baseline-recovery-2026-06-23.md`：WSL baseline recovery evidence。
+18. `V30.x/evidence/post-v30-doc-coverage-review-2026-06-23.md`：Post-V30 文档覆盖评估 evidence。
+19. `V30.x/evidence/post-v30-drawio-human-review-sync-2026-06-23.md`：Post-V30 drawio 人工审核同步 evidence。
+20. `V30.x/evidence/post-v30-detailed-plan-review-2026-06-23.md`：Post-V30 详细计划评估 evidence。
+21. `blueprint/03-pet-event-protocol.md`：PetEvent 协议边界。
+22. `reference/agent-integration-guide.md` 和 `reference/petctl-recipes.md`：agent 接入与命令 cookbook。
 
 维护者 / 审计者：
 
-1. `V3.0/v3_0-final-acceptance-report.md`：V3.0 ready 的最终依据。
-2. `V3.0/v3_0-claim-matrix.md`：允许声明和禁止扩展。
-3. `V3.0/v3_0-evidence-index.md`：证据索引。
-4. `active/current-vs-target-gap.md` 与 `active/current-vs-target-gap.drawio`：当前 gap 和图。
-5. `V3.1/v3_1-final-manual-acceptance-checklist.md`：V3.1 最终人工验收逐项检查表。
-6. `V3.1/evidence/`：V3.1 各阶段 evidence。
-7. `V3.2/v3_2-claim-matrix.md`：V3.2 集成声明边界。
-8. `V3.2/evidence/`：V3.2 MCP / Claude hook / third-party contract evidence。
-9. `V3.7/v3_7-final-acceptance-report.md`：V3.7 JSONL monitor scoped passed 的最终依据。
-10. `V3.x/v3_x-evidence-index.md`：V3.x final evidence 索引。
-11. `V3.x/v3_x-claim-matrix.md`：V3.x final claim 边界。
-12. `V3.x/v3_x-final-acceptance-report.md`：V3.x final consolidation 收口报告。
-13. `V4.x/v4_x-claim-matrix.md`：V4.x OS-level binding 规划声明边界。
-14. `V5.x/v5_x-claim-matrix.md`：V5.x renderer / asset 规划声明边界。
+1. `active/current-vs-target-gap.md` 与 `active/current-vs-target-gap.drawio`：当前 gap 和图。
+2. `active/acceptance-plan.md`：当前验收事实源。
+3. `V30.x/v30-final-acceptance-report.md`：V30 scoped passed 的最终依据。
+4. `V30.x/v30-claim-matrix.md`：V30 允许声明和禁止扩展。
+5. `V30.x/evidence/`：V30 evidence。
+6. `active/post-v30-evidence-and-scan-checklist.md`：Post-V30 审计清单。
+7. `V3.0/v3_0-final-acceptance-report.md`：V3.0 ready 的最终依据。
+8. `V3.0/v3_0-claim-matrix.md`：允许声明和禁止扩展。
+9. `V3.0/v3_0-evidence-index.md`：证据索引。
+10. `V3.1/v3_1-final-manual-acceptance-checklist.md`：V3.1 最终人工验收逐项检查表。
+11. `V3.1/evidence/`：V3.1 各阶段 evidence。
+12. `V3.2/v3_2-claim-matrix.md`：V3.2 集成声明边界。
+13. `V3.2/evidence/`：V3.2 MCP / Claude hook / third-party contract evidence。
+14. `V3.7/v3_7-final-acceptance-report.md`：V3.7 JSONL monitor scoped passed 的最终依据。
+15. `V3.x/v3_x-evidence-index.md`：V3.x final evidence 索引。
+16. `V3.x/v3_x-claim-matrix.md`：V3.x final claim 边界。
+17. `V3.x/v3_x-final-acceptance-report.md`：V3.x final consolidation 收口报告。
+18. `V4.x/v4_x-claim-matrix.md`：V4.x OS-level binding 规划声明边界。
+19. `V5.x/v5_x-claim-matrix.md`：V5.x renderer / asset 规划声明边界。
 
 历史阶段文档（`V1.0/`、`V2.0/`、`V2.1/`、`V2.2/`）主要用于审计和追溯。普通用户不需要阅读这些目录才能使用桌宠。
 
@@ -68,6 +90,13 @@ docs/
 - `development-plan.md`：当前主线开发计划。
 - `acceptance-plan.md`：当前主线验收计划。
 - `current-vs-target-gap.md`：当前实现、目标状态和差距矩阵。
+- `agent_desktop_pet_prd_post_v30.md`：Post-V30 当前阶段 PRD。
+- `architecture-remediation-plan.md`：Post-V30 架构整改计划。
+- `post-v30-runtime-smoke-spec.md`：Post-V30.1 runtime desktop smoke 执行规格。
+- `post-v30-managed-codex-smoke-spec.md`：Post-V30.2 managed Codex workflow smoke 执行规格。
+- `post-v30-frontend-architecture-slices.md`：Post-V30.3 frontend architecture slice 执行前规格。
+- `post-v30-tauri-bridge-architecture-slices.md`：Post-V30.4 Tauri / HTTP bridge slice 执行前规格。
+- `post-v30-evidence-and-scan-checklist.md`：Post-V30 evidence、PRD/spec review、claim/security scan 清单。
 - `current-vs-target-gap.drawio`：与 gap markdown 同步维护的可视化图。
 
 维护规则：
@@ -149,6 +178,7 @@ docs/
 - `V3.x/`：V3.x 后续开发总计划和 final consolidation；当前包含 `v3_x-development-plan.md`、`v3_x-evidence-index.md`、`v3_x-claim-matrix.md`、`v3_x-final-acceptance-report.md` 和 `v3_x-codex-monitoring-strategy.md`，用于审计 V3.5 hook diagnostics、V3.6 historical blocked boundary、V3.7 JSONL monitor 和 V3.x final consolidation。
 - `V4.x/`：已打开 Codex 活动窗口 / OS-level session binding 的 feasibility planning。V4.x 当前不代表 `OS-level Codex window binding ready`，只能声明 planned for feasibility review。
 - `V5.x/`：Cat Renderer & Asset System 规划；承接高质量 2D、GLTF/Three.js 3D、动作资产、renderer plugin 和后续自定义资产包导入。V5.x 当前不代表 `Rive / Live2D / 3D ready`。
+- `V30.x/`：Semantic Character Animation Quality Track；当前 scoped passed，证明 tested local action packs 可以拒绝 transform-only 弱动作并接受语义动作候选。V30.x 不代表 Petdex parity、任意猫自动生成动作资产 ready、provider integration verified、3D ready、production release ready、Windows ready 或 cross-platform ready。
 
 维护规则：
 

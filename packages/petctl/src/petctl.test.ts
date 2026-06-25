@@ -747,6 +747,7 @@ describe("petctl codex bind", () => {
     const storePath = tempStorePath();
     const result = await previewCodexBinding({
       terminal: "terminal",
+      platform: "darwin",
       storePath,
       now: new Date("2026-05-26T00:00:00.000Z"),
       spawnImpl: fakeProbeSpawn({
@@ -790,6 +791,7 @@ describe("petctl codex bind", () => {
     }) as any;
     const preview = await previewCodexBinding({
       terminal: "terminal",
+      platform: "darwin",
       storePath,
       now: new Date("2026-05-26T00:00:00.000Z"),
       spawnImpl
@@ -846,6 +848,7 @@ describe("petctl codex bind", () => {
     }) as any;
     const preview = await previewCodexBinding({
       terminal: "terminal",
+      platform: "darwin",
       storePath,
       now: new Date("2026-05-26T00:00:00.000Z"),
       spawnImpl
@@ -870,6 +873,7 @@ describe("petctl codex bind", () => {
     const storePath = tempStorePath();
     const preview = await previewCodexBinding({
       terminal: "terminal",
+      platform: "darwin",
       storePath,
       now: new Date("2026-05-26T00:00:00.000Z"),
       spawnImpl: fakeProbeSpawn({
@@ -920,6 +924,7 @@ describe("petctl codex bind", () => {
     }) as any;
     const preview = await previewCodexBinding({
       terminal: "terminal",
+      platform: "darwin",
       storePath,
       now: new Date("2026-05-26T00:00:00.000Z"),
       spawnImpl
@@ -1016,6 +1021,7 @@ describe("petctl codex bind", () => {
     }) as any;
     const preview = await previewCodexBinding({
       terminal: "terminal",
+      platform: "darwin",
       storePath,
       now: new Date("2026-05-26T00:00:00.000Z"),
       spawnImpl

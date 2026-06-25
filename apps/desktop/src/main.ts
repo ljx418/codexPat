@@ -1,4 +1,3 @@
-import { invoke } from "@tauri-apps/api/core";
 import { listen } from "@tauri-apps/api/event";
 import { getCurrentWindow } from "@tauri-apps/api/window";
 import { CAT_STATE_CONFIG, CAT_STATE_ORDER, labelForState, type CatState } from "./pet-states";
@@ -17,10 +16,10 @@ import {
   type InteractionSettings
 } from "./interaction-settings";
 import { composeRuntimeVisual, type VisualActionPlan } from "./visual-action-composer";
-import { CORE_ACTION_IDS, isOptionalActionId, type AssetManifest, type CoreActionId, type PlaybackPriority, type RendererKind, type SafeActionId } from "./assets/asset-manifest";
+import { CORE_ACTION_IDS, isOptionalActionId, type AssetManifest, type CoreActionId, type RendererKind, type SafeActionId } from "./assets/asset-manifest";
 import { resolveAnimationCoverage, type AnimationCoverage } from "./assets/animation-coverage";
+import { applyGalleryCardFilters } from "./assets/gallery-controls";
 import {
-  createAssetManagerPackViews,
   createManagerRuntimePackView,
   createPetGalleryPackViews,
   sanitizeFavoritePackIds,
@@ -29,11 +28,17 @@ import {
   type PetGalleryPackSummary,
   type PetGalleryPackView
 } from "./assets/asset-manager-view-model";
+import { assetPackList, assetPreviewPanel } from "./assets/asset-manager-panel";
 import { generateAnimatedSpritePromptWorkflow, type AnimatedSpritePromptWorkflow } from "./assets/animated-sprite-prompt-workflow";
 import { generateExternalGenerationInstructionWorkflowFromPromptPack } from "./assets/external-generation-instruction-workflow";
 import { generateGuidedAssetPromptPack, type GuidedAssetRendererTarget } from "./assets/guided-prompt-workflow";
 import { generateLocalTraitPromptPack, type LocalTraitPromptPack } from "./assets/local-trait-prompt-pack";
 import { buildPhotoIntakeEvidenceSnapshot, createPhotoIntakePrivacySession, type PhotoIntakeSession } from "./assets/photo-intake-privacy-boundary";
+import {
+  bindPhoto2DProviderDisclosureControls,
+  readPhoto2DProviderDisclosureControls,
+  resetPhoto2DProviderDisclosureControls
+} from "./assets/photo-2d-wizard-controls";
 import {
   createPhoto2DWizardIntakeSnapshot,
   createPhoto2DWizardGenerationSnapshot,
@@ -60,185 +65,52 @@ import {
 } from "./assets/bundled-packs/flagship-work-cat-v2";
 import { createCodexWorkCatOnboarding } from "./codex/work-cat-onboarding";
 import { createSanitizedDiagnosticsExport, diagnosticsExportHasForbiddenContent, releaseFoundationStatus } from "./release/release-foundation";
+import {
+  defaultPetInstance,
+  derivePetInstanceLimits,
+  type PetInstanceLimits,
+  type PetInstanceListResult
+} from "./runtime-state";
+import {
+  activatePersonalizedAssetPack,
+  assembleAnimatedSpritePack,
+  createPetInstance,
+  deactivatePersonalizedAssetPack,
+  deletePersonalizedAssetPack,
+  detachPetInstance,
+  getApiDebugState,
+  getCurrentPetInstance,
+  getPetPosition,
+  getSettings,
+  importPersonalizedAssetPack,
+  listCatProfiles,
+  listPersonalizedAssetPacks,
+  listPetInstances,
+  renamePersonalizedAssetPack,
+  renamePetInstance,
+  resetPetInstancePosition,
+  runtimePersonalizedAssetData,
+  runtimePersonalizedAssetPack,
+  sendTestPetReaction,
+  setCurrentPetPosition,
+  setMuted,
+  setPetInstanceProfile,
+  setPetInstanceVisible,
+  type AnimatedSpriteAssemblyResult,
+  type ApiEventSummary,
+  type AppSettings,
+  type BridgeDiagnostics,
+  type CatProfile,
+  type DiagnosticsViewState,
+  type PetInstance,
+  type RuntimeAssetData,
+  type RuntimeImportedAssetPack,
+  type PersonalizedAssetPack,
+  type PersonalizedAssetUpdateEvent,
+  type TokenStatus,
+  type WindowPosition
+} from "./tauri-commands";
 import "./styles.css";
-
-type AppSettings = {
-  muted: boolean;
-  petVisible: boolean;
-  petX: number | null;
-  petY: number | null;
-};
-
-type WindowPosition = {
-  x: number;
-  y: number;
-};
-
-type PetInstance = {
-  instanceId: string;
-  sourceKind: string;
-  sourceId: string;
-  displayName: string;
-  windowLabel: string;
-  workspaceLabel?: string | null;
-  workspaceHash?: string | null;
-  position: WindowPosition;
-  visible: boolean;
-  currentState: string;
-  catProfileId: string;
-  createdAt: string;
-  updatedAt: string;
-  lastEventAt?: string | null;
-  isDefault: boolean;
-};
-
-type PetInstanceLimits = {
-  totalCount: number;
-  softLimit: number;
-  hardLimit: number;
-  overSoftLimit: boolean;
-  atHardLimit: boolean;
-};
-
-type PetInstanceListResult = {
-  instances: PetInstance[];
-  limits: PetInstanceLimits;
-};
-
-type PersonalizedAssetPack = {
-  packId: string;
-  displayName: string;
-  rendererKind: "sprite" | "gltf";
-  copiedAssetIds: string[];
-  manifestHash: string;
-  createdAt: string;
-  activeInstances: string[];
-  validationStatus: string;
-};
-
-type PersonalizedAssetImportResult = {
-  packId: string;
-  displayName: string;
-  rendererKind: "sprite" | "gltf";
-  copiedAssetIds: string[];
-  manifestHash: string;
-  appManagedStorage: boolean;
-  validationStatus: string;
-};
-
-type PersonalizedAssetActivationResult = {
-  packId: string;
-  instanceId: string;
-  rendererKind: "sprite" | "gltf";
-  validationStatus: string;
-};
-
-type AnimatedSpriteAssemblyResult = {
-  packId: string;
-  displayName: string;
-  rendererKind: "sprite";
-  actionFrameCounts: Record<string, number>;
-  fps: number;
-  manifestGenerated: boolean;
-  imported: boolean;
-  activatedInstanceId?: string;
-  reasonCode: string;
-};
-
-type PersonalizedAssetUpdateEvent = {
-  instanceId: string;
-};
-
-type RuntimeImportedAssetPack = {
-  schemaVersion: "5.0";
-  packId: string;
-  version: string;
-  rendererKind: "sprite" | "gltf";
-  license: {
-    type: string;
-    attribution: string;
-  };
-  assets: Record<string, {
-    assetId: string;
-    kind: "sprite" | "gltf";
-  }>;
-  actions: Record<string, {
-    assetId: string;
-    loop: boolean;
-    priority: PlaybackPriority;
-    durationMs?: number;
-  }>;
-  validationStatus: string;
-};
-
-type RuntimeAssetData = {
-  mimeType: string;
-  base64: string;
-  frames?: Array<{
-    mimeType: string;
-    base64: string;
-  }>;
-  fps?: number;
-};
-
-type CatProfile = {
-  id: string;
-  name: string;
-  description?: string;
-  cssClass: string;
-  previewColor?: string;
-  builtIn: true;
-};
-
-type ApiEventSummary = {
-  id: string;
-  sourceId?: string | null;
-  level?: string | null;
-  titlePreview?: string | null;
-  messagePreview?: string | null;
-  targetInstanceId?: string | null;
-  targetWindowLabel?: string | null;
-  status: number;
-  accepted: boolean;
-  reasonCode?: string | null;
-  reasonField?: string | null;
-  reason?: string | null;
-  receivedAt: string;
-};
-
-type BridgeDiagnostics = {
-  enabled: boolean;
-  listenAddress: string;
-  queueLength: number;
-  queueCapacity: number;
-  acceptedEvents: ApiEventSummary[];
-  rejectedEvents: ApiEventSummary[];
-  lastAccepted?: ApiEventSummary | null;
-  lastRejected?: ApiEventSummary | null;
-  sound: {
-    playbackAvailable: boolean;
-    muted: boolean;
-    cooldownMs: number;
-    acceptedIds: string[];
-    lastDecision?: {
-      sound: string;
-      played: boolean;
-      reason: string;
-      decidedAt: string;
-    } | null;
-  };
-  hardwareLight: boolean;
-  startupError?: string | null;
-};
-
-type TokenStatus = "configured" | "missing" | "unreadable";
-
-type DiagnosticsViewState = {
-  diagnostics: BridgeDiagnostics;
-  tokenStatus: TokenStatus;
-  refreshedAt: Date;
-  error?: string;
-};
 
 type AcceptedPetEvent = {
   source: {
@@ -268,6 +140,11 @@ const BUNDLED_PACK_BY_INSTANCE_STORAGE_KEY = "agentDesktopPet.bundledPackByInsta
 const BUNDLED_PACK_FAVORITES_STORAGE_KEY = "agentDesktopPet.bundledPackFavorites.v14";
 const FIRST_RUN_COMPLETED_STORAGE_KEY = "agentDesktopPet.firstRunCompleted.v11";
 const BUNDLED_LOCAL_CAT_PACKS = [FLAGSHIP_WORK_CAT_V2_PACK, LIVING_WORK_CAT_V1_PACK, ...PREMIUM_CAT_PACKS] as const;
+const assetManagerPanelFormatters = {
+  escapeHtml,
+  formatTimestamp,
+  shortStateLabel
+};
 let petNativeDragGuardInstalled = false;
 const app = document.querySelector<HTMLDivElement>("#app");
 
@@ -287,132 +164,12 @@ function isSettingsWindow() {
   return windowLabel === "settings";
 }
 
-async function getSettings(): Promise<AppSettings> {
-  return invoke<AppSettings>("get_settings");
-}
-
-async function setMuted(muted: boolean): Promise<AppSettings> {
-  return invoke<AppSettings>("set_muted", { muted });
-}
-
-async function getPetPosition(): Promise<WindowPosition> {
-  return invoke<WindowPosition>("get_pet_position");
-}
-
-async function setCurrentPetPosition(position: WindowPosition): Promise<WindowPosition> {
-  return invoke<WindowPosition>("set_current_pet_position", { position });
-}
-
-async function getApiDebugState(): Promise<BridgeDiagnostics> {
-  return invoke<BridgeDiagnostics>("get_api_debug_state");
-}
-
-async function getCurrentPetInstance(): Promise<PetInstance> {
-  return invoke<PetInstance>("get_current_pet_instance");
-}
-
-async function listPetInstances(): Promise<PetInstance[]> {
-  return invoke<PetInstance[]>("list_pet_instances");
-}
-
 async function getPetInstanceListResult(): Promise<PetInstanceListResult> {
   const instances = await listPetInstances();
   return {
     instances,
     limits: derivePetInstanceLimits(instances)
   };
-}
-
-async function listCatProfiles(): Promise<CatProfile[]> {
-  return invoke<CatProfile[]>("list_cat_profiles");
-}
-
-async function listPersonalizedAssetPacks(): Promise<PersonalizedAssetPack[]> {
-  return invoke<PersonalizedAssetPack[]>("list_personalized_asset_packs");
-}
-
-async function assembleAnimatedSpritePack(
-  sourceFolderPath: string,
-  displayName: string,
-  fps: number,
-  activateInstanceId?: string
-): Promise<AnimatedSpriteAssemblyResult> {
-  return invoke<AnimatedSpriteAssemblyResult>("assemble_animated_sprite_pack", {
-    sourceFolderPath,
-    displayName,
-    fps,
-    activateInstanceId: activateInstanceId || null
-  });
-}
-
-async function importPersonalizedAssetPack(manifestPath: string, displayName?: string): Promise<PersonalizedAssetImportResult> {
-  return invoke<PersonalizedAssetImportResult>("import_personalized_asset_pack", {
-    manifestPath,
-    displayName: displayName || null
-  });
-}
-
-async function activatePersonalizedAssetPack(packId: string, instanceId: string): Promise<PersonalizedAssetActivationResult> {
-  return invoke<PersonalizedAssetActivationResult>("activate_personalized_asset_pack", {
-    packId,
-    instanceId
-  });
-}
-
-async function deactivatePersonalizedAssetPack(instanceId: string): Promise<void> {
-  return invoke<void>("deactivate_personalized_asset_pack", {
-    instanceId
-  });
-}
-
-async function deletePersonalizedAssetPack(packId: string): Promise<PersonalizedAssetPack[]> {
-  return invoke<PersonalizedAssetPack[]>("delete_personalized_asset_pack", {
-    packId
-  });
-}
-
-async function renamePersonalizedAssetPack(packId: string, displayName: string): Promise<PersonalizedAssetPack> {
-  return invoke<PersonalizedAssetPack>("rename_personalized_asset_pack", {
-    packId,
-    displayName
-  });
-}
-
-async function runtimePersonalizedAssetPack(instanceId: string): Promise<RuntimeImportedAssetPack | null> {
-  return invoke<RuntimeImportedAssetPack | null>("runtime_personalized_asset_pack", {
-    instanceId
-  });
-}
-
-async function createPetInstance(displayName?: string): Promise<PetInstance> {
-  return invoke<PetInstance>("create_pet_instance", { displayName });
-}
-
-async function renamePetInstance(instanceId: string, displayName: string): Promise<PetInstance> {
-  return invoke<PetInstance>("rename_pet_instance", { instanceId, displayName });
-}
-
-async function setPetInstanceProfile(instanceId: string, catProfileId: string): Promise<PetInstance> {
-  return invoke<PetInstance>("set_pet_instance_profile", { instanceId, catProfileId });
-}
-
-async function setPetInstanceVisible(instanceId: string, visible: boolean): Promise<PetInstance> {
-  return invoke<PetInstance>("set_pet_instance_visible", { instanceId, visible });
-}
-
-async function resetPetInstancePosition(instanceId: string): Promise<PetInstance> {
-  return invoke<PetInstance>("reset_pet_instance_position", { instanceId });
-}
-
-async function detachPetInstance(instanceId: string): Promise<PetInstance[]> {
-  return invoke<PetInstance[]>("detach_pet_instance", { instanceId });
-}
-
-async function sendTestPetReaction(instanceId: string, level: CatState = "success"): Promise<{ accepted: true; eventId: string; instanceId: string; level: CatState }> {
-  return invoke<{ accepted: true; eventId: string; instanceId: string; level: CatState }>("send_test_pet_reaction", {
-    instanceId,
-    level
-  });
 }
 
 async function renderPet(settings: AppSettings) {
@@ -1004,7 +761,7 @@ async function renderSettings(settings: AppSettings) {
         <p class="asset-import-feedback" id="asset-import-feedback" aria-live="polite"></p>
         </article>
         <div id="asset-pack-list">
-          ${assetPackList(assetPacks)}
+          ${assetPackList(assetPacks, assetManagerPanelFormatters)}
         </div>
         ${assetPreviewPanel(assetPacks)}
       </section>
@@ -1610,26 +1367,7 @@ async function renderSettings(settings: AppSettings) {
   });
 
   function applyGalleryFilter() {
-    const search = appRoot.querySelector<HTMLInputElement>("#gallery-search")?.value.trim().toLowerCase() ?? "";
-    const filter = appRoot.querySelector<HTMLSelectElement>("#gallery-filter")?.value ?? "all";
-    const style = appRoot.querySelector<HTMLSelectElement>("#gallery-style-filter")?.value ?? "all";
-    const color = appRoot.querySelector<HTMLSelectElement>("#gallery-color-filter")?.value ?? "all";
-    const motion = appRoot.querySelector<HTMLSelectElement>("#gallery-motion-filter")?.value ?? "all";
-    const source = appRoot.querySelector<HTMLSelectElement>("#gallery-source-filter")?.value ?? "all";
-    const renderer = appRoot.querySelector<HTMLSelectElement>("#gallery-renderer-filter")?.value ?? "all";
-    appRoot.querySelectorAll<HTMLElement>("[data-gallery-pack]").forEach((card) => {
-      const matchesSearch = !search || (card.dataset.gallerySearch ?? "").includes(search);
-      const matchesFilter =
-        filter === "all" ||
-        (filter === "favorite" && card.dataset.galleryFavorite === "true") ||
-        (filter === "active" && card.dataset.galleryActive === "true");
-      const matchesStyle = style === "all" || card.dataset.galleryStyle === style;
-      const matchesColor = color === "all" || card.dataset.galleryColor === color;
-      const matchesMotion = motion === "all" || card.dataset.galleryMotion === motion;
-      const matchesSource = source === "all" || card.dataset.gallerySource === source;
-      const matchesRenderer = renderer === "all" || card.dataset.galleryRenderer === renderer;
-      card.hidden = !(matchesSearch && matchesFilter && matchesStyle && matchesColor && matchesMotion && matchesSource && matchesRenderer);
-    });
+    applyGalleryCardFilters(appRoot);
   }
 
   appRoot.querySelector<HTMLInputElement>("#gallery-search")?.addEventListener("input", applyGalleryFilter);
@@ -1798,7 +1536,7 @@ async function renderSettings(settings: AppSettings) {
       try {
         const packs = await deletePersonalizedAssetPack(packId);
         if (list) {
-          list.innerHTML = assetPackList(packs);
+          list.innerHTML = assetPackList(packs, assetManagerPanelFormatters);
         }
         setAssetImportFeedback("资产包已删除。");
         await renderSettings(await getSettings());
@@ -1831,7 +1569,7 @@ async function renderSettings(settings: AppSettings) {
       const imported = await importPersonalizedAssetPack(manifestPath, displayName);
       const packs = await listPersonalizedAssetPacks();
       if (list) {
-        list.innerHTML = assetPackList(packs);
+        list.innerHTML = assetPackList(packs, assetManagerPanelFormatters);
       }
       if (manifestInput) {
         manifestInput.value = "";
@@ -2079,26 +1817,6 @@ async function boot() {
   }
 }
 
-function defaultPetInstance(): PetInstance {
-  return {
-    instanceId: "default",
-    sourceKind: "system",
-    sourceId: "default",
-    displayName: "Agent Desktop Pet",
-    windowLabel: "main",
-    workspaceHash: null,
-    workspaceLabel: null,
-    position: { x: 0, y: 0 },
-    visible: true,
-    currentState: "idle",
-    catProfileId: "default-cat",
-    createdAt: "legacy",
-    updatedAt: "legacy",
-    lastEventAt: null,
-    isDefault: true
-  };
-}
-
 function cssCatMarkup() {
   return `
     <span class="cat" aria-hidden="true">
@@ -2114,19 +1832,6 @@ function cssCatMarkup() {
       </span>
     </span>
   `;
-}
-
-function derivePetInstanceLimits(instances: PetInstance[]): PetInstanceLimits {
-  const totalCount = instances.length;
-  const softLimit = 6;
-  const hardLimit = 12;
-  return {
-    totalCount,
-    softLimit,
-    hardLimit,
-    overSoftLimit: totalCount >= softLimit,
-    atHardLimit: totalCount >= hardLimit
-  };
 }
 
 function isBundledLocalCatPackId(packId: string) {
@@ -2919,70 +2624,6 @@ function instanceList(instances: PetInstance[], profiles: CatProfile[], assetPac
   `;
 }
 
-function assetPackList(packs: PersonalizedAssetPack[]) {
-  if (packs.length === 0) {
-    return `<p class="diagnostics-empty">尚未导入个性化资产包。</p>`;
-  }
-  const views = createAssetManagerPackViews(packs);
-  return `
-    <div class="asset-pack-list-grid">
-      ${packs.map((pack, index) => {
-        const view = views[index];
-        return `
-        <article class="asset-pack-card">
-          <div>
-            <h3>${escapeHtml(view.displayName)}</h3>
-            <dl class="asset-pack-meta-grid">
-              <div><dt>Pack ID</dt><dd>${escapeHtml(view.packId)}</dd></div>
-              <div><dt>Renderer</dt><dd>${escapeHtml(view.rendererKind)}</dd></div>
-              <div><dt>Actions</dt><dd>${escapeHtml(view.actionCoverage)}</dd></div>
-              <div><dt>Hash</dt><dd>${escapeHtml(pack.manifestHash)}</dd></div>
-              <div><dt>Imported</dt><dd>${escapeHtml(formatTimestamp(pack.createdAt))}</dd></div>
-              <div><dt>Status</dt><dd>${escapeHtml(view.validationStatus)}</dd></div>
-              <div><dt>Health</dt><dd>${escapeHtml(view.healthStatus)} · ${escapeHtml(view.reasonCode)}</dd></div>
-              <div><dt>Active</dt><dd>${escapeHtml(view.activeInstanceSummary)}</dd></div>
-            </dl>
-            <label class="asset-pack-rename-control">
-              <span>显示名称</span>
-              <input type="text" maxlength="80" value="${escapeHtml(view.displayName)}" data-asset-pack-name-input="${escapeHtml(view.packId)}" aria-label="${escapeHtml(view.displayName)} 的显示名称" />
-            </label>
-          </div>
-          <div class="asset-pack-actions">
-            <span class="instance-badge">${view.activeInstanceCount ? "Runtime active" : "Imported"}</span>
-            <button class="secondary-action" type="button" data-asset-pack-preview="${escapeHtml(view.packId)}" data-preview-action="idle">预览</button>
-            <button class="secondary-action" type="button" data-asset-pack-rename="${escapeHtml(view.packId)}">重命名</button>
-            <button class="secondary-action" type="button" data-asset-pack-delete="${escapeHtml(view.packId)}">删除</button>
-          </div>
-          <div class="asset-preview-action-row" aria-label="${escapeHtml(view.displayName)} action preview">
-            ${view.previewActions.map((action) => `
-              <button class="icon-action" type="button" title="预览 ${escapeHtml(action)}" data-asset-pack-preview="${escapeHtml(view.packId)}" data-preview-action="${escapeHtml(action)}">${escapeHtml(shortStateLabel(action))}</button>
-            `).join("")}
-          </div>
-        </article>
-      `;
-      }).join("")}
-    </div>
-  `;
-}
-
-function assetPreviewPanel(packs: PersonalizedAssetPack[]) {
-  if (packs.length === 0) {
-    return "";
-  }
-  return `
-    <article class="asset-preview-panel">
-      <header class="guided-output-header">
-        <div>
-          <h3>资产预览</h3>
-          <p id="asset-preview-summary">选择资产包和动作进行预览。预览不会激活到任何猫。</p>
-        </div>
-        <span class="instance-badge">Preview only</span>
-      </header>
-      <div id="asset-preview-stage" class="asset-preview-stage" aria-label="Asset pack preview"></div>
-    </article>
-  `;
-}
-
 function previewImportedManifest(pack: PersonalizedAssetPack): AssetManifest {
   const actions = Object.fromEntries(CORE_ACTION_IDS.map((action) => [action, {
     assetId: action,
@@ -3017,10 +2658,7 @@ async function refreshPreviewRuntimeCoverage(
     return;
   }
   try {
-    const asset = await invoke<RuntimeAssetData>("runtime_personalized_asset_data", {
-      packId: pack.packId,
-      actionId
-    });
+    const asset = await runtimePersonalizedAssetData(pack.packId, actionId);
     if (container.dataset.previewPackId !== pack.packId || container.dataset.previewActionId !== actionId) {
       return;
     }
@@ -3505,16 +3143,7 @@ function attachPhoto2DWizardControls(root: ParentNode) {
   root.querySelector<HTMLInputElement>("#photo-2d-consent")?.addEventListener("change", () => updatePhoto2DWizardState());
   root.querySelector<HTMLTextAreaElement>("#photo-2d-traits")?.addEventListener("input", () => updatePhoto2DWizardState());
   root.querySelector<HTMLInputElement>("#photo-2d-pack-name")?.addEventListener("input", () => updatePhoto2DWizardState());
-  [
-    "#photo-2d-provider-upload-consent",
-    "#photo-2d-provider-terms",
-    "#photo-2d-provider-cost",
-    "#photo-2d-provider-privacy",
-    "#photo-2d-provider-retention",
-    "#photo-2d-provider-license"
-  ].forEach((selector) => {
-    root.querySelector<HTMLInputElement>(selector)?.addEventListener("change", () => updatePhoto2DWizardState());
-  });
+  bindPhoto2DProviderDisclosureControls(root, () => updatePhoto2DWizardState());
   root.querySelectorAll<HTMLInputElement>("[name='photo-2d-generation-mode']").forEach((input) => {
     input.addEventListener("change", () => updatePhoto2DWizardState());
   });
@@ -3561,19 +3190,7 @@ function closePhoto2DWizardModal() {
     sameCat.checked = false;
     sameCat.disabled = true;
   }
-  [
-    "#photo-2d-provider-upload-consent",
-    "#photo-2d-provider-terms",
-    "#photo-2d-provider-cost",
-    "#photo-2d-provider-privacy",
-    "#photo-2d-provider-retention",
-    "#photo-2d-provider-license"
-  ].forEach((selector) => {
-    const checkbox = appRoot.querySelector<HTMLInputElement>(selector);
-    if (checkbox) {
-      checkbox.checked = false;
-    }
-  });
+  resetPhoto2DProviderDisclosureControls(appRoot);
   updatePhoto2DWizardState();
 }
 
@@ -3691,12 +3308,7 @@ function updatePhoto2DWizardState() {
   const consent = appRoot.querySelector<HTMLInputElement>("#photo-2d-consent")?.checked ?? false;
   const approvedTraits = appRoot.querySelector<HTMLTextAreaElement>("#photo-2d-traits")?.value ?? "";
   const targetPackName = appRoot.querySelector<HTMLInputElement>("#photo-2d-pack-name")?.value ?? "";
-  const providerUploadConsent = appRoot.querySelector<HTMLInputElement>("#photo-2d-provider-upload-consent")?.checked ?? false;
-  const providerTermsReviewed = appRoot.querySelector<HTMLInputElement>("#photo-2d-provider-terms")?.checked ?? false;
-  const providerCostDisclosureAccepted = appRoot.querySelector<HTMLInputElement>("#photo-2d-provider-cost")?.checked ?? false;
-  const providerPrivacyDisclosureAccepted = appRoot.querySelector<HTMLInputElement>("#photo-2d-provider-privacy")?.checked ?? false;
-  const providerRetentionDisclosureAccepted = appRoot.querySelector<HTMLInputElement>("#photo-2d-provider-retention")?.checked ?? false;
-  const providerLicenseDisclosureAccepted = appRoot.querySelector<HTMLInputElement>("#photo-2d-provider-license")?.checked ?? false;
+  const providerDisclosureControls = readPhoto2DProviderDisclosureControls(appRoot);
   const snapshot = createPhoto2DWizardIntakeSnapshot({
     photo: photo2DWizardSelectedPhoto,
     consent,
@@ -3705,13 +3317,13 @@ function updatePhoto2DWizardState() {
   });
   const providerBoundary = createPhoto2DWizardProviderDisclosureSnapshot({
     providerName: "minimax",
-    uploadConsent: providerUploadConsent,
-    termsReviewed: providerTermsReviewed,
-    costDisclosureAccepted: providerCostDisclosureAccepted,
-    privacyDisclosureAccepted: providerPrivacyDisclosureAccepted,
-    retentionDisclosureAccepted: providerRetentionDisclosureAccepted,
-    licenseDisclosureAccepted: providerLicenseDisclosureAccepted,
-    attributionDisclosureAccepted: providerLicenseDisclosureAccepted,
+    uploadConsent: providerDisclosureControls.uploadConsent,
+    termsReviewed: providerDisclosureControls.termsReviewed,
+    costDisclosureAccepted: providerDisclosureControls.costDisclosureAccepted,
+    privacyDisclosureAccepted: providerDisclosureControls.privacyDisclosureAccepted,
+    retentionDisclosureAccepted: providerDisclosureControls.retentionDisclosureAccepted,
+    licenseDisclosureAccepted: providerDisclosureControls.licenseDisclosureAccepted,
+    attributionDisclosureAccepted: providerDisclosureControls.licenseDisclosureAccepted,
     credentialConfigured: false
   });
   const generation = createPhoto2DWizardGenerationSnapshot({

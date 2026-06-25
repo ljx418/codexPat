@@ -1,29 +1,125 @@
 # Active Development Plan
 
-文档状态：active index；V30 planned；V29/V23-V28 scoped baselines 是输入基线。
-当前日期：2026-06-17。
+文档状态：active index；V32 quality rescue passed scoped；V31 partial scoped with continuation execution blocked scoped；V30 scoped passed；Post-V30 architecture/runtime remediation passed scoped；V29/V23-V28 scoped baselines 是输入基线。
+当前日期：2026-06-24。
 
 ## Current Active Line
 
-V30 is the current active planning track. It starts from the V29 gallery/photo
-generation baseline and fixes the latest visual review finding: generated
-frames can move without being readable, attractive character animation.
+V32 quality rescue is the latest scoped development line.
+`docs/active/agent_desktop_pet_prd_v32.md` is the current active scoped PRD.
+V31 high-quality 2D action assets and arbitrary-cat photo-to-action remains the
+input problem statement, but its arbitrary-cat automatic path is not ready.
 
-V30 target flow:
+Post-V30 architecture/runtime remediation has passed scoped and remains the
+latest engineering baseline. V30 remains the semantic animation claim boundary:
+it passed only for tested local 2D action packs, where transform-only weak
+actions were rejected and semantic candidates were accepted. A follow-up visual
+review narrowed the current asset-quality status: the simplified SVG
+`flagship-work-cat-v2` candidate is not accepted as target high-quality visual
+art.
+
+V31 target flow:
 
 ```text
-Action semantics
-  -> storyboard / key-pose contract
-  -> semantic candidate frame routes
-  -> motion readability QA
-  -> old-vs-new preview
-  -> approved target apply
-  -> rollback
+V30 semantic gate
+  -> V31 art quality rubric
+  -> high-quality flagship 2D action asset route
+  -> layered rig / professional animation route
+  -> photo-to-character-to-action candidate route
+  -> real visual evidence / preview / apply / rollback
 ```
 
-V30 active docs:
+Current V31 execution decision: partial scoped. One named local high-quality
+flagship 8-action asset passed visual QA, semantic QA, preview, target apply,
+rollback, claim scan, and security scan. Arbitrary-cat automatic high-quality
+action generation, provider integration, 3D, production, Windows, and
+cross-platform readiness remain not ready.
 
+Current V31 continuation decision: blocked scoped. V31.8-V31.13 produced real
+evidence on 2026-06-24: repeatable production is partial, layered rig runtime
+is blocked, named photo sample set is partial, photo-action closure is blocked,
+and continuation E2E/final gate are blocked. This does not change the V31.7
+partial scoped result.
+
+Current V32 execution decision: passed scoped. V32 generated two local
+project-authored 8-action frameSequence packs, measured the real PNG frames,
+passed V30 semantic QA, V31 art QA, V32 quality gate, target-only
+preview/apply/rollback, claim scan, security scan, HTML report generation, and
+headless screenshot evidence. This proves only named local project-authored
+2D packs, not arbitrary-cat photo automation.
+
+V32 target flow:
+
+```text
+local layered-rig generator
+  -> real PNG frameSequence
+  -> V32 measured quality gate
+  -> V30 semantic gate
+  -> V31 art gate
+  -> isolated preview
+  -> target-only apply / rollback
+  -> HTML + screenshot evidence
+  -> claim / security scan
+```
+
+Post-V30 target flow:
+
+```text
+fact-source sync
+  -> architecture map
+  -> runtime desktop smoke plan
+  -> managed Codex workflow smoke plan
+  -> scoped code debt slices
+  -> evidence / claim / security scan per phase
+```
+
+Current execution decision: Post-V30.1 through Post-V30.5 have passed scoped.
+The final gate records real local runtime evidence, one scoped
+wrapper-launched managed workflow smoke, frontend slice evidence, Rust/Tauri
+bridge slice evidence, PRD/spec review, claim scan, and security scan.
+A full PRD/code/docs/function/E2E audit on 2026-06-24 also passed scoped with
+residual risks documented in
+`docs/V30.x/evidence/post-v30-v30-full-audit-2026-06-24.md`.
+
+Documentation completeness must not be treated as runtime, managed workflow,
+refactor, platform, provider, 3D, or production evidence.
+
+Active docs:
+
+- `docs/active/agent_desktop_pet_prd_v32.md`
+- `docs/V32.x/v32-target-architecture.md`
+- `docs/V32.x/v32-development-and-acceptance-plan.md`
+- `docs/V32.x/v32-final-acceptance-report.md`
+- `docs/active/agent_desktop_pet_prd_v31.md`
 - `docs/active/agent_desktop_pet_prd_v30.md`
+- `docs/active/agent_desktop_pet_prd_post_v30.md`
+- `docs/V31.x/v31-target-architecture.md`
+- `docs/V31.x/v31-development-plan.md`
+- `docs/V31.x/v31-acceptance-plan.md`
+- `docs/V31.x/v31-milestones.md`
+- `docs/V31.x/v31-claim-matrix.md`
+- `docs/V31.x/v31-current-gap-analysis.md`
+- `docs/V31.x/v31-doc-audit.md`
+- `docs/V31.x/v31-detailed-development-and-acceptance-plan.md`
+- `docs/V31.x/v31-independent-doc-audit-2026-06-24.md`
+- `docs/V31.x/v31_1-art-quality-rubric-spec.md`
+- `docs/V31.x/v31_2-flagship-asset-route-spec.md`
+- `docs/V31.x/v31_3-visual-review-report-spec.md`
+- `docs/V31.x/v31_4-layered-rig-route-spec.md`
+- `docs/V31.x/v31_5-photo-to-character-route-spec.md`
+- `docs/V31.x/v31_6-e2e-real-data-acceptance-spec.md`
+- `docs/active/architecture-remediation-plan.md`
+- `docs/active/post-v30-runtime-smoke-spec.md`
+- `docs/active/post-v30-managed-codex-smoke-spec.md`
+- `docs/active/post-v30-frontend-architecture-slices.md`
+- `docs/active/post-v30-tauri-bridge-architecture-slices.md`
+- `docs/active/post-v30-evidence-and-scan-checklist.md`
+- `docs/V30.x/post-v30-target-architecture.md`
+- `docs/V30.x/post-v30-detailed-development-and-acceptance-plan.md`
+- `docs/V30.x/post-v30-acceptance-plan.md`
+- `docs/V30.x/post-v30-milestones.md`
+- `docs/V30.x/post-v30_2-managed-codex-workflow-smoke-development-and-acceptance-plan.md`
+- `docs/active/current-vs-target-gap.drawio`
 - `docs/V30.x/v30-development-plan.md`
 - `docs/V30.x/v30-acceptance-plan.md`
 - `docs/V30.x/v30-target-architecture.md`
@@ -34,12 +130,80 @@ V30 active docs:
 - `docs/V30.x/v30-doc-audit.md`
 - `docs/V30.x/v30-target-state.drawio`
 
-V30.0 is the next planned phase. V30.6 remains No-Go until V30.0-V30.5 have
-passed / blocked / failed evidence and at least one semantic 8-action pack
-passes storyboard, motion-readability QA, preview, target apply, and rollback.
+Post-V30 phases:
+
+| Phase | Status | Exit Signal |
+| --- | --- | --- |
+| Post-V30.0 fact-source sync | passed scoped | active docs, V30 docs, README, ops docs agree on V30 scoped passed and next remediation line |
+| Post-V30.1 runtime desktop smoke | passed scoped | `post-v30_1-runtime-desktop-smoke-2026-06-23.md` records real host-side Tauri bridge, petctl, and runtime smoke pass |
+| Post-V30.2 managed Codex workflow smoke | passed scoped | `post-v30_2-managed-codex-workflow-smoke-2026-06-23.md` records one local wrapper-launched managed workflow smoke against the running bridge |
+| Post-V30.3 architecture debt slices | passed scoped | FE-1 through FE-5 frontend slices have per-slice evidence, PRD/spec review, checks, and scans |
+| Post-V30.4 Tauri bridge architecture slices | passed scoped | RS-1 through RS-6 have per-slice evidence; RS-5/RS-6 passed with real WSL frontend plus Windows Cargo runtime smoke; closure evidence is `post-v30_4-tauri-bridge-slice-closure-2026-06-24.md` |
+| Post-V30.5 final remediation gate | passed scoped | `post-v30_5-final-remediation-gate-2026-06-24.md` records final regression, runtime smoke, managed smoke, PRD/spec review, claim scan, and security scan |
+
+V31 phases:
+
+| Phase | Status | Exit Signal |
+| --- | --- | --- |
+| V31.0 scope/docs/drawio | passed scoped | `v31_0-scope-freeze-2026-06-24.md` |
+| V31.1 art quality rubric | passed scoped | placeholder/simple line-art candidate rejected; rubric evidence exists |
+| V31.2 flagship 2D asset route | passed scoped | one named local 8-action flagship candidate passed |
+| V31.3 visual review report | passed scoped | HTML report, screenshots, contact sheet, 1x/0.75x review evidence |
+| V31.4 layered rig route | passed scoped as route contract | part-rig/professional animation export and QA contract recorded |
+| V31.5 arbitrary-cat photo route | candidate-only scoped | photo -> character design route sampled; arbitrary-cat ready not proven |
+| V31.6 real-data E2E acceptance | partial scoped | flagship path passed; photo path candidate-only |
+| V31.7 final gate | partial scoped | `docs/V31.x/v31-final-acceptance-report.md` |
+| V31.8 repeatable asset production | partial scoped | `v31_8-repeatable-asset-production-2026-06-24.md`; only one high-quality candidate passed |
+| V31.9 layered rig runtime route | blocked scoped | `v31_9-layered-rig-runtime-route-2026-06-24.md`; no accepted runtime payload or normalized frames |
+| V31.10 named photo sample set | partial scoped | `v31_10-photo-sample-set-2026-06-24.md`; real positives/blocked, simulated negative metadata |
+| V31.11 photo action preview/apply/rollback | blocked scoped | `v31_11-photo-action-preview-apply-rollback-2026-06-24.md`; no photo-derived action frames |
+| V31.12 continuation real-data E2E | blocked scoped | `v31_12-real-data-e2e-2026-06-24.md`; HTML report generated |
+| V31.13 continuation final gate | blocked scoped | `v31_13-continuation-final-gate-2026-06-24.md`; claim/security scans passed |
+
+V32 phases:
+
+| Phase | Status | Exit Signal |
+| --- | --- | --- |
+| V32.1 measured quality gate | passed scoped | `apps/desktop/src/assets/v32-quality-rescue.test.ts` passed |
+| V32.2 local project-authored packs | passed scoped | two generated packs under `fixtures/manual/v32_quality_rescue/` |
+| V32.3 integrated semantic/art/runtime gates | passed scoped | `docs/V32.x/evidence/v32_quality_rescue-smoke-2026-06-24.md` |
+| V32.4 visual evidence report | passed scoped | `docs/V32.x/evidence/v32_quality_rescue-report-2026-06-24.html` and screenshot evidence |
+| V32.5 final scoped gate | passed scoped | `docs/V32.x/v32-final-acceptance-report.md` |
+
+V30 scoped pass evidence:
+
+- `docs/V30.x/v30-final-acceptance-report.md`
+- `docs/V30.x/evidence/v30_0-scope-freeze-2026-06-17.md`
+- `docs/V30.x/evidence/v30_1-action-storyboard-2026-06-17.md`
+- `docs/V30.x/evidence/v30_2-semantic-candidate-generation-2026-06-17.md`
+- `docs/V30.x/evidence/v30_3-motion-readability-qa-2026-06-17.md`
+- `docs/V30.x/evidence/v30_4-preview-ux-2026-06-17.html`
+- `docs/V30.x/evidence/v30_5-target-apply-rollback-2026-06-17.md`
+- `docs/V30.x/evidence/v30-wsl-baseline-recovery-2026-06-23.md`
+- `docs/V30.x/evidence/post-v30-architecture-remediation-2026-06-23.md`
+- `docs/V30.x/evidence/post-v30-documentation-development-2026-06-23.md`
+- `docs/V30.x/evidence/post-v30-stage-goals-design-sync-2026-06-23.md`
+- `docs/V30.x/evidence/post-v30-doc-coverage-review-2026-06-23.md`
+- `docs/V30.x/evidence/post-v30-drawio-human-review-sync-2026-06-23.md`
+- `docs/V30.x/evidence/post-v30-detailed-plan-review-2026-06-23.md`
+- `docs/V30.x/evidence/post-v30_1-pre-execution-audit-2026-06-23.md`
+- `docs/V30.x/evidence/post-v30_1-runtime-desktop-smoke-2026-06-23.md`
+- `docs/V30.x/evidence/post-v30_2-pre-execution-audit-2026-06-23.md`
+- `docs/V30.x/evidence/post-v30_2-managed-codex-workflow-smoke-2026-06-23.md`
+- `docs/V30.x/evidence/post-v30_3-architecture-slice-FE-1-command-boundary-2026-06-23.md`
+- `docs/V30.x/evidence/post-v30_4-tauri-bridge-slice-closure-2026-06-24.md`
+- `docs/V30.x/evidence/post-v30_5-pre-execution-audit-2026-06-24.md`
+- `docs/V30.x/evidence/post-v30_5-final-remediation-gate-2026-06-24.md`
+- `docs/V30.x/evidence/post-v30-v30-full-audit-2026-06-24.md`
+
 V30 must not claim Petdex parity achieved, automatic photo-to-animation ready
 for arbitrary cats, provider integration verified, 3D readiness, production
 release readiness, Windows readiness, or cross-platform readiness.
+
+V31/V32 must not claim arbitrary-cat automatic animation ready, provider
+integration verified, production release readiness, Windows readiness, or
+cross-platform readiness until separate real evidence passes. V32 may only
+claim scoped validation of named local project-authored 2D frameSequence packs.
 
 ## V29 Baseline
 

@@ -2,6 +2,7 @@
 import { existsSync, readFileSync } from "node:fs";
 import { homedir } from "node:os";
 import { join, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 
 const DEFAULT_URL = "http://127.0.0.1:17321";
@@ -18,7 +19,7 @@ const SENSITIVE_PATTERNS = [
   "/Users/"
 ];
 
-const repoRoot = resolve(new URL("..", import.meta.url).pathname);
+const repoRoot = resolve(fileURLToPath(new URL("..", import.meta.url)));
 const petctlBin = process.env.PETCTL_BIN
   ? resolve(process.env.PETCTL_BIN)
   : join(repoRoot, "packages/petctl/dist/cli.js");
@@ -240,8 +241,8 @@ function runPetctl(args, extraEnv = {}) {
     },
     encoding: "utf8"
   });
-  const stdout = result.stdout.trim();
-  const stderr = result.stderr.trim();
+  const stdout = (result.stdout || "").trim();
+  const stderr = (result.stderr || "").trim();
   const text = stdout || stderr;
   const parsed = parseJson(text);
   return {

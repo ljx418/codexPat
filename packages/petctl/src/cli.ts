@@ -1,4 +1,6 @@
 #!/usr/bin/env node
+import { resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { parseArgs, buildEventFromOptions } from "./args.js";
 import { activateAssetPack, deleteAssetPack, generateAssetPromptPack, importAssetPack, lintAssetPack, listAssetPacks, renameAssetPack } from "./assets.js";
 import { confirmCodexBinding, previewCodexBinding, routeCodexBindingTest } from "./codex-bind.js";
@@ -233,7 +235,7 @@ function writeResult(result: Parameters<typeof formatResult>[0], pretty: boolean
   }
 }
 
-if (import.meta.url === `file://${process.argv[1]}`) {
+if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
   const exitCode = await main();
   process.exitCode = exitCode;
 }

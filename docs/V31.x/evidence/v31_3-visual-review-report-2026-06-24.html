@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>V31 视觉验收报告</title>
+  <style>
+    body{margin:0;background:#f6f8fb;color:#172033;font-family:"Segoe UI",Arial,sans-serif}
+    main{max-width:1380px;margin:0 auto;padding:28px}
+    header{background:#111827;color:#fff;border-radius:8px;padding:26px}
+    h1{margin:0 0 10px;font-size:30px;letter-spacing:0}
+    h2{margin:30px 0 14px;font-size:22px;letter-spacing:0}
+    h3{margin:0 0 8px;font-size:16px;letter-spacing:0}
+    p{line-height:1.6;color:#566176}
+    header p{color:#cbd5e1}
+    .badge{display:inline-block;background:#dcfce7;color:#166534;border-radius:6px;padding:6px 10px;font-weight:700}
+    .warn{background:#fef3c7;color:#92400e}
+    .grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+    .card,.action-row{background:white;border:1px solid #d9e0eb;border-radius:8px;padding:14px}
+    .frames{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+    figure{margin:0;border:1px solid #d9e0eb;border-radius:7px;background:white;overflow:hidden}
+    img{display:block;width:100%;height:auto}
+    figcaption{font-size:12px;color:#64748b;padding:5px 8px}
+    table{width:100%;border-collapse:collapse;background:white;border:1px solid #d9e0eb;border-radius:8px;overflow:hidden}
+    th,td{text-align:left;padding:10px 12px;border-bottom:1px solid #d9e0eb;font-size:13px;vertical-align:top}
+    th{background:#eef2f7}
+    .pass{color:#0f766e;font-weight:800}.fail{color:#b91c1c;font-weight:800}
+    .contact{max-width:760px;border:1px solid #d9e0eb;border-radius:8px;background:white}
+    @media(max-width:900px){.grid,.frames{grid-template-columns:1fr}}
+  </style>
+</head>
+<body><main>
+  <header><span class="badge">V31 flagship visual candidate</span><h1>V31 高质量 2D 猫动作资产验收报告</h1><p>本报告展示真实本地候选帧包、旧线条猫拒绝、V31 美术质量门禁、语义 QA、预览应用回滚和照片候选路线边界。</p></header>
+  <section class="card"><strong>边界：</strong>本报告最多证明 named local flagship candidate 的 scoped 结果，不声明任意猫自动动作资产 ready、provider integration verified、Petdex parity、3D ready、production/Windows/cross-platform ready。</section>
+  <h2>决策摘要</h2>
+  <div class="grid">
+    <article class="card"><h3>旗舰候选</h3><p class="pass">passed</p><p>v31_art_quality_passed</p></article>
+    <article class="card"><h3>旧线条猫</h3><p class="fail">failed</p><p>action_pose_too_weak, expression_clarity_too_low, placeholder_line_art_rejected, silhouette_clarity_too_low, small_scale_readability_failed, visual_polish_too_low</p></article>
+    <article class="card"><h3>照片路线</h3><p class="warn">candidate_workflow_passed_scoped</p><p>真实样本 3 个；candidate-only。</p></article>
+  </div>
+  <h2>Contact Sheet</h2>
+  <img class="contact" src="assets/v31_flagship_candidate_sanitized_2026-06-24/contact-sheet.png" alt="V31 candidate contact sheet">
+  <h2>8 个核心动作截图</h2>
+  <section class="action-row"><h3>idle</h3><div class="frames"><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/idle-000.png" alt="idle frame 0"><figcaption>idle 0</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/idle-001.png" alt="idle frame 1"><figcaption>idle 1</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/idle-002.png" alt="idle frame 2"><figcaption>idle 2</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/idle-003.png" alt="idle frame 3"><figcaption>idle 3</figcaption></figure></div></section><section class="action-row"><h3>thinking</h3><div class="frames"><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/thinking-000.png" alt="thinking frame 0"><figcaption>thinking 0</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/thinking-001.png" alt="thinking frame 1"><figcaption>thinking 1</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/thinking-002.png" alt="thinking frame 2"><figcaption>thinking 2</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/thinking-003.png" alt="thinking frame 3"><figcaption>thinking 3</figcaption></figure></div></section><section class="action-row"><h3>running</h3><div class="frames"><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/running-000.png" alt="running frame 0"><figcaption>running 0</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/running-001.png" alt="running frame 1"><figcaption>running 1</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/running-002.png" alt="running frame 2"><figcaption>running 2</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/running-003.png" alt="running frame 3"><figcaption>running 3</figcaption></figure></div></section><section class="action-row"><h3>success</h3><div class="frames"><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/success-000.png" alt="success frame 0"><figcaption>success 0</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/success-001.png" alt="success frame 1"><figcaption>success 1</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/success-002.png" alt="success frame 2"><figcaption>success 2</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/success-003.png" alt="success frame 3"><figcaption>success 3</figcaption></figure></div></section><section class="action-row"><h3>warning</h3><div class="frames"><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/warning-000.png" alt="warning frame 0"><figcaption>warning 0</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/warning-001.png" alt="warning frame 1"><figcaption>warning 1</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/warning-002.png" alt="warning frame 2"><figcaption>warning 2</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/warning-003.png" alt="warning frame 3"><figcaption>warning 3</figcaption></figure></div></section><section class="action-row"><h3>error</h3><div class="frames"><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/error-000.png" alt="error frame 0"><figcaption>error 0</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/error-001.png" alt="error frame 1"><figcaption>error 1</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/error-002.png" alt="error frame 2"><figcaption>error 2</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/error-003.png" alt="error frame 3"><figcaption>error 3</figcaption></figure></div></section><section class="action-row"><h3>need_input</h3><div class="frames"><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/need_input-000.png" alt="need_input frame 0"><figcaption>need_input 0</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/need_input-001.png" alt="need_input frame 1"><figcaption>need_input 1</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/need_input-002.png" alt="need_input frame 2"><figcaption>need_input 2</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/need_input-003.png" alt="need_input frame 3"><figcaption>need_input 3</figcaption></figure></div></section><section class="action-row"><h3>sleeping</h3><div class="frames"><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/sleeping-000.png" alt="sleeping frame 0"><figcaption>sleeping 0</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/sleeping-001.png" alt="sleeping frame 1"><figcaption>sleeping 1</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/sleeping-002.png" alt="sleeping frame 2"><figcaption>sleeping 2</figcaption></figure><figure><img src="assets/v31_flagship_candidate_sanitized_2026-06-24/sleeping-003.png" alt="sleeping frame 3"><figcaption>sleeping 3</figcaption></figure></div></section>
+  <h2>QA Table</h2>
+  <table><thead><tr><th>Gate</th><th>Status</th><th>Reason</th></tr></thead><tbody>
+    <tr><td>V31 art quality</td><td>passed</td><td>v31_art_quality_passed</td></tr>
+    <tr><td>V30 semantic QA</td><td>passed</td><td>semantic_animation_passed</td></tr>
+    <tr><td>weak transform rejection</td><td>failed</td><td>action_semantics_unreadable, key_pose_diversity_too_low, motion_amplitude_too_low, silhouette_change_too_low, visual_review_rejected, whole_image_transform_only</td></tr>
+    <tr><td>target apply/rollback</td><td>passed</td><td>pack_assembled, preview_ready, rollback_available, rollback_restored_previous_pack, target_pack_applied</td></tr>
+    <tr><td>claim/security scan</td><td>passed / passed</td><td>forbidden claims remain in not-ready contexts only</td></tr>
+  </tbody></table>
+</main></body></html>
