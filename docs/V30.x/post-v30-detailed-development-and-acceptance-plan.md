@@ -29,6 +29,15 @@ Documentation completeness is not execution evidence:
 - it does not approve any ready claim outside the evidence produced by a
   specific phase。
 
+## Temporal Status Note
+
+Some 2026-06-23 review evidence correctly described Post-V30.1 as the next Go
+phase and Post-V30.5 as No-Go until prior evidence existed. That guidance is
+historical and has been superseded by later scoped evidence. As of the current
+fact sources, Post-V30.1 through Post-V30.5 are `passed scoped`; current active
+development has moved to V33. See
+`docs/V30.x/evidence/post-v30-external-advice-reconciliation-2026-06-25.md`.
+
 ## Stage Objective
 
 Post-V30 is complete only when the project can safely continue from:

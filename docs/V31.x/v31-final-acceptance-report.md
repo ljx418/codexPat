@@ -15,17 +15,6 @@ date: 2026-06-24
 - Forbidden/not-ready claims remain: Petdex parity, arbitrary-cat automatic animation ready, provider integration verified, 3D ready, production release ready, Windows ready, cross-platform ready, MCP ready, Claude Code integration verified, OS-level Codex window binding ready, all Codex workflows verified.
 - Claim scan: passed. Security scan: passed.
 
-## Continuation Execution Update
-
-- V31.8-V31.13 ran on 2026-06-24 and produced real evidence.
-- Continuation final status: blocked scoped.
-- V31.8 repeatable asset production: partial scoped; only one high-quality local candidate passed the full bar.
-- V31.9 layered rig runtime route: blocked scoped; no accepted runtime payload or normalized frame export was proven.
-- V31.10 named photo sample set: partial scoped; real local photos covered positive/blocked cases, while negative coverage is simulated metadata only.
-- V31.11 photo action preview/apply/rollback: blocked scoped; runtime controls pass for the tested local candidate, but no photo-derived action frames exist.
-- V31.12 real-data E2E: blocked scoped; HTML evidence exists and records the missing target-experience pieces.
-- V31.13 final gate: blocked scoped with claim scan and security scan passed.
-
 ## Required Boundary
 
 This evidence does not claim Petdex parity, arbitrary-cat automatic animation ready, provider integration verified, 3D ready, production release ready, Windows ready, cross-platform ready, MCP ready, Claude Code integration verified, OS-level Codex window binding ready, or all Codex workflows verified.

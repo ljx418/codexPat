@@ -167,40 +167,132 @@ export type DiagnosticsViewState = {
   error?: string;
 };
 
+export function isTauriRuntime(): boolean {
+  return typeof window !== "undefined" && "__TAURI_INTERNALS__" in window;
+}
+
+const previewInstance: PetInstance = {
+  instanceId: "default",
+  sourceKind: "preview",
+  sourceId: "browser-preview",
+  displayName: "Agent Desktop Pet Preview",
+  windowLabel: "main",
+  workspaceLabel: null,
+  workspaceHash: null,
+  position: { x: 120, y: 120 },
+  visible: true,
+  currentState: "idle",
+  catProfileId: "orange-tabby",
+  createdAt: "browser-preview",
+  updatedAt: "browser-preview",
+  lastEventAt: null,
+  isDefault: true
+};
+
+function previewSettings(): AppSettings {
+  return {
+    muted: false,
+    petVisible: true,
+    petX: previewInstance.position.x,
+    petY: previewInstance.position.y
+  };
+}
+
+function previewProfiles(): CatProfile[] {
+  return [
+    {
+      id: "default-cat",
+      name: "Default Cat",
+      description: "Browser preview default cat profile.",
+      cssClass: "cat-profile-default",
+      previewColor: "#8d99a8",
+      builtIn: true
+    },
+    {
+      id: "orange-tabby",
+      name: "Orange Tabby",
+      description: "Browser preview orange tabby profile.",
+      cssClass: "cat-profile-orange-tabby",
+      previewColor: "#d97706",
+      builtIn: true
+    },
+    {
+      id: "black-cat",
+      name: "Black Cat",
+      description: "Browser preview black cat profile.",
+      cssClass: "cat-profile-black-cat",
+      previewColor: "#111827",
+      builtIn: true
+    }
+  ];
+}
+
+function previewDiagnostics(): BridgeDiagnostics {
+  return {
+    enabled: false,
+    listenAddress: "browser-preview-no-tauri-bridge",
+    queueLength: 0,
+    queueCapacity: 32,
+    acceptedEvents: [],
+    rejectedEvents: [],
+    lastAccepted: null,
+    lastRejected: null,
+    sound: {
+      playbackAvailable: false,
+      muted: false,
+      cooldownMs: 1200,
+      acceptedIds: ["none"],
+      lastDecision: null
+    },
+    hardwareLight: false,
+    startupError: "browser_preview_without_tauri_runtime"
+  };
+}
+
+async function tauriInvoke<T>(command: string, args?: Record<string, unknown>, fallback?: () => T): Promise<T> {
+  if (isTauriRuntime()) {
+    return invoke<T>(command, args);
+  }
+  if (fallback) {
+    return fallback();
+  }
+  throw new Error(`Tauri command ${command} is unavailable in browser preview.`);
+}
+
 export function getSettings(): Promise<AppSettings> {
-  return invoke<AppSettings>("get_settings");
+  return tauriInvoke("get_settings", undefined, previewSettings);
 }
 
 export function setMuted(muted: boolean): Promise<AppSettings> {
-  return invoke<AppSettings>("set_muted", { muted });
+  return tauriInvoke("set_muted", { muted }, () => ({ ...previewSettings(), muted }));
 }
 
 export function getPetPosition(): Promise<WindowPosition> {
-  return invoke<WindowPosition>("get_pet_position");
+  return tauriInvoke("get_pet_position", undefined, () => previewInstance.position);
 }
 
 export function setCurrentPetPosition(position: WindowPosition): Promise<WindowPosition> {
-  return invoke<WindowPosition>("set_current_pet_position", { position });
+  return tauriInvoke("set_current_pet_position", { position }, () => position);
 }
 
 export function getApiDebugState(): Promise<BridgeDiagnostics> {
-  return invoke<BridgeDiagnostics>("get_api_debug_state");
+  return tauriInvoke("get_api_debug_state", undefined, previewDiagnostics);
 }
 
 export function getCurrentPetInstance(): Promise<PetInstance> {
-  return invoke<PetInstance>("get_current_pet_instance");
+  return tauriInvoke("get_current_pet_instance", undefined, () => previewInstance);
 }
 
 export function listPetInstances(): Promise<PetInstance[]> {
-  return invoke<PetInstance[]>("list_pet_instances");
+  return tauriInvoke("list_pet_instances", undefined, () => [previewInstance]);
 }
 
 export function listCatProfiles(): Promise<CatProfile[]> {
-  return invoke<CatProfile[]>("list_cat_profiles");
+  return tauriInvoke("list_cat_profiles", undefined, previewProfiles);
 }
 
 export function listPersonalizedAssetPacks(): Promise<PersonalizedAssetPack[]> {
-  return invoke<PersonalizedAssetPack[]>("list_personalized_asset_packs");
+  return tauriInvoke("list_personalized_asset_packs", undefined, () => []);
 }
 
 export function assembleAnimatedSpritePack(
@@ -209,7 +301,7 @@ export function assembleAnimatedSpritePack(
   fps: number,
   activateInstanceId?: string
 ): Promise<AnimatedSpriteAssemblyResult> {
-  return invoke<AnimatedSpriteAssemblyResult>("assemble_animated_sprite_pack", {
+  return tauriInvoke("assemble_animated_sprite_pack", {
     sourceFolderPath,
     displayName,
     fps,
@@ -218,78 +310,103 @@ export function assembleAnimatedSpritePack(
 }
 
 export function importPersonalizedAssetPack(manifestPath: string, displayName?: string): Promise<PersonalizedAssetImportResult> {
-  return invoke<PersonalizedAssetImportResult>("import_personalized_asset_pack", {
+  return tauriInvoke("import_personalized_asset_pack", {
     manifestPath,
     displayName: displayName || null
   });
 }
 
 export function activatePersonalizedAssetPack(packId: string, instanceId: string): Promise<PersonalizedAssetActivationResult> {
-  return invoke<PersonalizedAssetActivationResult>("activate_personalized_asset_pack", {
+  return tauriInvoke("activate_personalized_asset_pack", {
     packId,
     instanceId
-  });
+  }, () => ({
+    packId,
+    instanceId,
+    rendererKind: "sprite",
+    validationStatus: "browser_preview"
+  }));
 }
 
 export function deactivatePersonalizedAssetPack(instanceId: string): Promise<void> {
-  return invoke<void>("deactivate_personalized_asset_pack", {
-    instanceId
-  });
+  return tauriInvoke("deactivate_personalized_asset_pack", { instanceId }, () => undefined);
 }
 
 export function deletePersonalizedAssetPack(packId: string): Promise<PersonalizedAssetPack[]> {
-  return invoke<PersonalizedAssetPack[]>("delete_personalized_asset_pack", {
-    packId
-  });
+  return tauriInvoke("delete_personalized_asset_pack", { packId }, () => []);
 }
 
 export function renamePersonalizedAssetPack(packId: string, displayName: string): Promise<PersonalizedAssetPack> {
-  return invoke<PersonalizedAssetPack>("rename_personalized_asset_pack", {
+  return tauriInvoke("rename_personalized_asset_pack", {
     packId,
     displayName
   });
 }
 
 export function runtimePersonalizedAssetPack(instanceId: string): Promise<RuntimeImportedAssetPack | null> {
-  return invoke<RuntimeImportedAssetPack | null>("runtime_personalized_asset_pack", {
-    instanceId
-  });
+  return tauriInvoke("runtime_personalized_asset_pack", { instanceId }, () => null);
 }
 
 export function runtimePersonalizedAssetData(packId: string, actionId: string): Promise<RuntimeAssetData> {
-  return invoke<RuntimeAssetData>("runtime_personalized_asset_data", {
+  return tauriInvoke("runtime_personalized_asset_data", {
     packId,
     actionId
   });
 }
 
 export function createPetInstance(displayName?: string): Promise<PetInstance> {
-  return invoke<PetInstance>("create_pet_instance", { displayName });
+  return tauriInvoke("create_pet_instance", { displayName }, () => ({
+    ...previewInstance,
+    instanceId: "browser-preview-work-cat",
+    displayName: displayName || "Codex Work Cat",
+    isDefault: false
+  }));
 }
 
 export function renamePetInstance(instanceId: string, displayName: string): Promise<PetInstance> {
-  return invoke<PetInstance>("rename_pet_instance", { instanceId, displayName });
+  return tauriInvoke("rename_pet_instance", { instanceId, displayName }, () => ({
+    ...previewInstance,
+    instanceId,
+    displayName
+  }));
 }
 
 export function setPetInstanceProfile(instanceId: string, catProfileId: string): Promise<PetInstance> {
-  return invoke<PetInstance>("set_pet_instance_profile", { instanceId, catProfileId });
+  return tauriInvoke("set_pet_instance_profile", { instanceId, catProfileId }, () => ({
+    ...previewInstance,
+    instanceId,
+    catProfileId
+  }));
 }
 
 export function setPetInstanceVisible(instanceId: string, visible: boolean): Promise<PetInstance> {
-  return invoke<PetInstance>("set_pet_instance_visible", { instanceId, visible });
+  return tauriInvoke("set_pet_instance_visible", { instanceId, visible }, () => ({
+    ...previewInstance,
+    instanceId,
+    visible
+  }));
 }
 
 export function resetPetInstancePosition(instanceId: string): Promise<PetInstance> {
-  return invoke<PetInstance>("reset_pet_instance_position", { instanceId });
+  return tauriInvoke("reset_pet_instance_position", { instanceId }, () => ({
+    ...previewInstance,
+    instanceId,
+    position: { x: 0, y: 0 }
+  }));
 }
 
 export function detachPetInstance(instanceId: string): Promise<PetInstance[]> {
-  return invoke<PetInstance[]>("detach_pet_instance", { instanceId });
+  return tauriInvoke("detach_pet_instance", { instanceId }, () => [previewInstance]);
 }
 
 export function sendTestPetReaction(instanceId: string, level: CatState = "success"): Promise<{ accepted: true; eventId: string; instanceId: string; level: CatState }> {
-  return invoke<{ accepted: true; eventId: string; instanceId: string; level: CatState }>("send_test_pet_reaction", {
+  return tauriInvoke("send_test_pet_reaction", {
     instanceId,
     level
-  });
+  }, () => ({
+    accepted: true,
+    eventId: "browser-preview-event",
+    instanceId,
+    level
+  }));
 }

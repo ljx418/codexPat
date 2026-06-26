@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<meta charset="utf-8">
+<title>V36.7 产品 UX 自动化验收报告</title>
+<style>
+body{font-family:Arial,"Microsoft YaHei",sans-serif;margin:0;background:#f8fafc;color:#172033}
+main{max-width:1180px;margin:0 auto;padding:32px}
+h1{font-size:28px;margin:0 0 12px}
+h2{margin-top:32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:#fff;border:1px solid #dbe3ef;border-radius:8px;padding:16px}
+table{width:100%;border-collapse:collapse;background:#fff}
+th,td{border:1px solid #dbe3ef;padding:8px;text-align:left;font-size:13px;vertical-align:top}
+.warn{background:#fff7ed;border:1px solid #fdba74;border-radius:8px;padding:12px}
+code{word-break:break-all}
+</style>
+<main>
+<h1>V36.7 产品 UX 自动化验收报告</h1>
+<p>本报告使用 V36 scoped metadata、Route A2 derivative visual evidence 和产品路径摘要生成。没有记录 raw photo bytes、EXIF/GPS、完整本地路径或 provider payload。</p>
+<section class="warn">
+<strong>当前结论：</strong>V36 产品 UX 证据为 partial scoped。Route B 没有真实 source-bound professional-assisted assets，因此不能声明 Route B 已验证或任意猫自动生成 ready。
+</section>
+<h2>目标架构与当前架构</h2>
+<p>V36 risk closure layers: visual goldens, Route A2 ceiling, Route B boundary, same-sample comparison, generalization, human review, product UX evidence.</p>
+<p>Current runtime contracts are reused from V33/V34/V35; V36 adds scoped risk closure evidence only.</p>
+<h2>用户可见路径</h2>
+<ul>
+<li>Preview: ready</li>
+<li>Apply: applied</li>
+<li>Rollback: rolled_back</li>
+<li>Failed/blocked candidate: blocked</li>
+</ul>
+<h2>Route A2 样本卡片</h2>
+<div class="grid">
+    <article class="card">
+      <h3>v36_orange_tabby_public</h3>
+      <p><strong>target_experience</strong></p>
+      <p>Template similarity: 0.62</p>
+      <p>Local motion ceiling: 0.787</p>
+      <p>action_target_experience_thresholds_met</p>
+    </article>
+    <article class="card">
+      <h3>v36_calico_public</h3>
+      <p><strong>target_experience</strong></p>
+      <p>Template similarity: 0.655</p>
+      <p>Local motion ceiling: 0.787</p>
+      <p>action_target_experience_thresholds_met</p>
+    </article>
+    <article class="card">
+      <h3>v36_silver_tabby_public</h3>
+      <p><strong>target_experience</strong></p>
+      <p>Template similarity: 0.69</p>
+      <p>Local motion ceiling: 0.787</p>
+      <p>action_target_experience_thresholds_met</p>
+    </article>
+    <article class="card">
+      <h3>v36_black_cat_public</h3>
+      <p><strong>blocked</strong></p>
+      <p>Template similarity: 0.805</p>
+      <p>Local motion ceiling: 0.787</p>
+      <p>action_target_experience_thresholds_met, route_a2_template_similarity_high, v34_qa_blocked</p>
+    </article>
+    <article class="card">
+      <h3>v36_siamese_public</h3>
+      <p><strong>target_experience</strong></p>
+      <p>Template similarity: 0.76</p>
+      <p>Local motion ceiling: 0.787</p>
+      <p>action_target_experience_thresholds_met</p>
+    </article>
+    <article class="card">
+      <h3>v36_complex_background_public</h3>
+      <p><strong>blocked</strong></p>
+      <p>Template similarity: 0.875</p>
+      <p>Local motion ceiling: 0.787</p>
+      <p>action_target_experience_thresholds_met, complex_background_requires_manual_review, route_a2_template_similarity_high, v34_qa_blocked</p>
+    </article></div>
+<h2>Route A2 Ceiling</h2>
+<table><thead><tr><th>sampleId</th><th>candidateId</th><th>difficulty</th><th>status</th><th>templateSimilarity</th><th>identityDifferentiation</th><th>localMotion</th><th>reasonCodes</th></tr></thead><tbody><tr><td>v36_orange_tabby_public</td><td>v36_orange_tabby_public_v34_character_asset_v35_route_a2_uplift_pack</td><td>clear</td><td>target_experience</td><td>0.62</td><td>0.88</td><td>0.787</td><td>action_target_experience_thresholds_met</td></tr><tr><td>v36_calico_public</td><td>v36_calico_public_v34_character_asset_v35_route_a2_uplift_pack</td><td>clear</td><td>target_experience</td><td>0.655</td><td>0.88</td><td>0.787</td><td>action_target_experience_thresholds_met</td></tr><tr><td>v36_silver_tabby_public</td><td>v36_silver_tabby_public_v34_character_asset_v35_route_a2_uplift_pack</td><td>clear</td><td>target_experience</td><td>0.69</td><td>0.88</td><td>0.787</td><td>action_target_experience_thresholds_met</td></tr><tr><td>v36_black_cat_public</td><td>v36_black_cat_public_v34_character_asset_v35_route_a2_uplift_pack</td><td>partial</td><td>blocked</td><td>0.805</td><td>0.88</td><td>0.787</td><td>action_target_experience_thresholds_met, route_a2_template_similarity_high, v34_qa_blocked</td></tr><tr><td>v36_siamese_public</td><td>v36_siamese_public_v34_character_asset_v35_route_a2_uplift_pack</td><td>clear</td><td>target_experience</td><td>0.76</td><td>0.88</td><td>0.787</td><td>action_target_experience_thresholds_met</td></tr><tr><td>v36_complex_background_public</td><td>v36_complex_background_public_v34_character_asset_v35_route_a2_uplift_pack</td><td>complex_background</td><td>blocked</td><td>0.875</td><td>0.76</td><td>0.787</td><td>action_target_experience_thresholds_met, complex_background_requires_manual_review, route_a2_template_similarity_high, v34_qa_blocked</td></tr></tbody></table>
+<h2>Route B Boundary</h2>
+<table><thead><tr><th>sampleId</th><th>status</th><th>rubricStatus</th><th>assetProvenance</th><th>reasonCodes</th></tr></thead><tbody><tr><td>v36_orange_tabby_public</td><td>blocked_not_executed</td><td>blocked</td><td>not_available</td><td>route_b_real_asset_not_available</td></tr><tr><td>v36_calico_public</td><td>blocked_not_executed</td><td>blocked</td><td>not_available</td><td>route_b_real_asset_not_available</td></tr></tbody></table>
+<h2>泛化矩阵</h2>
+<table><thead><tr><th>sampleId</th><th>difficulty</th><th>routeId</th><th>rubricStatus</th><th>humanReviewStatus</th><th>productPathStatus</th><th>reasonCodes</th></tr></thead><tbody><tr><td>v36_orange_tabby_public</td><td>clear</td><td>route_a2_quality_uplift</td><td>target_experience</td><td>target_experience</td><td>preview_apply_rollback_ready</td><td>sample_intake_passed</td></tr><tr><td>v36_calico_public</td><td>clear</td><td>route_a2_quality_uplift</td><td>target_experience</td><td>target_experience</td><td>preview_apply_rollback_ready</td><td>sample_intake_passed</td></tr><tr><td>v36_silver_tabby_public</td><td>clear</td><td>route_a2_quality_uplift</td><td>target_experience</td><td>target_experience</td><td>preview_apply_rollback_ready</td><td>sample_intake_passed</td></tr><tr><td>v36_black_cat_public</td><td>partial</td><td>route_a2_quality_uplift</td><td>engineering_only</td><td>engineering_only</td><td>not_attempted</td><td>sample_intake_passed</td></tr><tr><td>v36_siamese_public</td><td>clear</td><td>route_a2_quality_uplift</td><td>target_experience</td><td>target_experience</td><td>preview_apply_rollback_ready</td><td>sample_intake_passed</td></tr><tr><td>v36_longhair_public</td><td>occluded</td><td>not_attempted</td><td>failed</td><td>failed</td><td>not_attempted</td><td>insufficient_body_visibility, not_in_route_a2_ceiling_set, occlusion_generalization_risk</td></tr><tr><td>v36_tail_hidden_public</td><td>occluded</td><td>not_attempted</td><td>failed</td><td>failed</td><td>not_attempted</td><td>insufficient_body_visibility, not_in_route_a2_ceiling_set, occlusion_generalization_risk</td></tr><tr><td>v36_complex_background_public</td><td>complex_background</td><td>route_a2_quality_uplift</td><td>engineering_only</td><td>engineering_only</td><td>not_attempted</td><td>complex_background_generalization_risk, sample_intake_passed</td></tr><tr><td>v36_public_ginger_profile</td><td>clear</td><td>not_attempted</td><td>engineering_only</td><td>engineering_only</td><td>not_attempted</td><td>not_in_route_a2_ceiling_set, sample_intake_passed</td></tr><tr><td>v36_public_calico_yawning</td><td>complex_background</td><td>not_attempted</td><td>engineering_only</td><td>engineering_only</td><td>not_attempted</td><td>complex_background_generalization_risk, not_in_route_a2_ceiling_set, sample_intake_passed</td></tr><tr><td>v36_public_black_portrait</td><td>partial</td><td>not_attempted</td><td>engineering_only</td><td>engineering_only</td><td>not_attempted</td><td>not_in_route_a2_ceiling_set, sample_intake_passed</td></tr><tr><td>v36_public_siamese_pose</td><td>clear</td><td>not_attempted</td><td>engineering_only</td><td>engineering_only</td><td>not_attempted</td><td>not_in_route_a2_ceiling_set, sample_intake_passed</td></tr><tr><td>v36_public_tortoiseshell</td><td>partial</td><td>not_attempted</td><td>engineering_only</td><td>engineering_only</td><td>not_attempted</td><td>not_in_route_a2_ceiling_set, sample_intake_passed</td></tr><tr><td>v36_public_white_cat</td><td>partial</td><td>not_attempted</td><td>engineering_only</td><td>engineering_only</td><td>not_attempted</td><td>not_in_route_a2_ceiling_set, sample_intake_passed</td></tr><tr><td>v36_public_bicolor</td><td>clear</td><td>not_attempted</td><td>engineering_only</td><td>engineering_only</td><td>not_attempted</td><td>not_in_route_a2_ceiling_set, sample_intake_passed</td></tr><tr><td>v36_public_kitten</td><td>partial</td><td>not_attempted</td><td>engineering_only</td><td>engineering_only</td><td>not_attempted</td><td>not_in_route_a2_ceiling_set, sample_intake_passed</td></tr><tr><td>v36_public_cropped_face</td><td>occluded</td><td>not_attempted</td><td>failed</td><td>failed</td><td>not_attempted</td><td>insufficient_body_visibility, not_in_route_a2_ceiling_set, occlusion_generalization_risk</td></tr><tr><td>v36_public_multi_cat</td><td>multi_cat</td><td>not_attempted</td><td>failed</td><td>failed</td><td>not_attempted</td><td>multi_subject, not_in_route_a2_ceiling_set</td></tr><tr><td>v36_public_longhair_gray</td><td>occluded</td><td>not_attempted</td><td>failed</td><td>failed</td><td>not_attempted</td><td>insufficient_body_visibility, not_in_route_a2_ceiling_set, occlusion_generalization_risk</td></tr><tr><td>v36_public_outdoor_shadow</td><td>complex_background</td><td>not_attempted</td><td>engineering_only</td><td>engineering_only</td><td>not_attempted</td><td>complex_background_generalization_risk, not_in_route_a2_ceiling_set, sample_intake_passed</td></tr></tbody></table>
+<h2>人工视觉审查</h2>
+<table><thead><tr><th>sampleId</th><th>identity</th><th>motion</th><th>polish</th><th>conflict</th><th>finalStatus</th><th>reasonCodes</th></tr></thead><tbody><tr><td>v36_orange_tabby_public</td><td>0.88</td><td>0.79</td><td>0.82</td><td>false</td><td>target_experience</td><td>sample_intake_passed</td></tr><tr><td>v36_calico_public</td><td>0.88</td><td>0.79</td><td>0.82</td><td>false</td><td>target_experience</td><td>sample_intake_passed</td></tr><tr><td>v36_silver_tabby_public</td><td>0.88</td><td>0.79</td><td>0.82</td><td>false</td><td>target_experience</td><td>sample_intake_passed</td></tr><tr><td>v36_black_cat_public</td><td>0.72</td><td>0.79</td><td>0.72</td><td>false</td><td>engineering_only</td><td>human_review_not_target_experience, sample_intake_passed</td></tr><tr><td>v36_siamese_public</td><td>0.88</td><td>0.79</td><td>0.82</td><td>false</td><td>target_experience</td><td>sample_intake_passed</td></tr><tr><td>v36_longhair_public</td><td>0.3</td><td>0.48</td><td>0.62</td><td>false</td><td>failed</td><td>human_review_not_target_experience, insufficient_body_visibility, not_in_route_a2_ceiling_set, occlusion_generalization_risk</td></tr><tr><td>v36_tail_hidden_public</td><td>0.3</td><td>0.48</td><td>0.62</td><td>false</td><td>failed</td><td>human_review_not_target_experience, insufficient_body_visibility, not_in_route_a2_ceiling_set, occlusion_generalization_risk</td></tr><tr><td>v36_complex_background_public</td><td>0.72</td><td>0.79</td><td>0.62</td><td>false</td><td>engineering_only</td><td>complex_background_generalization_risk, human_review_not_target_experience, sample_intake_passed</td></tr><tr><td>v36_public_ginger_profile</td><td>0.72</td><td>0.48</td><td>0.82</td><td>false</td><td>engineering_only</td><td>human_review_not_target_experience, not_in_route_a2_ceiling_set, sample_intake_passed</td></tr><tr><td>v36_public_calico_yawning</td><td>0.72</td><td>0.48</td><td>0.62</td><td>false</td><td>engineering_only</td><td>complex_background_generalization_risk, human_review_not_target_experience, not_in_route_a2_ceiling_set, sample_intake_passed</td></tr><tr><td>v36_public_black_portrait</td><td>0.72</td><td>0.48</td><td>0.72</td><td>false</td><td>engineering_only</td><td>human_review_not_target_experience, not_in_route_a2_ceiling_set, sample_intake_passed</td></tr><tr><td>v36_public_siamese_pose</td><td>0.72</td><td>0.48</td><td>0.82</td><td>false</td><td>engineering_only</td><td>human_review_not_target_experience, not_in_route_a2_ceiling_set, sample_intake_passed</td></tr><tr><td>v36_public_tortoiseshell</td><td>0.72</td><td>0.48</td><td>0.72</td><td>false</td><td>engineering_only</td><td>human_review_not_target_experience, not_in_route_a2_ceiling_set, sample_intake_passed</td></tr><tr><td>v36_public_white_cat</td><td>0.72</td><td>0.48</td><td>0.72</td><td>false</td><td>engineering_only</td><td>human_review_not_target_experience, not_in_route_a2_ceiling_set, sample_intake_passed</td></tr><tr><td>v36_public_bicolor</td><td>0.72</td><td>0.48</td><td>0.82</td><td>false</td><td>engineering_only</td><td>human_review_not_target_experience, not_in_route_a2_ceiling_set, sample_intake_passed</td></tr><tr><td>v36_public_kitten</td><td>0.72</td><td>0.48</td><td>0.72</td><td>false</td><td>engineering_only</td><td>human_review_not_target_experience, not_in_route_a2_ceiling_set, sample_intake_passed</td></tr><tr><td>v36_public_cropped_face</td><td>0.3</td><td>0.48</td><td>0.62</td><td>false</td><td>failed</td><td>human_review_not_target_experience, insufficient_body_visibility, not_in_route_a2_ceiling_set, occlusion_generalization_risk</td></tr><tr><td>v36_public_multi_cat</td><td>0.3</td><td>0.48</td><td>0.62</td><td>false</td><td>failed</td><td>human_review_not_target_experience, multi_subject, not_in_route_a2_ceiling_set</td></tr><tr><td>v36_public_longhair_gray</td><td>0.3</td><td>0.48</td><td>0.62</td><td>false</td><td>failed</td><td>human_review_not_target_experience, insufficient_body_visibility, not_in_route_a2_ceiling_set, occlusion_generalization_risk</td></tr><tr><td>v36_public_outdoor_shadow</td><td>0.72</td><td>0.48</td><td>0.62</td><td>false</td><td>engineering_only</td><td>complex_background_generalization_risk, human_review_not_target_experience, not_in_route_a2_ceiling_set, sample_intake_passed</td></tr></tbody></table>
+<h2>证据引用</h2>
+<ul><li><code>docs/V35.x/evidence/derivatives/v36_orange_tabby_public_v34_character_asset_v35_route_a2_uplift_pack-contact-sheet.svg</code></li><li><code>docs/V35.x/evidence/derivatives/v36_orange_tabby_public_v34_character_asset_v35_route_a2_uplift_pack-playback-summary.html</code></li><li><code>docs/V35.x/evidence/derivatives/v36_calico_public_v34_character_asset_v35_route_a2_uplift_pack-contact-sheet.svg</code></li><li><code>docs/V35.x/evidence/derivatives/v36_calico_public_v34_character_asset_v35_route_a2_uplift_pack-playback-summary.html</code></li><li><code>docs/V35.x/evidence/derivatives/v36_silver_tabby_public_v34_character_asset_v35_route_a2_uplift_pack-contact-sheet.svg</code></li><li><code>docs/V35.x/evidence/derivatives/v36_silver_tabby_public_v34_character_asset_v35_route_a2_uplift_pack-playback-summary.html</code></li><li><code>docs/V35.x/evidence/derivatives/v36_black_cat_public_v34_character_asset_v35_route_a2_uplift_pack-contact-sheet.svg</code></li><li><code>docs/V35.x/evidence/derivatives/v36_black_cat_public_v34_character_asset_v35_route_a2_uplift_pack-playback-summary.html</code></li></ul>
+<h2>声明边界</h2>
+<p>只能声明 tested named/public metadata samples scoped risk closure evidence。不得声明 broad readiness。</p>
+</main>
+</html>

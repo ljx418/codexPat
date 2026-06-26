@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>V38 公开猫图到动作帧资产自动化验收报告</title>
+  <style>
+    body { margin: 0; font-family: system-ui, "Microsoft YaHei", sans-serif; color: #0f172a; background: #eef6f3; }
+    main { max-width: 1260px; margin: 0 auto; padding: 32px; display: grid; gap: 18px; }
+    section, .sample-card { background: #fff; border: 1px solid #d6e3df; border-radius: 8px; padding: 18px; }
+    h1, h2, h3 { margin: 0 0 8px; }
+    p { color: #475569; line-height: 1.55; }
+    .metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .metric { background: #ecfdf5; border: 1px solid #bbf7d0; border-radius: 8px; padding: 14px; }
+    .metric strong { display: block; font-size: 22px; color: #0f766e; margin-top: 4px; }
+    .samples { display: grid; gap: 14px; }
+    .media-grid { display: grid; grid-template-columns: 220px 1fr 220px; gap: 12px; align-items: start; }
+    figure { margin: 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; background: #f8fafc; }
+    img { display: block; width: 100%; height: auto; }
+    figcaption { padding: 8px; font-size: 12px; color: #475569; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border-bottom: 1px solid #e2e8f0; padding: 8px; text-align: left; font-size: 13px; vertical-align: top; }
+    .warn { background: #fff7ed; border-color: #fed7aa; }
+    @media (max-width: 860px) {
+      main { padding: 16px; }
+      .metrics, .media-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section>
+    <h1>V38 公开猫图到动作帧资产自动化验收报告</h1>
+    <p>本报告使用公开授权样本进行真实下载、元数据剥离、派生图片生成、动作帧联系表和 GIF 预览截图验收。结论只覆盖 tested public photo samples。</p>
+  </section>
+  <section class="metrics">
+    <div class="metric">公开来源<strong>5</strong></div>
+    <div class="metric">去元数据猫图<strong>3</strong></div>
+    <div class="metric">可渲染帧包<strong>3</strong></div>
+    <div class="metric">质量门禁<strong>passed_scoped</strong></div>
+  </section>
+  <section>
+    <h2>目标架构与当前实现</h2>
+    <p>目标链路为 Wikimedia 公开来源 -> 临时原图下载 -> ImageMagick 去元数据派生图 -> 本地局部叠加动作帧 -> contact sheet / GIF -> 桌面设置页 V38 anchors -> evidence final gate。当前实现已经生成派生图片和帧包，但仍是样本绑定的本地确定性路径。</p>
+  </section>
+  <section>
+    <h2>用户场景体验路径</h2>
+    <p>用户进入设置页个性化生成区域，查看 V38 公开来源、像素资产、动作帧包、应用/回滚门槛和 blocked 原因；验收人员通过下方截图证据检查三张不同公开猫图的派生结果。</p>
+  </section>
+  <section class="samples">
+      <article class="sample-card">
+        <h3>Orange Tabby Cat</h3>
+        <p>CC BY-SA 3.0 · #85715C · passed</p>
+        <div class="media-grid">
+          <figure><img src="assets/v38_orange_tabby_public/sanitized.png" alt="v38_orange_tabby_public 去元数据公开猫图" /><figcaption>去元数据 512x512 派生图</figcaption></figure>
+          <figure><img src="assets/v38_orange_tabby_public/contact-sheet.png" alt="v38_orange_tabby_public 动作帧联系表" /><figcaption>8 动作 x 4 帧 contact sheet</figcaption></figure>
+          <figure><img src="assets/v38_orange_tabby_public/animated-preview.gif" alt="v38_orange_tabby_public 动作预览 GIF" /><figcaption>自动化验收 GIF 预览</figcaption></figure>
+        </div>
+        <p>Action coverage: idle, walk, jump, sleep, eat, play, alert, celebrate</p>
+      </article>
+
+      <article class="sample-card">
+        <h3>Tuxedo Cat Black And White</h3>
+        <p>CC BY-SA 4.0 · #8A735C · passed</p>
+        <div class="media-grid">
+          <figure><img src="assets/v38_tuxedo_public/sanitized.png" alt="v38_tuxedo_public 去元数据公开猫图" /><figcaption>去元数据 512x512 派生图</figcaption></figure>
+          <figure><img src="assets/v38_tuxedo_public/contact-sheet.png" alt="v38_tuxedo_public 动作帧联系表" /><figcaption>8 动作 x 4 帧 contact sheet</figcaption></figure>
+          <figure><img src="assets/v38_tuxedo_public/animated-preview.gif" alt="v38_tuxedo_public 动作预览 GIF" /><figcaption>自动化验收 GIF 预览</figcaption></figure>
+        </div>
+        <p>Action coverage: idle, walk, jump, sleep, eat, play, alert, celebrate</p>
+      </article>
+
+      <article class="sample-card">
+        <h3>A-Cat</h3>
+        <p>CC BY-SA 3.0 · #917F64 · passed</p>
+        <div class="media-grid">
+          <figure><img src="assets/v38_a_cat_public/sanitized.png" alt="v38_a_cat_public 去元数据公开猫图" /><figcaption>去元数据 512x512 派生图</figcaption></figure>
+          <figure><img src="assets/v38_a_cat_public/contact-sheet.png" alt="v38_a_cat_public 动作帧联系表" /><figcaption>8 动作 x 4 帧 contact sheet</figcaption></figure>
+          <figure><img src="assets/v38_a_cat_public/animated-preview.gif" alt="v38_a_cat_public 动作预览 GIF" /><figcaption>自动化验收 GIF 预览</figcaption></figure>
+        </div>
+        <p>Action coverage: idle, walk, jump, sleep, eat, play, alert, celebrate</p>
+      </article>
+    </section>
+  <section>
+    <h2>来源与负例/blocked 策略</h2>
+    <table>
+      <thead><tr><th>sampleId</th><th>类型</th><th>处理状态</th><th>授权来源</th></tr></thead>
+      <tbody>
+    <tr>
+      <td>v38_orange_tabby_public</td>
+      <td>passing_cat</td>
+      <td>accepted_for_sanitization</td>
+      <td><a href="https://commons.wikimedia.org/wiki/File:Orange_Tabby_Cat.jpg">CC BY-SA 3.0</a></td>
+    </tr>
+
+    <tr>
+      <td>v38_tuxedo_public</td>
+      <td>passing_cat</td>
+      <td>accepted_for_sanitization</td>
+      <td><a href="https://commons.wikimedia.org/wiki/File:TUXEDO_CAT_BLACK_AND_WHITE.jpg">CC BY-SA 4.0</a></td>
+    </tr>
+
+    <tr>
+      <td>v38_a_cat_public</td>
+      <td>passing_cat</td>
+      <td>accepted_for_sanitization</td>
+      <td><a href="https://commons.wikimedia.org/wiki/File:A-Cat.jpg">CC BY-SA 3.0</a></td>
+    </tr>
+
+    <tr>
+      <td>v38_negative_dog_public</td>
+      <td>negative_non_cat</td>
+      <td>rejected_non_cat_negative</td>
+      <td><a href="https://commons.wikimedia.org/wiki/File:My_dog.jpg">CC BY-SA 3.0</a></td>
+    </tr>
+
+    <tr>
+      <td>v38_multi_cat_public</td>
+      <td>blocked_multi_cat</td>
+      <td>blocked_multi_cat_identity_ambiguity</td>
+      <td><a href="https://commons.wikimedia.org/wiki/File:Collage_of_Six_Cats-02.jpg">CC BY-SA 3.0</a></td>
+    </tr>
+  </tbody>
+    </table>
+  </section>
+  <section class="warn">
+    <h2>不实声明防护</h2>
+    <p>本阶段不声明任意猫照片自动生成高质量动作资产、不声明 provider 集成、不声明生产发布、不声明 Windows 或跨平台就绪。该报告只证明公开样本路径的真实产物。</p>
+  </section>
+</main>
+</body>
+</html>

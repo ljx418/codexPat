@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>V33 外部猫图自动化验收报告</title>
+  <style>
+    body{margin:0;background:#f5f7fb;color:#172033;font-family:"Segoe UI",Arial,sans-serif}
+    main{max-width:1320px;margin:0 auto;padding:28px}
+    header{background:#142033;color:white;border-radius:8px;padding:24px}
+    h1{margin:0 0 10px;font-size:30px;letter-spacing:0} h2{font-size:22px;margin:28px 0 12px;letter-spacing:0}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:white;border:1px solid #d9e0eb;border-radius:8px;padding:14px}
+    img{display:block;max-width:100%;height:auto;border:1px solid #d9e0eb;border-radius:6px;background:white}
+    table{width:100%;border-collapse:collapse;background:white;border:1px solid #d9e0eb;border-radius:8px;overflow:hidden}td,th{border-bottom:1px solid #d9e0eb;padding:10px;text-align:left;vertical-align:top}th{background:#eef2f7}
+    .pass{color:#0f766e;font-weight:800}.fail{color:#b91c1c;font-weight:800}.warn{color:#a16207}.note{color:#475569}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body><main>
+  <header><h1>V33 外部猫图真实样本自动化验收</h1><p>本报告从公开网页下载多张不同猫图片，生成去元数据缩略图证据，并验证当前项目能做什么、不能做什么。没有调用外部生成 provider。</p></header>
+  <h2>目标架构与当前架构实现</h2>
+  <div class="grid">
+    <section class="card"><h3>目标架构</h3><p>目标是单照片样本经过隐私边界、猫图适配性、身份锚点、动作候选、V30/V31/V32/V33 QA、预览、应用和回滚，最终形成高质量 2D 动作资产。</p></section>
+    <section class="card"><h3>当前实现</h3><p>当前已能对外部图片建立安全样本记录并发现多主体/身份不匹配风险；只有命名本地 frameSequence 候选可通过动作 QA 和产品闭环。不同猫照片尚不能自动生成各自高质量动作资产。</p></section>
+  </div>
+  <h2>外部样本截图证据</h2>
+  <section class="card"><img src="v33-external-cat-web-validation-2026-06-25/external-cat-samples-contact-sheet.png" alt="External cat samples contact sheet"><p class="note">以上 contact sheet 由脚本从公开网页缩略图重新保存为 PNG 后生成。</p></section>
+  <div class="grid"><section class="card"><h3>橘色猫公开样本</h3>
+      <img src="v33-external-cat-web-validation-2026-06-25/web_orange_tabby_photo.png" alt="橘色猫公开样本">
+      <p><strong>Intake:</strong> passed / sample_intake_passed</p>
+      <p><strong>Source:</strong> <a href="https://commons.wikimedia.org/wiki/File:Orange_cat_PHOTO.jpg">Orange cat PHOTO.jpg</a></p>
+      <p><strong>License note:</strong> CC0 public domain dedication</p>
+
+    </section><section class="card"><h3>三花虎斑公开样本</h3>
+      <img src="v33-external-cat-web-validation-2026-06-25/web_calico_tabby_savannah.png" alt="三花虎斑公开样本">
+      <p><strong>Intake:</strong> passed / sample_intake_passed</p>
+      <p><strong>Source:</strong> <a href="https://commons.wikimedia.org/wiki/File:Calico_tabby_cat_-_Savannah.jpg">Calico tabby cat - Savannah.jpg</a></p>
+      <p><strong>License note:</strong> Wikimedia Commons file license</p>
+
+    </section><section class="card"><h3>暹罗猫公开样本</h3>
+      <img src="v33-external-cat-web-validation-2026-06-25/web_siamese_cat.png" alt="暹罗猫公开样本">
+      <p><strong>Intake:</strong> passed / sample_intake_passed</p>
+      <p><strong>Source:</strong> <a href="https://commons.wikimedia.org/wiki/File:Siamese_Cat.JPG">Siamese Cat.JPG</a></p>
+      <p><strong>License note:</strong> CC BY 3.0</p>
+
+    </section><section class="card"><h3>虎斑猫公开样本</h3>
+      <img src="v33-external-cat-web-validation-2026-06-25/web_featured_tabby_portugal.png" alt="虎斑猫公开样本">
+      <p><strong>Intake:</strong> passed / sample_intake_passed</p>
+      <p><strong>Source:</strong> <a href="https://en.wikipedia.org/wiki/File:Cat_November_2010-1a.jpg">Cat November 2010-1a.jpg</a></p>
+      <p><strong>License note:</strong> CC BY-SA / GFDL on Wikimedia</p>
+      <p class="warn">source page includes camera location metadata; report uses stripped thumbnail only</p>
+    </section><section class="card"><h3>燕尾服双猫公开样本</h3>
+      <img src="v33-external-cat-web-validation-2026-06-25/web_tuxedo_two_cats.png" alt="燕尾服双猫公开样本">
+      <p><strong>Intake:</strong> failed / insufficient_body_visibility, multi_subject, sample_failed</p>
+      <p><strong>Source:</strong> <a href="https://commons.wikimedia.org/wiki/File:Tuxedo_cats.JPG">Tuxedo cats.JPG</a></p>
+      <p><strong>License note:</strong> Wikimedia Commons file license</p>
+
+    </section></div>
+  <h2>当前项目可体验路径</h2>
+  <div class="grid">
+    <section class="card"><h3>可通过路径</h3><p class="pass">橘色样本记录 + 本地 quality-rescue-tabby-v1 候选：QA passed，preview ready，apply applied，rollback rolled_back。</p></section>
+    <section class="card"><h3>不能通过路径</h3><p class="fail">三花、暹罗、虎斑等不同身份样本直接套用同一个本地 tabby 候选会触发 identity_drift；双猫样本会因 multi_subject 失败。</p></section>
+  </div>
+  <h2>跨样本身份验证结果</h2>
+  <table><thead><tr><th>样本</th><th>身份门禁</th><th>原因</th></tr></thead><tbody><tr><td>web_orange_tabby_photo</td><td>passed</td><td>sample_intake_passed</td></tr><tr><td>web_calico_tabby_savannah</td><td>failed</td><td>identity_drift</td></tr><tr><td>web_siamese_cat</td><td>failed</td><td>identity_drift</td></tr><tr><td>web_featured_tabby_portugal</td><td>failed</td><td>identity_drift</td></tr></tbody></table>
+  <h2>验收结论</h2>
+  <table><tbody>
+    <tr><th>外部样本数量</th><td>5</td><td>公开网页图片，去元数据缩略图入报告。</td></tr>
+    <tr><th>安全样本接入</th><td>4 passed / 1 failed / 0 blocked</td><td>多主体样本按失败处理。</td></tr>
+    <tr><th>动作资产生成能力</th><td class="warn">partial scoped</td><td>当前未证明不同外部猫照片可自动生成各自高质量动作资产。</td></tr>
+    <tr><th>产品闭环</th><td class="pass">passed scoped</td><td>仅对命名本地 frameSequence 候选通过。</td></tr>
+  </tbody></table>
+</main></body></html>

@@ -56,6 +56,7 @@ runtime smoke, managed smoke, PRD/spec review, claim scan, and security scan.
 | Post-V30.4 closure | `docs/V30.x/evidence/post-v30_4-tauri-bridge-slice-closure-2026-06-24.md` |
 | Post-V30.5 pre-execution audit | `docs/V30.x/evidence/post-v30_5-pre-execution-audit-2026-06-24.md` |
 | Post-V30.5 | `docs/V30.x/evidence/post-v30_5-final-remediation-gate-2026-06-24.md` |
+| External advice reconciliation | `docs/V30.x/evidence/post-v30-external-advice-reconciliation-2026-06-25.md` |
 
 Slice spec inputs:
 

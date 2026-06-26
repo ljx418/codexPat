@@ -1,0 +1,150 @@
+{
+  "sanitizedAssets": [
+    {
+      "sampleId": "v38_orange_tabby_public",
+      "sanitizedImageRef": "docs/V38.x/evidence/assets/v38_orange_tabby_public/sanitized.png",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:Orange_Tabby_Cat.jpg",
+      "sourceHashRef": "docs/V38.x/evidence/assets/v38_orange_tabby_public/sanitized-sha256.txt",
+      "width": 512,
+      "height": 512,
+      "averageColor": "#85715C",
+      "exifStripped": true,
+      "status": "passed",
+      "reasonCodes": [
+        "sanitized_public_photo_ready"
+      ]
+    },
+    {
+      "sampleId": "v38_tuxedo_public",
+      "sanitizedImageRef": "docs/V38.x/evidence/assets/v38_tuxedo_public/sanitized.png",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:TUXEDO_CAT_BLACK_AND_WHITE.jpg",
+      "sourceHashRef": "docs/V38.x/evidence/assets/v38_tuxedo_public/sanitized-sha256.txt",
+      "width": 512,
+      "height": 512,
+      "averageColor": "#8A735C",
+      "exifStripped": true,
+      "status": "passed",
+      "reasonCodes": [
+        "sanitized_public_photo_ready"
+      ]
+    },
+    {
+      "sampleId": "v38_a_cat_public",
+      "sanitizedImageRef": "docs/V38.x/evidence/assets/v38_a_cat_public/sanitized.png",
+      "sourcePage": "https://commons.wikimedia.org/wiki/File:A-Cat.jpg",
+      "sourceHashRef": "docs/V38.x/evidence/assets/v38_a_cat_public/sanitized-sha256.txt",
+      "width": 512,
+      "height": 512,
+      "averageColor": "#917F64",
+      "exifStripped": true,
+      "status": "passed",
+      "reasonCodes": [
+        "sanitized_public_photo_ready"
+      ]
+    }
+  ],
+  "renderablePacks": [
+    {
+      "sampleId": "v38_orange_tabby_public",
+      "candidateId": "v38_orange_tabby_public_v38_public_photo_pack",
+      "contactSheetRef": "docs/V38.x/evidence/assets/v38_orange_tabby_public/contact-sheet.png",
+      "animatedPreviewRef": "docs/V38.x/evidence/assets/v38_orange_tabby_public/animated-preview.gif",
+      "actionCoverage": [
+        "idle",
+        "walk",
+        "jump",
+        "sleep",
+        "eat",
+        "play",
+        "alert",
+        "celebrate"
+      ],
+      "frameCountByAction": {
+        "idle": 4,
+        "walk": 4,
+        "jump": 4,
+        "sleep": 4,
+        "eat": 4,
+        "play": 4,
+        "alert": 4,
+        "celebrate": 4
+      },
+      "localMotionModel": "source_bound_photo_base_with_local_overlays",
+      "wholeImageTransformOnly": false,
+      "status": "renderable",
+      "reasonCodes": [
+        "renderable_frame_pack_ready",
+        "local_overlays_present",
+        "whole_image_transform_only_rejected"
+      ]
+    },
+    {
+      "sampleId": "v38_tuxedo_public",
+      "candidateId": "v38_tuxedo_public_v38_public_photo_pack",
+      "contactSheetRef": "docs/V38.x/evidence/assets/v38_tuxedo_public/contact-sheet.png",
+      "animatedPreviewRef": "docs/V38.x/evidence/assets/v38_tuxedo_public/animated-preview.gif",
+      "actionCoverage": [
+        "idle",
+        "walk",
+        "jump",
+        "sleep",
+        "eat",
+        "play",
+        "alert",
+        "celebrate"
+      ],
+      "frameCountByAction": {
+        "idle": 4,
+        "walk": 4,
+        "jump": 4,
+        "sleep": 4,
+        "eat": 4,
+        "play": 4,
+        "alert": 4,
+        "celebrate": 4
+      },
+      "localMotionModel": "source_bound_photo_base_with_local_overlays",
+      "wholeImageTransformOnly": false,
+      "status": "renderable",
+      "reasonCodes": [
+        "renderable_frame_pack_ready",
+        "local_overlays_present",
+        "whole_image_transform_only_rejected"
+      ]
+    },
+    {
+      "sampleId": "v38_a_cat_public",
+      "candidateId": "v38_a_cat_public_v38_public_photo_pack",
+      "contactSheetRef": "docs/V38.x/evidence/assets/v38_a_cat_public/contact-sheet.png",
+      "animatedPreviewRef": "docs/V38.x/evidence/assets/v38_a_cat_public/animated-preview.gif",
+      "actionCoverage": [
+        "idle",
+        "walk",
+        "jump",
+        "sleep",
+        "eat",
+        "play",
+        "alert",
+        "celebrate"
+      ],
+      "frameCountByAction": {
+        "idle": 4,
+        "walk": 4,
+        "jump": 4,
+        "sleep": 4,
+        "eat": 4,
+        "play": 4,
+        "alert": 4,
+        "celebrate": 4
+      },
+      "localMotionModel": "source_bound_photo_base_with_local_overlays",
+      "wholeImageTransformOnly": false,
+      "status": "renderable",
+      "reasonCodes": [
+        "renderable_frame_pack_ready",
+        "local_overlays_present",
+        "whole_image_transform_only_rejected"
+      ]
+    }
+  ]
+}

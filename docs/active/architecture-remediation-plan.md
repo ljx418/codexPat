@@ -10,7 +10,14 @@ job is to make the current architecture, development facts, runtime smoke path,
 and next code-debt slices explicit enough that later phases can proceed with
 real evidence instead of silent pass.
 
-Current active PRD: `docs/active/agent_desktop_pet_prd_post_v30.md`.
+Status note: this remediation plan has since been executed as scoped
+Post-V30 evidence. Post-V30.1 through Post-V30.5 are now `passed scoped`; this
+document remains the historical remediation plan and input baseline for later
+stages. See
+`docs/V30.x/evidence/post-v30-external-advice-reconciliation-2026-06-25.md`
+for the current reconciliation of older Post-V30 advice.
+
+Input remediation PRD: `docs/active/agent_desktop_pet_prd_post_v30.md`.
 Target architecture: `docs/V30.x/post-v30-target-architecture.md`.
 Milestones: `docs/V30.x/post-v30-milestones.md`.
 Acceptance plan: `docs/V30.x/post-v30-acceptance-plan.md`.

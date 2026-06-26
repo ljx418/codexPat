@@ -1,91 +1,302 @@
 # Active Development Plan
 
-文档状态：active index；V32 quality rescue passed scoped；V31 partial scoped with continuation execution blocked scoped；V30 scoped passed；Post-V30 architecture/runtime remediation passed scoped；V29/V23-V28 scoped baselines 是输入基线。
-当前日期：2026-06-24。
+文档状态：active index；V37 tested photo-to-action product-path scoped evidence generated on 2026-06-26；V36 risk closure and target-experience hardening executed with partial scoped final decision on 2026-06-26 and is the input baseline；V35 target-experience route assessment passed scoped for tested named samples only；V34 photo-to-character-to-actions generation core evidence-matched scoped passed through V34.8；V33 scoped local sample-to-frameSequence loop passed but remains partial for true generation；V32 quality rescue passed scoped；V31 partial scoped with continuation execution blocked scoped；V30 scoped passed；Post-V30 architecture/runtime remediation passed scoped；V29/V23-V28 scoped baselines 是输入基线。
+当前日期：2026-06-26。
 
 ## Current Active Line
 
-V32 quality rescue is the latest scoped development line.
-`docs/active/agent_desktop_pet_prd_v32.md` is the current active scoped PRD.
-V31 high-quality 2D action assets and arbitrary-cat photo-to-action remains the
-input problem statement, but its arbitrary-cat automatic path is not ready.
+V37 is the current active executed scoped product-path line.
+`docs/active/agent_desktop_pet_prd_v37.md` is the current active PRD. V37
+targets the gap visible after V36: the browser/product preview can still show a
+built-in cat, while the project cannot yet prove that a real cat photo produces
+that cat's own 8-action asset in the user-visible product path.
 
-Post-V30 architecture/runtime remediation has passed scoped and remains the
-latest engineering baseline. V30 remains the semantic animation claim boundary:
-it passed only for tested local 2D action packs, where transform-only weak
-actions were rejected and semantic candidates were accepted. A follow-up visual
-review narrowed the current asset-quality status: the simplified SVG
-`flagship-work-cat-v2` candidate is not accepted as target high-quality visual
-art.
+Current V37 decision: V37.1-V37.7 passed scoped for the product-path contract
+using safe named sample metadata and local deterministic Route A2 evidence.
+No raw-photo pixel generation, screenshot-backed real-photo animated playback,
+Route B, arbitrary-cat, provider, platform, or production readiness claim has
+passed.
 
-V31 target flow:
+Concrete V37 design docs:
+
+- `docs/active/agent_desktop_pet_prd_v37.md`
+- `docs/V37.x/v37-target-architecture.md`
+- `docs/V37.x/v37-development-and-acceptance-plan.md`
+- `docs/V37.x/v37-acceptance-plan.md`
+- `docs/V37.x/v37-milestones.md`
+- `docs/V37.x/v37-current-gap-analysis.md`
+- `docs/V37.x/v37-implementation-contract.md`
+- `docs/V37.x/v37-engineering-implementation-blueprint.md`
+- `docs/V37.x/v37-claim-matrix.md`
+- `docs/V37.x/v37-evidence-and-scan-checklist.md`
+- `docs/V37.x/v37-doc-audit.md`
+
+V37 target flow:
 
 ```text
-V30 semantic gate
-  -> V31 art quality rubric
-  -> high-quality flagship 2D action asset route
-  -> layered rig / professional animation route
-  -> photo-to-character-to-action candidate route
-  -> real visual evidence / preview / apply / rollback
+real cat photo
+  -> safe sample intake
+  -> subject detection / segmentation / pose part map
+  -> identity anchors and character asset contract
+  -> sample-bound 8-action asset candidate
+  -> quality and human visual gates
+  -> product preview
+  -> target-only apply
+  -> rollback
+  -> final scoped photo-to-action decision
 ```
 
-Current V31 execution decision: partial scoped. One named local high-quality
-flagship 8-action asset passed visual QA, semantic QA, preview, target apply,
-rollback, claim scan, and security scan. Arbitrary-cat automatic high-quality
-action generation, provider integration, 3D, production, Windows, and
-cross-platform readiness remain not ready.
+V37 executed phases:
 
-Current V31 continuation decision: blocked scoped. V31.8-V31.13 produced real
-evidence on 2026-06-24: repeatable production is partial, layered rig runtime
-is blocked, named photo sample set is partial, photo-action closure is blocked,
-and continuation E2E/final gate are blocked. This does not change the V31.7
-partial scoped result.
+- V37.0 documentation readiness: passed scoped for documentation readiness only.
+- V37.1 product UX contract: passed scoped.
+- V37.2 named photo sample set: passed scoped.
+- V37.3 identity and character asset: passed scoped.
+- V37.4 action candidate generation: passed scoped.
+- V37.5 product preview/apply/rollback: passed scoped.
+- V37.6 visual review report: passed scoped with model-level review evidence; not raw-photo screenshot-backed animation acceptance.
+- V37.7 final scoped gate: passed scoped for product-path contract only.
+
+V37 implementation evidence:
+
+- `docs/V37.x/evidence/v37_1-product-ux-contract-2026-06-26.md`
+- `docs/V37.x/evidence/v37_2-named-photo-sample-set-2026-06-26.md`
+- `docs/V37.x/evidence/v37_3-identity-character-asset-2026-06-26.md`
+- `docs/V37.x/evidence/v37_4-action-candidate-generation-2026-06-26.md`
+- `docs/V37.x/evidence/v37_5-product-preview-apply-rollback-2026-06-26.md`
+- `docs/V37.x/evidence/v37_6-visual-review-report-2026-06-26.md`
+- `docs/V37.x/evidence/v37_6-visual-review-report-2026-06-26.html`
+- `docs/V37.x/v37-final-photo-to-action-report.md`
+
+Next development risk is not document completeness; it is whether a future
+stage can close raw-photo pixel input, screenshot-backed animation playback,
+and Route B source-bound visual quality without broad or false claims.
+
+V36 is now the input executed risk-closure line.
+`docs/active/agent_desktop_pet_prd_v36.md` is the V36 input baseline PRD. V36
+targets the risk exposure left after V35: visual quality is still scoped,
+Route A2 may have a deterministic template ceiling, Route B has no real
+professional-assisted asset evidence yet, generalized public/named cat samples
+are not proven, human visual review is not yet a hard gate, and product UX
+screenshot evidence needs stronger closure.
+
+Current V36 decision: partial scoped. V36.1 visual goldens, V36.2 Route A2
+ceiling, V36.5 generalization matrix, V36.6 human visual review, and V36.7
+product UX report have scoped evidence. V36.3 Route B real assets and V36.4
+same-sample comparison are blocked scoped because no real source-bound
+professional-assisted Route B assets were available. V36.8 records the final
+partial scoped risk-closure decision.
+
+Concrete V36 design docs:
+
+- `docs/active/agent_desktop_pet_prd_v36.md`
+- `docs/V36.x/v36-target-architecture.md`
+- `docs/V36.x/v36-development-and-acceptance-plan.md`
+- `docs/V36.x/v36-acceptance-plan.md`
+- `docs/V36.x/v36-milestones.md`
+- `docs/V36.x/v36-current-gap-analysis.md`
+- `docs/V36.x/v36-risk-closure-plan.md`
+- `docs/V36.x/v36-implementation-contract.md`
+- `docs/V36.x/v36-claim-matrix.md`
+- `docs/V36.x/v36-evidence-and-scan-checklist.md`
+- `docs/V36.x/v36-doc-audit.md`
+- `docs/V36.x/v36_1-visual-goldens-spec.md`
+- `docs/V36.x/v36_2-route-a2-ceiling-spec.md`
+- `docs/V36.x/v36_3-route-b-real-assets-spec.md`
+- `docs/V36.x/v36_4-route-comparison-spec.md`
+- `docs/V36.x/v36_5-generalization-matrix-spec.md`
+- `docs/V36.x/v36_6-human-visual-review-spec.md`
+- `docs/V36.x/v36_7-product-ux-report-spec.md`
+- `docs/V36.x/v36_8-final-risk-closure-spec.md`
+- `docs/V36.x/v36-final-risk-closure-report.md`
+
+V36 target flow:
+
+```text
+V35 scoped route assessment
+  -> visual golden sample layer
+  -> Route A2 ceiling analysis
+  -> Route B real professional-assisted import
+  -> same-sample route comparison
+  -> generalization sample matrix
+  -> human visual review gate
+  -> product UX screenshot/report evidence
+  -> final risk closure decision
+```
+
+V36 execution evidence:
+
+- `docs/V36.x/evidence/v36_1-visual-goldens-2026-06-26.md` - passed scoped.
+- `docs/V36.x/evidence/v36_2-route-a2-ceiling-2026-06-26.md` - passed scoped; recommendation is continue Route A2.
+- `docs/V36.x/evidence/v36_3-route-b-real-assets-2026-06-26.md` - blocked scoped; no real Route B asset.
+- `docs/V36.x/evidence/v36_4-route-comparison-2026-06-26.md` - blocked scoped; Route B unavailable.
+- `docs/V36.x/evidence/v36_5-generalization-matrix-2026-06-26.md` - passed scoped with partial/generalization boundaries.
+- `docs/V36.x/evidence/v36_6-human-visual-review-2026-06-26.md` - passed scoped.
+- `docs/V36.x/evidence/v36_7-product-ux-report-2026-06-26.html` - passed scoped.
+- `docs/V36.x/evidence/v36_8-final-risk-closure-2026-06-26.md` - partial scoped.
+
+V35 is now the input scoped baseline for V36.
+`docs/active/agent_desktop_pet_prd_v35.md` is the V35 baseline PRD. V35
+targeted the remaining quality gap after V34 and produced a scoped route
+assessment for tested named samples only.
+
+Current V35 execution decision: passed scoped for tested named samples only.
+`docs/V35.x/v35-final-route-decision-report.md` records Route A2 target-experience scoped pass, while Route B remains blocked/not executed because no real professional-assisted asset was supplied.
+
+Current V35 decision: V35.1-V35.6 produced scoped evidence and
+`docs/V35.x/v35-final-route-decision-report.md`; Route B remained blocked/not
+executed because no real professional-assisted asset was supplied.
+
+V34 remains the input baseline: V34.1 subject detection, V34.2
+segmentation/mask records, V34.3 pose/part map records, V34.4 character asset
+contracts, V34.5 Route A2 rig/frame synthesis candidates, V34.6 product path,
+V34.7 HTML report, and V34.8 final gate passed scoped for named safe sample
+records and local Route A2 candidates. Route B was compared as a possible
+quality fallback but was not executed.
+
+Concrete V35 design docs:
+
+- `docs/active/agent_desktop_pet_prd_v35.md`
+- `docs/V35.x/v35-target-architecture.md`
+- `docs/V35.x/v35-development-and-acceptance-plan.md`
+- `docs/V35.x/v35-acceptance-plan.md`
+- `docs/V35.x/v35-milestones.md`
+- `docs/V35.x/v35-current-gap-analysis.md`
+- `docs/V35.x/v35-implementation-contract.md`
+- `docs/V35.x/v35-claim-matrix.md`
+- `docs/V35.x/v35-doc-audit.md`
+- `docs/V35.x/v35-evidence-and-scan-checklist.md`
+- `docs/V35.x/v35-risk-burndown-and-route-decision.md`
+- `docs/V35.x/v35_1-target-experience-rubric-spec.md`
+- `docs/V35.x/v35_2-route-a2-quality-uplift-spec.md`
+- `docs/V35.x/v35_3-route-b-source-boundary-spec.md`
+- `docs/V35.x/v35_4-same-sample-route-comparison-spec.md`
+- `docs/V35.x/v35_5-product-ux-evidence-spec.md`
+- `docs/V35.x/v35_6-final-route-decision-spec.md`
+
+V35 target flow:
+
+```text
+V34 generated action candidate
+  -> target-experience rubric
+  -> Route A2 quality uplift plan
+  -> Route B professional assisted source boundary
+  -> same-sample route comparison
+  -> product UX evidence
+  -> final route decision
+  -> evidence / claim / security scan
+```
+
+Concrete V34 design docs:
+
+- `docs/active/agent_desktop_pet_prd_v34.md`
+- `docs/V34.x/v34-target-architecture.md`
+- `docs/V34.x/v34-development-and-acceptance-plan.md`
+- `docs/V34.x/v34-acceptance-plan.md`
+- `docs/V34.x/v34-milestones.md`
+- `docs/V34.x/v34-current-gap-analysis.md`
+- `docs/V34.x/v34-implementation-contract.md`
+- `docs/V34.x/v34-claim-matrix.md`
+- `docs/V34.x/v34-doc-audit.md`
+- `docs/V34.x/v34-evidence-and-scan-checklist.md`
+- `docs/V34.x/v34-risk-burndown-and-route-decision.md`
+- `docs/V34.x/v34_1-subject-detection-spec.md`
+- `docs/V34.x/v34_2-segmentation-mask-spec.md`
+- `docs/V34.x/v34_3-pose-part-map-spec.md`
+- `docs/V34.x/v34_4-character-asset-contract-spec.md`
+- `docs/V34.x/v34_5-rig-frame-synthesis-spec.md`
+- `docs/V34.x/v34_6-generation-product-e2e-spec.md`
+- `docs/V34.x/v34_7-real-data-report-spec.md`
+- `docs/V34.x/v34_8-final-gate-spec.md`
+
+V34 target flow:
+
+```text
+single cat photo
+  -> privacy-safe intake
+  -> subject detection
+  -> segmentation / foreground mask
+  -> pose and visible part map
+  -> identity anchors
+  -> character asset contract
+  -> rig-ready parts or frame seed
+  -> 8-action synthesis
+  -> V30 semantic gate
+  -> V31 art gate
+  -> V32 measured quality gate
+  -> V33 identity gate
+  -> V34 generation-chain gate
+  -> in-app preview
+  -> target-only apply / rollback
+  -> evidence / claim / security scan
+```
+
+Current V33 execution decision: passed scoped for one named local safe-sample-to-frameSequence loop, with external cat validation showing partial scoped generation readiness only. V33 does not prove different cat photos can generate their own high-quality action packs.
 
 Current V32 execution decision: passed scoped. V32 generated two local
 project-authored 8-action frameSequence packs, measured the real PNG frames,
 passed V30 semantic QA, V31 art QA, V32 quality gate, target-only
 preview/apply/rollback, claim scan, security scan, HTML report generation, and
-headless screenshot evidence. This proves only named local project-authored
-2D packs, not arbitrary-cat photo automation.
+headless screenshot evidence. This proves only named local project-authored 2D
+packs, not arbitrary-cat photo automation.
 
-V32 target flow:
+Current V31 execution decision: partial scoped with blocked continuation. One
+named local high-quality flagship 8-action asset passed scoped, but repeatable
+production, layered rig runtime, photo-derived action frames, and continuation
+E2E remained partial or blocked. V31 is now a source baseline for V33, not the
+current active line.
 
-```text
-local layered-rig generator
-  -> real PNG frameSequence
-  -> V32 measured quality gate
-  -> V30 semantic gate
-  -> V31 art gate
-  -> isolated preview
-  -> target-only apply / rollback
-  -> HTML + screenshot evidence
-  -> claim / security scan
-```
-
-Post-V30 target flow:
-
-```text
-fact-source sync
-  -> architecture map
-  -> runtime desktop smoke plan
-  -> managed Codex workflow smoke plan
-  -> scoped code debt slices
-  -> evidence / claim / security scan per phase
-```
-
-Current execution decision: Post-V30.1 through Post-V30.5 have passed scoped.
-The final gate records real local runtime evidence, one scoped
-wrapper-launched managed workflow smoke, frontend slice evidence, Rust/Tauri
-bridge slice evidence, PRD/spec review, claim scan, and security scan.
-A full PRD/code/docs/function/E2E audit on 2026-06-24 also passed scoped with
-residual risks documented in
-`docs/V30.x/evidence/post-v30-v30-full-audit-2026-06-24.md`.
+Post-V30 architecture/runtime remediation has passed scoped and remains the
+latest engineering baseline. V30 remains the semantic animation claim boundary:
+it passed only for tested local 2D action packs, where transform-only weak
+actions were rejected and semantic candidates were accepted.
+External Post-V30 advice from the 2026-06-23 pre-execution state has been
+reconciled in
+`docs/V30.x/evidence/post-v30-external-advice-reconciliation-2026-06-25.md`;
+do not use that older Go/No-Go state to reopen Post-V30.1 or mark
+Post-V30.5 No-Go.
 
 Documentation completeness must not be treated as runtime, managed workflow,
-refactor, platform, provider, 3D, or production evidence.
+refactor, platform, provider, 3D, production, Windows, or cross-platform
+evidence.
 
 Active docs:
 
+- `docs/active/agent_desktop_pet_prd_v34.md`
+- `docs/V34.x/v34-target-architecture.md`
+- `docs/V34.x/v34-development-and-acceptance-plan.md`
+- `docs/V34.x/v34-acceptance-plan.md`
+- `docs/V34.x/v34-milestones.md`
+- `docs/V34.x/v34-current-gap-analysis.md`
+- `docs/V34.x/v34-implementation-contract.md`
+- `docs/V34.x/v34-claim-matrix.md`
+- `docs/V34.x/v34-doc-audit.md`
+- `docs/V34.x/v34-evidence-and-scan-checklist.md`
+- `docs/V34.x/v34-risk-burndown-and-route-decision.md`
+- `docs/V34.x/v34_1-subject-detection-spec.md`
+- `docs/V34.x/v34_2-segmentation-mask-spec.md`
+- `docs/V34.x/v34_3-pose-part-map-spec.md`
+- `docs/V34.x/v34_4-character-asset-contract-spec.md`
+- `docs/V34.x/v34_5-rig-frame-synthesis-spec.md`
+- `docs/V34.x/v34_6-generation-product-e2e-spec.md`
+- `docs/V34.x/v34_7-real-data-report-spec.md`
+- `docs/V34.x/v34_8-final-gate-spec.md`
+- `docs/active/agent_desktop_pet_prd_v33.md`
+- `docs/V33.x/v33-target-architecture.md`
+- `docs/V33.x/v33-development-and-acceptance-plan.md`
+- `docs/V33.x/v33-acceptance-plan.md`
+- `docs/V33.x/v33-milestones.md`
+- `docs/V33.x/v33-current-gap-analysis.md`
+- `docs/V33.x/v33-claim-matrix.md`
+- `docs/V33.x/v33-doc-audit.md`
+- `docs/V33.x/v33-implementation-contract.md`
+- `docs/V33.x/v33-evidence-and-scan-checklist.md`
+- `docs/V33.x/v33_1-real-sample-intake-spec.md`
+- `docs/V33.x/v33_2-trait-identity-contract-spec.md`
+- `docs/V33.x/v33_3-photo-action-candidates-spec.md`
+- `docs/V33.x/v33_4-rig-frame-runtime-route-spec.md`
+- `docs/V33.x/v33_5-in-app-preview-apply-rollback-spec.md`
+- `docs/V33.x/v33_6-real-data-e2e-report-spec.md`
 - `docs/active/agent_desktop_pet_prd_v32.md`
 - `docs/V32.x/v32-target-architecture.md`
 - `docs/V32.x/v32-development-and-acceptance-plan.md`
@@ -118,6 +329,7 @@ Active docs:
 - `docs/V30.x/post-v30-detailed-development-and-acceptance-plan.md`
 - `docs/V30.x/post-v30-acceptance-plan.md`
 - `docs/V30.x/post-v30-milestones.md`
+- `docs/V30.x/evidence/post-v30-external-advice-reconciliation-2026-06-25.md`
 - `docs/V30.x/post-v30_2-managed-codex-workflow-smoke-development-and-acceptance-plan.md`
 - `docs/active/current-vs-target-gap.drawio`
 - `docs/V30.x/v30-development-plan.md`
@@ -129,6 +341,33 @@ Active docs:
 - `docs/V30.x/v30-implementation-contract.md`
 - `docs/V30.x/v30-doc-audit.md`
 - `docs/V30.x/v30-target-state.drawio`
+
+V34 phases:
+
+| Phase | Status | Exit Signal |
+| --- | --- | --- |
+| V34.0 document and architecture freeze | passed scoped for documentation readiness | V34 docs, active docs, drawio, doc audit, claim scan, and security scan pass |
+| V34.1 sample set and subject detection | passed scoped | `docs/V34.x/evidence/v34_1-subject-detection-2026-06-25.md`; 3 single-cat samples passed, 2 negative samples rejected, 1 low-visibility sample blocked |
+| V34.2 segmentation and safe derivative | passed scoped | `docs/V34.x/evidence/v34_2-segmentation-mask-2026-06-25.md`; 3 passed masks, 2 blocked masks, 2 failed masks, 3 eligible for later character asset contract |
+| V34.3 pose and part map | passed scoped | `docs/V34.x/evidence/v34_3-pose-part-map-2026-06-25.md`; 3 passed part maps, 1 blocked risk case, 3 referencable by later character asset contract |
+| V34.4 character asset contract | passed scoped | `docs/V34.x/evidence/v34_4-character-asset-contract-2026-06-25.md`; 3 passed contracts, 3 blocked non-ready records, duplicate passed identity count 0 |
+| V34.5 rig/frame synthesis | passed scoped via Route A2 | `docs/V34.x/evidence/v34_5-rig-frame-synthesis-2026-06-25.md`; 2 named samples generated Route A2 candidates, transform-only negative rejected, Route B recorded for later quality comparison |
+| V34.6 generation QA and product path | passed scoped | `docs/V34.x/evidence/v34_6-generation-product-e2e-2026-06-25.md`; V30/V31/V32/V33/V34 gates plus preview/apply/rollback pass for approved generated candidates; failed candidates blocked |
+| V34.7 real-data HTML report | passed scoped | `docs/V34.x/evidence/v34_7-real-data-report-2026-06-25.html`; Chinese report embeds sample, mask, part map, action, QA, product evidence, and Route A2 / Route B quality comparison |
+| V34.8 final gate | passed scoped | `docs/V34.x/v34-final-acceptance-report.md`; command log, claim/security scan, and Route A2 / Route B final decision completed |
+
+V33 phases:
+
+| Phase | Status | Exit Signal |
+| --- | --- | --- |
+| V33.0 scope and doc freeze | planned | V33 docs, active docs, drawio, doc audit, claim scan, and security scan pass |
+| V33.1 real sample intake | planned | named real sample set has safe metadata, suitability status, and reasonCodes |
+| V33.2 trait and identity contract | planned | passing samples have safe trait summary, character design contract, and identity QA inputs |
+| V33.3 action candidate production | planned | passing samples produce 8-action candidates with manifest, frames, contact sheet, and playback evidence |
+| V33.4 professional route runtime | planned | frameSequence or professional rig output passes V30/V31/V32/V33 gates or records stable blocked reason |
+| V33.5 in-app product path | planned | approved candidates preview/apply/rollback target-only; failed candidates are blocked |
+| V33.6 real-data E2E report | planned | Chinese HTML report embeds screenshots, QA tables, user paths, blocked/failed reasons, and scans |
+| V33.7 final gate | No-Go | waits for V33.0-V33.6 passed/partial/blocked/failed evidence |
 
 Post-V30 phases:
 
@@ -862,30 +1101,30 @@ V4.x is no longer a planning-only line; it has scoped final acceptance evidence.
 The following remain forbidden as ready / verified / passed claims unless a later scoped phase produces explicit evidence and final acceptance:
 
 ```text
-OS-level Codex window binding ready
-interactive Codex TUI monitoring ready
-already-open Codex window auto-detection ready
-already-open Codex window auto-monitoring ready
-all Codex workflows verified
-Codex internal reasoning exact mapping ready
-ModelThinkingStart / ModelThinkingEnd verified
-V3.6 selected Codex workflow hook coverage smoke passed
-PostToolUse failure hook evidence passed
-Claude Code integration verified
-MCP ready
-Third-party agent integration verified
-Windows ready
-cross-platform ready
-USB ready
-production signed release ready
-per-instance queue ready
-Rive / Live2D / 3D ready
-custom asset pack import ready
-user asset upload ready
-asset marketplace ready
-automatic photo-to-3D ready
-provider integration verified
-remote asset loading ready
+forbidden ready claim: OS-level Codex window binding ready
+forbidden ready claim: interactive Codex TUI monitoring ready
+forbidden ready claim: already-open Codex window auto-detection ready
+forbidden ready claim: already-open Codex window auto-monitoring ready
+forbidden ready claim: all Codex workflows verified
+forbidden ready claim: Codex internal reasoning exact mapping ready
+forbidden ready claim: ModelThinkingStart / ModelThinkingEnd verified
+forbidden ready claim: V3.6 selected Codex workflow hook coverage smoke passed
+forbidden ready claim: PostToolUse failure hook evidence passed
+forbidden ready claim: Claude Code integration verified
+forbidden ready claim: MCP ready
+forbidden ready claim: Third-party agent integration verified
+forbidden ready claim: Windows ready
+forbidden ready claim: cross-platform ready
+forbidden ready claim: USB ready
+forbidden ready claim: production signed release ready
+forbidden ready claim: per-instance queue ready
+forbidden ready claim: Rive / Live2D / 3D ready
+forbidden ready claim: custom asset pack import ready
+forbidden ready claim: user asset upload ready
+forbidden ready claim: asset marketplace ready
+forbidden ready claim: automatic photo-to-3D ready
+forbidden ready claim: provider integration verified
+forbidden ready claim: remote asset loading ready
 ```
 
 ## Current Codex Monitoring Direction
@@ -1066,3 +1305,22 @@ V8.9 may claim only local frame-sequence assembly. V8.10 prompt-only evidence
 may not claim provider execution. V8.11 visual QA may not claim AI generation,
 3D readiness, Rive/Live2D readiness, marketplace readiness, or production signed
 release readiness.
+
+## V38 Development Rule
+
+V38 is the current public-photo action asset line. It starts from V37 product-path evidence and closes the visible gap that prior stages did not show real public photo pixels flowing into generated action-frame evidence.
+
+V38 implementation order and status:
+
+1. V38.0 Planning Audit: passed scoped.
+2. V38.1 Public Source Intake: passed scoped.
+3. V38.2 Pixel Sanitization: passed scoped.
+4. V38.3 Renderable Action Pack: passed scoped.
+5. V38.4 Quality Gate: passed scoped.
+6. V38.5 Product E2E UI Contract: passed scoped.
+7. V38.6 Human Visual Review Report: passed scoped.
+8. V38.7 Final Gate: passed scoped.
+
+V38 may claim only a tested public-photo sample-bound pipeline from public cat images to sanitized derived images, renderable 8-action frame packs, contact sheets, GIF previews, product UI anchors, and screenshot-backed evidence.
+
+V38 must not be expanded into arbitrary-cat automation, provider execution verification, production release, Windows/cross-platform readiness, 3D delivery, Petdex parity, MCP readiness, Claude integration, OS-level Codex binding, or all workflow verification.

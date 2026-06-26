@@ -1,0 +1,35 @@
+{
+  "candidateId": "v34_clear_silver_tabby_v34_character_asset_v34_route_a2_pack",
+  "characterAssetId": "v34_clear_silver_tabby_v34_character_asset",
+  "rendererKind": "frameSequence",
+  "targetActions": [
+    "idle",
+    "walk",
+    "jump",
+    "sleep",
+    "eat",
+    "alert",
+    "celebrate"
+  ],
+  "runtimeProjectionActions": [
+    "idle",
+    "thinking",
+    "running",
+    "success",
+    "warning",
+    "error",
+    "need_input",
+    "sleeping"
+  ],
+  "frameCountByAction": {
+    "idle": 12,
+    "walk": 12,
+    "jump": 8,
+    "sleep": 12,
+    "eat": 8,
+    "alert": 8,
+    "celebrate": 8
+  },
+  "semanticEquivalenceClaimed": false,
+  "routeBQualityFallbackRecorded": true
+}

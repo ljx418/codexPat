@@ -1,83 +1,341 @@
-<mxfile host="app.diagrams.net" modified="2026-06-24T20:30:00.000Z" agent="Codex" version="24.7.17" type="device">
-  <diagram id="v31-page-1" name="1 目标体验与阶段边界">
-    <mxGraphModel dx="1680" dy="980" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+<mxfile host="Electron" agent="Codex" pages="8">
+  <diagram id="v38-page-1" name="1 V38目标体验与声明边界">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
       <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-        <mxCell id="p1-title" value="V31 目标体验与阶段边界" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fontStyle=1;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="60" y="30" width="700" height="60" as="geometry"/></mxCell>
-        <mxCell id="p1-current" value="当前事实&#xa;&#xa;• V30 语义动作门禁 scoped passed&#xa;• transform-only 弱动作可被拒绝&#xa;• semantic local candidate 可被接受&#xa;• 旧 flagship-work-cat-v2 简化线条猫已被拒绝&#xa;• V31 已有一个 named local 旗舰 8 动作资产 scoped passed&#xa;• 任意猫照片自动高质量动作资产仍 not-ready" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;spacing=18;fillColor=#fff7ed;strokeColor=#f97316;" vertex="1" parent="1"><mxGeometry x="60" y="120" width="470" height="460" as="geometry"/></mxCell>
-        <mxCell id="p1-target" value="V31 阶段结果与延续目标&#xa;&#xa;已通过：一个 named local 高质量 2D 猫动作资产可作为目标体验参考。&#xa;&#xa;未通过：任意猫照片自动生成高质量动作资产。&#xa;&#xa;V31.8-V31.13 目标：&#xa;• 可重复生产高质量动作资产&#xa;• 分层 rig 进入 runtime 证据或稳定 blocked&#xa;• named real sample set 照片到动作验收&#xa;• preview / apply / rollback 闭环&#xa;• final claim 只覆盖真实 evidence" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;spacing=18;fillColor=#ecfdf5;strokeColor=#10b981;" vertex="1" parent="1"><mxGeometry x="565" y="120" width="500" height="460" as="geometry"/></mxCell>
-        <mxCell id="p1-not-ready" value="本阶段仍不能声明&#xa;&#xa;• Petdex parity&#xa;• 任意猫自动动作资产 ready&#xa;• provider integration verified&#xa;• 3D ready&#xa;• production release ready&#xa;• Windows ready&#xa;• cross-platform ready&#xa;• MCP / Claude integration ready&#xa;• OS-level Codex window binding ready&#xa;• all Codex workflows verified&#xa;&#xa;文档完成也不能替代真实资产、真实样本和截图证据。" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;align=left;verticalAlign=top;spacing=18;fillColor=#fef2f2;strokeColor=#ef4444;" vertex="1" parent="1"><mxGeometry x="1100" y="120" width="440" height="460" as="geometry"/></mxCell>
-        <mxCell id="p1-flow" value="当前体验路径：打开 V31 视觉报告 → 看到 named local 高质量旗舰猫 8 动作 → 查看旧占位/弱动作为什么失败 → 应用 approved 资产到目标猫 → 可回滚。延续目标：用 named sample set 证明照片路线，不能扩大为任意猫 ready。" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;spacing=16;fillColor=#ffffff;strokeColor=#111827;" vertex="1" parent="1"><mxGeometry x="170" y="650" width="1260" height="120" as="geometry"/></mxCell>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p1-title" value="V38 目标：真实照片到用户可见 2D 动作资产链路" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontStyle=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="70" y="40" width="1260" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-current" value="当前事实：V38 已有 scoped public-photo asset evidence&#xa;Route A2 可继续&#xa;Route B 缺真实高质量资产&#xa;未证明 raw public-photo 像素生成&#xa;不能声明任意猫 ready" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="80" y="170" width="280" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-target" value="V38 目标体验&#xa;选择真实猫照片&#xa;生成该猫身份摘要&#xa;生成该猫 8 动作帧包&#xa;预览 / 应用 / 回滚&#xa;失败候选不可应用" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef9c3;strokeColor=#ca8a04;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="440" y="160" width="310" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-claim" value="允许的最终窄声明&#xa;仅限本轮 evidence：&#xa;tested public photo samples&#xa;photo-to-action public-photo action asset scoped pass" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="840" y="175" width="260" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-forbid" value="禁止声明&#xa;任意猫 ready&#xa;provider verified&#xa;Route B verified 无真实资产&#xa;3D / production / Windows / cross-platform ready" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;fontStyle=1;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="840" y="440" width="360" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-user" value="用户能理解的结果&#xa;这张照片是否通过&#xa;动作为什么失败&#xa;是否真是这只猫&#xa;是否可以安全应用和回滚" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;fontSize=15;" vertex="1" parent="1">
+          <mxGeometry x="240" y="465" width="330" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e1" value="输入基线" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#64748b;" edge="1" parent="1" source="p1-current" target="p1-target">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e2" value="用户体验" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#0284c7;" edge="1" parent="1" source="p1-target" target="p1-user">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e3" value="出门声明" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#7c3aed;" edge="1" parent="1" source="p1-target" target="p1-claim">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p1-e4" value="claim scan 拦截" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;strokeColor=#dc2626;" edge="1" parent="1" source="p1-forbid" target="p1-claim">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="v31-page-2" name="2 当前架构到目标架构">
-    <mxGraphModel dx="1680" dy="980" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+  <diagram id="v38-page-2" name="2 当前架构与目标架构差异">
+    <mxGraphModel dx="1653" dy="842" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
       <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-        <mxCell id="p2-title" value="当前架构到 V31 目标架构" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fontStyle=1;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="60" y="30" width="700" height="60" as="geometry"/></mxCell>
-        <mxCell id="p2-current" value="当前架构能力&#xa;&#xa;apps/desktop&#xa;• main.ts：设置页、gallery、asset workflow、photo wizard、runtime renderer&#xa;• asset modules：V30 semantic QA、asset validator、photo-to-2D wizard、preview/apply/rollback&#xa;• bundled packs：flagship-work-cat-v2 仍是占位级 SVG&#xa;&#xa;src-tauri / packages&#xa;• runtime_setup.rs：Tauri runtime setup&#xa;• bridge/http：health、instances、events、visibility、diagnostics&#xa;• petctl：list / notify / diagnostics / managed smoke&#xa;&#xa;已具备：运行、预览、target-only apply、rollback、QA reasonCode。" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;align=left;verticalAlign=top;spacing=14;fillColor=#eff6ff;strokeColor=#2563eb;" vertex="1" parent="1"><mxGeometry x="60" y="120" width="470" height="610" as="geometry"/></mxCell>
-        <mxCell id="p2-gap" value="当前缺口&#xa;&#xa;视觉资产质量&#xa;• 旧简化线条猫已拒绝&#xa;• named local 旗舰候选已 scoped passed&#xa;• 仍缺可重复生产与更多资产样本&#xa;&#xa;生产路线&#xa;• 有专业帧包候选证据&#xa;• 分层 rig 仍是路线合同，不是 runtime ready&#xa;&#xa;任意猫路线&#xa;• photo wizard 有边界和分支&#xa;• V31 仅 candidate-only scoped&#xa;• 没有证明自动生成高质量 8 动作&#xa;&#xa;验收风险&#xa;• 旗舰单样本可能被误读为任意猫 ready" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;align=left;verticalAlign=top;spacing=14;fillColor=#fff7ed;strokeColor=#f97316;" vertex="1" parent="1"><mxGeometry x="565" y="120" width="470" height="610" as="geometry"/></mxCell>
-        <mxCell id="p2-target" value="V31 目标架构新增层&#xa;&#xa;Asset Source Layer&#xa;• 专业 sprite / frame pack&#xa;• layered part-rig / Spine-like / Live2D-like&#xa;• photo traits → character design&#xa;• provider key-pose candidate&#xa;• placeholder / transform reject baseline&#xa;&#xa;Production Layer&#xa;• license / consent / attribution&#xa;• character design contract&#xa;• action art direction&#xa;• normalized pack export&#xa;&#xa;Quality Layer&#xa;• V30 semantic QA&#xa;• V31 art quality QA&#xa;• same-cat identity QA&#xa;• action appeal / timing / 1x / 0.75x readability&#xa;&#xa;Experience Layer&#xa;• screenshot / playback report&#xa;• isolated preview&#xa;• approved-only apply&#xa;• rollback" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;align=left;verticalAlign=top;spacing=14;fillColor=#ecfdf5;strokeColor=#10b981;" vertex="1" parent="1"><mxGeometry x="1070" y="120" width="470" height="610" as="geometry"/></mxCell>
-        <mxCell id="p2-a" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#64748b;" edge="1" parent="1" source="p2-current" target="p2-gap"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="p2-b" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#64748b;" edge="1" parent="1" source="p2-gap" target="p2-target"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p2-title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontStyle=1;fontSize=20;" value="当前架构到 V38 目标架构的差异" vertex="1">
+          <mxGeometry height="70" width="1260" x="70" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-current" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=14;" value="当前已实现/复用&#xa;V33 sample intake / identity&#xa;V34 detection / mask / part map / character / Route A2&#xa;V35 target rubric&#xa;V36 risk closure&#xa;main.ts 内置猫预览路径" vertex="1">
+          <mxGeometry height="230" width="330" x="80" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-gap" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffedd5;strokeColor=#f97316;fontSize=14;" value="核心差距&#xa;产品里仍可能只看见内置猫&#xa;真实照片未变成可见动作资产&#xa;Route B 没有真实资产&#xa;同样本 Route B 对照缺失&#xa;任意猫不能 ready" vertex="1">
+          <mxGeometry height="210" width="300" x="520" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-target" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef9c3;strokeColor=#ca8a04;fontSize=14;" value="V38 目标架构&#xa;photo product entry&#xa;public photo sample set&#xa;identity character asset&#xa;sample-bound 8 actions&#xa;quality + human gate&#xa;preview/apply/rollback gate" vertex="1">
+          <mxGeometry height="230" width="330" x="510" y="470" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-routea" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;fontSize=14;" value="默认路线：Route A2&#xa;本地可控生成&#xa;继续使用 V34/V35/V36 门禁&#xa;目标：tested public photo samples scoped" vertex="1">
+          <mxGeometry height="150" width="320" x="690" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-routeb" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fed7aa;strokeColor=#ea580c;fontSize=14;" value="备选路线：Route B&#xa;仅真实 source-bound professional assets 可进入&#xa;无资产则 blocked&#xa;不得 provider verified" vertex="1">
+          <mxGeometry height="150" width="360" x="210" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e1" edge="1" parent="1" source="p2-current" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#f97316;" target="p2-gap" value="缺口识别">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e2" edge="1" parent="1" source="p2-gap" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#ca8a04;" target="p2-target" value="目标改造">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e3" edge="1" parent="1" source="p2-target" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#0284c7;" target="p2-routea" value="默认实现">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p2-e4" edge="1" parent="1" source="p2-target" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#ea580c;" target="p2-routeb" value="高质量备选">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="v31-page-3" name="3 目标架构细化">
-    <mxGraphModel dx="1680" dy="980" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+  <diagram id="v38-page-3" name="3 代码实体与分层关系">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
       <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-        <mxCell id="p3-title" value="V31 目标架构细化" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fontStyle=1;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="60" y="30" width="700" height="60" as="geometry"/></mxCell>
-        <mxCell id="p3-source" value="1 资产来源层&#xa;&#xa;P0 专业高质量帧包&#xa;• 人工 / 专业工具绘制&#xa;• 8 actions 多帧&#xa;• license / attribution&#xa;&#xa;P1 分层 rig / 专业动画工具&#xa;• 头、身体、四肢、尾巴、耳朵、眼睛&#xa;• 动作曲线和关键姿势&#xa;• 导出 normalized frames&#xa;&#xa;P2 照片个性化路线&#xa;• photo consent&#xa;• traits / character design&#xa;• key pose candidate&#xa;&#xa;P3 provider candidate&#xa;• 只产候选，不绕过 QA" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;align=left;verticalAlign=top;spacing=14;fillColor=#f8fafc;strokeColor=#475569;" vertex="1" parent="1"><mxGeometry x="50" y="130" width="350" height="560" as="geometry"/></mxCell>
-        <mxCell id="p3-prod" value="2 生产层&#xa;&#xa;Character Design Contract&#xa;• 角色设定图&#xa;• 毛色/体型/脸型/尾巴/眼睛&#xa;• 同猫一致性目标&#xa;&#xa;Action Art Direction&#xa;• idle / thinking / running&#xa;• success / warning / error&#xa;• need_input / sleeping&#xa;• 关键姿势与节奏&#xa;&#xa;Normalizer&#xa;• safe pack id&#xa;• action id coverage&#xa;• frames/action/frame-###&#xa;• renderer payload boundary" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;align=left;verticalAlign=top;spacing=14;fillColor=#eff6ff;strokeColor=#2563eb;" vertex="1" parent="1"><mxGeometry x="440" y="130" width="350" height="560" as="geometry"/></mxCell>
-        <mxCell id="p3-qa" value="3 质量层&#xa;&#xa;V30 Semantic QA&#xa;• transform-only detector&#xa;• key-pose diversity&#xa;• semantic checklist&#xa;• loop / adjacent delta&#xa;&#xa;V31 Art QA&#xa;• 非占位线条猫&#xa;• 体积感 / 表情 / 材质&#xa;• pose strength / action appeal&#xa;• 1x 和 0.75x 可读&#xa;• same-cat identity&#xa;• human visual review&#xa;&#xa;失败输出&#xa;• reasonCode&#xa;• blocked / failed evidence&#xa;• repair guidance" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;align=left;verticalAlign=top;spacing=14;fillColor=#fefce8;strokeColor=#ca8a04;" vertex="1" parent="1"><mxGeometry x="830" y="130" width="350" height="560" as="geometry"/></mxCell>
-        <mxCell id="p3-exp" value="4 体验层&#xa;&#xa;Visual Evidence Report&#xa;• screenshots&#xa;• contact sheets&#xa;• playback / GIF / HTML&#xa;• old placeholder vs new quality&#xa;• QA table&#xa;&#xa;Runtime Flow&#xa;• isolated preview&#xa;• approved-only target apply&#xa;• failed asset blocked&#xa;• rollback restores previous pack&#xa;&#xa;用户结果&#xa;• 看到真正好看的 8 动作猫&#xa;• 知道照片路线是否通过或阻塞&#xa;• 不被 ready claim 误导" style="rounded=1;whiteSpace=wrap;html=1;fontSize=15;align=left;verticalAlign=top;spacing=14;fillColor=#ecfdf5;strokeColor=#10b981;" vertex="1" parent="1"><mxGeometry x="1220" y="130" width="330" height="560" as="geometry"/></mxCell>
-        <mxCell id="p3-a" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#64748b;" edge="1" parent="1" source="p3-source" target="p3-prod"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="p3-b" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#64748b;" edge="1" parent="1" source="p3-prod" target="p3-qa"><mxGeometry relative="1" as="geometry"/></mxCell>
-        <mxCell id="p3-c" value="" style="endArrow=block;html=1;rounded=0;strokeWidth=2;strokeColor=#64748b;" edge="1" parent="1" source="p3-qa" target="p3-exp"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p3-title" value="V38 具体代码实体与目标分层" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontStyle=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="70" y="35" width="1260" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-ui" value="产品 UI 层&#xa;main.ts photo wizard&#xa;asset manager / gallery&#xa;preview/apply/rollback 控件&#xa;状态：需改造" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef9c3;strokeColor=#ca8a04;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="70" y="150" width="250" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-v33" value="V33 样本与身份层&#xa;v33-sample-intake.ts&#xa;v33-identity-contract.ts&#xa;v33-productized-photo-flow.ts&#xa;状态：复用" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="390" y="145" width="270" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-v34" value="V34 生成链路层&#xa;subject-detection&#xa;segmentation-mask&#xa;pose-part-map&#xa;character-asset-contract&#xa;rig-frame-synthesis&#xa;generation-quality-gate&#xa;状态：复用/产品化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="740" y="125" width="285" height="205" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-v35v36" value="质量与风险层&#xa;v35-target-experience-quality.ts&#xa;v36-risk-closure.ts&#xa;人审 / 泛化 / claim 边界&#xa;状态：复用" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1080" y="150" width="250" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-new" value="V38 已新增代码实体&#xa;v38-named-photo-sample-set.ts&#xa;v38-photo-to-action-product-path.ts&#xa;v38-human-visual-acceptance.ts&#xa;对应 .test.ts&#xa;scripts/v38_1 到 v38_7" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="390" y="470" width="330" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-report" value="证据与报告层&#xa;V38 phase evidence&#xa;中文 HTML / model review&#xa;claim scan&#xa;security scan&#xa;final scoped gate" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="860" y="480" width="290" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e1" value="用户入口" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" edge="1" parent="1" source="p3-ui" target="p3-v33">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e2" value="样本事实" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" edge="1" parent="1" source="p3-v33" target="p3-v34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e3" value="候选评估" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" edge="1" parent="1" source="p3-v34" target="p3-v35v36">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e4" value="V38 合同绑定" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#ca8a04;" edge="1" parent="1" source="p3-v33" target="p3-new">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p3-e5" value="验收证据" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#7c3aed;" edge="1" parent="1" source="p3-new" target="p3-report">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="v31-page-4" name="4 开发与验收计划">
-    <mxGraphModel dx="1680" dy="980" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+  <diagram id="v38-page-4" name="4 照片到动作资产技术路径">
+    <mxGraphModel dx="1653" dy="842" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
       <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-        <mxCell id="p4-title" value="V31 开发与验收计划" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fontStyle=1;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="60" y="30" width="700" height="60" as="geometry"/></mxCell>
-        <mxCell id="p4-phases" value="阶段结果与延续计划&#xa;&#xa;V31.0-V31.7&#xa;→ partial scoped：旗舰资产通过，照片路线 candidate-only&#xa;&#xa;V31.8 可重复资产生产&#xa;→ 多候选同一 QA 合同或稳定 blocked&#xa;&#xa;V31.9 分层 rig runtime 路线&#xa;→ normalized frames / runtime payload 或稳定 blocked&#xa;&#xa;V31.10 named photo sample set&#xa;→ 清晰、困难、blocked、negative 样本&#xa;&#xa;V31.11 photo action closure&#xa;→ QA 后 preview / apply / rollback&#xa;&#xa;V31.12 continuation E2E&#xa;→ 真实数据报告&#xa;&#xa;V31.13 final gate&#xa;→ scoped / partial / blocked / failed" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;align=left;verticalAlign=top;spacing=14;fillColor=#eff6ff;strokeColor=#2563eb;" vertex="1" parent="1"><mxGeometry x="60" y="120" width="500" height="650" as="geometry"/></mxCell>
-        <mxCell id="p4-acceptance" value="每阶段验收动作&#xa;&#xa;必须产出：&#xa;• 真实 evidence 文件&#xa;• PRD / spec review&#xa;• claim scan&#xa;• security scan&#xa;• passed / blocked / failed 结论&#xa;&#xa;视觉阶段必须产出：&#xa;• HTML 报告&#xa;• 自动化截图或播放证据&#xa;• old placeholder vs new quality 对比&#xa;• 人工视觉 rubric&#xa;&#xa;照片阶段必须产出：&#xa;• real sample set&#xa;• consent/privacy boundary&#xa;• identity / visual / motion QA&#xa;• blocked sample reasonCodes&#xa;&#xa;不通过则回到开发计划，不 silent pass。" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;align=left;verticalAlign=top;spacing=14;fillColor=#fefce8;strokeColor=#ca8a04;" vertex="1" parent="1"><mxGeometry x="600" y="120" width="440" height="650" as="geometry"/></mxCell>
-        <mxCell id="p4-user" value="延续完成后的目标体验&#xa;&#xa;资产生产：&#xa;• 不只依赖一个旗舰候选&#xa;• 多候选用同一美术 / 语义 QA&#xa;• 分层 rig 若可行，能输出真实 frames / payload&#xa;&#xa;照片路线：&#xa;• 用户照片先进入 named sample set 口径&#xa;• 系统给出候选或 blocked 原因&#xa;• 通过的候选可预览、应用、回滚&#xa;• 失败样本不隐藏、不 silent pass&#xa;&#xa;最终声明：&#xa;• 只能说 evidence 覆盖的 scoped 能力。" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;align=left;verticalAlign=top;spacing=14;fillColor=#ecfdf5;strokeColor=#10b981;" vertex="1" parent="1"><mxGeometry x="1080" y="120" width="460" height="650" as="geometry"/></mxCell>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p4-title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontStyle=1;fontSize=20;" value="V38 技术路径：公开授权照片 -&gt; 去元数据派生图 -&gt; 8 动作帧包" vertex="1">
+          <mxGeometry height="65" width="1260" x="70" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-a" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef9c3;strokeColor=#ca8a04;fontSize=13;" value="1 真实照片入口&#xa;safe metadata only&#xa;sampleId&#xa;permission summary" vertex="1">
+          <mxGeometry height="135" width="175" x="65" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-b" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=13;" value="2 样本资格&#xa;单猫检测&#xa;mask / leakage&#xa;pose / visible parts" vertex="1">
+          <mxGeometry height="135" width="175" x="290" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-c" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=13;" value="3 身份合同&#xa;trait summary&#xa;identity anchors&#xa;characterAssetId&#xa;v38-photo-to-action-product-path.ts" vertex="1">
+          <mxGeometry height="135" width="185" x="515" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-d" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;fontSize=13;" value="4 Route A2 候选&#xa;8 target actions&#xa;frameSequence&#xa;绑定 sampleId&#xa;v34-rig-frame-synthesis.ts" vertex="1">
+          <mxGeometry height="135" width="185" x="755" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-e" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontSize=13;" value="5 质量门禁&#xa;V30/V31/V32/V33/V34/V35&#xa;V36 人审边界&#xa;非 transform-only" vertex="1">
+          <mxGeometry height="135" width="235" x="995" y="175" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-f" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=13;" value="6 产品出门&#xa;#v38-photo-action-entry&#xa;#v38-action-preview-stage&#xa;target-only apply&#xa;rollback&#xa;failed blocked" vertex="1">
+          <mxGeometry height="150" width="220" x="1120" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-bad" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;fontStyle=1;fontSize=13;" value="No-Go&#xa;内置猫冒充照片结果&#xa;跨样本复用资产&#xa;整图变形/占位图&#xa;人审失败仍 apply" vertex="1">
+          <mxGeometry height="150" width="300" x="700" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-e1" edge="1" parent="1" source="p4-a" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" target="p4-b" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-e2" edge="1" parent="1" source="p4-b" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" target="p4-c" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-e3" edge="1" parent="1" source="p4-c" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" target="p4-d" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-e4" edge="1" parent="1" source="p4-d" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" target="p4-e" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-e5" edge="1" parent="1" source="p4-e" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#16a34a;" target="p4-f" value="通过后进入产品">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p4-e6" edge="1" parent="1" source="p4-e" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#dc2626;" target="p4-bad" value="门禁拦截">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="v31-page-5" name="5 里程碑与证据">
-    <mxGraphModel dx="1680" dy="980" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+  <diagram id="v38-page-5" name="5 开发及验收计划">
+    <mxGraphModel dx="1653" dy="842" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
       <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-        <mxCell id="p5-title" value="V31 里程碑与证据" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fontStyle=1;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="60" y="30" width="700" height="60" as="geometry"/></mxCell>
-        <mxCell id="p5-m1" value="M31.0-M31.1&#xa;&#xa;文档和美术门槛&#xa;• PRD / architecture / plan / acceptance / milestones / claim / gap / audit&#xa;• drawio ≤ 8 页&#xa;• 当前占位猫失败证据&#xa;• 高质量视觉 rubric&#xa;&#xa;Exit：维护者知道目标体验是什么，知道当前猫为什么失败。" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;align=left;verticalAlign=top;spacing=14;fillColor=#eff6ff;strokeColor=#2563eb;" vertex="1" parent="1"><mxGeometry x="60" y="130" width="330" height="260" as="geometry"/></mxCell>
-        <mxCell id="p5-m2" value="M31.2-M31.3&#xa;&#xa;旗舰资产与视觉报告&#xa;• 高质量 8 动作资产路线&#xa;• license / attribution&#xa;• contact sheets&#xa;• playback / screenshots&#xa;• 1x / 0.75x&#xa;• target-only apply / rollback&#xa;&#xa;Exit：scoped passed，用户能看到可作为目标体验的 named local 旗舰动作猫。" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;align=left;verticalAlign=top;spacing=14;fillColor=#ecfdf5;strokeColor=#10b981;" vertex="1" parent="1"><mxGeometry x="430" y="130" width="330" height="260" as="geometry"/></mxCell>
-        <mxCell id="p5-m3" value="M31.4&#xa;&#xa;可复用生产路线&#xa;• layered rig / Spine-like / Live2D-like 方案&#xa;• 部件：头、身体、四肢、尾巴、耳朵、眼睛&#xa;• 动作曲线 / 关键姿势&#xa;• 导出 normalized frames&#xa;• 接入 V30/V31 QA&#xa;&#xa;Exit：后续资产不用依赖整图变形。" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;align=left;verticalAlign=top;spacing=14;fillColor=#fefce8;strokeColor=#ca8a04;" vertex="1" parent="1"><mxGeometry x="800" y="130" width="330" height="260" as="geometry"/></mxCell>
-        <mxCell id="p5-m4" value="M31.5-M31.6&#xa;&#xa;任意猫照片路线与真实数据&#xa;• real photo sample set&#xa;• consent / privacy&#xa;• traits / character design&#xa;• key pose candidate&#xa;• identity QA&#xa;• visual QA&#xa;• motion QA&#xa;• blocked sample reasonCodes&#xa;&#xa;Exit：只能对真实样本 scoped passed，否则 blocked / failed。" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;align=left;verticalAlign=top;spacing=14;fillColor=#fff7ed;strokeColor=#f97316;" vertex="1" parent="1"><mxGeometry x="1170" y="130" width="330" height="260" as="geometry"/></mxCell>
-        <mxCell id="p5-final" value="M31.7 / M31.13 Final Gates&#xa;&#xa;M31.7 当前结果：partial scoped。旗舰资产通过，照片自动生成仍 not-ready。&#xa;&#xa;M31.8-M31.13 延续里程碑必须汇总：&#xa;• repeatable asset production evidence&#xa;• layered rig runtime evidence / stable blocked reason&#xa;• named real sample set&#xa;• photo action preview / apply / rollback&#xa;• user-visible target experience status&#xa;• claim scan / security scan&#xa;• narrow final claim&#xa;&#xa;不得 silent pass。" style="rounded=1;whiteSpace=wrap;html=1;fontSize=18;fontStyle=1;align=center;verticalAlign=middle;spacing=16;fillColor=#ffffff;strokeColor=#111827;" vertex="1" parent="1"><mxGeometry x="220" y="510" width="1160" height="240" as="geometry"/></mxCell>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p5-title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontStyle=1;fontSize=20;" value="V38 开发及验收计划：每阶段必须有 evidence" vertex="1">
+          <mxGeometry height="65" width="1260" x="70" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="p5-0" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=13;" value="V38.0 文档就绪&#xa;PRD / 架构 / drawio&#xa;claim/security scan&#xa;scoped passed" vertex="1">
+          <mxGeometry height="120" width="210" x="80" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="p5-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=13;" value="V38.1 产品 UX 合同&#xa;照片入口&#xa;候选列表&#xa;preview/apply/rollback&#xa;scoped passed" vertex="1">
+          <mxGeometry height="120" width="220" x="340" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="p5-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=13;" value="V38.2 样本集&#xa;3 tested public cat samples&#xa;负例 / blocked 样本&#xa;scoped passed" vertex="1">
+          <mxGeometry height="120" width="220" x="610" y="145" as="geometry" />
+        </mxCell>
+        <mxCell id="p5-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=13;" value="V38.3 身份资产&#xa;identity anchors&#xa;characterAssetId&#xa;禁止跨样本复用&#xa;scoped passed" vertex="1">
+          <mxGeometry height="120" width="220" x="590" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="p5-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=13;" value="V38.4 动作候选&#xa;8 动作&#xa;非 transform-only&#xa;非内置猫&#xa;scoped passed" vertex="1">
+          <mxGeometry height="125" width="220" x="80" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="p5-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=13;" value="V38.5 产品路径&#xa;preview ready&#xa;target-only apply&#xa;rollback&#xa;scoped passed" vertex="1">
+          <mxGeometry height="125" width="220" x="75" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="p5-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=13;" value="V38.6 视觉报告&#xa;中文 HTML&#xa;HTML 截图证据&#xa;公开照片截图验收" vertex="1">
+          <mxGeometry height="125" width="220" x="650" y="580" as="geometry" />
+        </mxCell>
+        <mxCell id="p5-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=13;" value="V38.7 Final Gate&#xa;public-photo action asset scoped pass&#xa;窄声明 + 扫描&#xa;剩余风险已记录" vertex="1">
+          <mxGeometry height="125" width="250" x="940" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="p5-e1" edge="1" parent="1" source="p5-0" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" target="p5-1" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p5-e2" edge="1" parent="1" source="p5-1" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" target="p5-2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p5-e3" edge="1" parent="1" source="p5-2" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" target="p5-3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p5-e4" edge="1" parent="1" source="p5-3" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" target="p5-4" value="进入实现链">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p5-e5" edge="1" parent="1" source="p5-4" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" target="p5-5" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p5-e6" edge="1" parent="1" source="p5-5" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" target="p5-6" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p5-e7" edge="1" parent="1" source="p5-6" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" target="p5-7" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram id="v31-page-6" name="6 验收门槛与出门条件">
-    <mxGraphModel dx="1680" dy="980" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+  <diagram id="v38-page-6" name="6 用户场景与目标体验">
+    <mxGraphModel dx="1653" dy="842" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
       <root>
-        <mxCell id="0"/>
-        <mxCell id="1" parent="0"/>
-        <mxCell id="p6-title" value="V31 验收门槛与出门条件" style="rounded=0;whiteSpace=wrap;html=1;fontSize=30;fontStyle=1;align=left;verticalAlign=middle;fillColor=none;strokeColor=none;" vertex="1" parent="1"><mxGeometry x="60" y="30" width="760" height="60" as="geometry"/></mxCell>
-        <mxCell id="p6-art" value="高质量旗舰资产 Pass 门槛&#xa;&#xa;• 不是简化线条占位猫&#xa;• 角色有体积感、表情、轮廓和材质细节&#xa;• 8 core actions 全覆盖&#xa;• active actions 不看标签也能识别&#xa;• running / success / error / need_input 有强姿态&#xa;• idle / sleeping 有生命感但不漂移&#xa;• 1x 和 0.75x 可读&#xa;• loop 不闪帧&#xa;• license / attribution 完整&#xa;• HTML/截图/播放证据嵌入" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;align=left;verticalAlign=top;spacing=14;fillColor=#ecfdf5;strokeColor=#10b981;" vertex="1" parent="1"><mxGeometry x="60" y="120" width="460" height="510" as="geometry"/></mxCell>
-        <mxCell id="p6-photo" value="任意猫照片路线 Pass 门槛&#xa;&#xa;必须基于 named real sample set：&#xa;• 清晰猫照片&#xa;• 侧面/局部身体照片&#xa;• 长毛或复杂花纹猫&#xa;• 低质量 blocked 样本&#xa;• 非猫/不安全输入样本&#xa;&#xa;必须证明：&#xa;• consent / privacy boundary&#xa;• traits / character design&#xa;• same-cat identity QA&#xa;• 8 action candidates&#xa;• visual art QA&#xa;• semantic motion QA&#xa;• blocked / failed reasonCodes&#xa;• preview / apply / rollback" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;align=left;verticalAlign=top;spacing=14;fillColor=#eff6ff;strokeColor=#2563eb;" vertex="1" parent="1"><mxGeometry x="570" y="120" width="460" height="510" as="geometry"/></mxCell>
-        <mxCell id="p6-nogo" value="No-Go / 出门失败条件&#xa;&#xa;• 没有真实视觉证据&#xa;• flagship 仍像占位线条猫&#xa;• 只靠文字声称质量达标&#xa;• whole-image transform 被当作最终路线&#xa;• provider 输出绕过本地 QA&#xa;• 任意猫 ready 无真实样本集&#xa;• failed asset 可以 apply&#xa;• rollback 失败&#xa;• claim/security scan 失败&#xa;• final gate 用 silent pass 代替 blocked/failed" style="rounded=1;whiteSpace=wrap;html=1;fontSize=16;align=left;verticalAlign=top;spacing=14;fillColor=#fef2f2;strokeColor=#ef4444;" vertex="1" parent="1"><mxGeometry x="1080" y="120" width="460" height="510" as="geometry"/></mxCell>
-        <mxCell id="p6-claim" value="最终声明已收窄：当前只能说 named local flagship 资产 scoped passed。V31.8-V31.13 完成后也只能声明 repeatable production 或 named sample set 覆盖的 scoped 能力，不能说任意猫自动生成 ready。" style="rounded=1;whiteSpace=wrap;html=1;fontSize=20;fontStyle=1;align=center;verticalAlign=middle;spacing=16;fillColor=#ffffff;strokeColor=#111827;" vertex="1" parent="1"><mxGeometry x="170" y="700" width="1260" height="120" as="geometry"/></mxCell>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p6-title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontStyle=1;fontSize=20;" value="V38 用户场景：审查者能看懂真实能力" vertex="1">
+          <mxGeometry height="65" width="1260" x="70" y="35" as="geometry" />
+        </mxCell>
+        <mxCell id="p6-u1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=14;" value="场景 A：普通体验&#xa;选择照片&#xa;看到身份摘要&#xa;生成候选&#xa;预览 8 动作&#xa;应用到目标猫&#xa;回滚" vertex="1">
+          <mxGeometry height="210" width="310" x="30" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="p6-u2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffedd5;strokeColor=#f97316;fontSize=14;" value="场景 B：失败可解释&#xa;多猫 / 遮挡 / 低可见&#xa;identity drift&#xa;动作缺失&#xa;人审失败&#xa;显示 reasonCodes" vertex="1">
+          <mxGeometry height="210" width="310" x="525" y="630" as="geometry" />
+        </mxCell>
+        <mxCell id="p6-u3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;fontSize=14;" value="场景 C：安全边界&#xa;不显示完整路径&#xa;不保存 raw photo bytes&#xa;不记录 EXIF/GPS&#xa;不泄露 token / prompt / payload" vertex="1">
+          <mxGeometry height="210" width="310" x="1030" y="165" as="geometry" />
+        </mxCell>
+        <mxCell id="p6-result" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontSize=15;" value="最终审查者应能判断&#xa;这是不是照片里的猫&#xa;动作是否自然且可读&#xa;是否只是内置猫复用&#xa;是否能安全应用/回滚&#xa;当前 claim 边界是什么" vertex="1">
+          <mxGeometry height="170" width="520" x="420" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="p6-e1" edge="1" parent="1" source="p6-u1" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#16a34a;" target="p6-result" value="通过体验">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p6-e2" edge="1" parent="1" source="p6-u2" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#f97316;" target="p6-result" value="失败也要可审计">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p6-e3" edge="1" parent="1" source="p6-u3" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#0284c7;" target="p6-result" value="安全前提">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="v38-page-7" name="7 项目里程碑与风险闭环">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p7-title" value="V38 里程碑与风险闭环" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontStyle=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="70" y="35" width="1260" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="p7-base" value="输入基线&#xa;V36 partial scoped&#xa;Route A2 continue&#xa;Route B blocked" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="90" y="165" width="220" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="p7-m1" value="M1 文档就绪&#xa;V38 PRD / 架构 / drawio&#xa;验收计划 / claim matrix&#xa;scoped passed" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="380" y="165" width="240" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="p7-m2" value="M2 产品链路合同&#xa;照片入口&#xa;候选预览&#xa;应用/回滚" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef9c3;strokeColor=#ca8a04;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="690" y="165" width="240" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="p7-m3" value="M3 生成链路合同&#xa;样本/身份/角色资产&#xa;8 动作候选&#xa;质量门禁" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef9c3;strokeColor=#ca8a04;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="165" width="250" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="p7-risk" value="高风险必须闭环&#xa;R1 仍只显示内置猫&#xa;R2 样本身份漂移&#xa;R3 Route A2 动作僵硬&#xa;R4 Route B 无真实资产&#xa;R5 人审失败&#xa;R6 敏感信息泄露" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;fontStyle=1;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="255" y="455" width="330" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="p7-exit" value="M4 Final Gate&#xa;public-photo action asset scoped pass&#xa;V38 partial scoped&#xa;V38 blocked scoped&#xa;V38 failed&#xa;raw public-photo 风险后续关闭" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="760" y="480" width="320" height="145" as="geometry" />
+        </mxCell>
+        <mxCell id="p7-e1" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" edge="1" parent="1" source="p7-base" target="p7-m1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p7-e2" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" edge="1" parent="1" source="p7-m1" target="p7-m2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p7-e3" value="" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" edge="1" parent="1" source="p7-m2" target="p7-m3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p7-e4" value="风险扫描" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#dc2626;" edge="1" parent="1" source="p7-m3" target="p7-risk">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p7-e5" value="闭环后出门" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#7c3aed;" edge="1" parent="1" source="p7-risk" target="p7-exit">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="v38-page-8" name="8 验收门槛与出门条件">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p8-title" value="V38 验收门槛与出门条件" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontStyle=1;fontSize=20;" vertex="1" parent="1">
+          <mxGeometry x="70" y="35" width="1260" height="65" as="geometry" />
+        </mxCell>
+        <mxCell id="p8-user" value="用户体验门槛&#xa;2+ tested named photos&#xa;每张照片有该猫身份摘要&#xa;每张通过样本有 8 动作预览&#xa;可应用到目标猫并回滚" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="90" y="155" width="340" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="p8-tech" value="技术验收门槛&#xa;sampleId / characterAssetId 绑定&#xa;非 transform-only&#xa;非占位图&#xa;非内置猫复用&#xa;failed blocked" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2fe;strokeColor=#0284c7;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="520" y="155" width="330" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="p8-evidence" value="证据门槛&#xa;PRD/spec review&#xa;命令结果或稳定 blocked reason&#xa;截图/HTML visual evidence&#xa;人审表&#xa;claim/security scan" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="940" y="155" width="330" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="p8-pass" value="允许出门结论&#xa;tested public photo samples photo-to-action public-photo action asset scoped pass&#xa;V38 partial scoped&#xa;V38 blocked scoped&#xa;V38 failed&#xa;Route B required before target-experience pass" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef9c3;strokeColor=#ca8a04;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="180" y="500" width="430" height="175" as="geometry" />
+        </mxCell>
+        <mxCell id="p8-forbid" value="出门阻塞 / 禁止声明&#xa;任意猫 ready&#xa;provider verified&#xa;Route B 无资产却通过&#xa;人审失败可应用&#xa;敏感信息泄露&#xa;仍只展示内置猫" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;fontStyle=1;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="760" y="495" width="400" height="185" as="geometry" />
+        </mxCell>
+        <mxCell id="p8-e1" value="共同满足" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" edge="1" parent="1" source="p8-user" target="p8-pass">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p8-e2" value="共同满足" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" edge="1" parent="1" source="p8-tech" target="p8-pass">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p8-e3" value="共同满足" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;" edge="1" parent="1" source="p8-evidence" target="p8-pass">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="p8-e4" value="claim/security scan 拦截" style="edgeStyle=orthogonalEdgeStyle;html=1;endArrow=block;strokeColor=#dc2626;" edge="1" parent="1" source="p8-forbid" target="p8-pass">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>

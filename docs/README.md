@@ -22,6 +22,10 @@ docs/
   V4.x/        OS-level Codex window/session binding feasibility planning
   V5.x/        Cat Renderer & Asset System：3D 化、动作资产和高级猫咪体验规划
   V30.x/       Semantic 2D action quality scoped passed evidence and claim boundary
+  V34.x/       Photo-to-character-to-actions generation core scoped evidence and claim boundary
+  V35.x/       Target-experience 2D action asset quality route assessment scoped baseline
+  V36.x/       Risk closure and target-experience hardening planning and execution specs
+  V37.x/       Tested photo-to-action asset product path planning and acceptance specs
 ```
 
 ## 推荐阅读路径
@@ -37,27 +41,28 @@ docs/
 开发者：
 
 1. `TRANSFER_HANDOFF_2026-06-22.md`：当前接手边界和禁止声明。
-2. `active/current-vs-target-gap.md`：当前实现、V30 scoped pass、Post-V30 active line。
+2. `active/current-vs-target-gap.md`：当前实现、V37 planned line、V36/V35/V34/V33 scoped baseline、V32/V31/V30/Post-V30 输入基线。
 3. `active/development-plan.md`：当前开发计划和阶段边界。
 4. `active/acceptance-plan.md`：当前验收门禁和证据路径。
-5. `active/agent_desktop_pet_prd_post_v30.md`：当前阶段 PRD。
-6. `active/architecture-remediation-plan.md`：Post-V30 架构整改计划。
-7. `V30.x/post-v30-target-architecture.md`：当前阶段目标架构。
-8. `V30.x/post-v30-acceptance-plan.md`：当前阶段验收计划。
-9. `V30.x/post-v30-milestones.md`：当前阶段项目里程碑。
-10. `V30.x/post-v30-detailed-development-and-acceptance-plan.md`：当前阶段详细开发及验收总控计划。
-11. `active/post-v30-runtime-smoke-spec.md`：Post-V30.1 runtime desktop smoke 执行规格。
-12. `active/post-v30-managed-codex-smoke-spec.md`：Post-V30.2 managed Codex workflow smoke 执行规格。
-13. `active/post-v30-frontend-architecture-slices.md`：Post-V30.3 frontend architecture slice 执行前规格。
-14. `active/post-v30-tauri-bridge-architecture-slices.md`：Post-V30.4 Tauri / HTTP bridge slice 执行前规格。
-15. `active/post-v30-evidence-and-scan-checklist.md`：Post-V30 evidence、PRD/spec review、claim/security scan 清单。
-16. `V30.x/v30-final-acceptance-report.md`：V30 scoped passed 的最终依据。
-17. `V30.x/evidence/v30-wsl-baseline-recovery-2026-06-23.md`：WSL baseline recovery evidence。
-18. `V30.x/evidence/post-v30-doc-coverage-review-2026-06-23.md`：Post-V30 文档覆盖评估 evidence。
-19. `V30.x/evidence/post-v30-drawio-human-review-sync-2026-06-23.md`：Post-V30 drawio 人工审核同步 evidence。
-20. `V30.x/evidence/post-v30-detailed-plan-review-2026-06-23.md`：Post-V30 详细计划评估 evidence。
-21. `blueprint/03-pet-event-protocol.md`：PetEvent 协议边界。
-22. `reference/agent-integration-guide.md` 和 `reference/petctl-recipes.md`：agent 接入与命令 cookbook。
+5. `active/agent_desktop_pet_prd_v37.md`：当前阶段 PRD，目标是 tested named photo samples 的照片到 2D 动作资产产品路径。
+6. `V37.x/v37-target-architecture.md`：当前阶段目标架构。
+7. `V37.x/v37-development-and-acceptance-plan.md`：当前阶段详细开发及验收总控计划。
+8. `V37.x/v37-acceptance-plan.md`：当前阶段验收计划。
+9. `V37.x/v37-milestones.md`：当前阶段项目里程碑。
+10. `V37.x/v37-implementation-contract.md`：当前阶段实现契约。
+11. `V37.x/v37-engineering-implementation-blueprint.md`：当前阶段工程实现蓝图，定义后续代码实体、UI anchor、样本矩阵、脚本和 No-Go 条件。
+12. `V37.x/v37-current-gap-analysis.md`：当前阶段差距分析。
+13. `V37.x/v37-claim-matrix.md`：当前阶段声明边界。
+14. `V37.x/v37-evidence-and-scan-checklist.md`：当前阶段证据、PRD/spec review、claim/security scan 清单。
+15. `V37.x/v37-doc-audit.md`：当前阶段文档审计结论。
+16. `active/agent_desktop_pet_prd_v36.md` 与 `V36.x/`：V36 risk closure 输入基线，最终结论为 partial scoped。
+17. `V35.x/v35-final-route-decision-report.md`：V35 scoped route assessment 输入基线。
+18. `V35.x/v35_1-target-experience-rubric-spec.md` 到 `V35.x/v35_6-final-route-decision-spec.md`：V35 输入基线逐子阶段执行规格。
+19. `active/agent_desktop_pet_prd_v33.md` 与 `V33.x/`：V33 scoped baseline，不代表完整照片生成能力。
+20. `active/agent_desktop_pet_prd_post_v30.md`：Post-V30 已通过工程基线 PRD。
+21. `V30.x/v30-final-acceptance-report.md`：V30 scoped passed 的最终依据。
+22. `blueprint/03-pet-event-protocol.md`：PetEvent 协议边界。
+23. `reference/agent-integration-guide.md` 和 `reference/petctl-recipes.md`：agent 接入与命令 cookbook。
 
 维护者 / 审计者：
 
@@ -67,19 +72,20 @@ docs/
 4. `V30.x/v30-claim-matrix.md`：V30 允许声明和禁止扩展。
 5. `V30.x/evidence/`：V30 evidence。
 6. `active/post-v30-evidence-and-scan-checklist.md`：Post-V30 审计清单。
-7. `V3.0/v3_0-final-acceptance-report.md`：V3.0 ready 的最终依据。
-8. `V3.0/v3_0-claim-matrix.md`：允许声明和禁止扩展。
-9. `V3.0/v3_0-evidence-index.md`：证据索引。
-10. `V3.1/v3_1-final-manual-acceptance-checklist.md`：V3.1 最终人工验收逐项检查表。
-11. `V3.1/evidence/`：V3.1 各阶段 evidence。
-12. `V3.2/v3_2-claim-matrix.md`：V3.2 集成声明边界。
-13. `V3.2/evidence/`：V3.2 MCP / Claude hook / third-party contract evidence。
-14. `V3.7/v3_7-final-acceptance-report.md`：V3.7 JSONL monitor scoped passed 的最终依据。
-15. `V3.x/v3_x-evidence-index.md`：V3.x final evidence 索引。
-16. `V3.x/v3_x-claim-matrix.md`：V3.x final claim 边界。
-17. `V3.x/v3_x-final-acceptance-report.md`：V3.x final consolidation 收口报告。
-18. `V4.x/v4_x-claim-matrix.md`：V4.x OS-level binding 规划声明边界。
-19. `V5.x/v5_x-claim-matrix.md`：V5.x renderer / asset 规划声明边界。
+7. `V30.x/evidence/post-v30-external-advice-reconciliation-2026-06-25.md`：Post-V30 外部建议时序核查。
+8. `V3.0/v3_0-final-acceptance-report.md`：V3.0 ready 的最终依据。
+9. `V3.0/v3_0-claim-matrix.md`：允许声明和禁止扩展。
+10. `V3.0/v3_0-evidence-index.md`：证据索引。
+11. `V3.1/v3_1-final-manual-acceptance-checklist.md`：V3.1 最终人工验收逐项检查表。
+12. `V3.1/evidence/`：V3.1 各阶段 evidence。
+13. `V3.2/v3_2-claim-matrix.md`：V3.2 集成声明边界。
+14. `V3.2/evidence/`：V3.2 MCP / Claude hook / third-party contract evidence。
+15. `V3.7/v3_7-final-acceptance-report.md`：V3.7 JSONL monitor scoped passed 的最终依据。
+16. `V3.x/v3_x-evidence-index.md`：V3.x final evidence 索引。
+17. `V3.x/v3_x-claim-matrix.md`：V3.x final claim 边界。
+18. `V3.x/v3_x-final-acceptance-report.md`：V3.x final consolidation 收口报告。
+19. `V4.x/v4_x-claim-matrix.md`：V4.x OS-level binding 规划声明边界。
+20. `V5.x/v5_x-claim-matrix.md`：V5.x renderer / asset 规划声明边界。
 
 历史阶段文档（`V1.0/`、`V2.0/`、`V2.1/`、`V2.2/`）主要用于审计和追溯。普通用户不需要阅读这些目录才能使用桌宠。
 
@@ -90,7 +96,11 @@ docs/
 - `development-plan.md`：当前主线开发计划。
 - `acceptance-plan.md`：当前主线验收计划。
 - `current-vs-target-gap.md`：当前实现、目标状态和差距矩阵。
-- `agent_desktop_pet_prd_post_v30.md`：Post-V30 当前阶段 PRD。
+- `agent_desktop_pet_prd_v37.md`：V37 当前计划阶段 PRD，目标是 tested named photo samples 的照片到动作资产产品路径。
+- `agent_desktop_pet_prd_v36.md`：V36 输入基线 PRD，最终结论为 partial scoped。
+- `agent_desktop_pet_prd_post_v30.md`：Post-V30 已通过工程基线 PRD。
+- `agent_desktop_pet_prd_v35.md`：V35 scoped baseline PRD，目标是 target-experience 2D action asset route assessment。
+- `agent_desktop_pet_prd_v34.md`：V34 输入基线 PRD，目标是 photo-to-character-to-actions generation core。
 - `architecture-remediation-plan.md`：Post-V30 架构整改计划。
 - `post-v30-runtime-smoke-spec.md`：Post-V30.1 runtime desktop smoke 执行规格。
 - `post-v30-managed-codex-smoke-spec.md`：Post-V30.2 managed Codex workflow smoke 执行规格。
@@ -179,6 +189,7 @@ docs/
 - `V4.x/`：已打开 Codex 活动窗口 / OS-level session binding 的 feasibility planning。V4.x 当前不代表 `OS-level Codex window binding ready`，只能声明 planned for feasibility review。
 - `V5.x/`：Cat Renderer & Asset System 规划；承接高质量 2D、GLTF/Three.js 3D、动作资产、renderer plugin 和后续自定义资产包导入。V5.x 当前不代表 `Rive / Live2D / 3D ready`。
 - `V30.x/`：Semantic Character Animation Quality Track；当前 scoped passed，证明 tested local action packs 可以拒绝 transform-only 弱动作并接受语义动作候选。V30.x 不代表 Petdex parity、任意猫自动生成动作资产 ready、provider integration verified、3D ready、production release ready、Windows ready 或 cross-platform ready。
+- `V37.x/`：Tested Photo-to-Action Asset Product Path；当前为文档计划阶段，定义真实猫照片到该猫 8 动作资产候选的产品路径、架构、里程碑、验收门槛和声明边界。V37.x 文档本身不代表任意猫自动生成高质量动作资产 ready，也不代表 runtime/photo-to-action evidence 已通过。
 
 维护规则：
 

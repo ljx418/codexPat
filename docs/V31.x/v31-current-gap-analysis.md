@@ -1,6 +1,6 @@
 # V31 Current Gap Analysis
 
-文档状态：gap analysis；V31 partial scoped execution recorded；V31 continuation planning active。
+文档状态：gap analysis；V31 partial scoped execution recorded；V31 continuation execution blocked scoped；V33 is the current active planned PRD。
 当前日期：2026-06-24。
 
 ## Core Gap

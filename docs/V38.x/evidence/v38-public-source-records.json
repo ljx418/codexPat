@@ -1,0 +1,97 @@
+[
+  {
+    "sampleId": "v38_orange_tabby_public",
+    "displayName": "Orange Tabby Cat",
+    "sampleClass": "passing_cat",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Orange_Tabby_Cat.jpg",
+    "commonsTitle": "File:Orange Tabby Cat.jpg",
+    "licenseShortName": "CC BY-SA 3.0",
+    "attribution": "Orange Tabby Cat",
+    "artist": "Gnissah",
+    "sourceReady": true,
+    "originalHashRef": "docs/V38.x/evidence/assets/v38_orange_tabby_public/original-sha256.txt",
+    "originalStoredInRepo": false,
+    "status": "accepted_for_sanitization",
+    "reasonCodes": [
+      "public_cat_source_ready"
+    ],
+    "metadataStatus": "metadata_ready",
+    "downloadStatus": "downloaded"
+  },
+  {
+    "sampleId": "v38_tuxedo_public",
+    "displayName": "Tuxedo Cat Black And White",
+    "sampleClass": "passing_cat",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:TUXEDO_CAT_BLACK_AND_WHITE.jpg",
+    "commonsTitle": "File:TUXEDO CAT BLACK AND WHITE.jpg",
+    "licenseShortName": "CC BY-SA 4.0",
+    "attribution": "TUXEDO CAT BLACK AND WHITE",
+    "artist": "Nancy Wong",
+    "sourceReady": true,
+    "originalHashRef": "docs/V38.x/evidence/assets/v38_tuxedo_public/original-sha256.txt",
+    "originalStoredInRepo": false,
+    "status": "accepted_for_sanitization",
+    "reasonCodes": [
+      "public_cat_source_ready"
+    ],
+    "metadataStatus": "metadata_ready",
+    "downloadStatus": "downloaded"
+  },
+  {
+    "sampleId": "v38_a_cat_public",
+    "displayName": "A-Cat",
+    "sampleClass": "passing_cat",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:A-Cat.jpg",
+    "commonsTitle": "File:A-Cat.jpg",
+    "licenseShortName": "CC BY-SA 3.0",
+    "attribution": "A-Cat",
+    "artist": "Florinux",
+    "sourceReady": true,
+    "originalHashRef": "docs/V38.x/evidence/assets/v38_a_cat_public/original-sha256.txt",
+    "originalStoredInRepo": false,
+    "status": "accepted_for_sanitization",
+    "reasonCodes": [
+      "public_cat_source_ready"
+    ],
+    "metadataStatus": "metadata_ready",
+    "downloadStatus": "downloaded"
+  },
+  {
+    "sampleId": "v38_negative_dog_public",
+    "displayName": "Negative Dog Public Sample",
+    "sampleClass": "negative_non_cat",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:My_dog.jpg",
+    "commonsTitle": "File:My dog.jpg",
+    "licenseShortName": "CC BY-SA 3.0",
+    "attribution": "My dog",
+    "artist": "Sp..andreea",
+    "sourceReady": true,
+    "originalHashRef": "docs/V38.x/evidence/assets/v38_negative_dog_public/original-sha256.txt",
+    "originalStoredInRepo": false,
+    "status": "rejected_non_cat_negative",
+    "reasonCodes": [
+      "negative_non_cat_sample_rejected"
+    ],
+    "metadataStatus": "metadata_ready",
+    "downloadStatus": "downloaded"
+  },
+  {
+    "sampleId": "v38_multi_cat_public",
+    "displayName": "Multi Cat Public Blocked Sample",
+    "sampleClass": "blocked_multi_cat",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Collage_of_Six_Cats-02.jpg",
+    "commonsTitle": "File:Collage of Six Cats-02.jpg",
+    "licenseShortName": "CC BY-SA 3.0",
+    "attribution": "Collage of Six Cats-02",
+    "artist": "Derivative work: howcheng {chat}",
+    "sourceReady": true,
+    "originalHashRef": "docs/V38.x/evidence/assets/v38_multi_cat_public/original-sha256.txt",
+    "originalStoredInRepo": false,
+    "status": "blocked_multi_cat_identity_ambiguity",
+    "reasonCodes": [
+      "multi_cat_identity_ambiguous"
+    ],
+    "metadataStatus": "metadata_ready",
+    "downloadStatus": "downloaded"
+  }
+]

@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="420" viewBox="0 0 900 420">
+  <rect width="900" height="420" fill="#f7fafc"/>
+  <text x="24" y="30" font-family="Arial" font-size="18" font-weight="700" fill="#172033">V35 Route A2 uplift contact sheet</text>
+  <text x="24" y="50" font-family="Arial" font-size="12" fill="#475569">v34_clear_calico_v34_character_asset_v35_route_a2_uplift_pack</text>
+  <g>
+    <rect x="24" y="64" width="180" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <ellipse cx="116" cy="132" rx="48" ry="30" fill="#f7d6a8" stroke="#334155" stroke-width="2"/>
+    <circle cx="96" cy="106" r="24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <path d="M78 88 l10 -22 l12 24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <path d="M106 88 l12 -22 l10 24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <text x="87" y="110" font-family="Arial" font-size="15" fill="#111827">o</text>
+    <text x="103" y="110" font-family="Arial" font-size="15" fill="#111827">o</text>
+    <path d="M82 120 q14 10 30 0" stroke="#111827" stroke-width="2" fill="none"/>
+    <path d="M150 124 q34 -17 30 -48" stroke="#9a3412" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <path d="M86 156 q8 18 22 22" stroke="#334155" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M128 156 q-8 18 20 22" stroke="#334155" stroke-width="6" stroke-linecap="round" fill="none"/>
+
+    <text x="36" y="180" font-family="Arial" font-size="13" fill="#172033">idle  motion 62</text>
+  </g><g>
+    <rect x="234" y="64" width="180" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <ellipse cx="326" cy="132" rx="48" ry="30" fill="#f7d6a8" stroke="#334155" stroke-width="2"/>
+    <circle cx="306" cy="106" r="24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <path d="M288 88 l10 -22 l12 24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <path d="M316 88 l12 -22 l10 24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <text x="297" y="110" font-family="Arial" font-size="15" fill="#111827">o</text>
+    <text x="313" y="110" font-family="Arial" font-size="15" fill="#111827">o</text>
+    <path d="M292 120 q14 10 30 0" stroke="#111827" stroke-width="2" fill="none"/>
+    <path d="M360 124 q34 -24 30 -48" stroke="#9a3412" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <path d="M296 156 q-8 18 22 22" stroke="#334155" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M338 156 q8 18 20 22" stroke="#334155" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M264 176 h112" stroke="#94a3b8" stroke-width="3" stroke-dasharray="8 5"/>
+    <text x="246" y="180" font-family="Arial" font-size="13" fill="#172033">walk  motion 86</text>
+  </g><g>
+    <rect x="444" y="64" width="180" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <ellipse cx="536" cy="132" rx="48" ry="30" fill="#f7d6a8" stroke="#334155" stroke-width="2"/>
+    <circle cx="516" cy="106" r="24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <path d="M498 88 l10 -22 l12 24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <path d="M526 88 l12 -22 l10 24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <text x="507" y="110" font-family="Arial" font-size="15" fill="#111827">o</text>
+    <text x="523" y="110" font-family="Arial" font-size="15" fill="#111827">o</text>
+    <path d="M502 120 q14 10 30 0" stroke="#111827" stroke-width="2" fill="none"/>
+    <path d="M570 124 q34 -25 30 -48" stroke="#9a3412" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <path d="M506 156 q8 18 22 22" stroke="#334155" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M548 156 q-8 18 20 22" stroke="#334155" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M480 160 q54 -64 112 -8" stroke="#38bdf8" stroke-width="3" fill="none" stroke-dasharray="6 4"/>
+    <text x="456" y="180" font-family="Arial" font-size="13" fill="#172033">jump  motion 88</text>
+  </g><g>
+    <rect x="654" y="64" width="180" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <ellipse cx="746" cy="132" rx="48" ry="30" fill="#f7d6a8" stroke="#334155" stroke-width="2"/>
+    <circle cx="726" cy="106" r="24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <path d="M708 88 l10 -22 l12 24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <path d="M736 88 l12 -22 l10 24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <text x="717" y="110" font-family="Arial" font-size="15" fill="#111827">M</text>
+    <text x="733" y="110" font-family="Arial" font-size="15" fill="#111827">M</text>
+    <path d="M712 120 q14 10 30 0" stroke="#111827" stroke-width="2" fill="none"/>
+    <path d="M780 124 q34 -17 30 -48" stroke="#9a3412" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <path d="M716 156 q-8 18 22 22" stroke="#334155" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M758 156 q8 18 20 22" stroke="#334155" stroke-width="6" stroke-linecap="round" fill="none"/>
+
+    <text x="666" y="180" font-family="Arial" font-size="13" fill="#172033">sleep  motion 62</text>
+  </g><g>
+    <rect x="24" y="224" width="180" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <ellipse cx="116" cy="292" rx="48" ry="30" fill="#f7d6a8" stroke="#334155" stroke-width="2"/>
+    <circle cx="96" cy="266" r="24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <path d="M78 248 l10 -22 l12 24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <path d="M106 248 l12 -22 l10 24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <text x="87" y="270" font-family="Arial" font-size="15" fill="#111827">o</text>
+    <text x="103" y="270" font-family="Arial" font-size="15" fill="#111827">o</text>
+    <path d="M82 280 q14 10 30 0" stroke="#111827" stroke-width="2" fill="none"/>
+    <path d="M150 284 q34 -22 30 -48" stroke="#9a3412" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <path d="M86 316 q8 18 22 22" stroke="#334155" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M128 316 q-8 18 20 22" stroke="#334155" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <circle cx="162" cy="326" r="12" fill="#facc15" stroke="#92400e"/><path d="M152 326 h20" stroke="#92400e"/>
+    <text x="36" y="340" font-family="Arial" font-size="13" fill="#172033">eat  motion 78</text>
+  </g><g>
+    <rect x="234" y="224" width="180" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <ellipse cx="326" cy="292" rx="48" ry="30" fill="#f7d6a8" stroke="#334155" stroke-width="2"/>
+    <circle cx="306" cy="266" r="24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <path d="M288 248 l10 -22 l12 24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <path d="M316 248 l12 -22 l10 24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <text x="297" y="270" font-family="Arial" font-size="15" fill="#111827">o</text>
+    <text x="313" y="270" font-family="Arial" font-size="15" fill="#111827">o</text>
+    <path d="M292 280 q14 10 30 0" stroke="#111827" stroke-width="2" fill="none"/>
+    <path d="M360 284 q34 -25 30 -48" stroke="#9a3412" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <path d="M296 316 q-8 18 22 22" stroke="#334155" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M338 316 q8 18 20 22" stroke="#334155" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <circle cx="379" cy="254" r="12" fill="#fb7185"/><path d="M379 266 q-20 18 -44 20" stroke="#be123c" fill="none"/>
+    <text x="246" y="340" font-family="Arial" font-size="13" fill="#172033">play  motion 90</text>
+  </g><g>
+    <rect x="444" y="224" width="180" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <ellipse cx="536" cy="292" rx="48" ry="30" fill="#f7d6a8" stroke="#334155" stroke-width="2"/>
+    <circle cx="516" cy="266" r="24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <path d="M498 248 l10 -22 l12 24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <path d="M526 248 l12 -22 l10 24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <text x="507" y="270" font-family="Arial" font-size="15" fill="#111827">o</text>
+    <text x="523" y="270" font-family="Arial" font-size="15" fill="#111827">o</text>
+    <path d="M502 280 q14 10 30 0" stroke="#111827" stroke-width="2" fill="none"/>
+    <path d="M570 284 q34 -22 30 -48" stroke="#9a3412" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <path d="M506 316 q8 18 22 22" stroke="#334155" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M548 316 q-8 18 20 22" stroke="#334155" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M580 244 l10 -12 l10 12" stroke="#dc2626" stroke-width="3" fill="none"/><path d="M594 236 v24" stroke="#dc2626" stroke-width="3"/>
+    <text x="456" y="340" font-family="Arial" font-size="13" fill="#172033">alert  motion 80</text>
+  </g><g>
+    <rect x="654" y="224" width="180" height="128" rx="8" fill="#ffffff" stroke="#cbd5e1"/>
+    <ellipse cx="746" cy="292" rx="48" ry="30" fill="#f7d6a8" stroke="#334155" stroke-width="2"/>
+    <circle cx="726" cy="266" r="24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <path d="M708 248 l10 -22 l12 24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <path d="M736 248 l12 -22 l10 24" fill="#fff7ed" stroke="#334155" stroke-width="2"/>
+    <text x="717" y="270" font-family="Arial" font-size="15" fill="#111827">o</text>
+    <text x="733" y="270" font-family="Arial" font-size="15" fill="#111827">o</text>
+    <path d="M712 280 q14 10 30 0" stroke="#111827" stroke-width="2" fill="none"/>
+    <path d="M780 284 q34 -24 30 -48" stroke="#9a3412" stroke-width="8" stroke-linecap="round" fill="none"/>
+    <path d="M716 316 q-8 18 22 22" stroke="#334155" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M758 316 q8 18 20 22" stroke="#334155" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <path d="M794 250 l8 16 l18 2 l-13 12 l4 18 l-17 -9 l-17 9 l4 -18 l-13 -12 l18 -2z" fill="#f59e0b"/>
+    <text x="666" y="340" font-family="Arial" font-size="13" fill="#172033">celebrate  motion 84</text>
+  </g>
+</svg>

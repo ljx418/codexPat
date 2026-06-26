@@ -26,6 +26,11 @@ Current execution decision:
 Documentation completeness is not acceptance evidence. Runtime, managed
 workflow, slice, and final-gate claims require their own phase evidence.
 
+Temporal note: older 2026-06-23 reviews that mark Post-V30.1 as next or
+Post-V30.5 as No-Go are historical pre-execution records. Current acceptance
+status is governed by the table above and by
+`docs/V30.x/evidence/post-v30-external-advice-reconciliation-2026-06-25.md`.
+
 ## Acceptance Gates
 
 | Phase | Gate | Required Evidence | Status |

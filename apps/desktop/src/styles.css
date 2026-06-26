@@ -17,6 +17,14 @@ body,
   background: transparent;
 }
 
+html.browser-preview-root,
+html.browser-preview-root body,
+html.browser-preview-root #app {
+  background:
+    radial-gradient(circle at 30% 18%, rgba(244, 162, 97, 0.16), transparent 30%),
+    linear-gradient(135deg, #f8fafc 0%, #eef2f7 52%, #f7f0e8 100%);
+}
+
 html.settings-root,
 html.settings-root body,
 html.settings-root #app {
@@ -2174,6 +2182,232 @@ button {
   margin-top: 12px;
 }
 
+.v37-photo-action-panel {
+  border: 1px solid rgba(15, 23, 42, 0.12);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.92);
+  padding: 18px;
+  display: grid;
+  gap: 16px;
+}
+
+.v37-photo-action-panel > header {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.v37-photo-action-panel h3,
+.v37-photo-action-panel h4 {
+  margin: 0;
+}
+
+.v37-photo-action-panel p {
+  margin: 6px 0 0;
+}
+
+.v37-photo-action-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.v37-photo-action-card {
+  border: 1px solid rgba(15, 23, 42, 0.1);
+  border-radius: 8px;
+  background: #fff;
+  padding: 14px;
+  min-width: 0;
+}
+
+.v37-photo-action-card dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.v37-photo-action-card dt {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.v37-photo-action-card dd {
+  margin: 0;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.v37-photo-action-card ul {
+  display: grid;
+  gap: 8px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.v37-photo-action-card li {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  padding: 8px;
+  border-radius: 6px;
+  background: #f8fafc;
+}
+
+.v37-preview-identity {
+  display: grid;
+  gap: 4px;
+  margin: 10px 0;
+  overflow-wrap: anywhere;
+}
+
+.v37-action-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.v37-action-chip {
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  border-radius: 999px;
+  background: #eff6ff;
+  color: #1d4ed8;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.v37-action-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.v38-public-photo-panel {
+  border: 1px solid rgba(13, 148, 136, 0.22);
+  border-radius: 8px;
+  background: #f8fffd;
+  padding: 18px;
+  display: grid;
+  gap: 16px;
+}
+
+.v38-public-photo-panel > header {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.v38-public-photo-panel h3,
+.v38-public-photo-panel h4 {
+  margin: 0;
+}
+
+.v38-public-photo-panel p {
+  margin: 6px 0 0;
+}
+
+.v38-public-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.v38-public-photo-card {
+  border: 1px solid rgba(15, 118, 110, 0.16);
+  border-radius: 8px;
+  background: #ffffff;
+  padding: 14px;
+  min-width: 0;
+}
+
+.v38-public-photo-card dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  margin: 10px 0;
+}
+
+.v38-public-photo-card dt {
+  color: #64748b;
+  font-size: 12px;
+}
+
+.v38-public-photo-card dd {
+  margin: 0;
+  font-weight: 700;
+  overflow-wrap: anywhere;
+}
+
+.v38-public-photo-card ul {
+  display: grid;
+  gap: 8px;
+  margin: 10px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.v38-public-photo-card li {
+  display: grid;
+  gap: 3px;
+  min-width: 0;
+  padding: 8px;
+  border-radius: 6px;
+  background: #f0fdfa;
+  overflow-wrap: anywhere;
+}
+
+.v38-preview-identity {
+  display: grid;
+  gap: 4px;
+  margin: 10px 0;
+  overflow-wrap: anywhere;
+}
+
+.v38-preview-strip {
+  display: grid;
+  grid-template-columns: 72px 1fr 92px;
+  gap: 8px;
+  align-items: stretch;
+  margin: 10px 0;
+}
+
+.v38-preview-strip img {
+  width: 100%;
+  height: 92px;
+  object-fit: cover;
+  border: 1px solid rgba(15, 118, 110, 0.16);
+  border-radius: 8px;
+  background: #f8fafc;
+}
+
+.v38-action-chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.v38-action-chip {
+  border: 1px solid rgba(13, 148, 136, 0.25);
+  border-radius: 999px;
+  background: #ccfbf1;
+  color: #0f766e;
+  padding: 4px 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.v38-action-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
 .photo-2d-mode-card {
   display: grid;
   grid-template-columns: auto 1fr;
@@ -3047,6 +3281,18 @@ button {
     justify-items: start;
   }
 
+  .v38-public-photo-panel > header {
+    display: grid;
+  }
+
+  .v38-public-photo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .v38-preview-strip {
+    grid-template-columns: 1fr;
+  }
+
   .asset-pack-meta-grid {
     grid-template-columns: 1fr;
   }
@@ -3117,7 +3363,8 @@ button {
 
   .photo-2d-intake-grid,
   .photo-2d-generation-grid,
-  .photo-2d-state-grid {
+  .photo-2d-state-grid,
+  .v37-photo-action-grid {
     grid-template-columns: 1fr;
   }
 }

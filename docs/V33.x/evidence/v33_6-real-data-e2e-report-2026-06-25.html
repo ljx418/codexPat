@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>V33 真实数据自动化验收报告</title>
+  <style>
+    body{margin:0;background:#f5f7fb;color:#172033;font-family:"Segoe UI",Arial,sans-serif}
+    main{max-width:1320px;margin:0 auto;padding:28px}
+    header{background:#152033;color:white;border-radius:8px;padding:24px}
+    h1{margin:0 0 10px;font-size:30px;letter-spacing:0} h2{font-size:22px;margin:28px 0 12px;letter-spacing:0}
+    .grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.card{background:white;border:1px solid #d9e0eb;border-radius:8px;padding:14px}
+    img{display:block;max-width:100%;height:auto;border:1px solid #d9e0eb;border-radius:6px;background:white}
+    table{width:100%;border-collapse:collapse;background:white;border:1px solid #d9e0eb;border-radius:8px;overflow:hidden}td,th{border-bottom:1px solid #d9e0eb;padding:10px;text-align:left;vertical-align:top}th{background:#eef2f7}
+    .pass{color:#0f766e;font-weight:800}.fail{color:#b91c1c;font-weight:800}.note{color:#475569}
+    @media(max-width:900px){.grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body><main>
+  <header><h1>V33 真实样本到高质量 2D 动作资产验收</h1><p>本报告展示安全样本记录、身份契约、本地 frameSequence 候选、QA 门禁和预览/应用/回滚闭环。结论只覆盖命名样本与命名本地候选。</p></header>
+  <h2>目标架构与当前实现</h2>
+  <div class="grid">
+    <section class="card"><h3>目标架构</h3><p>单照片样本先通过隐私与适配性检查，再形成身份锚点和角色合同；候选动作资产必须通过语义、美术、帧质量和身份一致性门禁，最后进入产品预览、目标实例应用与回滚。</p></section>
+    <section class="card"><h3>当前实现</h3><p>已实现安全样本记录、身份合同、本地项目自有 frameSequence 候选、V30/V31/V32/V33 QA、预览/应用/回滚。自动分割、自动姿态估计、外部生成服务仍未作为通过能力声明。</p></section>
+  </div>
+  <h2>用户可体验路径证据</h2>
+  <div class="grid">
+    <section class="card"><h3>本地动作帧 contact sheet</h3><img src="../V32.x/evidence/v32_quality-rescue-tabby-v1_contact_sheet_2026-06-24.png" alt="V33 local frameSequence contact sheet"></section>
+    <section class="card"><h3>动作播放预览</h3><img src="../V32.x/evidence/v32_quality-rescue-tabby-v1_animation_preview_2026-06-24.gif" alt="V33 local frameSequence GIF preview"></section>
+    <section class="card"><h3>应用内资产路径截图</h3><img src="../V32.x/evidence/v32-full-prd-audit-e2e-2026-06-25/screenshots/02-assets-gallery-preview.png" alt="Asset manager preview path screenshot"></section>
+    <section class="card"><h3>产品闭环结果</h3><p class="pass">preview: ready / apply: applied / rollback: rolled_back</p><p class="note">失败候选阻塞应用：是</p></section>
+  </div>
+  <h2>样本接入</h2><table><thead><tr><th>Sample</th><th>Class</th><th>Status</th><th>Reason</th></tr></thead><tbody><tr><td>v33_clear_tabby_reference</td><td>clear</td><td>passed</td><td>sample_intake_passed</td></tr><tr><td>v33_difficult_tabby_reviewed</td><td>difficult</td><td>passed</td><td>insufficient_body_visibility</td></tr><tr><td>v33_blocked_no_consent</td><td>blocked</td><td>blocked</td><td>privacy_boundary_failed, sample_blocked</td></tr><tr><td>v33_negative_multi_subject</td><td>negative</td><td>failed</td><td>multi_subject, sample_failed</td></tr></tbody></table>
+  <h2>动作资产 QA</h2><table><thead><tr><th>Action</th><th>Frames</th><th>Motion</th><th>Local Motion</th></tr></thead><tbody><tr><td>idle</td><td>12</td><td>high</td><td>low</td></tr><tr><td>thinking</td><td>12</td><td>high</td><td>medium</td></tr><tr><td>running</td><td>12</td><td>high</td><td>medium</td></tr><tr><td>success</td><td>8</td><td>high</td><td>medium</td></tr><tr><td>warning</td><td>8</td><td>high</td><td>medium</td></tr><tr><td>error</td><td>8</td><td>high</td><td>medium</td></tr><tr><td>need_input</td><td>8</td><td>high</td><td>medium</td></tr><tr><td>sleeping</td><td>12</td><td>high</td><td>low</td></tr></tbody></table>
+  <h2>阶段结论</h2>
+  <table><tbody>
+    <tr><th>Identity gate</th><td>passed</td><td>sample_intake_passed</td></tr>
+    <tr><th>Candidate QA</th><td>passed</td><td>sample_intake_passed</td></tr>
+    <tr><th>Transform-only negative</th><td>failed</td><td>frame_quality_failed, low_art_quality, weak_motion, whole_image_transform</td></tr>
+    <tr><th>Runtime route</th><td>passed</td><td>existing sprite preview contract, bridge unchanged</td></tr>
+    <tr><th>Final scoped status</th><td class="pass">passed scoped</td><td>仅证明本地命名样本记录与命名本地 frameSequence 候选闭环。</td></tr>
+  </tbody></table>
+</main></body></html>

@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>V37 照片到动作资产验收报告</title>
+  <style>
+    body { font-family: system-ui, sans-serif; margin: 32px; color: #0f172a; background: #f8fafc; }
+    main { max-width: 1180px; margin: 0 auto; display: grid; gap: 18px; }
+    section { background: #fff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 18px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border-bottom: 1px solid #e2e8f0; padding: 8px; text-align: left; font-size: 13px; vertical-align: top; }
+    .grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .metric { background: #f1f5f9; border-radius: 8px; padding: 12px; }
+  </style>
+</head>
+<body>
+<main>
+  <section>
+    <h1>V37 照片到动作资产验收报告</h1>
+    <p>该报告覆盖 tested named samples scoped path，不声明任意猫自动生成 ready。</p>
+  </section>
+  <section class="grid">
+    <div class="metric"><strong>样本数</strong><br>4</div>
+    <div class="metric"><strong>通过候选</strong><br>2</div>
+    <div class="metric"><strong>Route B</strong><br>blocked_not_executed</div>
+    <div class="metric"><strong>Final</strong><br>tested named samples photo-to-action product-path scoped pass</div>
+  </section>
+  <section>
+    <h2>当前架构与目标架构</h2>
+    <p>当前实现复用 V33-V36 本地安全样本、身份、角色资产、Route A2、质量和人审合同，并新增 V37 产品路径合同。目标架构要求真实 named sample 绑定自己的 sampleId、characterAssetId 和 8 动作候选，再进入 preview/apply/rollback 门禁。</p>
+  </section>
+  <section>
+    <h2>候选路径</h2>
+    <table>
+      <thead><tr><th>sampleId</th><th>candidateId</th><th>route</th><th>semantic</th><th>visual</th><th>human</th><th>product</th></tr></thead>
+      <tbody>
+    <tr>
+      <td>v37_amber_clear_tabby</td>
+      <td>v37_amber_clear_tabby_v34_character_asset_v35_route_a2_uplift_pack</td>
+      <td>route_a2_local_deterministic</td>
+      <td>passed</td>
+      <td>target_experience</td>
+      <td>target_experience</td>
+      <td>preview_apply_rollback_ready</td>
+    </tr>
+
+    <tr>
+      <td>v37_amber_clear_tabby</td>
+      <td>v37_amber_clear_tabby_route_b_blocked</td>
+      <td>route_b_professional_assisted</td>
+      <td>blocked</td>
+      <td>blocked</td>
+      <td>blocked</td>
+      <td>not_attempted</td>
+    </tr>
+
+    <tr>
+      <td>v37_misty_distinct_tuxedo</td>
+      <td>v37_misty_distinct_tuxedo_v34_character_asset_v35_route_a2_uplift_pack</td>
+      <td>route_a2_local_deterministic</td>
+      <td>passed</td>
+      <td>target_experience</td>
+      <td>target_experience</td>
+      <td>preview_apply_rollback_ready</td>
+    </tr>
+
+    <tr>
+      <td>v37_misty_distinct_tuxedo</td>
+      <td>v37_misty_distinct_tuxedo_route_b_blocked</td>
+      <td>route_b_professional_assisted</td>
+      <td>blocked</td>
+      <td>blocked</td>
+      <td>blocked</td>
+      <td>not_attempted</td>
+    </tr>
+  </tbody>
+    </table>
+  </section>
+</main>
+</body>
+</html>

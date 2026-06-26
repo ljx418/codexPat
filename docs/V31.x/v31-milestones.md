@@ -1,6 +1,6 @@
 # V31 Milestones
 
-文档状态：milestones；V31 partial scoped execution recorded；V31 continuation planning active。
+文档状态：milestones；V31 partial scoped execution recorded；V31 continuation execution blocked scoped；V33 is the current active planned PRD。
 当前日期：2026-06-24。
 
 | Milestone | Phase | Exit Signal |

@@ -1,6 +1,6 @@
 # Agent Desktop Pet PRD V32 - Quality Rescue 2D Action Assets
 
-文档状态：active scoped PRD；V32 quality rescue passed scoped on 2026-06-24。
+文档状态：input scoped PRD；V32 quality rescue passed scoped on 2026-06-24；V37 is the current active planned documentation line。
 
 ## 目标用户体验
 

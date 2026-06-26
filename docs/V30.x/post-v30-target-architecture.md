@@ -17,6 +17,14 @@ V30 claim boundary
   -> Future scoped implementation slices only after new evidence
 ```
 
+## Temporal Status Note
+
+2026-06-23 planning reviews that treated Post-V30.1 as next and Post-V30.5 as
+No-Go were correct at that time. They are now historical evidence. The current
+Post-V30 architecture status is `passed scoped` through Post-V30.5, and future
+work must start from a new active PRD or slice plan. See
+`docs/V30.x/evidence/post-v30-external-advice-reconciliation-2026-06-25.md`.
+
 ## Current Architecture
 
 ```text

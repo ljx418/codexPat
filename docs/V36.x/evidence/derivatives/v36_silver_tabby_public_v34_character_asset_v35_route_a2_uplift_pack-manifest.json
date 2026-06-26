@@ -1,0 +1,30 @@
+{
+  "candidateId": "v36_silver_tabby_public_v34_character_asset_v35_route_a2_uplift_pack",
+  "sampleId": "v36_silver_tabby_public",
+  "characterAssetId": "v36_silver_tabby_public_v34_character_asset",
+  "status": "target_experience",
+  "targetActions": [
+    "idle",
+    "walk",
+    "jump",
+    "sleep",
+    "eat",
+    "play",
+    "alert",
+    "celebrate"
+  ],
+  "frameCountByAction": {
+    "idle": 12,
+    "walk": 12,
+    "jump": 8,
+    "sleep": 12,
+    "eat": 8,
+    "play": 12,
+    "alert": 8,
+    "celebrate": 8
+  },
+  "templateSimilarityScore": 0.69,
+  "identityDifferentiationScore": 0.88,
+  "localMotionCeiling": 0.787,
+  "scopedBoundary": "tested named/public metadata samples only"
+}

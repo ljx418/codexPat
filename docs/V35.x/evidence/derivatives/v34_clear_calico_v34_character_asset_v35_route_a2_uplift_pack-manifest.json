@@ -1,0 +1,51 @@
+{
+  "candidateId": "v34_clear_calico_v34_character_asset_v35_route_a2_uplift_pack",
+  "characterAssetId": "v34_clear_calico_v34_character_asset",
+  "rendererKind": "frameSequence",
+  "targetActions": [
+    "idle",
+    "walk",
+    "jump",
+    "sleep",
+    "eat",
+    "play",
+    "alert",
+    "celebrate"
+  ],
+  "runtimeProjectionActions": [
+    "idle",
+    "thinking",
+    "running",
+    "success",
+    "warning",
+    "error",
+    "need_input",
+    "sleeping"
+  ],
+  "frameCountByAction": {
+    "idle": 12,
+    "walk": 12,
+    "jump": 8,
+    "sleep": 12,
+    "eat": 8,
+    "play": 12,
+    "alert": 8,
+    "celebrate": 8
+  },
+  "localMotionEvidence": [
+    "idle:layered_part_motion:tail_ears_face_legs_symbol",
+    "walk:layered_part_motion:tail_ears_face_legs_symbol",
+    "jump:layered_part_motion:tail_ears_face_legs_symbol",
+    "sleep:layered_part_motion:tail_ears_face_legs_symbol",
+    "eat:layered_part_motion:tail_ears_face_legs_symbol",
+    "play:layered_part_motion:tail_ears_face_legs_symbol",
+    "alert:layered_part_motion:tail_ears_face_legs_symbol",
+    "celebrate:layered_part_motion:tail_ears_face_legs_symbol"
+  ],
+  "visualEvidenceRefs": [
+    "docs/V35.x/evidence/derivatives/v34_clear_calico_v34_character_asset_v35_route_a2_uplift_pack-contact-sheet.svg",
+    "docs/V35.x/evidence/derivatives/v34_clear_calico_v34_character_asset_v35_route_a2_uplift_pack-playback-summary.html"
+  ],
+  "semanticEquivalenceClaimed": false,
+  "scopedBoundary": "named samples only"
+}

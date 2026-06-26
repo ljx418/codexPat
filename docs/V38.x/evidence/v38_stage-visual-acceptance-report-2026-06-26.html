@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>V38 阶段性可视化验收报告</title>
+  <style>
+    body { margin: 0; font-family: system-ui, "Microsoft YaHei", sans-serif; color: #0f172a; background: #eef6f3; }
+    main { max-width: 1240px; margin: 0 auto; padding: 32px; display: grid; gap: 18px; }
+    section { background: #fff; border: 1px solid #d6e3df; border-radius: 8px; padding: 18px; }
+    h1, h2, h3 { margin: 0 0 8px; }
+    p { color: #475569; line-height: 1.6; }
+    .metrics { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+    .metric { background: #ecfdf5; border: 1px solid #bbf7d0; border-radius: 8px; padding: 14px; }
+    .metric strong { display: block; margin-top: 6px; font-size: 24px; color: #0f766e; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+    figure { margin: 0; border: 1px solid #e2e8f0; border-radius: 8px; overflow: hidden; background: #f8fafc; }
+    img { display: block; width: 100%; height: auto; }
+    figcaption { padding: 9px; font-size: 13px; color: #475569; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border-bottom: 1px solid #e2e8f0; padding: 9px; text-align: left; vertical-align: top; font-size: 13px; }
+    .warn { background: #fff7ed; border-color: #fed7aa; }
+    .fail { background: #fef2f2; border-color: #fecaca; }
+    code { background: #f1f5f9; padding: 2px 5px; border-radius: 4px; }
+    @media (max-width: 860px) {
+      main { padding: 16px; }
+      .metrics, .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <section>
+    <h1>V38 阶段性可视化验收报告</h1>
+    <p>本报告基于 V38 PRD、目标架构、代码实现、阶段证据和自动化截图。结论只覆盖 tested public photo samples，不扩展到任意猫自动生成或生产发布。</p>
+  </section>
+
+  <section class="metrics">
+    <div class="metric">公开来源<strong>5</strong></div>
+    <div class="metric">通过猫图<strong>3</strong></div>
+    <div class="metric">动作帧包<strong>3</strong></div>
+    <div class="metric">阶段结论<strong>scoped pass</strong></div>
+  </section>
+
+  <section>
+    <h2>目标架构与当前实现</h2>
+    <table>
+      <thead><tr><th>层级</th><th>目标设计</th><th>当前实现</th><th>审计结论</th></tr></thead>
+      <tbody>
+        <tr><td>来源层</td><td>公开授权样本，含负例和 blocked 样本</td><td>Wikimedia public source manifest，3 cat + dog negative + multi-cat blocked</td><td>通过</td></tr>
+        <tr><td>像素层</td><td>原图不入仓，保存去元数据派生图</td><td>512x512 sanitized PNG + hash evidence</td><td>通过</td></tr>
+        <tr><td>动作层</td><td>每只猫生成 8 动作、多帧、非 transform-only</td><td>8 actions x 4 frames，contact sheet，GIF preview</td><td>通过 scoped</td></tr>
+        <tr><td>产品层</td><td>设置页展示来源、像素、动作、apply/rollback、blocked reason</td><td>V38 UI anchors 已通过合同检查；headless settings screenshot 白屏</td><td>合同通过，截图风险保留</td></tr>
+        <tr><td>证据层</td><td>中文 HTML、截图、claim/security scan</td><td>V38 report screenshot 和阶段审计报告</td><td>通过</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>用户场景体验路径</h2>
+    <p>验收者可以从公开猫图样本开始，检查派生图、动作帧联系表和 GIF 预览，确认本阶段确实不再只展示旧的简单线条猫。该路径展示的是样本绑定本地生成结果，不是任意猫自动高质量生成。</p>
+    <figure>
+      <img src="v38_6-public-photo-review-report-2026-06-26.png" alt="V38 自动化验收报告截图" />
+      <figcaption>自动化截图：公开猫图、去元数据派生图、contact sheet、GIF 预览和 scoped 结论。</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>三组公开猫图动作证据</h2>
+    <div class="grid">
+      <figure>
+        <img src="assets/v38_orange_tabby_public/sanitized.png" alt="Orange Tabby 去元数据派生图" />
+        <figcaption>Orange Tabby：去元数据派生图</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/v38_orange_tabby_public/contact-sheet.png" alt="Orange Tabby 动作帧联系表" />
+        <figcaption>Orange Tabby：8 动作 x 4 帧 contact sheet</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/v38_orange_tabby_public/animated-preview.gif" alt="Orange Tabby GIF 预览" />
+        <figcaption>Orange Tabby：GIF 预览</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/v38_tuxedo_public/sanitized.png" alt="Tuxedo Cat 去元数据派生图" />
+        <figcaption>Tuxedo Cat：去元数据派生图</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/v38_tuxedo_public/contact-sheet.png" alt="Tuxedo Cat 动作帧联系表" />
+        <figcaption>Tuxedo Cat：8 动作 x 4 帧 contact sheet</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/v38_tuxedo_public/animated-preview.gif" alt="Tuxedo Cat GIF 预览" />
+        <figcaption>Tuxedo Cat：GIF 预览</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/v38_a_cat_public/sanitized.png" alt="A-Cat 去元数据派生图" />
+        <figcaption>A-Cat：去元数据派生图</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/v38_a_cat_public/contact-sheet.png" alt="A-Cat 动作帧联系表" />
+        <figcaption>A-Cat：8 动作 x 4 帧 contact sheet</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/v38_a_cat_public/animated-preview.gif" alt="A-Cat GIF 预览" />
+        <figcaption>A-Cat：GIF 预览</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>功能与测试覆盖</h2>
+    <table>
+      <thead><tr><th>验收项</th><th>自动化结果</th><th>说明</th></tr></thead>
+      <tbody>
+        <tr><td>desktop test</td><td>329 tests passed</td><td>包含 V38 public photo action pipeline 单测</td></tr>
+        <tr><td>desktop check/build</td><td>passed</td><td>TypeScript 与 Vite build 通过</td></tr>
+        <tr><td>petctl test</td><td>71 tests passed</td><td>CLI 回归通过</td></tr>
+        <tr><td>V30 semantic gate</td><td>passed</td><td>弱 transform-only 候选仍被拒绝</td></tr>
+        <tr><td>V38.0-V38.7</td><td>passed scoped</td><td>来源、像素、动作、质量、UI 合同、报告、final gate 通过</td></tr>
+        <tr><td>drawio</td><td>8 pages parsed</td><td>V38 页面名称和 XML 可解析</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="fail">
+    <h2>截图风险与不虚假验收</h2>
+    <p>设置页在 Vite browser preview 的 DOM dump 中已经生成内容，但 Windows Chrome/Edge headless screenshot 输出白屏。因此本报告不把 settings screenshot 当作 UI 视觉通过证据，只把 V38.5 UI anchor contract 当作产品 UI 合同证据。</p>
+    <p>白屏截图文件保留为失败证据：<code>v38_stage-settings-desktop-2026-06-26.png</code>、<code>v38_stage-settings-mobile-2026-06-26.png</code>。</p>
+  </section>
+
+  <section class="warn">
+    <h2>禁止扩展声明</h2>
+    <p>本阶段不能声明任意猫照片自动生成高质量动作资产、provider integration verified、production ready、Windows ready、cross-platform ready、3D ready、Petdex parity、MCP ready、Claude integration verified、OS-level Codex binding ready 或 all Codex workflows verified。</p>
+  </section>
+</main>
+</body>
+</html>

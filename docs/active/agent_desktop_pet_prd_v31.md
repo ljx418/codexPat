@@ -1,6 +1,6 @@
 # Agent Desktop Pet PRD V31
 
-文档状态：active PRD；V31 partial scoped execution recorded；V31 continuation planning active；V30/Post-V30 scoped baselines are inputs.
+文档状态：input PRD；V31 partial scoped execution recorded；V31 continuation execution blocked scoped；V37 is the current active planned documentation line；V30/Post-V30 scoped baselines are inputs.
 阶段主题：High-quality 2D Action Assets and Arbitrary-cat Photo-to-Action Pipeline.
 当前日期：2026-06-24。
 

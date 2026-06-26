@@ -6,7 +6,7 @@ date: 2026-06-24
 ## Summary
 
 - PRD/spec review: V31 PRD, target architecture, detailed plan, acceptance plan, phase specs, and active drawio are present.
-- Drawio page count: 6.
+- Drawio page count: 8.
 - Missing docs: none.
 - Claim scan: passed. Security scan: passed.
 - Audit opinion: no fatal or major spec deviation before starting V31.1.

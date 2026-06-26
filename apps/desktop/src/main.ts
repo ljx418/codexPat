@@ -48,6 +48,16 @@ import {
   type Photo2DWizardSafeActionSheetInput,
   type Photo2DWizardSafePhotoInput
 } from "./assets/photo-to-2d-wizard";
+import {
+  buildV37PhotoToActionEvidenceSnapshot,
+  createV37PhotoToActionProductPath,
+  decideV37FinalPhotoToAction
+} from "./assets/v37-photo-to-action-product-path";
+import {
+  buildV38PublicPhotoActionEvidenceSnapshot,
+  createV38BundledPublicPhotoActionPipeline,
+  createV38PublicPhotoActionPipeline
+} from "./assets/v38-public-photo-action-pipeline";
 import { providerFeasibilityStatus } from "./assets/provider-consent-boundary";
 import { PREMIUM_CAT_PACKS, getPremiumCatPack, isPremiumCatPackId } from "./assets/bundled-packs/premium-cats-v1";
 import {
@@ -83,6 +93,7 @@ import {
   getPetPosition,
   getSettings,
   importPersonalizedAssetPack,
+  isTauriRuntime,
   listCatProfiles,
   listPersonalizedAssetPacks,
   listPetInstances,
@@ -153,7 +164,9 @@ if (!app) {
 }
 
 const appRoot = app;
-const currentWindow = getCurrentWindow();
+const currentWindow = isTauriRuntime()
+  ? getCurrentWindow()
+  : { label: new URLSearchParams(window.location.search).get("window") === "settings" ? "settings" : "main" };
 const windowLabel = currentWindow.label;
 let photo2DWizardSelectedPhoto: Photo2DWizardSafePhotoInput | null = null;
 let photo2DWizardPreviewUrl: string | null = null;
@@ -487,7 +500,9 @@ async function renderPet(settings: AppSettings) {
         microInteractions.startDragging();
         renderRuntimeAction(latestSnapshot);
       }
-      await currentWindow.startDragging();
+      if (isTauriRuntime() && "startDragging" in currentWindow) {
+        await currentWindow.startDragging();
+      }
     } finally {
       window.setTimeout(() => {
         shell?.classList.remove("pet-dragging");
@@ -579,6 +594,8 @@ async function renderSettings(settings: AppSettings) {
   const activeAssetCount = assetPacks.filter((pack) => pack.activeInstances.length > 0).length;
   const interactionSettings = readInteractionSettings();
   const photo2DWizard = createPhoto2DWizardModel();
+  const v37ProductPath = createV37PhotoToActionProductPath();
+  const v38PublicPhotoPipeline = createV38BundledPublicPhotoActionPipeline();
 
   appRoot.innerHTML = `
     <main class="settings-panel">
@@ -767,6 +784,8 @@ async function renderSettings(settings: AppSettings) {
       </section>
 
       <h2 class="settings-group-title" id="section-personalization">个性化生成</h2>
+      ${v37PhotoToActionPanel(v37ProductPath)}
+      ${v38PublicPhotoActionPanel(v38PublicPhotoPipeline)}
       ${photo2DWizardPanel(photo2DWizard)}
       ${photo2DWizardModal(photo2DWizard)}
       <section class="settings-section api-debug-section">
@@ -1809,6 +1828,7 @@ async function renderSettings(settings: AppSettings) {
 }
 
 async function boot() {
+  document.documentElement.classList.toggle("browser-preview-root", !isTauriRuntime());
   const settings = await getSettings();
   if (isSettingsWindow()) {
     await renderSettings(settings);
@@ -2794,6 +2814,172 @@ function animatedSpritePromptOutput(workflow: AnimatedSpritePromptWorkflow) {
         </section>
       </div>
     </article>
+  `;
+}
+
+function v38PublicPhotoActionPanel(pipeline: ReturnType<typeof createV38PublicPhotoActionPipeline>) {
+  const snapshot = buildV38PublicPhotoActionEvidenceSnapshot(pipeline);
+  const passingSources = snapshot.sourceManifest.sources.filter((source) => source.sampleClass === "passing_cat");
+  const nonPassingSources = snapshot.sourceManifest.sources.filter((source) => source.sampleClass !== "passing_cat");
+  const firstPack = snapshot.renderablePacks[0];
+  const firstAsset = firstPack ? snapshot.sanitizedAssets.find((asset) => asset.sampleId === firstPack.sampleId) : undefined;
+  return `
+    <section class="v38-public-photo-panel" id="v38-public-photo-action-entry" data-v38-status="${escapeHtml(snapshot.status)}">
+      <header>
+        <div>
+          <h3>V38 公开猫图到动作帧资产</h3>
+          <p>目标是用已授权公开照片样本生成可检查的像素资产、动作帧包和产品证据；当前声明范围仅限 tested public photo samples。</p>
+        </div>
+        <span class="instance-badge">${escapeHtml(snapshot.status)}</span>
+      </header>
+      <div class="v38-public-photo-grid">
+        <article id="v38-public-source-status" class="v38-public-photo-card" aria-label="V38 公开来源状态">
+          <h4>公开来源</h4>
+          <dl>
+            <div><dt>样本范围</dt><dd>${escapeHtml(snapshot.sourceManifest.sampleScope)}</dd></div>
+            <div><dt>通过猫图</dt><dd>${snapshot.sourceManifest.passingCatCount}</dd></div>
+            <div><dt>负例</dt><dd>${snapshot.sourceManifest.negativeCount}</dd></div>
+            <div><dt>blocked</dt><dd>${snapshot.sourceManifest.blockedCount}</dd></div>
+          </dl>
+          <ul>
+            ${passingSources.map((source) => `
+              <li data-v38-source-id="${escapeHtml(source.sampleId)}">
+                <strong>${escapeHtml(source.displayName)}</strong>
+                <span>${escapeHtml(source.sampleClass)} · ${escapeHtml(source.expectedLicenseFamily)}</span>
+              </li>
+            `).join("")}
+          </ul>
+        </article>
+        <article id="v38-pixel-asset-status" class="v38-public-photo-card" aria-label="V38 像素资产状态">
+          <h4>去元数据像素资产</h4>
+          <dl>
+            <div><dt>已生成</dt><dd>${snapshot.sanitizedAssets.filter((asset) => asset.status === "passed").length}</dd></div>
+            <div><dt>目标</dt><dd>3</dd></div>
+            <div><dt>EXIF 清理</dt><dd>${snapshot.sanitizedAssets.every((asset) => asset.exifStripped) && snapshot.sanitizedAssets.length > 0 ? "passed" : "pending"}</dd></div>
+            <div><dt>像素尺寸</dt><dd>${snapshot.sanitizedAssets[0] ? `${snapshot.sanitizedAssets[0].width}x${snapshot.sanitizedAssets[0].height}` : "pending"}</dd></div>
+          </dl>
+          <ul>
+            ${snapshot.sanitizedAssets.map((asset) => `
+              <li data-v38-asset-id="${escapeHtml(asset.sampleId)}">
+                <strong>${escapeHtml(asset.sampleId)}</strong>
+                <span>${escapeHtml(asset.averageColor)} · ${escapeHtml(asset.status)}</span>
+              </li>
+            `).join("") || "<li><strong>待生成</strong><span>需要运行 V38.2 像素清理脚本</span></li>"}
+          </ul>
+        </article>
+        <article id="v38-renderable-pack-preview" class="v38-public-photo-card v38-preview-stage" aria-label="V38 动作帧预览">
+          <h4>动作帧包</h4>
+          ${firstPack ? `
+            <div class="v38-preview-identity">
+              <strong>${escapeHtml(firstPack.sampleId)}</strong>
+              <span>${escapeHtml(firstPack.localMotionModel)}</span>
+            </div>
+            <div class="v38-preview-strip" aria-label="V38 公开猫图动作帧证据缩略图">
+              ${firstAsset ? `<img src="${escapeHtml(firstAsset.sanitizedImageRef)}" alt="V38 去元数据猫图" loading="lazy" />` : ""}
+              <img src="${escapeHtml(firstPack.contactSheetRef)}" alt="V38 动作帧 contact sheet" loading="lazy" />
+              <img src="${escapeHtml(firstPack.animatedPreviewRef)}" alt="V38 动作帧 GIF 预览" loading="lazy" />
+            </div>
+            <div class="v38-action-chip-row">
+              ${firstPack.actionCoverage.map((actionId) => `<span class="v38-action-chip">${escapeHtml(actionId)}</span>`).join("")}
+            </div>
+          ` : `
+            <p>待生成 contact sheet 和 animated preview；不能用 transform-only 弱动作冒充通过。</p>
+          `}
+        </article>
+        <article id="v38-product-apply-rollback" class="v38-public-photo-card" aria-label="V38 产品应用和回滚">
+          <h4>产品出门门槛</h4>
+          <dl>
+            <div><dt>UI anchors</dt><dd>${snapshot.productUiAnchors.length}</dd></div>
+            <div><dt>可渲染包</dt><dd>${snapshot.renderablePacks.filter((pack) => pack.status === "renderable").length}</dd></div>
+            <div><dt>负例策略</dt><dd>${nonPassingSources.length}</dd></div>
+            <div><dt>最终状态</dt><dd>${escapeHtml(snapshot.status)}</dd></div>
+          </dl>
+          <div class="v38-action-controls">
+            <button class="primary-action" type="button" disabled>应用 V38 候选</button>
+            <button class="secondary-action" type="button" disabled>回滚 V38 候选</button>
+          </div>
+          <p id="v38-blocked-reason" class="asset-import-feedback">
+            ${escapeHtml(snapshot.reasonCodes.join(" / "))}
+          </p>
+        </article>
+      </div>
+    </section>
+  `;
+}
+
+function v37PhotoToActionPanel(path: ReturnType<typeof createV37PhotoToActionProductPath>) {
+  const snapshot = buildV37PhotoToActionEvidenceSnapshot(path);
+  const final = decideV37FinalPhotoToAction(path);
+  const routeA2Candidates = snapshot.actionCandidates.filter((candidate) => candidate.routeId === "route_a2_local_deterministic");
+  const blockedCandidates = snapshot.actionCandidates.filter((candidate) => candidate.semanticStatus !== "passed");
+  const firstCandidate = routeA2Candidates[0];
+  return `
+    <section class="v37-photo-action-panel" id="v37-photo-action-entry" data-v37-status="${escapeHtml(path.status)}" data-v37-final-decision="${escapeHtml(final.decision)}">
+      <header>
+        <div>
+          <h3>V37 照片到动作资产路径</h3>
+          <p>本地 scoped evidence：tested named samples 进入样本、身份、动作候选、人审和产品路径门禁；不代表任意猫自动生成 ready。</p>
+        </div>
+        <span class="instance-badge">${escapeHtml(final.decision)}</span>
+      </header>
+      <div class="v37-photo-action-grid">
+        <article id="v37-sample-status" class="v37-photo-action-card" aria-label="V37 样本状态">
+          <h4>样本状态</h4>
+          <dl>
+            <div><dt>样本范围</dt><dd>${escapeHtml(snapshot.sampleSet.sampleScope)}</dd></div>
+            <div><dt>通过样本</dt><dd>${snapshot.sampleSet.passedCount}</dd></div>
+            <div><dt>负例拒绝</dt><dd>${snapshot.sampleSet.negativeRejectedCount}</dd></div>
+            <div><dt>blocked</dt><dd>${snapshot.sampleSet.blockedCount}</dd></div>
+          </dl>
+          <ul>
+            ${snapshot.sampleSet.records.map((record) => `
+              <li data-v37-sample-id="${escapeHtml(record.sampleId)}">
+                <strong>${escapeHtml(record.displayName)}</strong>
+                <span>${escapeHtml(record.intakeStatus)} / ${escapeHtml(record.difficultyClass)}</span>
+              </li>
+            `).join("")}
+          </ul>
+        </article>
+        <article id="v37-action-candidate-list" class="v37-photo-action-card" aria-label="V37 动作候选">
+          <h4>动作候选</h4>
+          <ul>
+            ${snapshot.actionCandidates.map((candidate) => `
+              <li data-v37-candidate-id="${escapeHtml(candidate.candidateId)}" data-v37-route-id="${escapeHtml(candidate.routeId)}" data-v37-candidate-status="${escapeHtml(candidate.semanticStatus)}">
+                <strong>${escapeHtml(candidate.sampleId)}</strong>
+                <span>${escapeHtml(candidate.routeId)} / ${escapeHtml(candidate.visualStatus)} / ${candidate.actionCoverage.length} actions</span>
+              </li>
+            `).join("")}
+          </ul>
+        </article>
+        <article id="v37-action-preview-stage" class="v37-photo-action-card v37-preview-stage" aria-label="V37 动作预览">
+          <h4>候选预览</h4>
+          ${firstCandidate ? `
+            <div class="v37-preview-identity">
+              <strong>${escapeHtml(firstCandidate.sampleId)}</strong>
+              <span>${escapeHtml(firstCandidate.characterAssetId)}</span>
+            </div>
+            <div class="v37-action-chip-row">
+              ${firstCandidate.actionCoverage.map((actionId) => `<span class="v37-action-chip">${escapeHtml(actionId)}</span>`).join("")}
+            </div>
+          ` : "<p>没有可预览候选。</p>"}
+        </article>
+        <article class="v37-photo-action-card" aria-label="V37 应用和回滚">
+          <h4>应用 / 回滚</h4>
+          <dl>
+            <div><dt>preview</dt><dd>${String(snapshot.productGate.previewReady)}</dd></div>
+            <div><dt>target-only apply</dt><dd>${String(snapshot.productGate.targetOnlyApplyPassed)}</dd></div>
+            <div><dt>rollback</dt><dd>${String(snapshot.productGate.rollbackPassed)}</dd></div>
+          </dl>
+          <div class="v37-action-controls">
+            <button class="primary-action" type="button" data-v37-apply-candidate="${escapeHtml(firstCandidate?.candidateId ?? "")}" ${firstCandidate ? "" : "disabled"}>应用候选</button>
+            <button class="secondary-action" id="v37-rollback-candidate" type="button">回滚候选</button>
+          </div>
+          <p id="v37-blocked-candidate-reason" class="asset-import-feedback">
+            ${blockedCandidates.length > 0 ? escapeHtml(blockedCandidates.map((candidate) => `${candidate.candidateId}: ${candidate.reasonCodes.join(", ")}`).join(" / ")) : "无 blocked candidate。"}
+          </p>
+        </article>
+      </div>
+    </section>
   `;
 }
 
