@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>V39 角色化 2D 动作资产验收报告</title>
+  <style>
+    :root { color-scheme: light; font-family: Arial, "Microsoft YaHei", sans-serif; color: #1f2933; background: #f6f7f9; }
+    body { margin: 0; padding: 32px; }
+    main { max-width: 1180px; margin: 0 auto; }
+    h1, h2, h3 { margin: 0 0 10px; }
+    .hero, .section, .sample { background: #fff; border: 1px solid #d9e0e8; border-radius: 8px; padding: 20px; margin-bottom: 18px; }
+    .hero p, .section p { max-width: 860px; line-height: 1.6; }
+    .grid, .media-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+    figure { margin: 0; border: 1px solid #d9e0e8; border-radius: 8px; padding: 10px; background: #fbfcfd; }
+    img { width: 100%; max-height: 260px; object-fit: contain; display: block; }
+    figcaption { margin-top: 8px; font-size: 13px; color: #56616f; }
+    dl { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 8px; }
+    dt { font-size: 12px; color: #64748b; }
+    dd { margin: 2px 0 0; font-weight: 700; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; border-bottom: 1px solid #e1e7ef; padding: 8px; }
+    code { background: #edf2f7; padding: 2px 5px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <h1>V39 角色化 2D 动作资产验收报告</h1>
+      <p>本报告只覆盖 tested public-photo samples 的 Route A2++ 本地角色化、分层 rig 和动作帧证据。它不证明任意猫自动生成、provider、Route B、生产发布、Windows、跨平台或 Petdex parity。</p>
+      <dl>
+        <div><dt>Final decision</dt><dd>passed scoped</dd></div>
+        <div><dt>通过样本</dt><dd>3</dd></div>
+        <div><dt>负例/blocked</dt><dd>2</dd></div>
+        <div><dt>产品路径</dt><dd>passed</dd></div>
+      </dl>
+    </section>
+    <section class="section">
+      <h2>当前架构与目标架构实现</h2>
+      <p>当前 V38 已有公开猫图、脱敏像素和可渲染动作帧包；V39 在其上新增角色化资产合同、分层部件 rig、A2++ 动作帧生成、目标体验 rubric、人类偏好门槛、产品预览/应用/回滚合同和 Route B 诚实记录。</p>
+      <table>
+        <thead><tr><th>层级</th><th>实现状态</th><th>证据</th></tr></thead>
+        <tbody>
+          <tr><td>来源/脱敏</td><td>复用 V38 scoped public-photo derived assets</td><td><code>v38_7-final-gate</code></td></tr>
+          <tr><td>角色化资产</td><td>V39 contract passed for tested samples</td><td><code>character.svg</code></td></tr>
+          <tr><td>分层 rig</td><td>head/body/ears/paws/tail/eyes-expression</td><td><code>v39-pipeline-summary.json</code></td></tr>
+          <tr><td>动作资产</td><td>8 actions, 8+ frames/action</td><td><code>contact-sheet.svg</code></td></tr>
+          <tr><td>产品路径</td><td>approved candidates preview/apply/rollback contract</td><td><code>productGate</code></td></tr>
+        </tbody>
+      </table>
+    </section>
+    <section class="section">
+      <h2>用户场景体验路径</h2>
+      <p>用户看到的目标路径是：公开猫图样本进入脱敏来源 -> 生成同猫身份的角色化 2D 资产 -> 查看 8 个动作帧表和预览 -> 只允许通过候选应用到目标猫 -> 可以回滚；失败候选和 Route B 缺失不会被写成通过。</p>
+    </section>
+    <section class="grid">
+      
+      <article class="sample">
+        <header>
+          <h3>v38_orange_tabby_public</h3>
+          <p>target_experience / target_experience</p>
+        </header>
+        <div class="media-row">
+          <figure><img src="/v38/v38_orange_tabby_public/sanitized.png" alt="V38 sanitized source" /><figcaption>V38 脱敏来源</figcaption></figure>
+          <figure><img src="/v39/v38_orange_tabby_public/character.svg" alt="V39 character" /><figcaption>V39 角色化资产</figcaption></figure>
+          <figure><img src="/v39/v38_orange_tabby_public/contact-sheet.svg" alt="V39 contact sheet" /><figcaption>8 动作帧表</figcaption></figure>
+          <figure><img src="/v39/v38_orange_tabby_public/animated-preview.svg" alt="V39 animated preview" /><figcaption>SVG 动作预览</figcaption></figure>
+        </div>
+        <dl>
+          <div><dt>动作数</dt><dd>8</dd></div>
+          <div><dt>最低帧数</dt><dd>8</dd></div>
+          <div><dt>平均局部动作</dt><dd>0.82</dd></div>
+          <div><dt>Route B</dt><dd>blocked_not_supplied</dd></div>
+        </dl>
+      </article>
+    
+
+      <article class="sample">
+        <header>
+          <h3>v38_tuxedo_public</h3>
+          <p>target_experience / target_experience</p>
+        </header>
+        <div class="media-row">
+          <figure><img src="/v38/v38_tuxedo_public/sanitized.png" alt="V38 sanitized source" /><figcaption>V38 脱敏来源</figcaption></figure>
+          <figure><img src="/v39/v38_tuxedo_public/character.svg" alt="V39 character" /><figcaption>V39 角色化资产</figcaption></figure>
+          <figure><img src="/v39/v38_tuxedo_public/contact-sheet.svg" alt="V39 contact sheet" /><figcaption>8 动作帧表</figcaption></figure>
+          <figure><img src="/v39/v38_tuxedo_public/animated-preview.svg" alt="V39 animated preview" /><figcaption>SVG 动作预览</figcaption></figure>
+        </div>
+        <dl>
+          <div><dt>动作数</dt><dd>8</dd></div>
+          <div><dt>最低帧数</dt><dd>8</dd></div>
+          <div><dt>平均局部动作</dt><dd>0.82</dd></div>
+          <div><dt>Route B</dt><dd>blocked_not_supplied</dd></div>
+        </dl>
+      </article>
+    
+
+      <article class="sample">
+        <header>
+          <h3>v38_a_cat_public</h3>
+          <p>target_experience / target_experience</p>
+        </header>
+        <div class="media-row">
+          <figure><img src="/v38/v38_a_cat_public/sanitized.png" alt="V38 sanitized source" /><figcaption>V38 脱敏来源</figcaption></figure>
+          <figure><img src="/v39/v38_a_cat_public/character.svg" alt="V39 character" /><figcaption>V39 角色化资产</figcaption></figure>
+          <figure><img src="/v39/v38_a_cat_public/contact-sheet.svg" alt="V39 contact sheet" /><figcaption>8 动作帧表</figcaption></figure>
+          <figure><img src="/v39/v38_a_cat_public/animated-preview.svg" alt="V39 animated preview" /><figcaption>SVG 动作预览</figcaption></figure>
+        </div>
+        <dl>
+          <div><dt>动作数</dt><dd>8</dd></div>
+          <div><dt>最低帧数</dt><dd>8</dd></div>
+          <div><dt>平均局部动作</dt><dd>0.82</dd></div>
+          <div><dt>Route B</dt><dd>blocked_not_supplied</dd></div>
+        </dl>
+      </article>
+    
+    </section>
+    <section class="section">
+      <h2>失败与风险</h2>
+      <ul>
+        <li>V38 风格照片卡片、标签点、边框动作和整体 transform-only 在 V39.1 被拒绝。</li>
+        <li>Route B 当前没有真实同样本 source-bound 资产，因此只记录为 blocked_not_supplied。</li>
+        <li>最终 scoped pass 仍保留视觉品味风险，不扩大为任意猫自动生成能力。</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

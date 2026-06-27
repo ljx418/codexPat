@@ -1,0 +1,104 @@
+{
+  "candidateId": "v38_tuxedo_public_v39_character_a2pp_pack",
+  "sampleId": "v38_tuxedo_public",
+  "characterAssetId": "v38_tuxedo_public_v39_character",
+  "rendererKind": "frameSequence",
+  "routeId": "route_a2_plus_plus_local_character_rig",
+  "actions": [
+    {
+      "actionId": "idle",
+      "frameCount": 12,
+      "fps": 10,
+      "movingParts": [
+        "body",
+        "head",
+        "leftEar",
+        "rightEar",
+        "tail",
+        "eyesExpression"
+      ]
+    },
+    {
+      "actionId": "walk",
+      "frameCount": 12,
+      "fps": 12,
+      "movingParts": [
+        "body",
+        "frontPaws",
+        "backPaws",
+        "tail"
+      ]
+    },
+    {
+      "actionId": "jump",
+      "frameCount": 8,
+      "fps": 10,
+      "movingParts": [
+        "body",
+        "head",
+        "frontPaws",
+        "backPaws"
+      ]
+    },
+    {
+      "actionId": "sleep",
+      "frameCount": 12,
+      "fps": 10,
+      "movingParts": [
+        "body",
+        "eyesExpression"
+      ]
+    },
+    {
+      "actionId": "eat",
+      "frameCount": 8,
+      "fps": 10,
+      "movingParts": [
+        "body",
+        "head",
+        "frontPaws"
+      ]
+    },
+    {
+      "actionId": "play",
+      "frameCount": 12,
+      "fps": 12,
+      "movingParts": [
+        "body",
+        "head",
+        "leftEar",
+        "rightEar",
+        "frontPaws",
+        "backPaws",
+        "tail",
+        "eyesExpression"
+      ]
+    },
+    {
+      "actionId": "alert",
+      "frameCount": 8,
+      "fps": 10,
+      "movingParts": [
+        "body",
+        "head",
+        "leftEar",
+        "rightEar",
+        "tail",
+        "eyesExpression"
+      ]
+    },
+    {
+      "actionId": "celebrate",
+      "frameCount": 8,
+      "fps": 10,
+      "movingParts": [
+        "body",
+        "head",
+        "leftEar",
+        "rightEar",
+        "tail",
+        "eyesExpression"
+      ]
+    }
+  ]
+}

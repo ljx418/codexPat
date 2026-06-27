@@ -58,6 +58,11 @@ import {
   createV38BundledPublicPhotoActionPipeline,
   createV38PublicPhotoActionPipeline
 } from "./assets/v38-public-photo-action-pipeline";
+import {
+  buildV39EvidenceSnapshot,
+  buildV39Pipeline,
+  decideV39FinalGate
+} from "./assets/v39-characterized-action-assets";
 import { providerFeasibilityStatus } from "./assets/provider-consent-boundary";
 import { PREMIUM_CAT_PACKS, getPremiumCatPack, isPremiumCatPackId } from "./assets/bundled-packs/premium-cats-v1";
 import {
@@ -596,6 +601,7 @@ async function renderSettings(settings: AppSettings) {
   const photo2DWizard = createPhoto2DWizardModel();
   const v37ProductPath = createV37PhotoToActionProductPath();
   const v38PublicPhotoPipeline = createV38BundledPublicPhotoActionPipeline();
+  const v39CharacterizedActionPipeline = buildV39Pipeline();
 
   appRoot.innerHTML = `
     <main class="settings-panel">
@@ -786,6 +792,7 @@ async function renderSettings(settings: AppSettings) {
       <h2 class="settings-group-title" id="section-personalization">个性化生成</h2>
       ${v37PhotoToActionPanel(v37ProductPath)}
       ${v38PublicPhotoActionPanel(v38PublicPhotoPipeline)}
+      ${v39CharacterizedActionPanel(v39CharacterizedActionPipeline)}
       ${photo2DWizardPanel(photo2DWizard)}
       ${photo2DWizardModal(photo2DWizard)}
       <section class="settings-section api-debug-section">
@@ -2900,6 +2907,90 @@ function v38PublicPhotoActionPanel(pipeline: ReturnType<typeof createV38PublicPh
           </div>
           <p id="v38-blocked-reason" class="asset-import-feedback">
             ${escapeHtml(snapshot.reasonCodes.join(" / "))}
+          </p>
+        </article>
+      </div>
+    </section>
+  `;
+}
+
+function v39CharacterizedActionPanel(pipeline: ReturnType<typeof buildV39Pipeline>) {
+  const snapshot = buildV39EvidenceSnapshot(pipeline);
+  const final = decideV39FinalGate(pipeline);
+  const passedContracts = snapshot.characterContracts.filter((contract) => contract.status === "passed");
+  const firstPack = snapshot.actionPacks[0];
+  const firstContract = firstPack ? snapshot.characterContracts.find((contract) => contract.sampleId === firstPack.sampleId) : passedContracts[0];
+  return `
+    <section class="v38-public-photo-panel" id="v39-characterized-action-entry" data-v39-status="${escapeHtml(final.decision)}">
+      <header>
+        <div>
+          <h3>V39 角色化 2D 动作资产</h3>
+          <p>Route A2++ scoped evidence：公开猫图脱敏样本进入角色化资产、分层 rig、8 动作帧表和产品预览/应用/回滚合同；不代表任意猫自动生成 ready。</p>
+        </div>
+        <span class="instance-badge">${escapeHtml(final.decision)}</span>
+      </header>
+      <div class="v38-public-photo-grid">
+        <article id="v39-candidate-list" class="v38-public-photo-card" aria-label="V39 候选列表">
+          <h4>候选与样本</h4>
+          <dl>
+            <div><dt>通过样本</dt><dd>${final.passedSampleCount}</dd></div>
+            <div><dt>负例/blocked</dt><dd>${final.blockedOrNegativeCount}</dd></div>
+            <div><dt>Route B</dt><dd>${escapeHtml(final.routeBStatusSummary)}</dd></div>
+            <div><dt>人审门槛</dt><dd>${escapeHtml(final.humanPreferenceStatus)}</dd></div>
+          </dl>
+          <ul>
+            ${snapshot.rubricAssessments.map((assessment) => `
+              <li data-v39-candidate-id="${escapeHtml(assessment.candidateId)}">
+                <strong>${escapeHtml(assessment.sampleId)}</strong>
+                <span>${escapeHtml(assessment.status)} · localMotion ${assessment.scoreSummary.averageLocalPartMotionScore.toFixed(2)}</span>
+              </li>
+            `).join("")}
+          </ul>
+        </article>
+        <article id="v39-character-preview" class="v38-public-photo-card v38-preview-stage" aria-label="V39 角色预览">
+          <h4>角色化资产</h4>
+          ${firstContract ? `
+            <div class="v38-preview-identity">
+              <strong>${escapeHtml(firstContract.sampleId)}</strong>
+              <span>${escapeHtml(firstContract.identityTraits.map((trait) => trait.value).join(" / "))}</span>
+            </div>
+            <div class="v38-preview-strip" aria-label="V39 角色化资产证据缩略图">
+              ${firstContract.sanitizedImageRef ? `<img src="${escapeHtml(firstContract.sanitizedImageRef)}" alt="V38 脱敏来源图" loading="lazy" />` : ""}
+              <img src="${escapeHtml(firstContract.characterSvgRef)}" alt="V39 角色化猫资产" loading="lazy" />
+              <img src="${escapeHtml(firstContract.cleanedSilhouetteRef)}" alt="V39 清理后轮廓" loading="lazy" />
+            </div>
+          ` : "<p>没有通过的 V39 角色化资产。</p>"}
+        </article>
+        <article id="v39-action-contact-sheet" class="v38-public-photo-card v38-preview-stage" aria-label="V39 动作帧表">
+          <h4>8 动作帧表</h4>
+          ${firstPack ? `
+            <div class="v38-preview-identity">
+              <strong>${escapeHtml(firstPack.candidateId)}</strong>
+              <span>${firstPack.actionSequences.length} actions · min ${Math.min(...firstPack.actionSequences.map((sequence) => sequence.frameCount))} frames</span>
+            </div>
+            <div class="v38-preview-strip">
+              <img src="${escapeHtml(firstPack.contactSheetRef)}" alt="V39 动作 contact sheet" loading="lazy" />
+              <img src="${escapeHtml(firstPack.animatedPreviewRef)}" alt="V39 SVG 动作预览" loading="lazy" />
+            </div>
+            <div class="v38-action-chip-row">
+              ${firstPack.actionSequences.map((sequence) => `<span class="v38-action-chip">${escapeHtml(sequence.actionId)}</span>`).join("")}
+            </div>
+          ` : "<p>没有通过的 V39 动作帧包。</p>"}
+        </article>
+        <article id="v39-product-apply-rollback" class="v38-public-photo-card" aria-label="V39 产品应用和回滚合同">
+          <h4>产品出门门槛</h4>
+          <dl id="v39-approval-status">
+            <div><dt>产品门槛</dt><dd>${escapeHtml(snapshot.productGate.status)}</dd></div>
+            <div><dt>approved</dt><dd>${snapshot.productGate.approvedCandidateCount}</dd></div>
+            <div><dt>apply</dt><dd>${snapshot.productGate.targetOnlyApplyPassed ? "passed" : "blocked"}</dd></div>
+            <div><dt>rollback</dt><dd>${snapshot.productGate.rollbackPassed ? "passed" : "blocked"}</dd></div>
+          </dl>
+          <div class="v38-action-controls">
+            <button class="primary-action" type="button" disabled>应用 V39 候选</button>
+            <button class="secondary-action" type="button" disabled>回滚 V39 候选</button>
+          </div>
+          <p id="v39-blocked-reason" class="asset-import-feedback">
+            ${escapeHtml(snapshot.productGate.reasonCodes.join(" / "))}
           </p>
         </article>
       </div>

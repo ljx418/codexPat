@@ -1,11 +1,55 @@
 # Active Acceptance Plan
 
-文档状态：active acceptance index；V37 tested photo-to-action product-path scoped evidence generated on 2026-06-26；V36 risk closure and target-experience hardening executed with partial scoped final decision on 2026-06-26 and is the input baseline；V35 target-experience route assessment passed scoped for tested named samples only；V34 photo-to-character-to-actions generation core evidence-matched scoped passed through V34.8；V33 scoped local sample-to-frameSequence loop passed but does not prove true photo-generated action assets；V32 quality rescue passed scoped；V31 partial scoped with continuation execution blocked scoped；V30 scoped passed；Post-V30 architecture/runtime remediation gates passed scoped；V29/V23-V28 scoped baselines 是输入基线。
-当前日期：2026-06-26。
+文档状态：active acceptance index；V39.0-V39.8 characterized 2D action asset Route A2++ scoped evidence generated on 2026-06-27；V38 public-photo action asset scoped evidence generated on 2026-06-26 and is the input baseline；V37 tested photo-to-action product-path scoped evidence generated on 2026-06-26；V36 risk closure and target-experience hardening executed with partial scoped final decision on 2026-06-26；V35 target-experience route assessment passed scoped for tested named samples only；V34 photo-to-character-to-actions generation core evidence-matched scoped passed through V34.8；V33 scoped local sample-to-frameSequence loop passed but does not prove true photo-generated action assets；V32 quality rescue passed scoped；V31 partial scoped with continuation execution blocked scoped；V30 scoped passed；Post-V30 architecture/runtime remediation gates passed scoped；V29/V23-V28 scoped baselines 是输入基线。
+当前日期：2026-06-27。
+
+## V39 Characterized 2D Action Asset Acceptance
+
+Current active PRD: `docs/active/agent_desktop_pet_prd_v39.md`.
+
+V39 acceptance proves only whether tested samples can become character-like 2D
+desktop pet action asset candidates through Route A2++ and pass human visual
+preference. It starts from V38 public-photo frame-pack evidence and raises the
+bar from "renderable evidence" to "usable target-experience asset."
+
+| Phase | Gate | Required Evidence | Status |
+| --- | --- | --- | --- |
+| V39.0 | documentation readiness | `docs/V39.x/evidence/v39_0-documentation-readiness-2026-06-27.md`; V39 PRD、目标架构、drawio、计划、验收、claim/security 文档一致 | passed scoped for documentation readiness only |
+| V39.1 | target-experience rubric | `docs/V39.x/evidence/v39_1-target-experience-rubric-2026-06-27.md`; rejects photo-card overlays, visible test labels, decorative dots, weak motion, and transform-only output | passed scoped |
+| V39.2 | characterized asset contract | `docs/V39.x/evidence/v39_2-characterized-asset-contract-2026-06-27.md`; cleaned silhouette, style profile, identity traits, no-card/no-label proof | passed scoped |
+| V39.3 | layered part rig | `docs/V39.x/evidence/v39_3-layered-part-rig-2026-06-27.md`; head/body/ears/paws/tail/eyes-expression responsibilities or visibility-based blocked reason | passed scoped |
+| V39.4 | action frame composer | `docs/V39.x/evidence/v39_4-action-frame-composer-2026-06-27.md`; eight actions with local part motion and pose changes, not border/dot/text overlays | passed scoped |
+| V39.5 | product preview/apply/rollback | `docs/V39.x/evidence/v39_5-product-preview-apply-rollback-2026-06-27.md`; preview, target-only apply, rollback, failed-candidate block, blocked reason | passed scoped |
+| V39.6 | visual report | `docs/V39.x/evidence/v39_6-visual-report-2026-06-27.md`; `docs/V39.x/evidence/v39_6-visual-report-2026-06-27.html`; Chinese HTML with source, character, actions, product UI, and failures | passed scoped |
+| V39.7 | Route B comparison record | `docs/V39.x/evidence/v39_7-route-b-comparison-2026-06-27.md`; Route B same-sample asset not supplied | passed scoped with Route B blocked |
+| V39.8 | final scoped gate | `docs/V39.x/evidence/v39_8-final-gate-2026-06-27.md`; `docs/V39.x/v39-final-acceptance-report.md`; final report, PRD/spec review, command results, claim scan, security scan | passed scoped |
+
+V39 forbidden/not-ready claim: arbitrary-cat automatic animation ready.
+V39 forbidden/not-ready claim: automatic photo-to-2D ready for arbitrary cats.
+V39 forbidden/not-ready claim: provider integration verified.
+V39 forbidden/not-ready claim: Route B verified without real source-bound assets.
+V39 forbidden/not-ready claim: Petdex parity, 3D ready, production release ready, Windows ready, and cross-platform ready.
+
+V39 cannot pass if the output still looks like a V38 photo-card overlay with
+labels, borders, decorative dots, or whole-image transform-only motion.
+V39 scoped pass covers tested public-photo samples only. It remains local
+deterministic SVG/frameSequence evidence and does not prove arbitrary user-photo
+automation, provider integration, Route B execution, production readiness,
+Windows readiness, cross-platform readiness, 3D, or Petdex parity.
+
+## V38 Public-Photo Action Asset Input Baseline
+
+Current input PRD: `docs/active/agent_desktop_pet_prd_v38.md`.
+
+V38 passed scoped for tested public photo samples on 2026-06-26. It proves
+public-source intake, sanitized derived pixels, renderable frame packs, contact
+sheets, GIF previews, product UI anchors, and screenshot-backed evidence. It
+does not prove human-preferred characterized assets or arbitrary-photo
+automation.
 
 ## V37 Tested Photo-to-Action Asset Product Path Acceptance
 
-Current active PRD: `docs/active/agent_desktop_pet_prd_v37.md`.
+Current input PRD: `docs/active/agent_desktop_pet_prd_v37.md`.
 
 V37 acceptance proves only whether tested named photo sample metadata can drive
 the scoped product path for sample-bound 8-action candidates. It starts from
@@ -37,7 +81,7 @@ claim scan, and security scan.
 
 ## V36 Risk Closure and Target-Experience Hardening Acceptance
 
-Current active PRD: `docs/active/agent_desktop_pet_prd_v36.md`.
+Current input PRD: `docs/active/agent_desktop_pet_prd_v36.md`.
 
 V36 acceptance closes the remaining risk after V35: more real visual samples,
 Route A2 ceiling analysis, Route B real professional-assisted source boundary,
@@ -66,7 +110,7 @@ V36 forbidden/not-ready claim: Petdex parity, 3D ready, production release ready
 
 ## V35 Target-Experience 2D Action Asset Quality Acceptance
 
-Current active PRD: `docs/active/agent_desktop_pet_prd_v35.md`.
+Current input PRD: `docs/active/agent_desktop_pet_prd_v35.md`.
 
 V35 execution decision: passed scoped for tested named samples only. Route A2
 target-experience assessment passed scoped; Route B remained blocked/not
@@ -98,7 +142,7 @@ V35 forbidden/not-ready claim: Petdex parity, 3D ready, production release ready
 
 ## V34 Photo-to-Character-to-Actions Generation Core Acceptance
 
-Current active PRD: `docs/active/agent_desktop_pet_prd_v34.md`.
+Current input PRD: `docs/active/agent_desktop_pet_prd_v34.md`.
 
 V34 acceptance proves whether different cat photos can generate their own
 high-quality 2D action assets. It starts from V33 scoped evidence and adds the
@@ -148,7 +192,7 @@ V34 execution checklist:
 
 ## V33 Photo-to-High-Quality 2D Action Asset Acceptance
 
-Current active PRD: `docs/active/agent_desktop_pet_prd_v33.md`.
+Current input PRD: `docs/active/agent_desktop_pet_prd_v33.md`.
 
 V33 acceptance proves only what real named sample evidence proves. It starts
 from V32 scoped pass for named local frameSequence packs and adds the missing

@@ -1,0 +1,1860 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1248 1248" role="img" aria-label="V39 action contact sheet">
+  <rect width="1248" height="1248" fill="#f4f7fa"/>
+  <g transform="translate(0 0)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0) rotate(0 128 152)">
+    <path d="M186 141 C218 124 220 184 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 124 221 184 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 0) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="1.5" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="1.5" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">idle 1</text>
+      </g><g transform="translate(156 0)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 1.081281634911195) rotate(0 128 152)">
+    <path d="M186 141 C218 128.32512653964477 220 179.67487346035523 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 128.32512653964477 221 179.67487346035523 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 0.8109612261833963) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">idle 2</text>
+      </g><g transform="translate(312 0)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 1.8192639907090367) rotate(0 128 152)">
+    <path d="M186 141 C218 131.27705596283616 220 176.72294403716384 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 131.27705596283616 221 176.72294403716384 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 1.3644479930317774) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">idle 3</text>
+      </g><g transform="translate(468 0)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 1.9796428837618656) rotate(0 128 152)">
+    <path d="M186 141 C218 131.91857153504748 220 176.08142846495252 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 131.91857153504748 221 176.08142846495252 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 1.4847321628213992) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">idle 4</text>
+      </g><g transform="translate(624 0)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 1.5114991487085168) rotate(0 128 152)">
+    <path d="M186 141 C218 130.04599659483407 220 177.95400340516593 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 130.04599659483407 221 177.95400340516593 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 1.1336243615313877) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">idle 5</text>
+      </g><g transform="translate(780 0)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0.5634651136828601) rotate(0 128 152)">
+    <path d="M186 141 C218 126.25386045473144 220 181.74613954526856 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 126.25386045473144 221 181.74613954526856 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 0.4225988352621451) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">idle 6</text>
+      </g><g transform="translate(936 0)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -0.5634651136828588) rotate(0 128 152)">
+    <path d="M186 141 C218 121.74613954526856 220 186.25386045473144 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 121.74613954526856 221 186.25386045473144 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -0.4225988352621441) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">idle 7</text>
+      </g><g transform="translate(1092 0)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -1.5114991487085163) rotate(0 128 152)">
+    <path d="M186 141 C218 117.95400340516593 220 190.04599659483407 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 117.95400340516593 221 190.04599659483407 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -1.1336243615313872) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="1.5" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="1.5" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">idle 8</text>
+      </g><g transform="translate(0 156)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0) rotate(0 128 152)">
+    <path d="M186 141 C218 124 220 184 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 124 221 184 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 0) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">walk 1</text>
+      </g><g transform="translate(156 156)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 2.728895986063555) rotate(0 128 152)">
+    <path d="M186 141 C218 131.56897144437838 220 176.43102855562162 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 131.56897144437838 221 176.43102855562162 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(9.096319953545184 -7.277055962836147) rotate(14.554111925672293 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(-9.096319953545184 4.548159976772592) rotate(-14.554111925672293 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(1.081281634911195 0) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">walk 2</text>
+      </g><g transform="translate(312 156)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 2.2672487230627754) rotate(0 128 152)">
+    <path d="M186 141 C218 136.73484793496326 220 171.26515206503674 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 136.73484793496326 221 171.26515206503674 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(7.557495743542583 -6.045996594834067) rotate(12.091993189668134 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(-7.557495743542583 3.7787478717712917) rotate(-12.091993189668134 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(1.8192639907090367 0) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">walk 3</text>
+      </g><g transform="translate(468 156)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -0.8451976705242882) rotate(0 128 152)">
+    <path d="M186 141 C218 137.85750018633306 220 170.14249981366694 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 137.85750018633306 221 170.14249981366694 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(-2.8173255684142937 -2.253860454731435) rotate(-4.50772090946287 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(2.8173255684142937 1.4086627842071469) rotate(4.50772090946287 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(1.9796428837618656 0) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">walk 4</text>
+      </g><g transform="translate(624 156)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -2.969464325642798) rotate(0 128 152)">
+    <path d="M186 141 C218 134.58049404095962 220 173.41950595904038 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 134.58049404095962 221 173.41950595904038 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(-9.898214418809326 -7.9185715350474615) rotate(-15.837143070094923 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(9.898214418809326 4.949107209404663) rotate(15.837143070094923 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(1.5114991487085168 0) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">walk 5</text>
+      </g><g transform="translate(780 156)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -1.6219224523667948) rotate(0 128 152)">
+    <path d="M186 141 C218 127.94425579578002 220 180.05574420422 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 127.94425579578002 221 180.05574420422 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(-5.406408174555982 -4.325126539644786) rotate(-8.650253079289572 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(5.406408174555982 2.703204087277991) rotate(8.650253079289572 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0.5634651136828601 0) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">walk 6</text>
+      </g><g transform="translate(936 156)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 1.6219224523667912) rotate(0 128 152)">
+    <path d="M186 141 C218 120.05574420421999 220 187.94425579578 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 120.05574420421999 221 187.94425579578 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(5.406408174555971 -4.325126539644777) rotate(8.650253079289554 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(-5.406408174555971 2.7032040872779857) rotate(-8.650253079289554 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(-0.5634651136828588 0) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">walk 7</text>
+      </g><g transform="translate(1092 156)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 2.9694643256427984) rotate(0 128 152)">
+    <path d="M186 141 C218 113.41950595904038 220 194.58049404095962 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 113.41950595904038 221 194.58049404095962 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(9.898214418809328 -7.918571535047462) rotate(15.837143070094925 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(-9.898214418809328 4.949107209404664) rotate(-15.837143070094925 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(-1.5114991487085163 0) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">walk 8</text>
+      </g><g transform="translate(0 312)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0) rotate(0 128 152)">
+    <path d="M186 141 C218 124 220 184 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 124 221 184 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 0) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">jump 1</text>
+      </g><g transform="translate(156 312)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="54.190092695883955" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -16.48758208646721) rotate(0 128 152)">
+    <path d="M186 141 C218 118.7933951305893 220 189.2066048694107 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 118.7933951305893 221 189.2066048694107 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 -7.809907304116046) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 -5.206604869410698) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -3.471069912940465) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">jump 2</text>
+      </g><g transform="translate(312 312)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="47.927033315575464" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -29.709596333785132) rotate(0 128 152)">
+    <path d="M186 141 C218 114.61802221038364 220 193.38197778961637 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 114.61802221038364 221 193.38197778961637 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 -14.072966684424536) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 -9.381977789616357) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -6.254651859744238) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">jump 3</text>
+      </g><g transform="translate(468 312)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="44.45129758072717" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -37.047260662909295) rotate(0 128 152)">
+    <path d="M186 141 C218 112.30086505381811 220 195.69913494618189 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 112.30086505381811 221 195.69913494618189 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 -17.548702419272825) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 -11.699134946181884) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -7.799423297454589) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">jump 4</text>
+      </g><g transform="translate(624 312)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="44.45129758072717" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -37.047260662909295) rotate(0 128 152)">
+    <path d="M186 141 C218 112.30086505381811 220 195.69913494618189 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 112.30086505381811 221 195.69913494618189 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 -17.548702419272825) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 -11.699134946181884) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -7.799423297454589) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">jump 5</text>
+      </g><g transform="translate(780 312)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="47.92703331557546" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -29.709596333785136) rotate(0 128 152)">
+    <path d="M186 141 C218 114.61802221038364 220 193.38197778961637 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 114.61802221038364 221 193.38197778961637 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 -14.07296668442454) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 -9.381977789616359) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -6.254651859744239) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">jump 6</text>
+      </g><g transform="translate(936 312)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="54.190092695883955" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -16.487582086467214) rotate(0 128 152)">
+    <path d="M186 141 C218 118.7933951305893 220 189.2066048694107 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 118.7933951305893 221 189.2066048694107 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 -7.809907304116048) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 -5.2066048694106986) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -3.471069912940466) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">jump 7</text>
+      </g><g transform="translate(1092 312)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -4.653657836759942e-15) rotate(0 128 152)">
+    <path d="M186 141 C218 124 220 184 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 124 221 184 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 -2.204364238465236e-15) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 -1.4695761589768238e-15) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -9.797174393178826e-16) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">jump 8</text>
+      </g><g transform="translate(0 468)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="70" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 6) rotate(0 128 152)">
+    <path d="M186 141 C218 116 220 192 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 116 221 192 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 10) rotate(-8 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <path d="M109 89 q7 5 14 0M137 89 q7 5 14 0" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">sleep 1</text>
+      </g><g transform="translate(156 468)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="70" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 6.756897144437836) rotate(0 128 152)">
+    <path d="M186 141 C218 116 220 192 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 116 221 192 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 10) rotate(-8 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <path d="M109 89 q7 5 14 0M137 89 q7 5 14 0" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">sleep 2</text>
+      </g><g transform="translate(312 468)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="70" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 7.273484793496325) rotate(0 128 152)">
+    <path d="M186 141 C218 116 220 192 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 116 221 192 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 10) rotate(-8 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <path d="M109 89 q7 5 14 0M137 89 q7 5 14 0" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">sleep 3</text>
+      </g><g transform="translate(468 468)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="70" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 7.385750018633306) rotate(0 128 152)">
+    <path d="M186 141 C218 116 220 192 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 116 221 192 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 10) rotate(-8 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <path d="M109 89 q7 5 14 0M137 89 q7 5 14 0" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">sleep 4</text>
+      </g><g transform="translate(624 468)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="70" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 7.058049404095962) rotate(0 128 152)">
+    <path d="M186 141 C218 116 220 192 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 116 221 192 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 10) rotate(-8 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <path d="M109 89 q7 5 14 0M137 89 q7 5 14 0" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">sleep 5</text>
+      </g><g transform="translate(780 468)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="70" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 6.394425579578002) rotate(0 128 152)">
+    <path d="M186 141 C218 116 220 192 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 116 221 192 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 10) rotate(-8 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <path d="M109 89 q7 5 14 0M137 89 q7 5 14 0" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">sleep 6</text>
+      </g><g transform="translate(936 468)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="70" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 5.605574420421999) rotate(0 128 152)">
+    <path d="M186 141 C218 116 220 192 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 116 221 192 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 10) rotate(-8 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <path d="M109 89 q7 5 14 0M137 89 q7 5 14 0" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">sleep 7</text>
+      </g><g transform="translate(1092 468)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="70" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 4.941950595904038) rotate(0 128 152)">
+    <path d="M186 141 C218 116 220 192 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 116 221 192 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 10) rotate(-8 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <path d="M109 89 q7 5 14 0M137 89 q7 5 14 0" stroke="#111111" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">sleep 8</text>
+      </g><g transform="translate(0 624)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0) rotate(0 128 152)">
+    <path d="M186 141 C218 124 220 184 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 124 221 184 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 5) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 18) rotate(8 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <ellipse cx="73" cy="207" rx="21" ry="9" fill="#f2eadc" opacity=".85"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">eat 1</text>
+      </g><g transform="translate(156 624)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0) rotate(0 128 152)">
+    <path d="M186 141 C218 124 220 184 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 124 221 184 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 5) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 21.127325929872118) rotate(8 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <ellipse cx="73" cy="207" rx="21" ry="9" fill="#f2eadc" opacity=".85"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">eat 2</text>
+      </g><g transform="translate(312 624)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0) rotate(0 128 152)">
+    <path d="M186 141 C218 124 220 184 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 124 221 184 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 5) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 21.899711648727294) rotate(8 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <ellipse cx="73" cy="207" rx="21" ry="9" fill="#f2eadc" opacity=".85"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">eat 3</text>
+      </g><g transform="translate(468 624)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0) rotate(0 128 152)">
+    <path d="M186 141 C218 124 220 184 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 124 221 184 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 5) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 19.735534956470232) rotate(8 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <ellipse cx="73" cy="207" rx="21" ry="9" fill="#f2eadc" opacity=".85"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">eat 4</text>
+      </g><g transform="translate(624 624)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0) rotate(0 128 152)">
+    <path d="M186 141 C218 124 220 184 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 124 221 184 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 5) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 19.735534956470232) rotate(8 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <ellipse cx="73" cy="207" rx="21" ry="9" fill="#f2eadc" opacity=".85"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">eat 5</text>
+      </g><g transform="translate(780 624)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0) rotate(0 128 152)">
+    <path d="M186 141 C218 124 220 184 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 124 221 184 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 5) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 21.899711648727294) rotate(8 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <ellipse cx="73" cy="207" rx="21" ry="9" fill="#f2eadc" opacity=".85"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">eat 6</text>
+      </g><g transform="translate(936 624)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0) rotate(0 128 152)">
+    <path d="M186 141 C218 124 220 184 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 124 221 184 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 5) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 21.12732592987212) rotate(8 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <ellipse cx="73" cy="207" rx="21" ry="9" fill="#f2eadc" opacity=".85"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">eat 7</text>
+      </g><g transform="translate(1092 624)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0) rotate(0 128 152)">
+    <path d="M186 141 C218 124 220 184 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 124 221 184 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 5) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 18) rotate(8 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <ellipse cx="73" cy="207" rx="21" ry="9" fill="#f2eadc" opacity=".85"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">eat 8</text>
+      </g><g transform="translate(0 780)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0) rotate(0 128 152)">
+    <path d="M186 141 C218 124 220 184 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 124 221 184 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 -12) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 0) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <circle cx="58" cy="171" r="13" fill="#f2eadc" opacity=".85"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">play 1</text>
+      </g><g transform="translate(156 780)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0) rotate(2.703204087277988 128 152)">
+    <path d="M186 141 C218 133.73153471420076 220 174.26846528579924 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 133.73153471420076 221 174.26846528579924 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(8.65025307928956 -16.32512653964478) rotate(12.97537961893434 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(-8.65025307928956 0) rotate(-12.97537961893434 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(2.703204087277988 0) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <circle cx="58" cy="171" r="13" fill="#f2eadc" opacity=".85"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">play 2</text>
+      </g><g transform="translate(312 780)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0) rotate(4.548159976772592 128 152)">
+    <path d="M186 141 C218 140.37337591638132 220 167.62662408361868 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 140.37337591638132 221 167.62662408361868 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(14.554111925672293 -19.277055962836148) rotate(21.83116788850844 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(-14.554111925672293 0) rotate(-21.83116788850844 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(4.548159976772592 0) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <circle cx="58" cy="171" r="13" fill="#f2eadc" opacity=".85"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">play 3</text>
+      </g><g transform="translate(468 780)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0) rotate(4.949107209404664 128 152)">
+    <path d="M186 141 C218 141.8167859538568 220 166.1832140461432 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 141.8167859538568 221 166.1832140461432 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(15.837143070094925 -19.918571535047462) rotate(23.755714605142387 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(-15.837143070094925 0) rotate(-23.755714605142387 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(4.949107209404664 0) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <circle cx="58" cy="171" r="13" fill="#f2eadc" opacity=".85"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">play 4</text>
+      </g><g transform="translate(624 780)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0) rotate(3.7787478717712917 128 152)">
+    <path d="M186 141 C218 137.60349233837664 220 170.39650766162336 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 137.60349233837664 221 170.39650766162336 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(12.091993189668134 -18.045996594834065) rotate(18.137989784502203 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(-12.091993189668134 0) rotate(-18.137989784502203 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(3.7787478717712917 0) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <circle cx="58" cy="171" r="13" fill="#f2eadc" opacity=".85"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">play 5</text>
+      </g><g transform="translate(780 780)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0) rotate(1.4086627842071504 128 152)">
+    <path d="M186 141 C218 129.07118602314574 220 178.92881397685426 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 129.07118602314574 221 178.92881397685426 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(4.507720909462881 -14.253860454731441) rotate(6.761581364194321 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(-4.507720909462881 0) rotate(-6.761581364194321 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(1.4086627842071504 0) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <circle cx="58" cy="171" r="13" fill="#f2eadc" opacity=".85"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">play 6</text>
+      </g><g transform="translate(936 780)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0) rotate(-1.4086627842071469 128 152)">
+    <path d="M186 141 C218 118.92881397685427 220 189.07118602314574 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 118.92881397685427 221 189.07118602314574 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(-4.50772090946287 -14.253860454731434) rotate(-6.761581364194305 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(4.50772090946287 0) rotate(6.761581364194305 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(-1.4086627842071469 0) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <circle cx="58" cy="171" r="13" fill="#f2eadc" opacity=".85"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">play 7</text>
+      </g><g transform="translate(1092 780)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0) rotate(-3.778747871771291 128 152)">
+    <path d="M186 141 C218 110.39650766162336 220 197.60349233837664 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 110.39650766162336 221 197.60349233837664 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(-12.09199318966813 -18.045996594834065) rotate(-18.137989784502196 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(12.09199318966813 0) rotate(18.137989784502196 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(-3.778747871771291 0) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <circle cx="58" cy="171" r="13" fill="#f2eadc" opacity=".85"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">play 8</text>
+      </g><g transform="translate(0 936)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -4) rotate(0 128 152)">
+    <path d="M186 141 C218 139 220 169 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 139 221 169 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -6) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="8" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="8" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <path d="M196 59 l13 -25 l13 25z" fill="#f2eadc" opacity=".9"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">alert 1</text>
+      </g><g transform="translate(156 936)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -4) rotate(0 128 152)">
+    <path d="M186 141 C218 139 220 169 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 139 221 169 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -6) rotate(2.3454944474040893 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="8" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="8" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <path d="M196 59 l13 -25 l13 25z" fill="#f2eadc" opacity=".9"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">alert 2</text>
+      </g><g transform="translate(312 936)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -4) rotate(0 128 152)">
+    <path d="M186 141 C218 139 220 169 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 139 221 169 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -6) rotate(2.924783736545471 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="8" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="8" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <path d="M196 59 l13 -25 l13 25z" fill="#f2eadc" opacity=".9"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">alert 3</text>
+      </g><g transform="translate(468 936)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -4) rotate(0 128 152)">
+    <path d="M186 141 C218 139 220 169 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 139 221 169 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -6) rotate(1.3016512173526746 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="8" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="8" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <path d="M196 59 l13 -25 l13 25z" fill="#f2eadc" opacity=".9"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">alert 4</text>
+      </g><g transform="translate(624 936)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -4) rotate(0 128 152)">
+    <path d="M186 141 C218 139 220 169 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 139 221 169 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -6) rotate(-1.301651217352674 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="8" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="8" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <path d="M196 59 l13 -25 l13 25z" fill="#f2eadc" opacity=".9"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">alert 5</text>
+      </g><g transform="translate(780 936)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -4) rotate(0 128 152)">
+    <path d="M186 141 C218 139 220 169 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 139 221 169 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -6) rotate(-2.924783736545471 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="8" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="8" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <path d="M196 59 l13 -25 l13 25z" fill="#f2eadc" opacity=".9"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">alert 6</text>
+      </g><g transform="translate(936 936)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -4) rotate(0 128 152)">
+    <path d="M186 141 C218 139 220 169 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 139 221 169 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -6) rotate(-2.3454944474040897 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="8" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="8" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <path d="M196 59 l13 -25 l13 25z" fill="#f2eadc" opacity=".9"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">alert 7</text>
+      </g><g transform="translate(1092 936)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -4) rotate(0 128 152)">
+    <path d="M186 141 C218 139 220 169 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 139 221 169 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 0) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -6) rotate(-7.347880794884119e-16 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="8" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="8" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <path d="M196 59 l13 -25 l13 25z" fill="#f2eadc" opacity=".9"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">alert 8</text>
+      </g><g transform="translate(0 1092)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0) rotate(0 128 152)">
+    <path d="M186 141 C218 124 220 184 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 124 221 184 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 -20) rotate(0 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(0 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -6) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="7" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="7" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <path d="M62 64 l9 18 l20 3 l-14 14 l3 20 l-18 -9 l-18 9 l3 -20 l-14 -14 l20 -3z" fill="#f2eadc" opacity=".9"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">celebrate 1</text>
+      </g><g transform="translate(156 1092)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -6.254651859744238) rotate(0 128 152)">
+    <path d="M186 141 C218 138.07296668442453 220 169.92703331557547 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 138.07296668442453 221 169.92703331557547 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 -23.127325929872118) rotate(14.072966684424536 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(-14.072966684424536 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -6) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="7" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="7" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <path d="M62 64 l9 18 l20 3 l-14 14 l3 20 l-18 -9 l-18 9 l3 -20 l-14 -14 l20 -3z" fill="#f2eadc" opacity=".9"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">celebrate 2</text>
+      </g><g transform="translate(312 1092)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -7.799423297454589) rotate(0 128 152)">
+    <path d="M186 141 C218 141.54870241927281 220 166.45129758072719 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 141.54870241927281 221 166.45129758072719 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 -23.899711648727294) rotate(17.548702419272825 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(-17.548702419272825 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -6) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="7" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="7" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <path d="M62 64 l9 18 l20 3 l-14 14 l3 20 l-18 -9 l-18 9 l3 -20 l-14 -14 l20 -3z" fill="#f2eadc" opacity=".9"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">celebrate 3</text>
+      </g><g transform="translate(468 1092)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -3.471069912940466) rotate(0 128 152)">
+    <path d="M186 141 C218 131.80990730411605 220 176.19009269588395 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 131.80990730411605 221 176.19009269588395 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 -21.735534956470232) rotate(7.809907304116048 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(-7.809907304116048 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -6) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="7" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="7" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <path d="M62 64 l9 18 l20 3 l-14 14 l3 20 l-18 -9 l-18 9 l3 -20 l-14 -14 l20 -3z" fill="#f2eadc" opacity=".9"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">celebrate 4</text>
+      </g><g transform="translate(624 1092)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -3.471069912940464) rotate(0 128 152)">
+    <path d="M186 141 C218 116.19009269588396 220 191.80990730411605 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 116.19009269588396 221 191.80990730411605 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 -21.735534956470232) rotate(-7.809907304116044 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(7.809907304116044 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -6) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="7" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="7" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <path d="M62 64 l9 18 l20 3 l-14 14 l3 20 l-18 -9 l-18 9 l3 -20 l-14 -14 l20 -3z" fill="#f2eadc" opacity=".9"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">celebrate 5</text>
+      </g><g transform="translate(780 1092)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -7.799423297454589) rotate(0 128 152)">
+    <path d="M186 141 C218 106.45129758072717 220 201.54870241927281 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 106.45129758072717 221 201.54870241927281 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 -23.899711648727294) rotate(-17.548702419272825 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(17.548702419272825 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -6) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="7" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="7" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <path d="M62 64 l9 18 l20 3 l-14 14 l3 20 l-18 -9 l-18 9 l3 -20 l-14 -14 l20 -3z" fill="#f2eadc" opacity=".9"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">celebrate 6</text>
+      </g><g transform="translate(936 1092)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -6.254651859744239) rotate(0 128 152)">
+    <path d="M186 141 C218 109.92703331557546 220 198.07296668442453 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 109.92703331557546 221 198.07296668442453 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 -23.12732592987212) rotate(-14.07296668442454 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(14.07296668442454 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -6) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="7" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="7" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <path d="M62 64 l9 18 l20 3 l-14 14 l3 20 l-18 -9 l-18 9 l3 -20 l-14 -14 l20 -3z" fill="#f2eadc" opacity=".9"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">celebrate 7</text>
+      </g><g transform="translate(1092 1092)">
+        <rect x="4" y="4" width="148" height="148" rx="10" fill="#fff" stroke="#d8e0e8"/>
+        <g transform="translate(16 10) scale(.48)">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 -1.959434878635765e-15) rotate(0 128 152)">
+    <path d="M186 141 C218 124 220 184 184 168" fill="none" stroke="#242426" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 124 221 184 185 168" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M91 125 q38 34 76 0 v52 q-39 28 -76 0z" fill="#f2eadc" opacity=".95"/>
+    <g transform="translate(0 -20) rotate(-4.408728476930472e-15 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+    <g transform="translate(0 0) rotate(4.408728476930472e-15 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#242426" stroke="#111111" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(0 -6) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#242426" stroke="#111111" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#f2eadc" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="7" fill="#d8c15a"/><ellipse cx="145" cy="88" rx="5" ry="7" fill="#d8c15a"/>
+    <path d="M127 100 l-6 6 h12z" fill="#111111"/>
+    <path d="M121 113 q8 7 16 0" stroke="#111111" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <path d="M62 64 l9 18 l20 3 l-14 14 l3 20 l-18 -9 l-18 9 l3 -20 l-14 -14 l20 -3z" fill="#f2eadc" opacity=".9"/>
+</g>
+        <text x="12" y="142" font-family="Arial" font-size="11" fill="#52606d">celebrate 8</text>
+      </g>
+</svg>

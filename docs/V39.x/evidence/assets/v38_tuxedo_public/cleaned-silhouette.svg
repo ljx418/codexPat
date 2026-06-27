@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="V39 cleaned cat silhouette">
+  <rect width="256" height="256" fill="#f7fafc"/>
+  <g fill="#242426" stroke="#111111" stroke-width="5" stroke-linejoin="round">
+    <ellipse cx="126" cy="152" rx="62" ry="47"/>
+    <circle cx="124" cy="91" r="42"/>
+    <path d="M93 61 L105 20 L122 63 Z"/>
+    <path d="M151 62 L171 23 L172 70 Z"/>
+    <path d="M182 137 C222 116 225 178 183 169" fill="none" stroke-linecap="round"/>
+  </g>
+</svg>

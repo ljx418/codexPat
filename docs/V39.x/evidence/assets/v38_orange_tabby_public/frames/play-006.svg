@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="V39 play characterized cat frame">
+  <rect width="256" height="256" rx="22" fill="#f8fafc"/>
+  <ellipse cx="128" cy="211" rx="62" ry="12" fill="#263238" opacity=".16"/>
+  <g transform="translate(0 0) rotate(-1.4086627842071469 128 152)">
+    <path d="M186 141 C218 118.92881397685427 220 189.07118602314574 184 168" fill="none" stroke="#d8893d" stroke-width="18" stroke-linecap="round"/>
+    <path d="M187 141 C219 118.92881397685427 221 189.07118602314574 185 168" fill="none" stroke="#4a2a17" stroke-width="5" stroke-linecap="round" opacity=".75"/>
+    <ellipse cx="126" cy="152" rx="62" ry="47" fill="#d8893d" stroke="#4a2a17" stroke-width="5"/>
+    <path d="M100 86 q22 12 46 0" stroke="#8b4a24" stroke-width="5" fill="none" opacity=".55"/>
+       <path d="M89 137 q36 18 75 0" stroke="#8b4a24" stroke-width="7" fill="none" opacity=".45"/>
+    <g transform="translate(-4.50772090946287 -14.253860454731434) rotate(-6.761581364194305 108 178)">
+      <ellipse cx="108" cy="178" rx="13" ry="24" fill="#d8893d" stroke="#4a2a17" stroke-width="4"/>
+    </g>
+    <g transform="translate(4.50772090946287 0) rotate(6.761581364194305 151 181)">
+      <ellipse cx="151" cy="181" rx="15" ry="23" fill="#d8893d" stroke="#4a2a17" stroke-width="4"/>
+    </g>
+  </g>
+  <g transform="translate(-1.4086627842071469 0) rotate(0 126 91)">
+    <path d="M94 63 L105 22 L123 65 Z" fill="#d8893d" stroke="#4a2a17" stroke-width="5"/>
+    <path d="M150 64 L171 24 L173 71 Z" fill="#d8893d" stroke="#4a2a17" stroke-width="5"/>
+    <circle cx="126" cy="91" r="42" fill="#d8893d" stroke="#4a2a17" stroke-width="5"/>
+    <ellipse cx="128" cy="110" rx="23" ry="15" fill="#8b4a24" opacity=".92"/>
+    <ellipse cx="116" cy="88" rx="5" ry="6" fill="#5f7f35"/><ellipse cx="145" cy="88" rx="5" ry="6" fill="#5f7f35"/>
+    <path d="M127 100 l-6 6 h12z" fill="#4a2a17"/>
+    <path d="M121 113 q8 7 16 0" stroke="#4a2a17" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+  <circle cx="58" cy="171" r="13" fill="#8b4a24" opacity=".85"/>
+</svg>

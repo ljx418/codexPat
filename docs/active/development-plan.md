@@ -1,12 +1,83 @@
 # Active Development Plan
 
-文档状态：active index；V37 tested photo-to-action product-path scoped evidence generated on 2026-06-26；V36 risk closure and target-experience hardening executed with partial scoped final decision on 2026-06-26 and is the input baseline；V35 target-experience route assessment passed scoped for tested named samples only；V34 photo-to-character-to-actions generation core evidence-matched scoped passed through V34.8；V33 scoped local sample-to-frameSequence loop passed but remains partial for true generation；V32 quality rescue passed scoped；V31 partial scoped with continuation execution blocked scoped；V30 scoped passed；Post-V30 architecture/runtime remediation passed scoped；V29/V23-V28 scoped baselines 是输入基线。
-当前日期：2026-06-26。
+文档状态：active index；V39.0-V39.8 characterized 2D action asset Route A2++ scoped evidence generated on 2026-06-27；V38 public-photo action asset scoped evidence generated on 2026-06-26 and is the input baseline；V37 tested photo-to-action product-path scoped evidence generated on 2026-06-26；V36 risk closure and target-experience hardening executed with partial scoped final decision on 2026-06-26；V35 target-experience route assessment passed scoped for tested named samples only；V34 photo-to-character-to-actions generation core evidence-matched scoped passed through V34.8；V33 scoped local sample-to-frameSequence loop passed but remains partial for true generation；V32 quality rescue passed scoped；V31 partial scoped with continuation execution blocked scoped；V30 scoped passed；Post-V30 architecture/runtime remediation passed scoped；V29/V23-V28 scoped baselines 是输入基线。
+当前日期：2026-06-27。
 
 ## Current Active Line
 
-V37 is the current active executed scoped product-path line.
-`docs/active/agent_desktop_pet_prd_v37.md` is the current active PRD. V37
+V39 is the current active documentation line.
+`docs/active/agent_desktop_pet_prd_v39.md` is the current active PRD. V39
+targets the quality gap visible after V38: public cat photos can flow into
+sanitized images and renderable frame packs, but the output still reads as a
+photo-card overlay rather than a lovable character-like desktop pet asset.
+
+Current V39 decision: V39.0-V39.8 passed scoped for tested public-photo samples
+through Route A2++ local characterized, part-based, layered 2D action asset
+evidence. The final report is `docs/V39.x/v39-final-acceptance-report.md`.
+V39 generated three tested public-photo sample candidates, rejected V38-style
+photo-card/transform-only negatives, exposed V39 product UI anchors, and kept
+Route B blocked because no real same-sample source-bound professional assets
+were supplied.
+
+Concrete V39 design docs:
+
+- `docs/active/agent_desktop_pet_prd_v39.md`
+- `docs/V39.x/v39-target-architecture.md`
+- `docs/V39.x/v39-development-and-acceptance-plan.md`
+- `docs/V39.x/v39-acceptance-plan.md`
+- `docs/V39.x/v39-milestones.md`
+- `docs/V39.x/v39-current-gap-analysis.md`
+- `docs/V39.x/v39-implementation-contract.md`
+- `docs/V39.x/v39-phase-specs.md`
+- `docs/V39.x/v39-quality-rubric-and-risk-closure.md`
+- `docs/V39.x/v39-claim-matrix.md`
+- `docs/V39.x/v39-evidence-and-scan-checklist.md`
+- `docs/V39.x/v39-doc-audit.md`
+
+V39 target flow:
+
+```text
+V38 public-photo sanitized sample
+  -> source eligibility and visual suitability review
+  -> cleaned cat silhouette
+  -> characterized 2D design contract
+  -> part map for head/body/ears/paws/tail/eyes-expression
+  -> layered rig
+  -> Route A2++ local action frame composer
+  -> eight action contact sheets and animated previews
+  -> V31/V32/V34/V35 gates
+  -> human preference gate
+  -> product preview / target-only apply / rollback
+  -> Chinese HTML visual report
+  -> final scoped V39 decision
+```
+
+V39 phases:
+
+- V39.0 documentation readiness: `docs/V39.x/evidence/v39_0-documentation-readiness-2026-06-27.md`; passed scoped for documentation readiness only.
+- V39.1 target-experience visual rubric: `docs/V39.x/evidence/v39_1-target-experience-rubric-2026-06-27.md`; passed scoped.
+- V39.2 characterized asset contract: `docs/V39.x/evidence/v39_2-characterized-asset-contract-2026-06-27.md`; passed scoped.
+- V39.3 layered part rig contract: `docs/V39.x/evidence/v39_3-layered-part-rig-2026-06-27.md`; passed scoped.
+- V39.4 Route A2++ action frame composer: `docs/V39.x/evidence/v39_4-action-frame-composer-2026-06-27.md`; passed scoped.
+- V39.5 product preview/apply/rollback contract: `docs/V39.x/evidence/v39_5-product-preview-apply-rollback-2026-06-27.md`; passed scoped.
+- V39.6 automated visual report: `docs/V39.x/evidence/v39_6-visual-report-2026-06-27.md`; `docs/V39.x/evidence/v39_6-visual-report-2026-06-27.html`; passed scoped.
+- V39.7 Route B comparison record: `docs/V39.x/evidence/v39_7-route-b-comparison-2026-06-27.md`; passed scoped with Route B blocked.
+- V39.8 final scoped gate: `docs/V39.x/evidence/v39_8-final-gate-2026-06-27.md`; `docs/V39.x/v39-final-acceptance-report.md`; passed scoped.
+
+V39 must reject V38-style card, label, dot, border, and whole-image-transform
+outputs as final target-experience assets. V39 must not claim arbitrary-cat
+automation, provider integration verified, Petdex parity, 3D readiness,
+production release readiness, Windows readiness, or cross-platform readiness.
+The V39 scoped pass covers only tested public-photo samples, local deterministic
+SVG/frameSequence evidence, and Route A2++ contracts. It does not prove
+arbitrary user-photo automation, provider integration, Route B execution,
+production release readiness, Windows readiness, cross-platform readiness, 3D,
+or Petdex parity.
+
+## V38/V37 Input Baselines
+
+V37 remains an executed scoped product-path input baseline.
+`docs/active/agent_desktop_pet_prd_v37.md` is the V37 baseline PRD. V37
 targets the gap visible after V36: the browser/product preview can still show a
 built-in cat, while the project cannot yet prove that a real cat photo produces
 that cat's own 8-action asset in the user-visible product path.
@@ -1306,9 +1377,9 @@ may not claim provider execution. V8.11 visual QA may not claim AI generation,
 3D readiness, Rive/Live2D readiness, marketplace readiness, or production signed
 release readiness.
 
-## V38 Development Rule
+## V38 Baseline Development Rule
 
-V38 is the current public-photo action asset line. It starts from V37 product-path evidence and closes the visible gap that prior stages did not show real public photo pixels flowing into generated action-frame evidence.
+V38 is now the public-photo action asset input baseline for V39. It starts from V37 product-path evidence and closes the visible gap that prior stages did not show real public photo pixels flowing into generated action-frame evidence.
 
 V38 implementation order and status:
 

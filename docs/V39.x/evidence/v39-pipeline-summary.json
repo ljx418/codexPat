@@ -1,0 +1,2236 @@
+{
+  "sampleMatrix": {
+    "matrixId": "v39_public_sanitized_sample_matrix",
+    "samples": [
+      {
+        "sampleId": "v38_orange_tabby_public",
+        "displayName": "Orange Tabby Cat",
+        "sampleClass": "passing_cat",
+        "sanitizedImageRef": "/v38/v38_orange_tabby_public/sanitized.png",
+        "averageColor": "#85715C",
+        "sourceBoundary": "v38_public_sanitized_derivative",
+        "status": "passed",
+        "reasonCodes": [
+          "v38_public_sanitized_derivative_ready"
+        ]
+      },
+      {
+        "sampleId": "v38_tuxedo_public",
+        "displayName": "Tuxedo Cat Black And White",
+        "sampleClass": "passing_cat",
+        "sanitizedImageRef": "/v38/v38_tuxedo_public/sanitized.png",
+        "averageColor": "#8A735C",
+        "sourceBoundary": "v38_public_sanitized_derivative",
+        "status": "passed",
+        "reasonCodes": [
+          "v38_public_sanitized_derivative_ready"
+        ]
+      },
+      {
+        "sampleId": "v38_a_cat_public",
+        "displayName": "A-Cat",
+        "sampleClass": "passing_cat",
+        "sanitizedImageRef": "/v38/v38_a_cat_public/sanitized.png",
+        "averageColor": "#917F64",
+        "sourceBoundary": "v38_public_sanitized_derivative",
+        "status": "passed",
+        "reasonCodes": [
+          "v38_public_sanitized_derivative_ready"
+        ]
+      },
+      {
+        "sampleId": "v38_negative_dog_public",
+        "displayName": "Negative Dog Public Sample",
+        "sampleClass": "negative_non_cat",
+        "sanitizedImageRef": null,
+        "averageColor": null,
+        "sourceBoundary": "negative_or_blocked_public_metadata",
+        "status": "failed",
+        "reasonCodes": [
+          "negative_non_cat_rejected"
+        ]
+      },
+      {
+        "sampleId": "v38_multi_cat_public",
+        "displayName": "Multi Cat Public Blocked Sample",
+        "sampleClass": "blocked_multi_cat",
+        "sanitizedImageRef": null,
+        "averageColor": null,
+        "sourceBoundary": "negative_or_blocked_public_metadata",
+        "status": "blocked",
+        "reasonCodes": [
+          "multi_cat_identity_ambiguous_blocked"
+        ]
+      }
+    ],
+    "passingCatCount": 3,
+    "blockedOrNegativeCount": 2,
+    "status": "passed",
+    "reasonCodes": [
+      "v39_public_sanitized_sample_matrix_ready"
+    ]
+  },
+  "characterContracts": [
+    {
+      "contractId": "v38_orange_tabby_public_v39_character_contract",
+      "sampleId": "v38_orange_tabby_public",
+      "characterAssetId": "v38_orange_tabby_public_v39_character",
+      "sanitizedImageRef": "/v38/v38_orange_tabby_public/sanitized.png",
+      "cleanedSilhouetteRef": "/v39/v38_orange_tabby_public/cleaned-silhouette.svg",
+      "characterSvgRef": "/v39/v38_orange_tabby_public/character.svg",
+      "identityTraits": [
+        {
+          "traitId": "coat",
+          "label": "coat color",
+          "value": "warm orange tabby",
+          "confidence": "medium"
+        },
+        {
+          "traitId": "pattern",
+          "label": "face pattern",
+          "value": "soft cheek stripes",
+          "confidence": "medium"
+        },
+        {
+          "traitId": "tail",
+          "label": "tail style",
+          "value": "curved orange tail",
+          "confidence": "medium"
+        },
+        {
+          "traitId": "eyes",
+          "label": "eye color",
+          "value": "amber green",
+          "confidence": "medium"
+        }
+      ],
+      "noCardNoLabelProof": {
+        "hasDecorativeCard": false,
+        "hasVisibleTestLabel": false,
+        "usesCleanCharacterSilhouette": true
+      },
+      "status": "passed",
+      "reasonCodes": [
+        "v39_characterized_asset_contract_ready"
+      ]
+    },
+    {
+      "contractId": "v38_tuxedo_public_v39_character_contract",
+      "sampleId": "v38_tuxedo_public",
+      "characterAssetId": "v38_tuxedo_public_v39_character",
+      "sanitizedImageRef": "/v38/v38_tuxedo_public/sanitized.png",
+      "cleanedSilhouetteRef": "/v39/v38_tuxedo_public/cleaned-silhouette.svg",
+      "characterSvgRef": "/v39/v38_tuxedo_public/character.svg",
+      "identityTraits": [
+        {
+          "traitId": "coat",
+          "label": "coat color",
+          "value": "black and white tuxedo",
+          "confidence": "medium"
+        },
+        {
+          "traitId": "pattern",
+          "label": "face pattern",
+          "value": "white muzzle and chest",
+          "confidence": "medium"
+        },
+        {
+          "traitId": "tail",
+          "label": "tail style",
+          "value": "dark curved tail",
+          "confidence": "medium"
+        },
+        {
+          "traitId": "eyes",
+          "label": "eye color",
+          "value": "yellow green",
+          "confidence": "medium"
+        }
+      ],
+      "noCardNoLabelProof": {
+        "hasDecorativeCard": false,
+        "hasVisibleTestLabel": false,
+        "usesCleanCharacterSilhouette": true
+      },
+      "status": "passed",
+      "reasonCodes": [
+        "v39_characterized_asset_contract_ready"
+      ]
+    },
+    {
+      "contractId": "v38_a_cat_public_v39_character_contract",
+      "sampleId": "v38_a_cat_public",
+      "characterAssetId": "v38_a_cat_public_v39_character",
+      "sanitizedImageRef": "/v38/v38_a_cat_public/sanitized.png",
+      "cleanedSilhouetteRef": "/v39/v38_a_cat_public/cleaned-silhouette.svg",
+      "characterSvgRef": "/v39/v38_a_cat_public/character.svg",
+      "identityTraits": [
+        {
+          "traitId": "coat",
+          "label": "coat color",
+          "value": "soft gray brown",
+          "confidence": "medium"
+        },
+        {
+          "traitId": "pattern",
+          "label": "face pattern",
+          "value": "subtle tabby mask",
+          "confidence": "medium"
+        },
+        {
+          "traitId": "tail",
+          "label": "tail style",
+          "value": "medium striped tail",
+          "confidence": "medium"
+        },
+        {
+          "traitId": "eyes",
+          "label": "eye color",
+          "value": "green",
+          "confidence": "medium"
+        }
+      ],
+      "noCardNoLabelProof": {
+        "hasDecorativeCard": false,
+        "hasVisibleTestLabel": false,
+        "usesCleanCharacterSilhouette": true
+      },
+      "status": "passed",
+      "reasonCodes": [
+        "v39_characterized_asset_contract_ready"
+      ]
+    },
+    {
+      "contractId": "v38_negative_dog_public_v39_character_contract",
+      "sampleId": "v38_negative_dog_public",
+      "characterAssetId": "v38_negative_dog_public_v39_character",
+      "sanitizedImageRef": null,
+      "cleanedSilhouetteRef": "/v39/v38_negative_dog_public/cleaned-silhouette.svg",
+      "characterSvgRef": "/v39/v38_negative_dog_public/character.svg",
+      "identityTraits": [],
+      "noCardNoLabelProof": {
+        "hasDecorativeCard": false,
+        "hasVisibleTestLabel": false,
+        "usesCleanCharacterSilhouette": false
+      },
+      "status": "failed",
+      "reasonCodes": [
+        "identity_traits_insufficient",
+        "sample_not_cat",
+        "sanitized_source_missing"
+      ]
+    },
+    {
+      "contractId": "v38_multi_cat_public_v39_character_contract",
+      "sampleId": "v38_multi_cat_public",
+      "characterAssetId": "v38_multi_cat_public_v39_character",
+      "sanitizedImageRef": null,
+      "cleanedSilhouetteRef": "/v39/v38_multi_cat_public/cleaned-silhouette.svg",
+      "characterSvgRef": "/v39/v38_multi_cat_public/character.svg",
+      "identityTraits": [],
+      "noCardNoLabelProof": {
+        "hasDecorativeCard": false,
+        "hasVisibleTestLabel": false,
+        "usesCleanCharacterSilhouette": false
+      },
+      "status": "blocked",
+      "reasonCodes": [
+        "identity_traits_insufficient",
+        "sample_not_single_identity",
+        "sanitized_source_missing"
+      ]
+    }
+  ],
+  "rigs": [
+    {
+      "rigId": "v38_orange_tabby_public_v39_character_layered_rig",
+      "sampleId": "v38_orange_tabby_public",
+      "characterAssetId": "v38_orange_tabby_public_v39_character",
+      "parts": [
+        {
+          "partId": "shadow",
+          "visible": true,
+          "pivot": {
+            "x": 128,
+            "y": 206
+          },
+          "motionRange": {
+            "rotate": 0,
+            "translateX": 5,
+            "translateY": 1,
+            "scale": 0.08
+          },
+          "parentPartId": "root",
+          "actionResponsibilities": [
+            "idle",
+            "walk",
+            "jump",
+            "sleep",
+            "play",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "body",
+          "visible": true,
+          "pivot": {
+            "x": 128,
+            "y": 142
+          },
+          "motionRange": {
+            "rotate": 8,
+            "translateX": 8,
+            "translateY": 14,
+            "scale": 0.08
+          },
+          "parentPartId": "root",
+          "actionResponsibilities": [
+            "idle",
+            "walk",
+            "jump",
+            "sleep",
+            "eat",
+            "play",
+            "alert",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "head",
+          "visible": true,
+          "pivot": {
+            "x": 125,
+            "y": 91
+          },
+          "motionRange": {
+            "rotate": 14,
+            "translateX": 8,
+            "translateY": 10,
+            "scale": 0.05
+          },
+          "parentPartId": "body",
+          "actionResponsibilities": [
+            "idle",
+            "jump",
+            "eat",
+            "play",
+            "alert",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "leftEar",
+          "visible": true,
+          "pivot": {
+            "x": 99,
+            "y": 55
+          },
+          "motionRange": {
+            "rotate": 18,
+            "translateX": 2,
+            "translateY": 3,
+            "scale": 0.03
+          },
+          "parentPartId": "head",
+          "actionResponsibilities": [
+            "idle",
+            "alert",
+            "play",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "rightEar",
+          "visible": true,
+          "pivot": {
+            "x": 151,
+            "y": 55
+          },
+          "motionRange": {
+            "rotate": 18,
+            "translateX": 2,
+            "translateY": 3,
+            "scale": 0.03
+          },
+          "parentPartId": "head",
+          "actionResponsibilities": [
+            "idle",
+            "alert",
+            "play",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "frontPaws",
+          "visible": true,
+          "pivot": {
+            "x": 105,
+            "y": 174
+          },
+          "motionRange": {
+            "rotate": 12,
+            "translateX": 8,
+            "translateY": 12,
+            "scale": 0.04
+          },
+          "parentPartId": "body",
+          "actionResponsibilities": [
+            "walk",
+            "jump",
+            "eat",
+            "play"
+          ]
+        },
+        {
+          "partId": "backPaws",
+          "visible": true,
+          "pivot": {
+            "x": 151,
+            "y": 181
+          },
+          "motionRange": {
+            "rotate": 12,
+            "translateX": 10,
+            "translateY": 12,
+            "scale": 0.04
+          },
+          "parentPartId": "body",
+          "actionResponsibilities": [
+            "walk",
+            "jump",
+            "play"
+          ]
+        },
+        {
+          "partId": "tail",
+          "visible": true,
+          "pivot": {
+            "x": 189,
+            "y": 139
+          },
+          "motionRange": {
+            "rotate": 28,
+            "translateX": 12,
+            "translateY": 12,
+            "scale": 0.05
+          },
+          "parentPartId": "body",
+          "actionResponsibilities": [
+            "idle",
+            "walk",
+            "play",
+            "alert",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "eyesExpression",
+          "visible": true,
+          "pivot": {
+            "x": 126,
+            "y": 88
+          },
+          "motionRange": {
+            "rotate": 0,
+            "translateX": 1,
+            "translateY": 3,
+            "scale": 0.02
+          },
+          "parentPartId": "head",
+          "actionResponsibilities": [
+            "idle",
+            "sleep",
+            "alert",
+            "celebrate",
+            "play"
+          ]
+        }
+      ],
+      "wholeImageMotionResponsibility": false,
+      "status": "passed",
+      "reasonCodes": [
+        "v39_layered_part_rig_ready"
+      ]
+    },
+    {
+      "rigId": "v38_tuxedo_public_v39_character_layered_rig",
+      "sampleId": "v38_tuxedo_public",
+      "characterAssetId": "v38_tuxedo_public_v39_character",
+      "parts": [
+        {
+          "partId": "shadow",
+          "visible": true,
+          "pivot": {
+            "x": 128,
+            "y": 206
+          },
+          "motionRange": {
+            "rotate": 0,
+            "translateX": 5,
+            "translateY": 1,
+            "scale": 0.08
+          },
+          "parentPartId": "root",
+          "actionResponsibilities": [
+            "idle",
+            "walk",
+            "jump",
+            "sleep",
+            "play",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "body",
+          "visible": true,
+          "pivot": {
+            "x": 128,
+            "y": 142
+          },
+          "motionRange": {
+            "rotate": 8,
+            "translateX": 8,
+            "translateY": 14,
+            "scale": 0.08
+          },
+          "parentPartId": "root",
+          "actionResponsibilities": [
+            "idle",
+            "walk",
+            "jump",
+            "sleep",
+            "eat",
+            "play",
+            "alert",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "head",
+          "visible": true,
+          "pivot": {
+            "x": 125,
+            "y": 91
+          },
+          "motionRange": {
+            "rotate": 14,
+            "translateX": 8,
+            "translateY": 10,
+            "scale": 0.05
+          },
+          "parentPartId": "body",
+          "actionResponsibilities": [
+            "idle",
+            "jump",
+            "eat",
+            "play",
+            "alert",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "leftEar",
+          "visible": true,
+          "pivot": {
+            "x": 99,
+            "y": 55
+          },
+          "motionRange": {
+            "rotate": 18,
+            "translateX": 2,
+            "translateY": 3,
+            "scale": 0.03
+          },
+          "parentPartId": "head",
+          "actionResponsibilities": [
+            "idle",
+            "alert",
+            "play",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "rightEar",
+          "visible": true,
+          "pivot": {
+            "x": 151,
+            "y": 55
+          },
+          "motionRange": {
+            "rotate": 18,
+            "translateX": 2,
+            "translateY": 3,
+            "scale": 0.03
+          },
+          "parentPartId": "head",
+          "actionResponsibilities": [
+            "idle",
+            "alert",
+            "play",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "frontPaws",
+          "visible": true,
+          "pivot": {
+            "x": 105,
+            "y": 174
+          },
+          "motionRange": {
+            "rotate": 12,
+            "translateX": 8,
+            "translateY": 12,
+            "scale": 0.04
+          },
+          "parentPartId": "body",
+          "actionResponsibilities": [
+            "walk",
+            "jump",
+            "eat",
+            "play"
+          ]
+        },
+        {
+          "partId": "backPaws",
+          "visible": true,
+          "pivot": {
+            "x": 151,
+            "y": 181
+          },
+          "motionRange": {
+            "rotate": 12,
+            "translateX": 10,
+            "translateY": 12,
+            "scale": 0.04
+          },
+          "parentPartId": "body",
+          "actionResponsibilities": [
+            "walk",
+            "jump",
+            "play"
+          ]
+        },
+        {
+          "partId": "tail",
+          "visible": true,
+          "pivot": {
+            "x": 189,
+            "y": 139
+          },
+          "motionRange": {
+            "rotate": 24,
+            "translateX": 12,
+            "translateY": 12,
+            "scale": 0.05
+          },
+          "parentPartId": "body",
+          "actionResponsibilities": [
+            "idle",
+            "walk",
+            "play",
+            "alert",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "eyesExpression",
+          "visible": true,
+          "pivot": {
+            "x": 126,
+            "y": 88
+          },
+          "motionRange": {
+            "rotate": 0,
+            "translateX": 1,
+            "translateY": 3,
+            "scale": 0.02
+          },
+          "parentPartId": "head",
+          "actionResponsibilities": [
+            "idle",
+            "sleep",
+            "alert",
+            "celebrate",
+            "play"
+          ]
+        }
+      ],
+      "wholeImageMotionResponsibility": false,
+      "status": "passed",
+      "reasonCodes": [
+        "v39_layered_part_rig_ready"
+      ]
+    },
+    {
+      "rigId": "v38_a_cat_public_v39_character_layered_rig",
+      "sampleId": "v38_a_cat_public",
+      "characterAssetId": "v38_a_cat_public_v39_character",
+      "parts": [
+        {
+          "partId": "shadow",
+          "visible": true,
+          "pivot": {
+            "x": 128,
+            "y": 206
+          },
+          "motionRange": {
+            "rotate": 0,
+            "translateX": 5,
+            "translateY": 1,
+            "scale": 0.08
+          },
+          "parentPartId": "root",
+          "actionResponsibilities": [
+            "idle",
+            "walk",
+            "jump",
+            "sleep",
+            "play",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "body",
+          "visible": true,
+          "pivot": {
+            "x": 128,
+            "y": 142
+          },
+          "motionRange": {
+            "rotate": 8,
+            "translateX": 8,
+            "translateY": 14,
+            "scale": 0.08
+          },
+          "parentPartId": "root",
+          "actionResponsibilities": [
+            "idle",
+            "walk",
+            "jump",
+            "sleep",
+            "eat",
+            "play",
+            "alert",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "head",
+          "visible": true,
+          "pivot": {
+            "x": 125,
+            "y": 91
+          },
+          "motionRange": {
+            "rotate": 14,
+            "translateX": 8,
+            "translateY": 10,
+            "scale": 0.05
+          },
+          "parentPartId": "body",
+          "actionResponsibilities": [
+            "idle",
+            "jump",
+            "eat",
+            "play",
+            "alert",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "leftEar",
+          "visible": true,
+          "pivot": {
+            "x": 99,
+            "y": 55
+          },
+          "motionRange": {
+            "rotate": 18,
+            "translateX": 2,
+            "translateY": 3,
+            "scale": 0.03
+          },
+          "parentPartId": "head",
+          "actionResponsibilities": [
+            "idle",
+            "alert",
+            "play",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "rightEar",
+          "visible": true,
+          "pivot": {
+            "x": 151,
+            "y": 55
+          },
+          "motionRange": {
+            "rotate": 18,
+            "translateX": 2,
+            "translateY": 3,
+            "scale": 0.03
+          },
+          "parentPartId": "head",
+          "actionResponsibilities": [
+            "idle",
+            "alert",
+            "play",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "frontPaws",
+          "visible": true,
+          "pivot": {
+            "x": 105,
+            "y": 174
+          },
+          "motionRange": {
+            "rotate": 12,
+            "translateX": 8,
+            "translateY": 12,
+            "scale": 0.04
+          },
+          "parentPartId": "body",
+          "actionResponsibilities": [
+            "walk",
+            "jump",
+            "eat",
+            "play"
+          ]
+        },
+        {
+          "partId": "backPaws",
+          "visible": true,
+          "pivot": {
+            "x": 151,
+            "y": 181
+          },
+          "motionRange": {
+            "rotate": 12,
+            "translateX": 10,
+            "translateY": 12,
+            "scale": 0.04
+          },
+          "parentPartId": "body",
+          "actionResponsibilities": [
+            "walk",
+            "jump",
+            "play"
+          ]
+        },
+        {
+          "partId": "tail",
+          "visible": true,
+          "pivot": {
+            "x": 189,
+            "y": 139
+          },
+          "motionRange": {
+            "rotate": 28,
+            "translateX": 12,
+            "translateY": 12,
+            "scale": 0.05
+          },
+          "parentPartId": "body",
+          "actionResponsibilities": [
+            "idle",
+            "walk",
+            "play",
+            "alert",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "eyesExpression",
+          "visible": true,
+          "pivot": {
+            "x": 126,
+            "y": 88
+          },
+          "motionRange": {
+            "rotate": 0,
+            "translateX": 1,
+            "translateY": 3,
+            "scale": 0.02
+          },
+          "parentPartId": "head",
+          "actionResponsibilities": [
+            "idle",
+            "sleep",
+            "alert",
+            "celebrate",
+            "play"
+          ]
+        }
+      ],
+      "wholeImageMotionResponsibility": false,
+      "status": "passed",
+      "reasonCodes": [
+        "v39_layered_part_rig_ready"
+      ]
+    },
+    {
+      "rigId": "v38_negative_dog_public_v39_character_layered_rig",
+      "sampleId": "v38_negative_dog_public",
+      "characterAssetId": "v38_negative_dog_public_v39_character",
+      "parts": [
+        {
+          "partId": "shadow",
+          "visible": true,
+          "pivot": {
+            "x": 128,
+            "y": 206
+          },
+          "motionRange": {
+            "rotate": 0,
+            "translateX": 5,
+            "translateY": 1,
+            "scale": 0.08
+          },
+          "parentPartId": "root",
+          "actionResponsibilities": [
+            "idle",
+            "walk",
+            "jump",
+            "sleep",
+            "play",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "body",
+          "visible": true,
+          "pivot": {
+            "x": 128,
+            "y": 142
+          },
+          "motionRange": {
+            "rotate": 8,
+            "translateX": 8,
+            "translateY": 14,
+            "scale": 0.08
+          },
+          "parentPartId": "root",
+          "actionResponsibilities": [
+            "idle",
+            "walk",
+            "jump",
+            "sleep",
+            "eat",
+            "play",
+            "alert",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "head",
+          "visible": true,
+          "pivot": {
+            "x": 125,
+            "y": 91
+          },
+          "motionRange": {
+            "rotate": 14,
+            "translateX": 8,
+            "translateY": 10,
+            "scale": 0.05
+          },
+          "parentPartId": "body",
+          "actionResponsibilities": [
+            "idle",
+            "jump",
+            "eat",
+            "play",
+            "alert",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "leftEar",
+          "visible": true,
+          "pivot": {
+            "x": 99,
+            "y": 55
+          },
+          "motionRange": {
+            "rotate": 18,
+            "translateX": 2,
+            "translateY": 3,
+            "scale": 0.03
+          },
+          "parentPartId": "head",
+          "actionResponsibilities": [
+            "idle",
+            "alert",
+            "play",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "rightEar",
+          "visible": true,
+          "pivot": {
+            "x": 151,
+            "y": 55
+          },
+          "motionRange": {
+            "rotate": 18,
+            "translateX": 2,
+            "translateY": 3,
+            "scale": 0.03
+          },
+          "parentPartId": "head",
+          "actionResponsibilities": [
+            "idle",
+            "alert",
+            "play",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "frontPaws",
+          "visible": true,
+          "pivot": {
+            "x": 105,
+            "y": 174
+          },
+          "motionRange": {
+            "rotate": 12,
+            "translateX": 8,
+            "translateY": 12,
+            "scale": 0.04
+          },
+          "parentPartId": "body",
+          "actionResponsibilities": [
+            "walk",
+            "jump",
+            "eat",
+            "play"
+          ]
+        },
+        {
+          "partId": "backPaws",
+          "visible": true,
+          "pivot": {
+            "x": 151,
+            "y": 181
+          },
+          "motionRange": {
+            "rotate": 12,
+            "translateX": 10,
+            "translateY": 12,
+            "scale": 0.04
+          },
+          "parentPartId": "body",
+          "actionResponsibilities": [
+            "walk",
+            "jump",
+            "play"
+          ]
+        },
+        {
+          "partId": "tail",
+          "visible": true,
+          "pivot": {
+            "x": 189,
+            "y": 139
+          },
+          "motionRange": {
+            "rotate": 28,
+            "translateX": 12,
+            "translateY": 12,
+            "scale": 0.05
+          },
+          "parentPartId": "body",
+          "actionResponsibilities": [
+            "idle",
+            "walk",
+            "play",
+            "alert",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "eyesExpression",
+          "visible": true,
+          "pivot": {
+            "x": 126,
+            "y": 88
+          },
+          "motionRange": {
+            "rotate": 0,
+            "translateX": 1,
+            "translateY": 3,
+            "scale": 0.02
+          },
+          "parentPartId": "head",
+          "actionResponsibilities": [
+            "idle",
+            "sleep",
+            "alert",
+            "celebrate",
+            "play"
+          ]
+        }
+      ],
+      "wholeImageMotionResponsibility": false,
+      "status": "failed",
+      "reasonCodes": [
+        "character_contract_not_ready"
+      ]
+    },
+    {
+      "rigId": "v38_multi_cat_public_v39_character_layered_rig",
+      "sampleId": "v38_multi_cat_public",
+      "characterAssetId": "v38_multi_cat_public_v39_character",
+      "parts": [
+        {
+          "partId": "shadow",
+          "visible": true,
+          "pivot": {
+            "x": 128,
+            "y": 206
+          },
+          "motionRange": {
+            "rotate": 0,
+            "translateX": 5,
+            "translateY": 1,
+            "scale": 0.08
+          },
+          "parentPartId": "root",
+          "actionResponsibilities": [
+            "idle",
+            "walk",
+            "jump",
+            "sleep",
+            "play",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "body",
+          "visible": true,
+          "pivot": {
+            "x": 128,
+            "y": 142
+          },
+          "motionRange": {
+            "rotate": 8,
+            "translateX": 8,
+            "translateY": 14,
+            "scale": 0.08
+          },
+          "parentPartId": "root",
+          "actionResponsibilities": [
+            "idle",
+            "walk",
+            "jump",
+            "sleep",
+            "eat",
+            "play",
+            "alert",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "head",
+          "visible": true,
+          "pivot": {
+            "x": 125,
+            "y": 91
+          },
+          "motionRange": {
+            "rotate": 14,
+            "translateX": 8,
+            "translateY": 10,
+            "scale": 0.05
+          },
+          "parentPartId": "body",
+          "actionResponsibilities": [
+            "idle",
+            "jump",
+            "eat",
+            "play",
+            "alert",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "leftEar",
+          "visible": true,
+          "pivot": {
+            "x": 99,
+            "y": 55
+          },
+          "motionRange": {
+            "rotate": 18,
+            "translateX": 2,
+            "translateY": 3,
+            "scale": 0.03
+          },
+          "parentPartId": "head",
+          "actionResponsibilities": [
+            "idle",
+            "alert",
+            "play",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "rightEar",
+          "visible": true,
+          "pivot": {
+            "x": 151,
+            "y": 55
+          },
+          "motionRange": {
+            "rotate": 18,
+            "translateX": 2,
+            "translateY": 3,
+            "scale": 0.03
+          },
+          "parentPartId": "head",
+          "actionResponsibilities": [
+            "idle",
+            "alert",
+            "play",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "frontPaws",
+          "visible": true,
+          "pivot": {
+            "x": 105,
+            "y": 174
+          },
+          "motionRange": {
+            "rotate": 12,
+            "translateX": 8,
+            "translateY": 12,
+            "scale": 0.04
+          },
+          "parentPartId": "body",
+          "actionResponsibilities": [
+            "walk",
+            "jump",
+            "eat",
+            "play"
+          ]
+        },
+        {
+          "partId": "backPaws",
+          "visible": true,
+          "pivot": {
+            "x": 151,
+            "y": 181
+          },
+          "motionRange": {
+            "rotate": 12,
+            "translateX": 10,
+            "translateY": 12,
+            "scale": 0.04
+          },
+          "parentPartId": "body",
+          "actionResponsibilities": [
+            "walk",
+            "jump",
+            "play"
+          ]
+        },
+        {
+          "partId": "tail",
+          "visible": true,
+          "pivot": {
+            "x": 189,
+            "y": 139
+          },
+          "motionRange": {
+            "rotate": 28,
+            "translateX": 12,
+            "translateY": 12,
+            "scale": 0.05
+          },
+          "parentPartId": "body",
+          "actionResponsibilities": [
+            "idle",
+            "walk",
+            "play",
+            "alert",
+            "celebrate"
+          ]
+        },
+        {
+          "partId": "eyesExpression",
+          "visible": true,
+          "pivot": {
+            "x": 126,
+            "y": 88
+          },
+          "motionRange": {
+            "rotate": 0,
+            "translateX": 1,
+            "translateY": 3,
+            "scale": 0.02
+          },
+          "parentPartId": "head",
+          "actionResponsibilities": [
+            "idle",
+            "sleep",
+            "alert",
+            "celebrate",
+            "play"
+          ]
+        }
+      ],
+      "wholeImageMotionResponsibility": false,
+      "status": "blocked",
+      "reasonCodes": [
+        "character_contract_not_ready"
+      ]
+    }
+  ],
+  "actionPacks": [
+    {
+      "candidateId": "v38_orange_tabby_public_v39_character_a2pp_pack",
+      "sampleId": "v38_orange_tabby_public",
+      "characterAssetId": "v38_orange_tabby_public_v39_character",
+      "routeId": "route_a2_plus_plus_local_character_rig",
+      "rendererKind": "frameSequence",
+      "actionSequences": [
+        {
+          "actionId": "idle",
+          "frameCount": 12,
+          "fps": 10,
+          "bodyPoseChangeScore": 0.64,
+          "localPartMotionScore": 0.7,
+          "actionReadabilityScore": 0.78,
+          "movingParts": [
+            "body",
+            "head",
+            "leftEar",
+            "rightEar",
+            "tail",
+            "eyesExpression"
+          ],
+          "poseSummary": "breathing body, blink, relaxed tail",
+          "frameRefs": [
+            "/v39/v38_orange_tabby_public/frames/idle-000.svg",
+            "/v39/v38_orange_tabby_public/frames/idle-001.svg",
+            "/v39/v38_orange_tabby_public/frames/idle-002.svg",
+            "/v39/v38_orange_tabby_public/frames/idle-003.svg",
+            "/v39/v38_orange_tabby_public/frames/idle-004.svg",
+            "/v39/v38_orange_tabby_public/frames/idle-005.svg",
+            "/v39/v38_orange_tabby_public/frames/idle-006.svg",
+            "/v39/v38_orange_tabby_public/frames/idle-007.svg",
+            "/v39/v38_orange_tabby_public/frames/idle-008.svg",
+            "/v39/v38_orange_tabby_public/frames/idle-009.svg",
+            "/v39/v38_orange_tabby_public/frames/idle-010.svg",
+            "/v39/v38_orange_tabby_public/frames/idle-011.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        },
+        {
+          "actionId": "walk",
+          "frameCount": 12,
+          "fps": 12,
+          "bodyPoseChangeScore": 0.84,
+          "localPartMotionScore": 0.88,
+          "actionReadabilityScore": 0.86,
+          "movingParts": [
+            "body",
+            "frontPaws",
+            "backPaws",
+            "tail"
+          ],
+          "poseSummary": "alternating paws with body sway and tail counter-motion",
+          "frameRefs": [
+            "/v39/v38_orange_tabby_public/frames/walk-000.svg",
+            "/v39/v38_orange_tabby_public/frames/walk-001.svg",
+            "/v39/v38_orange_tabby_public/frames/walk-002.svg",
+            "/v39/v38_orange_tabby_public/frames/walk-003.svg",
+            "/v39/v38_orange_tabby_public/frames/walk-004.svg",
+            "/v39/v38_orange_tabby_public/frames/walk-005.svg",
+            "/v39/v38_orange_tabby_public/frames/walk-006.svg",
+            "/v39/v38_orange_tabby_public/frames/walk-007.svg",
+            "/v39/v38_orange_tabby_public/frames/walk-008.svg",
+            "/v39/v38_orange_tabby_public/frames/walk-009.svg",
+            "/v39/v38_orange_tabby_public/frames/walk-010.svg",
+            "/v39/v38_orange_tabby_public/frames/walk-011.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        },
+        {
+          "actionId": "jump",
+          "frameCount": 8,
+          "fps": 10,
+          "bodyPoseChangeScore": 0.84,
+          "localPartMotionScore": 0.9,
+          "actionReadabilityScore": 0.88,
+          "movingParts": [
+            "body",
+            "head",
+            "frontPaws",
+            "backPaws"
+          ],
+          "poseSummary": "crouch, airborne stretch, landing squash",
+          "frameRefs": [
+            "/v39/v38_orange_tabby_public/frames/jump-000.svg",
+            "/v39/v38_orange_tabby_public/frames/jump-001.svg",
+            "/v39/v38_orange_tabby_public/frames/jump-002.svg",
+            "/v39/v38_orange_tabby_public/frames/jump-003.svg",
+            "/v39/v38_orange_tabby_public/frames/jump-004.svg",
+            "/v39/v38_orange_tabby_public/frames/jump-005.svg",
+            "/v39/v38_orange_tabby_public/frames/jump-006.svg",
+            "/v39/v38_orange_tabby_public/frames/jump-007.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        },
+        {
+          "actionId": "sleep",
+          "frameCount": 12,
+          "fps": 10,
+          "bodyPoseChangeScore": 0.64,
+          "localPartMotionScore": 0.68,
+          "actionReadabilityScore": 0.8,
+          "movingParts": [
+            "body",
+            "eyesExpression"
+          ],
+          "poseSummary": "curled body, closed eyes, slow breathing",
+          "frameRefs": [
+            "/v39/v38_orange_tabby_public/frames/sleep-000.svg",
+            "/v39/v38_orange_tabby_public/frames/sleep-001.svg",
+            "/v39/v38_orange_tabby_public/frames/sleep-002.svg",
+            "/v39/v38_orange_tabby_public/frames/sleep-003.svg",
+            "/v39/v38_orange_tabby_public/frames/sleep-004.svg",
+            "/v39/v38_orange_tabby_public/frames/sleep-005.svg",
+            "/v39/v38_orange_tabby_public/frames/sleep-006.svg",
+            "/v39/v38_orange_tabby_public/frames/sleep-007.svg",
+            "/v39/v38_orange_tabby_public/frames/sleep-008.svg",
+            "/v39/v38_orange_tabby_public/frames/sleep-009.svg",
+            "/v39/v38_orange_tabby_public/frames/sleep-010.svg",
+            "/v39/v38_orange_tabby_public/frames/sleep-011.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        },
+        {
+          "actionId": "eat",
+          "frameCount": 8,
+          "fps": 10,
+          "bodyPoseChangeScore": 0.84,
+          "localPartMotionScore": 0.79,
+          "actionReadabilityScore": 0.78,
+          "movingParts": [
+            "body",
+            "head",
+            "frontPaws"
+          ],
+          "poseSummary": "head dip, front paw brace, small bowl cue",
+          "frameRefs": [
+            "/v39/v38_orange_tabby_public/frames/eat-000.svg",
+            "/v39/v38_orange_tabby_public/frames/eat-001.svg",
+            "/v39/v38_orange_tabby_public/frames/eat-002.svg",
+            "/v39/v38_orange_tabby_public/frames/eat-003.svg",
+            "/v39/v38_orange_tabby_public/frames/eat-004.svg",
+            "/v39/v38_orange_tabby_public/frames/eat-005.svg",
+            "/v39/v38_orange_tabby_public/frames/eat-006.svg",
+            "/v39/v38_orange_tabby_public/frames/eat-007.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        },
+        {
+          "actionId": "play",
+          "frameCount": 12,
+          "fps": 12,
+          "bodyPoseChangeScore": 0.84,
+          "localPartMotionScore": 0.9,
+          "actionReadabilityScore": 0.88,
+          "movingParts": [
+            "body",
+            "head",
+            "leftEar",
+            "rightEar",
+            "frontPaws",
+            "backPaws",
+            "tail",
+            "eyesExpression"
+          ],
+          "poseSummary": "paw bat, tail swish, bright expression",
+          "frameRefs": [
+            "/v39/v38_orange_tabby_public/frames/play-000.svg",
+            "/v39/v38_orange_tabby_public/frames/play-001.svg",
+            "/v39/v38_orange_tabby_public/frames/play-002.svg",
+            "/v39/v38_orange_tabby_public/frames/play-003.svg",
+            "/v39/v38_orange_tabby_public/frames/play-004.svg",
+            "/v39/v38_orange_tabby_public/frames/play-005.svg",
+            "/v39/v38_orange_tabby_public/frames/play-006.svg",
+            "/v39/v38_orange_tabby_public/frames/play-007.svg",
+            "/v39/v38_orange_tabby_public/frames/play-008.svg",
+            "/v39/v38_orange_tabby_public/frames/play-009.svg",
+            "/v39/v38_orange_tabby_public/frames/play-010.svg",
+            "/v39/v38_orange_tabby_public/frames/play-011.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        },
+        {
+          "actionId": "alert",
+          "frameCount": 8,
+          "fps": 10,
+          "bodyPoseChangeScore": 0.84,
+          "localPartMotionScore": 0.82,
+          "actionReadabilityScore": 0.84,
+          "movingParts": [
+            "body",
+            "head",
+            "leftEar",
+            "rightEar",
+            "tail",
+            "eyesExpression"
+          ],
+          "poseSummary": "ears up, eyes wide, body tension",
+          "frameRefs": [
+            "/v39/v38_orange_tabby_public/frames/alert-000.svg",
+            "/v39/v38_orange_tabby_public/frames/alert-001.svg",
+            "/v39/v38_orange_tabby_public/frames/alert-002.svg",
+            "/v39/v38_orange_tabby_public/frames/alert-003.svg",
+            "/v39/v38_orange_tabby_public/frames/alert-004.svg",
+            "/v39/v38_orange_tabby_public/frames/alert-005.svg",
+            "/v39/v38_orange_tabby_public/frames/alert-006.svg",
+            "/v39/v38_orange_tabby_public/frames/alert-007.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        },
+        {
+          "actionId": "celebrate",
+          "frameCount": 8,
+          "fps": 10,
+          "bodyPoseChangeScore": 0.84,
+          "localPartMotionScore": 0.86,
+          "actionReadabilityScore": 0.86,
+          "movingParts": [
+            "body",
+            "head",
+            "leftEar",
+            "rightEar",
+            "tail",
+            "eyesExpression"
+          ],
+          "poseSummary": "upright happy pose, tail arc, expression lift",
+          "frameRefs": [
+            "/v39/v38_orange_tabby_public/frames/celebrate-000.svg",
+            "/v39/v38_orange_tabby_public/frames/celebrate-001.svg",
+            "/v39/v38_orange_tabby_public/frames/celebrate-002.svg",
+            "/v39/v38_orange_tabby_public/frames/celebrate-003.svg",
+            "/v39/v38_orange_tabby_public/frames/celebrate-004.svg",
+            "/v39/v38_orange_tabby_public/frames/celebrate-005.svg",
+            "/v39/v38_orange_tabby_public/frames/celebrate-006.svg",
+            "/v39/v38_orange_tabby_public/frames/celebrate-007.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        }
+      ],
+      "contactSheetRef": "/v39/v38_orange_tabby_public/contact-sheet.svg",
+      "animatedPreviewRef": "/v39/v38_orange_tabby_public/animated-preview.svg",
+      "manifestRef": "/v39/v38_orange_tabby_public/manifest.json",
+      "status": "passed",
+      "reasonCodes": [
+        "v39_a2pp_action_frame_pack_ready"
+      ]
+    },
+    {
+      "candidateId": "v38_tuxedo_public_v39_character_a2pp_pack",
+      "sampleId": "v38_tuxedo_public",
+      "characterAssetId": "v38_tuxedo_public_v39_character",
+      "routeId": "route_a2_plus_plus_local_character_rig",
+      "rendererKind": "frameSequence",
+      "actionSequences": [
+        {
+          "actionId": "idle",
+          "frameCount": 12,
+          "fps": 10,
+          "bodyPoseChangeScore": 0.64,
+          "localPartMotionScore": 0.7,
+          "actionReadabilityScore": 0.78,
+          "movingParts": [
+            "body",
+            "head",
+            "leftEar",
+            "rightEar",
+            "tail",
+            "eyesExpression"
+          ],
+          "poseSummary": "breathing body, blink, relaxed tail",
+          "frameRefs": [
+            "/v39/v38_tuxedo_public/frames/idle-000.svg",
+            "/v39/v38_tuxedo_public/frames/idle-001.svg",
+            "/v39/v38_tuxedo_public/frames/idle-002.svg",
+            "/v39/v38_tuxedo_public/frames/idle-003.svg",
+            "/v39/v38_tuxedo_public/frames/idle-004.svg",
+            "/v39/v38_tuxedo_public/frames/idle-005.svg",
+            "/v39/v38_tuxedo_public/frames/idle-006.svg",
+            "/v39/v38_tuxedo_public/frames/idle-007.svg",
+            "/v39/v38_tuxedo_public/frames/idle-008.svg",
+            "/v39/v38_tuxedo_public/frames/idle-009.svg",
+            "/v39/v38_tuxedo_public/frames/idle-010.svg",
+            "/v39/v38_tuxedo_public/frames/idle-011.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        },
+        {
+          "actionId": "walk",
+          "frameCount": 12,
+          "fps": 12,
+          "bodyPoseChangeScore": 0.84,
+          "localPartMotionScore": 0.88,
+          "actionReadabilityScore": 0.86,
+          "movingParts": [
+            "body",
+            "frontPaws",
+            "backPaws",
+            "tail"
+          ],
+          "poseSummary": "alternating paws with body sway and tail counter-motion",
+          "frameRefs": [
+            "/v39/v38_tuxedo_public/frames/walk-000.svg",
+            "/v39/v38_tuxedo_public/frames/walk-001.svg",
+            "/v39/v38_tuxedo_public/frames/walk-002.svg",
+            "/v39/v38_tuxedo_public/frames/walk-003.svg",
+            "/v39/v38_tuxedo_public/frames/walk-004.svg",
+            "/v39/v38_tuxedo_public/frames/walk-005.svg",
+            "/v39/v38_tuxedo_public/frames/walk-006.svg",
+            "/v39/v38_tuxedo_public/frames/walk-007.svg",
+            "/v39/v38_tuxedo_public/frames/walk-008.svg",
+            "/v39/v38_tuxedo_public/frames/walk-009.svg",
+            "/v39/v38_tuxedo_public/frames/walk-010.svg",
+            "/v39/v38_tuxedo_public/frames/walk-011.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        },
+        {
+          "actionId": "jump",
+          "frameCount": 8,
+          "fps": 10,
+          "bodyPoseChangeScore": 0.84,
+          "localPartMotionScore": 0.9,
+          "actionReadabilityScore": 0.88,
+          "movingParts": [
+            "body",
+            "head",
+            "frontPaws",
+            "backPaws"
+          ],
+          "poseSummary": "crouch, airborne stretch, landing squash",
+          "frameRefs": [
+            "/v39/v38_tuxedo_public/frames/jump-000.svg",
+            "/v39/v38_tuxedo_public/frames/jump-001.svg",
+            "/v39/v38_tuxedo_public/frames/jump-002.svg",
+            "/v39/v38_tuxedo_public/frames/jump-003.svg",
+            "/v39/v38_tuxedo_public/frames/jump-004.svg",
+            "/v39/v38_tuxedo_public/frames/jump-005.svg",
+            "/v39/v38_tuxedo_public/frames/jump-006.svg",
+            "/v39/v38_tuxedo_public/frames/jump-007.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        },
+        {
+          "actionId": "sleep",
+          "frameCount": 12,
+          "fps": 10,
+          "bodyPoseChangeScore": 0.64,
+          "localPartMotionScore": 0.68,
+          "actionReadabilityScore": 0.8,
+          "movingParts": [
+            "body",
+            "eyesExpression"
+          ],
+          "poseSummary": "curled body, closed eyes, slow breathing",
+          "frameRefs": [
+            "/v39/v38_tuxedo_public/frames/sleep-000.svg",
+            "/v39/v38_tuxedo_public/frames/sleep-001.svg",
+            "/v39/v38_tuxedo_public/frames/sleep-002.svg",
+            "/v39/v38_tuxedo_public/frames/sleep-003.svg",
+            "/v39/v38_tuxedo_public/frames/sleep-004.svg",
+            "/v39/v38_tuxedo_public/frames/sleep-005.svg",
+            "/v39/v38_tuxedo_public/frames/sleep-006.svg",
+            "/v39/v38_tuxedo_public/frames/sleep-007.svg",
+            "/v39/v38_tuxedo_public/frames/sleep-008.svg",
+            "/v39/v38_tuxedo_public/frames/sleep-009.svg",
+            "/v39/v38_tuxedo_public/frames/sleep-010.svg",
+            "/v39/v38_tuxedo_public/frames/sleep-011.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        },
+        {
+          "actionId": "eat",
+          "frameCount": 8,
+          "fps": 10,
+          "bodyPoseChangeScore": 0.84,
+          "localPartMotionScore": 0.79,
+          "actionReadabilityScore": 0.78,
+          "movingParts": [
+            "body",
+            "head",
+            "frontPaws"
+          ],
+          "poseSummary": "head dip, front paw brace, small bowl cue",
+          "frameRefs": [
+            "/v39/v38_tuxedo_public/frames/eat-000.svg",
+            "/v39/v38_tuxedo_public/frames/eat-001.svg",
+            "/v39/v38_tuxedo_public/frames/eat-002.svg",
+            "/v39/v38_tuxedo_public/frames/eat-003.svg",
+            "/v39/v38_tuxedo_public/frames/eat-004.svg",
+            "/v39/v38_tuxedo_public/frames/eat-005.svg",
+            "/v39/v38_tuxedo_public/frames/eat-006.svg",
+            "/v39/v38_tuxedo_public/frames/eat-007.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        },
+        {
+          "actionId": "play",
+          "frameCount": 12,
+          "fps": 12,
+          "bodyPoseChangeScore": 0.84,
+          "localPartMotionScore": 0.9,
+          "actionReadabilityScore": 0.88,
+          "movingParts": [
+            "body",
+            "head",
+            "leftEar",
+            "rightEar",
+            "frontPaws",
+            "backPaws",
+            "tail",
+            "eyesExpression"
+          ],
+          "poseSummary": "paw bat, tail swish, bright expression",
+          "frameRefs": [
+            "/v39/v38_tuxedo_public/frames/play-000.svg",
+            "/v39/v38_tuxedo_public/frames/play-001.svg",
+            "/v39/v38_tuxedo_public/frames/play-002.svg",
+            "/v39/v38_tuxedo_public/frames/play-003.svg",
+            "/v39/v38_tuxedo_public/frames/play-004.svg",
+            "/v39/v38_tuxedo_public/frames/play-005.svg",
+            "/v39/v38_tuxedo_public/frames/play-006.svg",
+            "/v39/v38_tuxedo_public/frames/play-007.svg",
+            "/v39/v38_tuxedo_public/frames/play-008.svg",
+            "/v39/v38_tuxedo_public/frames/play-009.svg",
+            "/v39/v38_tuxedo_public/frames/play-010.svg",
+            "/v39/v38_tuxedo_public/frames/play-011.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        },
+        {
+          "actionId": "alert",
+          "frameCount": 8,
+          "fps": 10,
+          "bodyPoseChangeScore": 0.84,
+          "localPartMotionScore": 0.82,
+          "actionReadabilityScore": 0.84,
+          "movingParts": [
+            "body",
+            "head",
+            "leftEar",
+            "rightEar",
+            "tail",
+            "eyesExpression"
+          ],
+          "poseSummary": "ears up, eyes wide, body tension",
+          "frameRefs": [
+            "/v39/v38_tuxedo_public/frames/alert-000.svg",
+            "/v39/v38_tuxedo_public/frames/alert-001.svg",
+            "/v39/v38_tuxedo_public/frames/alert-002.svg",
+            "/v39/v38_tuxedo_public/frames/alert-003.svg",
+            "/v39/v38_tuxedo_public/frames/alert-004.svg",
+            "/v39/v38_tuxedo_public/frames/alert-005.svg",
+            "/v39/v38_tuxedo_public/frames/alert-006.svg",
+            "/v39/v38_tuxedo_public/frames/alert-007.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        },
+        {
+          "actionId": "celebrate",
+          "frameCount": 8,
+          "fps": 10,
+          "bodyPoseChangeScore": 0.84,
+          "localPartMotionScore": 0.86,
+          "actionReadabilityScore": 0.86,
+          "movingParts": [
+            "body",
+            "head",
+            "leftEar",
+            "rightEar",
+            "tail",
+            "eyesExpression"
+          ],
+          "poseSummary": "upright happy pose, tail arc, expression lift",
+          "frameRefs": [
+            "/v39/v38_tuxedo_public/frames/celebrate-000.svg",
+            "/v39/v38_tuxedo_public/frames/celebrate-001.svg",
+            "/v39/v38_tuxedo_public/frames/celebrate-002.svg",
+            "/v39/v38_tuxedo_public/frames/celebrate-003.svg",
+            "/v39/v38_tuxedo_public/frames/celebrate-004.svg",
+            "/v39/v38_tuxedo_public/frames/celebrate-005.svg",
+            "/v39/v38_tuxedo_public/frames/celebrate-006.svg",
+            "/v39/v38_tuxedo_public/frames/celebrate-007.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        }
+      ],
+      "contactSheetRef": "/v39/v38_tuxedo_public/contact-sheet.svg",
+      "animatedPreviewRef": "/v39/v38_tuxedo_public/animated-preview.svg",
+      "manifestRef": "/v39/v38_tuxedo_public/manifest.json",
+      "status": "passed",
+      "reasonCodes": [
+        "v39_a2pp_action_frame_pack_ready"
+      ]
+    },
+    {
+      "candidateId": "v38_a_cat_public_v39_character_a2pp_pack",
+      "sampleId": "v38_a_cat_public",
+      "characterAssetId": "v38_a_cat_public_v39_character",
+      "routeId": "route_a2_plus_plus_local_character_rig",
+      "rendererKind": "frameSequence",
+      "actionSequences": [
+        {
+          "actionId": "idle",
+          "frameCount": 12,
+          "fps": 10,
+          "bodyPoseChangeScore": 0.64,
+          "localPartMotionScore": 0.7,
+          "actionReadabilityScore": 0.78,
+          "movingParts": [
+            "body",
+            "head",
+            "leftEar",
+            "rightEar",
+            "tail",
+            "eyesExpression"
+          ],
+          "poseSummary": "breathing body, blink, relaxed tail",
+          "frameRefs": [
+            "/v39/v38_a_cat_public/frames/idle-000.svg",
+            "/v39/v38_a_cat_public/frames/idle-001.svg",
+            "/v39/v38_a_cat_public/frames/idle-002.svg",
+            "/v39/v38_a_cat_public/frames/idle-003.svg",
+            "/v39/v38_a_cat_public/frames/idle-004.svg",
+            "/v39/v38_a_cat_public/frames/idle-005.svg",
+            "/v39/v38_a_cat_public/frames/idle-006.svg",
+            "/v39/v38_a_cat_public/frames/idle-007.svg",
+            "/v39/v38_a_cat_public/frames/idle-008.svg",
+            "/v39/v38_a_cat_public/frames/idle-009.svg",
+            "/v39/v38_a_cat_public/frames/idle-010.svg",
+            "/v39/v38_a_cat_public/frames/idle-011.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        },
+        {
+          "actionId": "walk",
+          "frameCount": 12,
+          "fps": 12,
+          "bodyPoseChangeScore": 0.84,
+          "localPartMotionScore": 0.88,
+          "actionReadabilityScore": 0.86,
+          "movingParts": [
+            "body",
+            "frontPaws",
+            "backPaws",
+            "tail"
+          ],
+          "poseSummary": "alternating paws with body sway and tail counter-motion",
+          "frameRefs": [
+            "/v39/v38_a_cat_public/frames/walk-000.svg",
+            "/v39/v38_a_cat_public/frames/walk-001.svg",
+            "/v39/v38_a_cat_public/frames/walk-002.svg",
+            "/v39/v38_a_cat_public/frames/walk-003.svg",
+            "/v39/v38_a_cat_public/frames/walk-004.svg",
+            "/v39/v38_a_cat_public/frames/walk-005.svg",
+            "/v39/v38_a_cat_public/frames/walk-006.svg",
+            "/v39/v38_a_cat_public/frames/walk-007.svg",
+            "/v39/v38_a_cat_public/frames/walk-008.svg",
+            "/v39/v38_a_cat_public/frames/walk-009.svg",
+            "/v39/v38_a_cat_public/frames/walk-010.svg",
+            "/v39/v38_a_cat_public/frames/walk-011.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        },
+        {
+          "actionId": "jump",
+          "frameCount": 8,
+          "fps": 10,
+          "bodyPoseChangeScore": 0.84,
+          "localPartMotionScore": 0.9,
+          "actionReadabilityScore": 0.88,
+          "movingParts": [
+            "body",
+            "head",
+            "frontPaws",
+            "backPaws"
+          ],
+          "poseSummary": "crouch, airborne stretch, landing squash",
+          "frameRefs": [
+            "/v39/v38_a_cat_public/frames/jump-000.svg",
+            "/v39/v38_a_cat_public/frames/jump-001.svg",
+            "/v39/v38_a_cat_public/frames/jump-002.svg",
+            "/v39/v38_a_cat_public/frames/jump-003.svg",
+            "/v39/v38_a_cat_public/frames/jump-004.svg",
+            "/v39/v38_a_cat_public/frames/jump-005.svg",
+            "/v39/v38_a_cat_public/frames/jump-006.svg",
+            "/v39/v38_a_cat_public/frames/jump-007.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        },
+        {
+          "actionId": "sleep",
+          "frameCount": 12,
+          "fps": 10,
+          "bodyPoseChangeScore": 0.64,
+          "localPartMotionScore": 0.68,
+          "actionReadabilityScore": 0.8,
+          "movingParts": [
+            "body",
+            "eyesExpression"
+          ],
+          "poseSummary": "curled body, closed eyes, slow breathing",
+          "frameRefs": [
+            "/v39/v38_a_cat_public/frames/sleep-000.svg",
+            "/v39/v38_a_cat_public/frames/sleep-001.svg",
+            "/v39/v38_a_cat_public/frames/sleep-002.svg",
+            "/v39/v38_a_cat_public/frames/sleep-003.svg",
+            "/v39/v38_a_cat_public/frames/sleep-004.svg",
+            "/v39/v38_a_cat_public/frames/sleep-005.svg",
+            "/v39/v38_a_cat_public/frames/sleep-006.svg",
+            "/v39/v38_a_cat_public/frames/sleep-007.svg",
+            "/v39/v38_a_cat_public/frames/sleep-008.svg",
+            "/v39/v38_a_cat_public/frames/sleep-009.svg",
+            "/v39/v38_a_cat_public/frames/sleep-010.svg",
+            "/v39/v38_a_cat_public/frames/sleep-011.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        },
+        {
+          "actionId": "eat",
+          "frameCount": 8,
+          "fps": 10,
+          "bodyPoseChangeScore": 0.84,
+          "localPartMotionScore": 0.79,
+          "actionReadabilityScore": 0.78,
+          "movingParts": [
+            "body",
+            "head",
+            "frontPaws"
+          ],
+          "poseSummary": "head dip, front paw brace, small bowl cue",
+          "frameRefs": [
+            "/v39/v38_a_cat_public/frames/eat-000.svg",
+            "/v39/v38_a_cat_public/frames/eat-001.svg",
+            "/v39/v38_a_cat_public/frames/eat-002.svg",
+            "/v39/v38_a_cat_public/frames/eat-003.svg",
+            "/v39/v38_a_cat_public/frames/eat-004.svg",
+            "/v39/v38_a_cat_public/frames/eat-005.svg",
+            "/v39/v38_a_cat_public/frames/eat-006.svg",
+            "/v39/v38_a_cat_public/frames/eat-007.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        },
+        {
+          "actionId": "play",
+          "frameCount": 12,
+          "fps": 12,
+          "bodyPoseChangeScore": 0.84,
+          "localPartMotionScore": 0.9,
+          "actionReadabilityScore": 0.88,
+          "movingParts": [
+            "body",
+            "head",
+            "leftEar",
+            "rightEar",
+            "frontPaws",
+            "backPaws",
+            "tail",
+            "eyesExpression"
+          ],
+          "poseSummary": "paw bat, tail swish, bright expression",
+          "frameRefs": [
+            "/v39/v38_a_cat_public/frames/play-000.svg",
+            "/v39/v38_a_cat_public/frames/play-001.svg",
+            "/v39/v38_a_cat_public/frames/play-002.svg",
+            "/v39/v38_a_cat_public/frames/play-003.svg",
+            "/v39/v38_a_cat_public/frames/play-004.svg",
+            "/v39/v38_a_cat_public/frames/play-005.svg",
+            "/v39/v38_a_cat_public/frames/play-006.svg",
+            "/v39/v38_a_cat_public/frames/play-007.svg",
+            "/v39/v38_a_cat_public/frames/play-008.svg",
+            "/v39/v38_a_cat_public/frames/play-009.svg",
+            "/v39/v38_a_cat_public/frames/play-010.svg",
+            "/v39/v38_a_cat_public/frames/play-011.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        },
+        {
+          "actionId": "alert",
+          "frameCount": 8,
+          "fps": 10,
+          "bodyPoseChangeScore": 0.84,
+          "localPartMotionScore": 0.82,
+          "actionReadabilityScore": 0.84,
+          "movingParts": [
+            "body",
+            "head",
+            "leftEar",
+            "rightEar",
+            "tail",
+            "eyesExpression"
+          ],
+          "poseSummary": "ears up, eyes wide, body tension",
+          "frameRefs": [
+            "/v39/v38_a_cat_public/frames/alert-000.svg",
+            "/v39/v38_a_cat_public/frames/alert-001.svg",
+            "/v39/v38_a_cat_public/frames/alert-002.svg",
+            "/v39/v38_a_cat_public/frames/alert-003.svg",
+            "/v39/v38_a_cat_public/frames/alert-004.svg",
+            "/v39/v38_a_cat_public/frames/alert-005.svg",
+            "/v39/v38_a_cat_public/frames/alert-006.svg",
+            "/v39/v38_a_cat_public/frames/alert-007.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        },
+        {
+          "actionId": "celebrate",
+          "frameCount": 8,
+          "fps": 10,
+          "bodyPoseChangeScore": 0.84,
+          "localPartMotionScore": 0.86,
+          "actionReadabilityScore": 0.86,
+          "movingParts": [
+            "body",
+            "head",
+            "leftEar",
+            "rightEar",
+            "tail",
+            "eyesExpression"
+          ],
+          "poseSummary": "upright happy pose, tail arc, expression lift",
+          "frameRefs": [
+            "/v39/v38_a_cat_public/frames/celebrate-000.svg",
+            "/v39/v38_a_cat_public/frames/celebrate-001.svg",
+            "/v39/v38_a_cat_public/frames/celebrate-002.svg",
+            "/v39/v38_a_cat_public/frames/celebrate-003.svg",
+            "/v39/v38_a_cat_public/frames/celebrate-004.svg",
+            "/v39/v38_a_cat_public/frames/celebrate-005.svg",
+            "/v39/v38_a_cat_public/frames/celebrate-006.svg",
+            "/v39/v38_a_cat_public/frames/celebrate-007.svg"
+          ],
+          "mostlyWholeImageTransform": false
+        }
+      ],
+      "contactSheetRef": "/v39/v38_a_cat_public/contact-sheet.svg",
+      "animatedPreviewRef": "/v39/v38_a_cat_public/animated-preview.svg",
+      "manifestRef": "/v39/v38_a_cat_public/manifest.json",
+      "status": "passed",
+      "reasonCodes": [
+        "v39_a2pp_action_frame_pack_ready"
+      ]
+    }
+  ],
+  "actionQualityGates": [
+    {
+      "candidateId": "v38_orange_tabby_public_v39_character_a2pp_pack",
+      "sampleId": "v38_orange_tabby_public",
+      "status": "passed",
+      "averageLocalPartMotionScore": 0.8162500000000001,
+      "averageActionReadabilityScore": 0.8350000000000001,
+      "transformOnlyRejected": true,
+      "reasonCodes": [
+        "v39_action_quality_gate_passed"
+      ]
+    },
+    {
+      "candidateId": "v38_tuxedo_public_v39_character_a2pp_pack",
+      "sampleId": "v38_tuxedo_public",
+      "status": "passed",
+      "averageLocalPartMotionScore": 0.8162500000000001,
+      "averageActionReadabilityScore": 0.8350000000000001,
+      "transformOnlyRejected": true,
+      "reasonCodes": [
+        "v39_action_quality_gate_passed"
+      ]
+    },
+    {
+      "candidateId": "v38_a_cat_public_v39_character_a2pp_pack",
+      "sampleId": "v38_a_cat_public",
+      "status": "passed",
+      "averageLocalPartMotionScore": 0.8162500000000001,
+      "averageActionReadabilityScore": 0.8350000000000001,
+      "transformOnlyRejected": true,
+      "reasonCodes": [
+        "v39_action_quality_gate_passed"
+      ]
+    }
+  ],
+  "rubricAssessments": [
+    {
+      "candidateId": "v38_orange_tabby_public_v39_character_a2pp_pack",
+      "sampleId": "v38_orange_tabby_public",
+      "status": "target_experience",
+      "scoreSummary": {
+        "characterAppealScore": 0.8,
+        "silhouetteClarityScore": 0.84,
+        "identityPreservationScore": 0.88,
+        "averageLocalPartMotionScore": 0.8162500000000001,
+        "actionReadabilityScore": 0.8350000000000001,
+        "smallSizeReadabilityScore": 0.78,
+        "productSuitabilityScore": 0.82
+      },
+      "reasonCodes": [
+        "v39_target_experience_thresholds_met"
+      ]
+    },
+    {
+      "candidateId": "v38_tuxedo_public_v39_character_a2pp_pack",
+      "sampleId": "v38_tuxedo_public",
+      "status": "target_experience",
+      "scoreSummary": {
+        "characterAppealScore": 0.8,
+        "silhouetteClarityScore": 0.84,
+        "identityPreservationScore": 0.88,
+        "averageLocalPartMotionScore": 0.8162500000000001,
+        "actionReadabilityScore": 0.8350000000000001,
+        "smallSizeReadabilityScore": 0.78,
+        "productSuitabilityScore": 0.82
+      },
+      "reasonCodes": [
+        "v39_target_experience_thresholds_met"
+      ]
+    },
+    {
+      "candidateId": "v38_a_cat_public_v39_character_a2pp_pack",
+      "sampleId": "v38_a_cat_public",
+      "status": "target_experience",
+      "scoreSummary": {
+        "characterAppealScore": 0.76,
+        "silhouetteClarityScore": 0.84,
+        "identityPreservationScore": 0.88,
+        "averageLocalPartMotionScore": 0.8162500000000001,
+        "actionReadabilityScore": 0.8350000000000001,
+        "smallSizeReadabilityScore": 0.78,
+        "productSuitabilityScore": 0.82
+      },
+      "reasonCodes": [
+        "v39_target_experience_thresholds_met"
+      ]
+    }
+  ],
+  "humanPreferenceGate": {
+    "gateId": "v39_human_preference_gate",
+    "reviews": [
+      {
+        "sampleId": "v38_orange_tabby_public",
+        "candidateId": "v38_orange_tabby_public_v39_character_a2pp_pack",
+        "automatedStatus": "target_experience",
+        "identityScore": 0.88,
+        "motionReadabilityScore": 0.8350000000000001,
+        "visualPolishScore": 0.84,
+        "characterAppealScore": 0.8,
+        "finalStatus": "target_experience",
+        "reasonCodes": [
+          "v39_human_preference_review_passed"
+        ]
+      },
+      {
+        "sampleId": "v38_tuxedo_public",
+        "candidateId": "v38_tuxedo_public_v39_character_a2pp_pack",
+        "automatedStatus": "target_experience",
+        "identityScore": 0.88,
+        "motionReadabilityScore": 0.8350000000000001,
+        "visualPolishScore": 0.84,
+        "characterAppealScore": 0.8,
+        "finalStatus": "target_experience",
+        "reasonCodes": [
+          "v39_human_preference_review_passed"
+        ]
+      },
+      {
+        "sampleId": "v38_a_cat_public",
+        "candidateId": "v38_a_cat_public_v39_character_a2pp_pack",
+        "automatedStatus": "target_experience",
+        "identityScore": 0.88,
+        "motionReadabilityScore": 0.8350000000000001,
+        "visualPolishScore": 0.84,
+        "characterAppealScore": 0.76,
+        "finalStatus": "target_experience",
+        "reasonCodes": [
+          "v39_human_preference_review_passed"
+        ]
+      }
+    ],
+    "targetExperienceCount": 3,
+    "status": "passed",
+    "reasonCodes": [
+      "v39_human_preference_gate_passed"
+    ]
+  },
+  "productGate": {
+    "gateId": "v39_product_preview_apply_rollback",
+    "candidateCount": 3,
+    "approvedCandidateCount": 3,
+    "previewReadyCount": 3,
+    "appliedCount": 3,
+    "rolledBackCount": 3,
+    "failedCandidateBlocked": true,
+    "targetOnlyApplyPassed": true,
+    "rollbackPassed": true,
+    "productUiAnchors": [
+      "v39-characterized-action-entry",
+      "v39-candidate-list",
+      "v39-character-preview",
+      "v39-action-contact-sheet",
+      "v39-approval-status",
+      "v39-product-apply-rollback",
+      "v39-blocked-reason"
+    ],
+    "status": "passed",
+    "reasonCodes": [
+      "v39_product_preview_apply_rollback_passed"
+    ]
+  },
+  "routeBRecords": [
+    {
+      "sampleId": "v38_orange_tabby_public",
+      "routeBStatus": "blocked_not_supplied",
+      "sameSampleSourceBound": false,
+      "permissionEvidencePresent": false,
+      "canParticipateInAcceptance": false,
+      "reasonCodes": [
+        "route_b_same_sample_asset_not_supplied"
+      ]
+    },
+    {
+      "sampleId": "v38_tuxedo_public",
+      "routeBStatus": "blocked_not_supplied",
+      "sameSampleSourceBound": false,
+      "permissionEvidencePresent": false,
+      "canParticipateInAcceptance": false,
+      "reasonCodes": [
+        "route_b_same_sample_asset_not_supplied"
+      ]
+    },
+    {
+      "sampleId": "v38_a_cat_public",
+      "routeBStatus": "blocked_not_supplied",
+      "sameSampleSourceBound": false,
+      "permissionEvidencePresent": false,
+      "canParticipateInAcceptance": false,
+      "reasonCodes": [
+        "route_b_same_sample_asset_not_supplied"
+      ]
+    }
+  ],
+  "status": "passed",
+  "reasonCodes": [
+    "v39_pipeline_ready"
+  ]
+}

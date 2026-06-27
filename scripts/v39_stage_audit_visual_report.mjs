@@ -1,0 +1,280 @@
+import fs from "node:fs";
+import path from "node:path";
+
+const date = "2026-06-27";
+const outDir = path.join("docs", "V39.x", "evidence");
+const htmlPath = path.join(outDir, `v39-stage-audit-visual-report-${date}.html`);
+const mdPath = path.join(outDir, `v39-stage-audit-${date}.md`);
+
+const screenshots = {
+  overview: "screenshots/v39-settings-overview.png",
+  v39Panel: "screenshots/v39-settings-panel-v39-crop.png",
+  contactSheet: "screenshots/v39-contact-sheet.png",
+  animatedPreview: "screenshots/v39-animated-preview.png"
+};
+
+const commandResults = [
+  ["pnpm --filter desktop test", "passed", "71 suites / 336 tests passed; V39 characterized action assets 7 tests passed"],
+  ["pnpm --filter desktop check", "passed", "TypeScript noEmit passed"],
+  ["pnpm --filter @agent-desktop-pet/petctl test", "passed", "10 suites / 71 tests passed"],
+  ["pnpm --filter desktop exec node --import tsx ../../scripts/v30_semantic_animation_gate_smoke.mjs", "passed", "transform-only weak baseline rejected; semantic candidate accepted"],
+  ["pnpm --filter desktop exec node --import tsx ../../scripts/v39_8_final_gate_smoke.mjs", "passed scoped", "3 passing public-photo samples, 2 negative/blocked records, Route B recorded as blocked_honestly"],
+  ["pnpm --filter desktop build", "passed", "Vite production build completed"],
+  ["drawio XML/page audit", "passed", "8 Chinese pages, within the <= 8 page requirement"],
+  ["claim scan", "passed with contextual hits", "Forbidden phrases only appeared in forbidden/not-ready/scanner-rule context"],
+  ["security scan", "passed", "No token, Authorization value, raw provider payload, raw HTTP payload, EXIF/GPS, or full workspace path detected"]
+];
+
+const findings = [
+  {
+    severity: "中风险",
+    title: "V39 通过范围仍是 tested public-photo samples 的 Route A2++ 本地证据",
+    detail: "当前实现能证明公开猫图样本经过角色化资产、分层 rig、8 动作帧表和产品门槛的 scoped pass；不能证明任意用户猫照片自动生成高质量动作资产，也不能声明 Petdex parity。"
+  },
+  {
+    severity: "中风险",
+    title: "产品应用/回滚仍偏合同和预览证据，不等价于完整最终用户 runtime 激活体验",
+    detail: "V39 面板展示通过候选、动作帧表和 apply/rollback 门槛；但当前 UI 中 V39 应用/回滚按钮保持 disabled，验收结论不能扩大为用户已可一键安装任意 V39 资产到运行桌宠。"
+  },
+  {
+    severity: "中风险",
+    title: "视觉质量较 V38 有改进，但仍可能低于用户对专业宠物资产的审美预期",
+    detail: "资产不再只是整图 transform-only 或照片卡片叠加，但仍是确定性 SVG/frameSequence；如果目标是显著接近专业项目资产，需要继续引入人工美术或真实 source-bound 专业资产路线。"
+  },
+  {
+    severity: "低风险",
+    title: "既有 V39.6 HTML 报告按 file:// 打开时图片路径不可见",
+    detail: "本轮阶段报告改用 headless Chrome 截图证据和相对路径图片；旧报告更适合在应用预览服务路径下查看，不能作为单独 file-open 视觉证据。"
+  }
+];
+
+function escapeHtml(value) {
+  return String(value)
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;");
+}
+
+function statusClass(status) {
+  if (status.includes("passed")) return "passed";
+  if (status.includes("blocked") || status.includes("risk")) return "warn";
+  return "neutral";
+}
+
+function commandRows() {
+  return commandResults.map(([command, status, evidence]) => `
+    <tr>
+      <td><code>${escapeHtml(command)}</code></td>
+      <td><span class="pill ${statusClass(status)}">${escapeHtml(status)}</span></td>
+      <td>${escapeHtml(evidence)}</td>
+    </tr>
+  `).join("");
+}
+
+function findingCards() {
+  return findings.map((finding) => `
+    <article class="finding">
+      <strong>${escapeHtml(finding.severity)} · ${escapeHtml(finding.title)}</strong>
+      <p>${escapeHtml(finding.detail)}</p>
+    </article>
+  `).join("");
+}
+
+const html = `<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>V39 阶段性自动化验收报告</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f7fb;
+      --paper: #ffffff;
+      --ink: #172033;
+      --muted: #5c697a;
+      --line: #d9e2ee;
+      --blue: #2359d6;
+      --green: #127a52;
+      --amber: #9a5b00;
+      --red: #a83434;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    body { margin: 0; padding: 28px; }
+    main { max-width: 1180px; margin: 0 auto; }
+    section, .hero, .finding, figure {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 1px 2px rgba(20, 30, 50, 0.04);
+    }
+    .hero { padding: 28px; margin-bottom: 18px; }
+    section { padding: 22px; margin-bottom: 18px; }
+    h1 { margin: 0 0 10px; font-size: 30px; }
+    h2 { margin: 0 0 14px; font-size: 22px; }
+    h3 { margin: 0 0 8px; font-size: 17px; }
+    p { line-height: 1.65; margin: 8px 0; }
+    .muted { color: var(--muted); }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-top: 18px;
+    }
+    .metric { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: #fbfdff; }
+    .metric span { display: block; color: var(--muted); font-size: 12px; }
+    .metric strong { display: block; margin-top: 4px; font-size: 20px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 10px 8px; border-bottom: 1px solid #e5edf6; text-align: left; vertical-align: top; }
+    th { color: #334155; background: #f8fbff; }
+    code { background: #eef4fb; padding: 2px 5px; border-radius: 4px; font-size: 12px; }
+    .pill { display: inline-block; border-radius: 999px; padding: 4px 9px; font-size: 12px; font-weight: 700; }
+    .passed { background: #e7f7ef; color: var(--green); }
+    .warn { background: #fff3d7; color: var(--amber); }
+    .neutral { background: #eef4fb; color: #34516f; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px; }
+    figure { margin: 0; padding: 12px; }
+    figure img { display: block; width: 100%; max-height: 680px; object-fit: contain; background: #fff; border-radius: 6px; }
+    figcaption { margin-top: 9px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+    .finding { padding: 14px; margin-bottom: 10px; border-left: 5px solid #f0b429; }
+    .architecture { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .box { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: #fbfdff; }
+    ul { line-height: 1.7; }
+    @media (max-width: 820px) {
+      body { padding: 14px; }
+      .architecture { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <h1>V39 阶段性自动化验收报告</h1>
+      <p>本报告基于原始 PRD/active 文档、V39 PRD、目标架构、当前代码和本轮真实命令执行结果生成。结论是 <strong>passed scoped</strong>：V39 可以声明 tested public-photo samples 的 Route A2++ 角色化 2D 动作资产 scoped pass。</p>
+      <p class="muted">不声明任意猫自动生成高质量动作资产、不声明 provider integration、Route B verified、Petdex parity、3D、production、Windows 或 cross-platform ready。</p>
+      <div class="summary">
+        <div class="metric"><span>阶段结论</span><strong>passed scoped</strong></div>
+        <div class="metric"><span>通过样本</span><strong>3 个公开猫图样本</strong></div>
+        <div class="metric"><span>负例/阻塞样本</span><strong>2 个</strong></div>
+        <div class="metric"><span>剩余产品风险</span><strong>中风险</strong></div>
+      </div>
+    </header>
+
+    <section>
+      <h2>主要审计发现</h2>
+      ${findingCards()}
+    </section>
+
+    <section>
+      <h2>目标架构与当前实现</h2>
+      <div class="architecture">
+        <div class="box">
+          <h3>目标架构</h3>
+          <ul>
+            <li>公开猫图样本进入安全来源/脱敏边界。</li>
+            <li>生成同猫身份的角色化 2D 资产，不复用照片卡片外观。</li>
+            <li>建立 head/body/ears/paws/tail/eyes-expression 分层 rig。</li>
+            <li>由 A2++ frame composer 生成 8 个动作、每动作至少 8 帧。</li>
+            <li>通过 target-experience rubric、产品预览、应用/回滚门槛和 evidence scan。</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>当前实现</h3>
+          <ul>
+            <li><code>apps/desktop/src/assets/v39-characterized-action-assets.ts</code> 实现样本、合同、rig、动作帧、门槛和扫描。</li>
+            <li><code>apps/desktop/src/main.ts</code> 在设置页展示 V39 面板、角色化资产和动作帧表。</li>
+            <li><code>apps/desktop/public/v39/</code> 提供通过样本的 SVG 角色、contact sheet、animated preview。</li>
+            <li><code>scripts/v39_*.mjs</code> 生成各阶段 evidence 与 final gate。</li>
+            <li><code>docs/V39.x/</code> 保存 PRD、目标架构、计划、验收、审计与 evidence。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>命令与端到端验收结果</h2>
+      <table>
+        <thead><tr><th>命令/审计项</th><th>结果</th><th>证据摘要</th></tr></thead>
+        <tbody>${commandRows()}</tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>用户场景截图证据</h2>
+      <p>截图通过 Windows Chrome headless 模式采集，没有打开可见浏览器窗口，也没有进行桌面焦点抢占。报告打开动作本身会按用户要求显示浏览器窗口。</p>
+      <div class="grid">
+        <figure>
+          <img src="${screenshots.overview}" alt="设置页总览截图" />
+          <figcaption>设置与工作猫管理页：可见当前状态、资产入口和基础功能，说明自动化能加载应用构建产物。</figcaption>
+        </figure>
+        <figure>
+          <img src="${screenshots.v39Panel}" alt="V39 设置面板截图" />
+          <figcaption>V39 面板区域：可见 V38 来源、V39 角色化资产、8 动作帧表、产品门槛和 apply/rollback 状态。按钮仍为 disabled，不能夸大为完整用户安装流。</figcaption>
+        </figure>
+        <figure>
+          <img src="${screenshots.contactSheet}" alt="V39 动作帧表截图" />
+          <figcaption>V39 contact sheet：展示 idle、walk、jump、sleep、eat、play、alert、celebrate 等动作帧，不是整图 transform-only。</figcaption>
+        </figure>
+        <figure>
+          <img src="${screenshots.animatedPreview}" alt="V39 动画预览截图" />
+          <figcaption>V39 animated preview：同一角色化猫资产的 SVG 动作预览截图，仍属于本地确定性 SVG/frameSequence 证据。</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section>
+      <h2>测试覆盖与缺口</h2>
+      <table>
+        <thead><tr><th>功能点</th><th>覆盖情况</th><th>缺口</th></tr></thead>
+        <tbody>
+          <tr><td>拒绝 V38 风格照片卡片/transform-only 弱动作</td><td>V39 单测和 final gate 覆盖</td><td>无阻塞缺口</td></tr>
+          <tr><td>公开样本进入角色化资产合同</td><td>3 个通过样本 + 负例/blocked 样本覆盖</td><td>不能推广到任意猫</td></tr>
+          <tr><td>分层 rig 与 8 动作帧表</td><td>单测、smoke、截图覆盖</td><td>审美质量仍需人工或专业路线提高</td></tr>
+          <tr><td>产品预览/应用/回滚</td><td>合同和 UI 状态覆盖</td><td>V39 UI 按钮 disabled，未完成真实最终用户一键应用体验</td></tr>
+          <tr><td>文档概念一致性</td><td>PRD/架构/计划/evidence 均限定 scoped pass 和 forbidden claims</td><td>历史文档存在大量 forbidden claim 文本，需持续保持语境限定</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>验收评价</h2>
+      <p><strong>阶段性结论：V39 scoped acceptance 可以通过，但项目整体仍不是高质量任意猫图生动作资产产品。</strong></p>
+      <p>当前比“难看的简单线条猫”和整图变形路线更接近目标：已经有同猫来源、角色化资产、分层部件和多动作帧表。但若目标是让普通用户明显喜欢、接近专业项目资产或稳定支持任意猫照片，下一阶段必须继续做真实用户照片导入、可点击应用安装、人工/专业资产增强路线和更强视觉审美验收。</p>
+    </section>
+  </main>
+</body>
+</html>`;
+
+const markdown = `# V39 Stage Audit - ${date}
+
+## Decision
+- Status: passed scoped.
+- Scope: tested public-photo samples, Route A2++ local deterministic characterized 2D action assets.
+- Not claimed: arbitrary-cat automatic generation, provider integration, Route B verified, Petdex parity, 3D, production, Windows, cross-platform.
+
+## Findings
+${findings.map((finding) => `- ${finding.severity}: ${finding.title} - ${finding.detail}`).join("\n")}
+
+## Commands
+${commandResults.map(([command, status, evidence]) => `- ${command}: ${status}. ${evidence}.`).join("\n")}
+
+## Visual Evidence
+- HTML report: ${htmlPath}
+- Screenshots:
+  - ${screenshots.overview}
+  - ${screenshots.v39Panel}
+  - ${screenshots.contactSheet}
+  - ${screenshots.animatedPreview}
+
+## Acceptance Evaluation
+V39 is acceptable as a scoped stage result. It is not sufficient for broad high-quality arbitrary-cat photo-to-action asset generation.
+`;
+
+fs.mkdirSync(outDir, { recursive: true });
+fs.writeFileSync(htmlPath, html, "utf8");
+fs.writeFileSync(mdPath, markdown, "utf8");
+
+console.log(JSON.stringify({ ok: true, htmlPath, mdPath }, null, 2));
