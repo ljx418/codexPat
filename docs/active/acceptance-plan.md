@@ -1,11 +1,51 @@
 # Active Acceptance Plan
 
-文档状态：active acceptance index；V39.0-V39.8 characterized 2D action asset Route A2++ scoped evidence generated on 2026-06-27；V38 public-photo action asset scoped evidence generated on 2026-06-26 and is the input baseline；V37 tested photo-to-action product-path scoped evidence generated on 2026-06-26；V36 risk closure and target-experience hardening executed with partial scoped final decision on 2026-06-26；V35 target-experience route assessment passed scoped for tested named samples only；V34 photo-to-character-to-actions generation core evidence-matched scoped passed through V34.8；V33 scoped local sample-to-frameSequence loop passed but does not prove true photo-generated action assets；V32 quality rescue passed scoped；V31 partial scoped with continuation execution blocked scoped；V30 scoped passed；Post-V30 architecture/runtime remediation gates passed scoped；V29/V23-V28 scoped baselines 是输入基线。
-当前日期：2026-06-27。
+文档状态：active acceptance index；V40 no-WebUI high-quality 2D action asset documentation line opened on 2026-06-29 by revising the existing V40 plan in place；V39.0-V39.8 characterized 2D action asset Route A2++ scoped evidence generated on 2026-06-27 and remains the immediate quality baseline；V38 public-photo action asset scoped evidence generated on 2026-06-26 and is the input baseline；V37 tested photo-to-action product-path scoped evidence generated on 2026-06-26；V36 risk closure and target-experience hardening executed with partial scoped final decision on 2026-06-26；V35 target-experience route assessment passed scoped for tested named samples only；V34 photo-to-character-to-actions generation core evidence-matched scoped passed through V34.8；V33 scoped local sample-to-frameSequence loop passed but does not prove true photo-generated action assets；V32 quality rescue passed scoped；V31 partial scoped with continuation execution blocked scoped；V30 scoped passed；Post-V30 architecture/runtime remediation gates passed scoped；V29/V23-V28 scoped baselines 是输入基线。
+当前日期：2026-06-29。
 
-## V39 Characterized 2D Action Asset Acceptance
+## V40 No-WebUI High-Quality 2D Action Asset Acceptance
 
-Current active PRD: `docs/active/agent_desktop_pet_prd_v39.md`.
+Current active PRD: `docs/active/agent_desktop_pet_prd_v40.md`.
+
+V40 acceptance proves only whether tested local/public cat samples can move from
+V39 prototype-quality assets to a higher-quality no-WebUI candidate route using
+project-owned Direct Local Runner generation or explicit accepted manual/import
+assets, Ollama prompt/review assistance, local normalization,
+same-sample V39 comparison, preview, target-only apply, rollback, and evidence
+scans.
+
+| Phase | Gate | Required Evidence | Status |
+| --- | --- | --- | --- |
+| V40.0 | documentation readiness | V40 PRD、目标架构、drawio、开发计划、验收计划、风险矩阵、doc audit、claim/security scan | superseded by no-WebUI in-place update |
+| V40.1 | local blocked baseline | ComfyUI blocked evidence preserved; GPU/Ollama safe summary | blocked for ComfyUI route |
+| V40.1A | Direct Local Runner smoke | project-owned runner dependency proof or stable blocked reason; model summary; Ollama advisory boundary summary | passed scoped |
+| V40.1A historical | WebUI Aki smoke | `docs/V40.x/evidence/v40_1a-webui-aki-smoke-2026-06-29.md` | blocked: WebUI removed from active dependencies |
+| V40.2 | no-WebUI workflow contract | safe run inputs, output refs, run IDs, reason codes; no raw prompt/path/payload leakage | passed scoped |
+| V40.3 | candidate generation/import | at least two tested cat samples and one blocked/negative sample with visual artifacts and explicit visual review | failed: generated candidates did not preserve same-cat identity/action consistency |
+| V40.3R | recovery subphase | direct img2img or identity-conditioned runner recovery, or accepted manual/import same-sample assets; visual review JSON required | failed/blocked: img2img failed visual target-experience review; identity-conditioned runner blocked by stack compatibility |
+| V40.3R2 | recovery execution | identity-conditioned runner repaired enough to generate real candidates and a stylized retry; explicit visual review failed both sets | failed |
+| V40.3R3 | candidate-source decision | PRD/spec review, route audit, source/license/sample-binding rules, visual acceptance preconditions, and claim/security scan before further code | next planned; not a success claim; V40.4 remains No-Go until two candidates pass explicit visual review |
+| V40.4 | normalization/action packaging | accepted outputs normalized to safe asset pack shape and compared to V39 baseline | No-Go until a future route or accepted imports produce two visually accepted candidates |
+| V40.5 | product preview/apply/rollback | accepted candidate preview, target-only apply, rollback, failed-candidate block | No-Go until V40.4 passes |
+| V40.6 | visual report | Chinese HTML with screenshots, V39/V40 same-sample comparison, failures and risks | No-Go until product evidence exists |
+| V40.7 | final scoped gate | PRD/spec review, command results, visual evidence, claim scan, security scan | No-Go until V40.0-V40.6 evidence exists with passed or stable blocked/failed reasons |
+
+V40 forbidden/not-ready claim: arbitrary-cat automatic animation ready.
+V40 forbidden/not-ready claim: automatic photo-to-2D ready for arbitrary cats.
+V40 forbidden/not-ready claim: provider integration verified.
+V40 forbidden/not-ready claim: Route B verified without real source-bound assets.
+V40 forbidden/not-ready claim: Petdex parity, 3D ready, production release ready, Windows ready, and cross-platform ready.
+
+V40 cannot pass if Direct Local Runner/model or accepted manual/import assets are
+unavailable, output cannot be normalized, visual quality does not improve over
+same-sample V39 evidence, generated candidates fail same-cat identity/action
+consistency, product apply/rollback does not work for accepted candidates, or
+evidence leaks raw prompts, raw paths, raw payloads, raw images, raw photos,
+EXIF/GPS, token, or Authorization values.
+
+## V39 Characterized 2D Action Asset Input Baseline
+
+Current input PRD: `docs/active/agent_desktop_pet_prd_v39.md`.
 
 V39 acceptance proves only whether tested samples can become character-like 2D
 desktop pet action asset candidates through Route A2++ and pass human visual

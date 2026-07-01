@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>V40.3R3 阶段性自动化验收报告</title>
+  <style>
+    :root{color-scheme:light;--bg:#f4f7fb;--paper:#fff;--ink:#172033;--muted:#5d6b80;--line:#d9e2ee;--green:#127a52;--red:#a83434;--amber:#9a5b00;font-family:Arial,"Microsoft YaHei",sans-serif;color:var(--ink);background:var(--bg)}
+    body{margin:0;padding:28px}main{max-width:1220px;margin:0 auto}.hero,section,.shot{background:var(--paper);border:1px solid var(--line);border-radius:8px;box-shadow:0 1px 2px rgba(20,30,50,.04)}.hero,section{padding:24px;margin-bottom:18px}h1{margin:0 0 10px;font-size:30px;letter-spacing:0}h2{margin:0 0 14px;font-size:22px;letter-spacing:0}h3{margin:0 0 8px;font-size:16px;letter-spacing:0}p,li{line-height:1.65}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}.metric{padding:14px;background:#fbfdff;border:1px solid var(--line);border-radius:8px}.metric span{display:block;color:var(--muted);font-size:12px}.metric strong{display:block;margin-top:4px;font-size:19px}table{width:100%;border-collapse:collapse}th,td{padding:10px 8px;border-bottom:1px solid #e5edf6;text-align:left;vertical-align:top}th{color:#334155;background:#f8fbff}code{background:#eef4fb;padding:2px 5px;border-radius:4px;font-size:12px}.pill{display:inline-block;border-radius:999px;padding:4px 9px;font-size:12px;font-weight:700}.pass{background:#e7f7ef;color:var(--green)}.fail{background:#fee2e2;color:var(--red)}.warn{background:#fff3d7;color:var(--amber)}.shot{padding:12px}.shot img{display:block;width:100%;max-height:720px;object-fit:contain;border:1px solid #e5e7eb;border-radius:6px;background:#fff}.issue{border-left:5px solid #f0b429;padding-left:12px}@media(max-width:820px){body{padding:14px}}
+  </style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <h1>V40.3R3 阶段性自动化验收报告</h1>
+    <p>日期：2026-07-01。本报告用 Headless Chrome 自动截图和命令结果审计当前阶段。结论从证据出发：V40.3R3 审计链路可复核，但 V40 目标体验仍未完成。</p>
+    <p class="muted">本报告不会声明任意猫自动生成已就绪、Petdex 同等水平、provider 集成完成、WebUI/ComfyUI 路线可用、3D/生产发布/Windows/跨平台已就绪。</p>
+    <div class="grid">
+      <div class="metric"><span>自动截图</span><strong>8 张</strong></div>
+      <div class="metric"><span>V40.3R3 决策</span><strong>blocked scoped</strong></div>
+      <div class="metric"><span>V40.4</span><strong>No-Go</strong></div>
+      <div class="metric"><span>总体评价</span><strong>NEEDS WORK</strong></div>
+    </div>
+  </header>
+
+  <section>
+    <h2>目标架构与当前实现</h2>
+    <div class="grid">
+      <div class="metric"><span>目标架构</span><strong>Direct Local Runner → 候选 → 视觉审查 → 归一化 → 预览/应用/回滚</strong></div>
+      <div class="metric"><span>当前实现</span><strong>runner/contract 已有 scoped evidence，候选质量失败</strong></div>
+      <div class="metric"><span>当前用户体验</span><strong>设置页、资产图库、V39 fallback、失败候选证据可见</strong></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>PRD 阶段状态</h2>
+    <table><thead><tr><th>阶段</th><th>状态</th><th>审计说明</th></tr></thead><tbody><tr><td>V40.1A Direct Local Runner</td><td>passed scoped</td><td>只有 runner readiness，不证明视觉质量</td></tr><tr><td>V40.2 no-WebUI contract</td><td>passed scoped</td><td>合同可校验安全摘要和失败原因</td></tr><tr><td>V40.3 prompt-only</td><td>failed</td><td>视觉审查失败</td></tr><tr><td>V40.3R img2img</td><td>failed</td><td>视觉审查失败</td></tr><tr><td>V40.3R2 identity-conditioned</td><td>failed</td><td>真实候选生成完成但视觉审查失败</td></tr><tr><td>V40.3R3 candidate source</td><td>blocked scoped</td><td>没有可信候选来源，V40.4 仍 No-Go</td></tr></tbody></table>
+  </section>
+
+  <section>
+    <h2>命令验收</h2>
+    <table><thead><tr><th>命令</th><th>结果</th><th>摘要</th></tr></thead><tbody>
+    <tr>
+      <td><code>desktop test</code></td>
+      <td><span class="pill pass">passed</span></td>
+      <td>tests 361, pass 361, fail 0; exit 0</td>
+    </tr>
+    <tr>
+      <td><code>desktop check</code></td>
+      <td><span class="pill pass">passed</span></td>
+      <td>TypeScript check passed; exit 0</td>
+    </tr>
+    <tr>
+      <td><code>desktop build</code></td>
+      <td><span class="pill pass">passed</span></td>
+      <td>TypeScript check passed; frontend bundle built; exit 0</td>
+    </tr>
+    <tr>
+      <td><code>petctl test</code></td>
+      <td><span class="pill pass">passed</span></td>
+      <td>tests 71, pass 71, fail 0; exit 0</td>
+    </tr>
+    <tr>
+      <td><code>petctl build</code></td>
+      <td><span class="pill pass">passed</span></td>
+      <td>completed without reported failure; exit 0</td>
+    </tr>
+    <tr>
+      <td><code>V30 semantic gate</code></td>
+      <td><span class="pill pass">passed</span></td>
+      <td>V30 semantic gate passed; exit 0</td>
+    </tr>
+    <tr>
+      <td><code>V39 final gate</code></td>
+      <td><span class="pill pass">passed</span></td>
+      <td>V39 scoped final gate passed; exit 0</td>
+    </tr>
+    <tr>
+      <td><code>V40.3R3 candidate source gate</code></td>
+      <td><span class="pill pass">passed</span></td>
+      <td>V40.3R3 blocked decision recorded; exit 0</td>
+    </tr></tbody></table>
+  </section>
+
+  <section>
+    <h2>用户场景截图证据</h2>
+    <p>截图覆盖设置页、资产图库、V39 fallback、照片到 2D 向导、诊断边界、失败候选、V40.3R3 决策和移动端布局。</p>
+    <div class="grid">
+    <article class="shot">
+      <h3>01-settings-overview-desktop.png</h3>
+      <img src="v40_3r3-automated-acceptance-2026-07-01/01-settings-overview-desktop.png" alt="01-settings-overview-desktop.png 截图证据">
+    </article>
+    <article class="shot">
+      <h3>02-assets-gallery.png</h3>
+      <img src="v40_3r3-automated-acceptance-2026-07-01/02-assets-gallery.png" alt="02-assets-gallery.png 截图证据">
+    </article>
+    <article class="shot">
+      <h3>03-v39-fallback-action-assets.png</h3>
+      <img src="v40_3r3-automated-acceptance-2026-07-01/03-v39-fallback-action-assets.png" alt="03-v39-fallback-action-assets.png 截图证据">
+    </article>
+    <article class="shot">
+      <h3>04-photo-2d-wizard-modal.png</h3>
+      <img src="v40_3r3-automated-acceptance-2026-07-01/04-photo-2d-wizard-modal.png" alt="04-photo-2d-wizard-modal.png 截图证据">
+    </article>
+    <article class="shot">
+      <h3>05-diagnostics-and-boundaries.png</h3>
+      <img src="v40_3r3-automated-acceptance-2026-07-01/05-diagnostics-and-boundaries.png" alt="05-diagnostics-and-boundaries.png 截图证据">
+    </article>
+    <article class="shot">
+      <h3>06-v40-failed-candidates.png</h3>
+      <img src="v40_3r3-automated-acceptance-2026-07-01/06-v40-failed-candidates.png" alt="06-v40-failed-candidates.png 截图证据">
+    </article>
+    <article class="shot">
+      <h3>07-v40-3r3-decision.png</h3>
+      <img src="v40_3r3-automated-acceptance-2026-07-01/07-v40-3r3-decision.png" alt="07-v40-3r3-decision.png 截图证据">
+    </article>
+    <article class="shot">
+      <h3>08-mobile-settings-overview.png</h3>
+      <img src="v40_3r3-automated-acceptance-2026-07-01/08-mobile-settings-overview.png" alt="08-mobile-settings-overview.png 截图证据">
+    </article></div>
+  </section>
+
+  <section>
+    <h2>自动检查摘要</h2>
+    <table>
+      <tr><th>检查项</th><th>结果</th></tr>
+      <tr><td>截图均存在且非空</td><td>通过</td></tr>
+      <tr><td>设置页标题</td><td>设置与工作猫管理</td></tr>
+      <tr><td>导航链接数</td><td>6</td></tr>
+      <tr><td>V39 fallback 面板</td><td>可见</td></tr>
+      <tr><td>照片到 2D 向导</td><td>可打开</td></tr>
+      <tr><td>V40.3R3 blocked 决策</td><td>已记录</td></tr>
+    </table>
+  </section>
+
+  <section>
+    <h2>问题与风险</h2>
+    <p class="issue"><strong>Critical</strong> · V40 没有可进入 V40.4 的候选来源；当前不能交付高质量 2D 图生动作资产。</p><p class="issue"><strong>Critical</strong> · 现有 V40 候选截图中动作语义、身份一致性或桌面宠物尺度表现不足，不能当作目标体验资产。</p><p class="issue"><strong>Medium</strong> · 本轮可视化验收使用 headless Chrome 与 browser preview fallback；它验证设置页路径，不验证真实桌面 overlay。</p><p class="issue"><strong>Medium</strong> · 当前用户可体验路径仍主要是 V39 fallback 与既有资产管理/向导界面。</p><p class="issue"><strong>Low</strong> · 移动端截图证明页面可渲染，但不覆盖真实触屏设备输入差异。</p>
+  </section>
+
+  <section>
+    <h2>验收评价</h2>
+    <p><strong>阶段性审计结论：</strong>审计材料与自动化证据可复核，当前阶段的真实产品结论是 NEEDS WORK。V40 还不能支撑高质量图生 2D 动作资产目标，不能进入 V40.4。</p>
+  </section>
+</main>
+</body>
+</html>

@@ -1,0 +1,89 @@
+{
+  "ok": true,
+  "outputs": [
+    {
+      "sampleId": "v38_a_cat_public",
+      "candidateId": "v40r-v38-a-cat-public-ip-adapter-candidate",
+      "modelLabel": "dreamshaper-8-local-checkpoint",
+      "sourceRef": "docs/V38.x/evidence/assets/v38_a_cat_public/sanitized.png",
+      "contactSheetFileName": "v38-a-cat-public-contact-sheet.png",
+      "actionFiles": [
+        {
+          "actionId": "idle",
+          "fileName": "v38-a-cat-public/idle.png"
+        },
+        {
+          "actionId": "walk",
+          "fileName": "v38-a-cat-public/walk.png"
+        },
+        {
+          "actionId": "jump",
+          "fileName": "v38-a-cat-public/jump.png"
+        },
+        {
+          "actionId": "sleep",
+          "fileName": "v38-a-cat-public/sleep.png"
+        },
+        {
+          "actionId": "eat",
+          "fileName": "v38-a-cat-public/eat.png"
+        },
+        {
+          "actionId": "play",
+          "fileName": "v38-a-cat-public/play.png"
+        },
+        {
+          "actionId": "alert",
+          "fileName": "v38-a-cat-public/alert.png"
+        },
+        {
+          "actionId": "celebrate",
+          "fileName": "v38-a-cat-public/celebrate.png"
+        }
+      ],
+      "route": "direct_local_ip_adapter_no_webui"
+    },
+    {
+      "sampleId": "v38_tuxedo_public",
+      "candidateId": "v40r-v38-tuxedo-public-ip-adapter-candidate",
+      "modelLabel": "dreamshaper-8-local-checkpoint",
+      "sourceRef": "docs/V38.x/evidence/assets/v38_tuxedo_public/sanitized.png",
+      "contactSheetFileName": "v38-tuxedo-public-contact-sheet.png",
+      "actionFiles": [
+        {
+          "actionId": "idle",
+          "fileName": "v38-tuxedo-public/idle.png"
+        },
+        {
+          "actionId": "walk",
+          "fileName": "v38-tuxedo-public/walk.png"
+        },
+        {
+          "actionId": "jump",
+          "fileName": "v38-tuxedo-public/jump.png"
+        },
+        {
+          "actionId": "sleep",
+          "fileName": "v38-tuxedo-public/sleep.png"
+        },
+        {
+          "actionId": "eat",
+          "fileName": "v38-tuxedo-public/eat.png"
+        },
+        {
+          "actionId": "play",
+          "fileName": "v38-tuxedo-public/play.png"
+        },
+        {
+          "actionId": "alert",
+          "fileName": "v38-tuxedo-public/alert.png"
+        },
+        {
+          "actionId": "celebrate",
+          "fileName": "v38-tuxedo-public/celebrate.png"
+        }
+      ],
+      "route": "direct_local_ip_adapter_no_webui"
+    }
+  ]
+}

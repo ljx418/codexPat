@@ -1,0 +1,44 @@
+{
+  "date": "2026-06-29",
+  "reviewScope": "V40.3 Direct Local Runner generated contact sheets",
+  "reviewBoundary": "visual target-experience review only; no final V40 asset acceptance",
+  "reviews": [
+    {
+      "candidateId": "v40-v38-a-cat-public-direct-candidate",
+      "status": "failed",
+      "observations": [
+        "candidate is visually better than the V39 deterministic SVG baseline, but identity is not stable enough across actions",
+        "source sample is a real tabby photo and the candidate keeps broad tabby traits, but the generated character becomes a generic stylized cat rather than a source-bound same cat",
+        "play frame includes an accessory-like collar artifact",
+        "celebrate frame is mostly a static sitting pose and does not clearly communicate the action",
+        "candidate is not ready for normalization or product apply"
+      ],
+      "reasonCodes": [
+        "visual_review_failed",
+        "action_semantics_unclear",
+        "target_experience_quality_failed"
+      ]
+    },
+    {
+      "candidateId": "v40-v38-tuxedo-public-direct-candidate",
+      "status": "failed",
+      "observations": [
+        "candidate is visually better than the V39 deterministic SVG baseline, but same-cat identity is not preserved across actions",
+        "walk frame drifts into a mostly white cat and loses the source sample black-white facial pattern",
+        "eye color, face shape, tail shape, and rendering style vary between actions",
+        "celebrate frame becomes a simplified chibi character that does not match idle, walk, jump, or sleep",
+        "candidate is not ready for normalization or product apply"
+      ],
+      "reasonCodes": [
+        "visual_review_failed",
+        "action_semantics_unclear",
+        "target_experience_quality_failed"
+      ]
+    }
+  ],
+  "claimBoundary": [
+    "V40.3 Direct Local Runner can generate local visual candidates for tested samples.",
+    "V40.3 does not prove source-bound same-cat action asset generation.",
+    "V40.3 does not prove arbitrary-cat automatic generation, Petdex parity, provider integration, production readiness, Windows readiness, or cross-platform readiness."
+  ]
+}

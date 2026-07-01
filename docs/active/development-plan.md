@@ -1,15 +1,99 @@
 # Active Development Plan
 
-文档状态：active index；V39.0-V39.8 characterized 2D action asset Route A2++ scoped evidence generated on 2026-06-27；V38 public-photo action asset scoped evidence generated on 2026-06-26 and is the input baseline；V37 tested photo-to-action product-path scoped evidence generated on 2026-06-26；V36 risk closure and target-experience hardening executed with partial scoped final decision on 2026-06-26；V35 target-experience route assessment passed scoped for tested named samples only；V34 photo-to-character-to-actions generation core evidence-matched scoped passed through V34.8；V33 scoped local sample-to-frameSequence loop passed but remains partial for true generation；V32 quality rescue passed scoped；V31 partial scoped with continuation execution blocked scoped；V30 scoped passed；Post-V30 architecture/runtime remediation passed scoped；V29/V23-V28 scoped baselines 是输入基线。
-当前日期：2026-06-27。
+文档状态：active index；V40 no-WebUI high-quality 2D action asset documentation line opened on 2026-06-29 by revising the existing V40 plan in place；V39.0-V39.8 characterized 2D action asset Route A2++ scoped evidence generated on 2026-06-27 and is the immediate quality baseline；V38 public-photo action asset scoped evidence generated on 2026-06-26 and is the input baseline；V37 tested photo-to-action product-path scoped evidence generated on 2026-06-26；V36 risk closure and target-experience hardening executed with partial scoped final decision on 2026-06-26；V35 target-experience route assessment passed scoped for tested named samples only；V34 photo-to-character-to-actions generation core evidence-matched scoped passed through V34.8；V33 scoped local sample-to-frameSequence loop passed but remains partial for true generation；V32 quality rescue passed scoped；V31 partial scoped with continuation execution blocked scoped；V30 scoped passed；Post-V30 architecture/runtime remediation passed scoped；V29/V23-V28 scoped baselines 是输入基线。
+当前日期：2026-06-29。
 
 ## Current Active Line
 
-V39 is the current active documentation line.
-`docs/active/agent_desktop_pet_prd_v39.md` is the current active PRD. V39
-targets the quality gap visible after V38: public cat photos can flow into
-sanitized images and renderable frame packs, but the output still reads as a
-photo-card overlay rather than a lovable character-like desktop pet asset.
+V40 is the current active documentation line.
+`docs/active/agent_desktop_pet_prd_v40.md` is the current active PRD. V40
+targets the quality gap visible after V39: the project can produce tested
+public-photo scoped characterized SVG/frameSequence assets, but those assets
+still read as deterministic prototype art and remain far from consistently
+lovable, high-quality desktop pet animation assets.
+
+V40 now uses a no-WebUI local route as the current active stage. V40.1 real
+evidence recorded GPU and Ollama availability but blocked ComfyUI because it was
+not scriptable from the repo/WSL environment. V40.1A real smoke on 2026-06-29
+blocked WebUI because its API is unreachable and its Python runtime is
+incompatible. V40.1A Direct Local Runner smoke passed scoped on 2026-06-29, and
+V40.2 no-WebUI workflow contract passed scoped. V40.3 generated real local
+checkpoint candidates but failed visual target-experience review: the candidates
+were more attractive than V39 deterministic SVG assets, but did not preserve
+same-cat identity and action consistency well enough to normalize or apply.
+V40.3R recovery then tested direct img2img and identity-conditioned direct
+runner routes. Direct img2img failed visual target-experience review because the
+outputs remained photo-like and did not provide readable full-body action
+semantics. The identity-conditioned route was initially blocked by runner-stack
+compatibility before candidate generation. V40.3R2 repaired that runner path
+enough to generate real same-sample candidates and one stylized retry on
+2026-06-30, but explicit visual review failed both sets. Therefore
+V40.4-V40.7 remain No-Go until a future route produces at least two visually
+reviewed candidates safe to normalize. The next document-supported step is
+V40.3R3 candidate-source decision inside the existing V40 stage. It must decide
+whether to use accepted same-sample manual/import assets, allow a materially
+different Direct Local Runner route, or keep V40 failed/blocked with V39
+fallback. Accepted same-sample manual/import assets are a fallback only when
+source, license, sample binding, and visual acceptance evidence already exist.
+
+Concrete V40 design docs:
+
+- `docs/active/agent_desktop_pet_prd_v40.md`
+- `docs/V40.x/v40-target-architecture.md`
+- `docs/V40.x/v40-development-and-acceptance-plan.md`
+- `docs/V40.x/v40-acceptance-plan.md`
+- `docs/V40.x/v40-milestones.md`
+- `docs/V40.x/v40-current-gap-analysis.md`
+- `docs/V40.x/v40-implementation-contract.md`
+- `docs/V40.x/v40-phase-specs.md`
+- `docs/V40.x/v40-risk-and-claim-matrix.md`
+- `docs/V40.x/v40-evidence-and-scan-checklist.md`
+- `docs/V40.x/v40-doc-audit.md`
+- `docs/V40.x/v40_3r3-detailed-development-and-acceptance-plan.md`
+
+V40 target flow:
+
+```text
+tested cat sample / safe user photo
+  -> safe intake and source boundary
+  -> V39 baseline snapshot
+  -> LocalImageCandidateOrchestrator
+  -> DirectLocalModelRunner
+  -> DirectLocalImageModelAdapter
+  -> OllamaPromptReviewAdapter
+  -> local candidate output directory
+  -> HybridAssetNormalizationGate
+  -> HybridVisualPreferenceGate
+  -> HybridPreviewApplyRollbackGate
+  -> same-sample V39 vs V40 comparison
+  -> Chinese HTML visual report
+  -> scoped final gate
+```
+
+V40 phases:
+
+- V40.0 documentation readiness: passed for the original documentation baseline; now superseded by no-WebUI in-place route update.
+- V40.1 local blocked baseline: blocked for ComfyUI; keep as historical evidence, not readiness.
+- V40.1A Direct Local Runner smoke: passed scoped on 2026-06-29; verified project-owned runner dependencies, model summary, GPU boundary, safe output directory, and Ollama advisory boundary.
+- Historical V40.1A WebUI Aki smoke: blocked on 2026-06-29 with `docs/V40.x/evidence/v40_1a-webui-aki-smoke-2026-06-29.md`; retained as evidence for removing WebUI from active V40 dependencies.
+- V40.2 no-WebUI workflow contract: passed scoped on 2026-06-29; safe run request/output manifest, run IDs, output refs, visual review, and reason-code boundaries are implemented.
+- V40.3 candidate generation/import: failed on 2026-06-29; real local candidates were generated for two tested cat samples and one negative sample, but visual review rejected them for identity/action inconsistency.
+- V40.3R recovery: executed on 2026-06-29; direct img2img failed visual review, identity-conditioned Direct Runner was blocked by runner-stack compatibility, and no accepted manual/import same-sample assets were available.
+- V40.3R2 recovery execution: failed visual target-experience review on 2026-06-30 after identity-conditioned runner repair and stylized retry; no new stage is created.
+- V40.3R3 candidate-source decision: next planned documentation and audit gate inside V40; choose accepted manual/import first, a materially different direct-runner route, or failed/blocked with V39 fallback.
+- V40.4 normalization and action packaging: No-Go until a future accepted route or accepted import assets have at least two visually reviewed candidates.
+- V40.5 product preview/apply/rollback: No-Go until V40.4 passes.
+- V40.6 visual report: No-Go until accepted candidates and product evidence exist.
+- V40.7 final gate: No-Go until V40.0-V40.6 evidence exists with passed or stable blocked/failed reasons.
+
+V40 must not claim arbitrary-cat automation, provider integration verified,
+Route B verified, Petdex parity, 3D readiness, production release readiness,
+Windows readiness, or cross-platform readiness. V40 documentation readiness and
+historical V40.1A blocked evidence do not prove direct-runner integration,
+high-quality generation, runtime product application, arbitrary-photo readiness,
+WebUI readiness, or ComfyUI readiness.
+
+## V39 Immediate Quality Baseline
 
 Current V39 decision: V39.0-V39.8 passed scoped for tested public-photo samples
 through Route A2++ local characterized, part-based, layered 2D action asset

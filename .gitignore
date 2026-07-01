@@ -2,6 +2,7 @@ node_modules/
 .pnpm-store/
 dist/
 target/
+.tmp/
 .DS_Store
 **/.DS_Store
 .*.bkp
@@ -9,6 +10,8 @@ target/
 .env
 .env.local
 *.env.local
+.v40-runner-venv/
+.v40-hf-cache/
 
 apps/*/node_modules/
 apps/*/dist/

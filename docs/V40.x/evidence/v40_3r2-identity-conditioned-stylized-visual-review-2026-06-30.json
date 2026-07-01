@@ -1,0 +1,42 @@
+{
+  "phase": "V40.3R2.identity.stylized.visual-review",
+  "date": "2026-06-30",
+  "decision": "failed",
+  "reviewScope": "same-sample V40.3R2 stylized IP-Adapter candidates compared against V39 target experience requirements",
+  "reviews": [
+    {
+      "candidateId": "v40r-v38-a-cat-public-ip-adapter-candidate",
+      "status": "failed",
+      "observations": [
+        "The stylized retry reduces some indoor room clutter, but the candidate still reads as semi-photographic generated cat images rather than a clean desktop-pet sprite action pack.",
+        "Multiple frames contain bright accessory-like artifacts around the mouth, chest, or body.",
+        "The eight action poses remain weak: eat, play, alert, and celebrate are not clearly readable as distinct action states.",
+        "The output is not reliably normalizable into a product action pack and is not clearly better than the V39 target-experience baseline."
+      ],
+      "reasonCodes": [
+        "visual_review_failed",
+        "action_semantics_unclear",
+        "text_or_logo_artifact",
+        "target_experience_quality_failed"
+      ]
+    },
+    {
+      "candidateId": "v40r-v38-tuxedo-public-ip-adapter-candidate",
+      "status": "failed",
+      "observations": [
+        "The stylized retry creates a more illustrated tuxedo cat, but action semantics are still not reliable across all eight actions.",
+        "Several frames include container, panel, or mark-like artifacts that would pollute a desktop-pet sprite pack.",
+        "Eat, play, alert, and celebrate do not read as robust action states at desktop-pet scale.",
+        "The candidate is visually more pleasant than the first retry but still fails the V40 requirement for accepted same-sample action assets."
+      ],
+      "reasonCodes": [
+        "visual_review_failed",
+        "action_semantics_unclear",
+        "text_or_logo_artifact",
+        "target_experience_quality_failed"
+      ]
+    }
+  ],
+  "claimBoundary": "This review does not claim high-quality image-to-action asset generation, arbitrary-cat readiness, Petdex parity, provider integration, WebUI readiness, ComfyUI readiness, 3D readiness, production readiness, Windows readiness, or cross-platform readiness.",
+  "securityBoundary": "The review records safe relative candidate identifiers and qualitative observations only."
+}

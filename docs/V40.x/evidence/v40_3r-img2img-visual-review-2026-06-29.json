@@ -1,0 +1,44 @@
+{
+  "date": "2026-06-29",
+  "reviewScope": "V40.3R direct local img2img recovery contact sheets",
+  "reviewBoundary": "visual target-experience review only; no V40.4 normalization approval",
+  "reviews": [
+    {
+      "candidateId": "v40r-v38-a-cat-public-img2img-candidate",
+      "status": "failed",
+      "observations": [
+        "source identity is preserved better than prompt-only generation",
+        "candidate remains close-up photo-like output rather than full-body desktop-pet action sprites",
+        "walk, jump, play, alert, and celebrate are not readable as distinct action assets",
+        "background and photo composition remain dominant",
+        "candidate is not safe to normalize for product preview"
+      ],
+      "reasonCodes": [
+        "visual_review_failed",
+        "action_semantics_unclear",
+        "target_experience_quality_failed"
+      ]
+    },
+    {
+      "candidateId": "v40r-v38-tuxedo-public-img2img-candidate",
+      "status": "failed",
+      "observations": [
+        "source identity is preserved better than prompt-only generation",
+        "candidate remains photo-like and mostly upright/static across actions",
+        "walk, sleep, play, alert, and celebrate do not provide a usable eight-action desktop-pet pack",
+        "background and lighting drift across frames",
+        "candidate is not safe to normalize for product preview"
+      ],
+      "reasonCodes": [
+        "visual_review_failed",
+        "action_semantics_unclear",
+        "target_experience_quality_failed"
+      ]
+    }
+  ],
+  "claimBoundary": [
+    "Direct img2img improved source identity retention.",
+    "Direct img2img did not produce usable high-quality 2D action assets.",
+    "V40.4 remains No-Go after this review."
+  ]
+}
