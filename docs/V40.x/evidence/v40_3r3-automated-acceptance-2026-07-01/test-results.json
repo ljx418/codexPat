@@ -1,68 +1,136 @@
 {
   "date": "2026-07-01",
   "status": "needs_work",
+  "gitHeadAtGeneration": "a345137f3413",
+  "authoritativeDocs": [
+    "docs/active/agent_desktop_pet_prd_v40.md",
+    "docs/V40.x/v40-target-architecture.md",
+    "docs/V40.x/v40-acceptance-plan.md",
+    "docs/V40.x/v40_3r3-detailed-development-and-acceptance-plan.md",
+    "docs/V40.x/evidence/v40_3r3-candidate-source-decision-2026-06-30.md"
+  ],
+  "reportRefs": {
+    "html": "docs/V40.x/evidence/v40_3r3-automated-acceptance-report-2026-07-01.html",
+    "markdownAudit": "docs/V40.x/evidence/v40_3r3-stage-audit-2026-07-01.md",
+    "resultsJson": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/test-results.json",
+    "screenshotDir": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01"
+  },
+  "reproducibility": [
+    "pnpm --filter desktop exec node --import tsx ../../scripts/v40_3r3_stage_audit_report.mjs",
+    "pnpm --filter desktop test",
+    "pnpm --filter desktop check",
+    "pnpm --filter desktop build",
+    "pnpm --filter @agent-desktop-pet/petctl test",
+    "pnpm --filter @agent-desktop-pet/petctl build",
+    "pnpm --filter desktop exec node --import tsx ../../scripts/v40_3r3_candidate_source_decision_smoke.mjs"
+  ],
+  "auditCoverage": [
+    [
+      "PRD target experience",
+      "covered",
+      "V40 high-quality image-to-action target remains unmet and blocked."
+    ],
+    [
+      "Architecture state",
+      "covered",
+      "Direct runner/contract exists; normalization/product gates remain locked."
+    ],
+    [
+      "Code checks",
+      "covered",
+      "desktop test/check/build and petctl test/build recorded."
+    ],
+    [
+      "Visual evidence",
+      "covered",
+      "8 headless screenshots, including failed candidates and V40.3R3 decision."
+    ],
+    [
+      "Claim/security scan",
+      "covered",
+      "report and audit scans passed with no hits."
+    ],
+    [
+      "Native desktop overlay",
+      "not covered",
+      "headless browser preview evidence cannot prove native overlay behavior."
+    ],
+    [
+      "High-quality V40 assets",
+      "not achieved",
+      "no accepted candidate source and no V40.4 entry."
+    ]
+  ],
   "commandResults": [
     {
       "label": "desktop test",
+      "commandLine": "pnpm --filter desktop test",
       "status": "passed",
       "exitCode": 0,
-      "durationMs": 4284,
+      "durationMs": 4823,
       "summary": "tests 361, pass 361, fail 0; exit 0",
-      "outputTail": "values to safe action ids\n    ok 1 - maps core CatState values to safe action ids\n      ---\n      duration_ms: 0.403558\n      type: 'test'\n      ...\n    # Subtest: falls missing optional action back to idle with sanitized warning\n    ok 2 - falls missing optional action back to idle with sanitized warning\n      ---\n      duration_ms: 0.604487\n      type: 'test'\n      ...\n    # Subtest: uses V11 optional micro-interaction action when the active manifest supports it\n    ok 3 - uses V11 optional micro-interaction action when the active manifest supports it\n      ---\n      duration_ms: 0.084211\n      type: 'test'\n      ...\n    # Subtest: does not let transient success overwrite active error\n    ok 4 - does not let transient success overwrite active error\n      ---\n      duration_ms: 0.064711\n      type: 'test'\n      ...\n    # Subtest: does not let transient success overwrite active need_input\n    ok 5 - does not let transient success overwrite active need_input\n      ---\n      duration_ms: 0.041663\n      type: 'test'\n      ...\n    1..5\nok 74 - V5.0 cat action resolver\n  ---\n  duration_ms: 1.676182\n  type: 'suite'\n  ...\n# Subtest: V11.3 emotion resolver\n    # Subtest: maps all core states to distinct emotion profiles without state mutation\n    ok 1 - maps all core states to distinct emotion profiles without state mutation\n      ---\n      duration_ms: 0.78128\n      type: 'test'\n      ...\n    # Subtest: produces safe renderer input fields only\n    ok 2 - produces safe renderer input fields only\n      ---\n      duration_ms: 0.247515\n      type: 'test'\n      ...\n    1..2\nok 75 - V11.3 emotion resolver\n  ---\n  duration_ms: 1.531578\n  type: 'suite'\n  ...\n# Subtest: V11.4 action composer\n    # Subtest: holds error and need_input above lower-priority visual actions\n    ok 1 - holds error and need_input above lower-priority visual actions\n      ---\n      duration_ms: 0.207637\n      type: 'test'\n      ...\n    # Subtest: treats success and click feedback as transients\n    ok 2 - treats success and click feedback as transients\n      ---\n      duration_ms: 0.109497\n      type: 'test'\n      ...\n    # Subtest: applies higher-priority interrupts and stable rapid-event final states\n    ok 3 - applies higher-priority interrupts and stable rapid-event final states\n      ---\n      duration_ms: 0.106203\n      type: 'test'\n      ...\n    # Subtest: maps pointer and drag micro-interactions to safe action fallbacks\n    ok 4 - maps pointer and drag micro-interactions to safe action fallbacks\n      ---\n      duration_ms: 0.102954\n      type: 'test'\n      ...\n    # Subtest: keeps working states clear when lower-priority ambience is active\n    ok 5 - keeps working states clear when lower-priority ambience is active\n      ---\n      duration_ms: 0.097282\n      type: 'test'\n      ...\n    1..5\nok 76 - V11.4 action composer\n  ---\n  duration_ms: 0.876678\n  type: 'suite'\n  ...\n1..76\n# tests 361\n# suites 76\n# pass 361\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 4060.022523\n"
+      "outputTail": "alues to safe action ids\n    ok 1 - maps core CatState values to safe action ids\n      ---\n      duration_ms: 0.458459\n      type: 'test'\n      ...\n    # Subtest: falls missing optional action back to idle with sanitized warning\n    ok 2 - falls missing optional action back to idle with sanitized warning\n      ---\n      duration_ms: 0.679884\n      type: 'test'\n      ...\n    # Subtest: uses V11 optional micro-interaction action when the active manifest supports it\n    ok 3 - uses V11 optional micro-interaction action when the active manifest supports it\n      ---\n      duration_ms: 0.061019\n      type: 'test'\n      ...\n    # Subtest: does not let transient success overwrite active error\n    ok 4 - does not let transient success overwrite active error\n      ---\n      duration_ms: 0.079018\n      type: 'test'\n      ...\n    # Subtest: does not let transient success overwrite active need_input\n    ok 5 - does not let transient success overwrite active need_input\n      ---\n      duration_ms: 0.179836\n      type: 'test'\n      ...\n    1..5\nok 74 - V5.0 cat action resolver\n  ---\n  duration_ms: 1.989339\n  type: 'suite'\n  ...\n# Subtest: V11.3 emotion resolver\n    # Subtest: maps all core states to distinct emotion profiles without state mutation\n    ok 1 - maps all core states to distinct emotion profiles without state mutation\n      ---\n      duration_ms: 1.378609\n      type: 'test'\n      ...\n    # Subtest: produces safe renderer input fields only\n    ok 2 - produces safe renderer input fields only\n      ---\n      duration_ms: 0.249951\n      type: 'test'\n      ...\n    1..2\nok 75 - V11.3 emotion resolver\n  ---\n  duration_ms: 2.175383\n  type: 'suite'\n  ...\n# Subtest: V11.4 action composer\n    # Subtest: holds error and need_input above lower-priority visual actions\n    ok 1 - holds error and need_input above lower-priority visual actions\n      ---\n      duration_ms: 0.282418\n      type: 'test'\n      ...\n    # Subtest: treats success and click feedback as transients\n    ok 2 - treats success and click feedback as transients\n      ---\n      duration_ms: 0.265305\n      type: 'test'\n      ...\n    # Subtest: applies higher-priority interrupts and stable rapid-event final states\n    ok 3 - applies higher-priority interrupts and stable rapid-event final states\n      ---\n      duration_ms: 0.138653\n      type: 'test'\n      ...\n    # Subtest: maps pointer and drag micro-interactions to safe action fallbacks\n    ok 4 - maps pointer and drag micro-interactions to safe action fallbacks\n      ---\n      duration_ms: 0.099298\n      type: 'test'\n      ...\n    # Subtest: keeps working states clear when lower-priority ambience is active\n    ok 5 - keeps working states clear when lower-priority ambience is active\n      ---\n      duration_ms: 0.074601\n      type: 'test'\n      ...\n    1..5\nok 76 - V11.4 action composer\n  ---\n  duration_ms: 1.089739\n  type: 'suite'\n  ...\n1..76\n# tests 361\n# suites 76\n# pass 361\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 4607.442415\n"
     },
     {
       "label": "desktop check",
+      "commandLine": "pnpm --filter desktop check",
       "status": "passed",
       "exitCode": 0,
-      "durationMs": 10804,
+      "durationMs": 9030,
       "summary": "TypeScript check passed; exit 0",
       "outputTail": "\n> desktop@0.1.0 check <workspace>/apps/desktop\n> tsc --noEmit\n\n"
     },
     {
       "label": "desktop build",
+      "commandLine": "pnpm --filter desktop build",
       "status": "passed",
       "exitCode": 0,
-      "durationMs": 13753,
+      "durationMs": 15483,
       "summary": "TypeScript check passed; frontend bundle built; exit 0",
-      "outputTail": "\n> desktop@0.1.0 build <workspace>/apps/desktop\n> tsc --noEmit && vite build\n\nvite v5.4.21 building for production...\ntransforming...\n✓ 77 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                     0.40 kB │ gzip:   0.27 kB\ndist/assets/index-BeqHwn5r.css     68.84 kB │ gzip:  10.23 kB\ndist/assets/index-12R_UKsZ.js   1,987.22 kB │ gzip: 381.67 kB\n✓ built in 4.49s\n"
+      "outputTail": "\n> desktop@0.1.0 build <workspace>/apps/desktop\n> tsc --noEmit && vite build\n\nvite v5.4.21 building for production...\ntransforming...\n✓ 77 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                     0.40 kB │ gzip:   0.27 kB\ndist/assets/index-BeqHwn5r.css     68.84 kB │ gzip:  10.23 kB\ndist/assets/index-12R_UKsZ.js   1,987.22 kB │ gzip: 381.67 kB\n✓ built in 5.86s\n"
     },
     {
       "label": "petctl test",
+      "commandLine": "pnpm --filter @agent-desktop-pet/petctl test",
       "status": "passed",
       "exitCode": 0,
-      "durationMs": 6364,
+      "durationMs": 7548,
       "summary": "tests 71, pass 71, fail 0; exit 0",
-      "outputTail": "pe: 'test'\n      ...\n    # Subtest: treats missing instance env and unavailable desktop as warnings\n    ok 2 - treats missing instance env and unavailable desktop as warnings\n      ---\n      duration_ms: 2.543317\n      type: 'test'\n      ...\n    # Subtest: reports strict managed startup diagnostics with stable reason codes\n    ok 3 - reports strict managed startup diagnostics with stable reason codes\n      ---\n      duration_ms: 2.275628\n      type: 'test'\n      ...\n    1..3\nok 7 - petctl codex doctor\n  ---\n  duration_ms: 7.80145\n  type: 'suite'\n  ...\n# Subtest: petctl codex session status\n    # Subtest: returns sanitized managed session status without raw binding id\n    ok 1 - returns sanitized managed session status without raw binding id\n      ---\n      duration_ms: 0.706181\n      type: 'test'\n      ...\n    # Subtest: marks old managed sessions stale\n    ok 2 - marks old managed sessions stale\n      ---\n      duration_ms: 0.318918\n      type: 'test'\n      ...\n    1..2\nok 8 - petctl codex session status\n  ---\n  duration_ms: 1.081464\n  type: 'suite'\n  ...\n# Subtest: petctl notify\n    # Subtest: does not send http when local validation fails\n    ok 1 - does not send http when local validation fails\n      ---\n      duration_ms: 0.148756\n      type: 'test'\n      ...\n    # Subtest: maps accepted bridge response\n    ok 2 - maps accepted bridge response\n      ---\n      duration_ms: 0.396481\n      type: 'test'\n      ...\n    # Subtest: posts to instance endpoint when instance is set\n    ok 3 - posts to instance endpoint when instance is set\n      ---\n      duration_ms: 0.227639\n      type: 'test'\n      ...\n    # Subtest: rejects invalid instance locally\n    ok 4 - rejects invalid instance locally\n      ---\n      duration_ms: 0.075229\n      type: 'test'\n      ...\n    # Subtest: maps unauthorized response\n    ok 5 - maps unauthorized response\n      ---\n      duration_ms: 0.457313\n      type: 'test'\n      ...\n    1..5\nok 9 - petctl notify\n  ---\n  duration_ms: 1.414189\n  type: 'suite'\n  ...\n# Subtest: petctl attach/list\n    # Subtest: attaches a codex instance\n    ok 1 - attaches a codex instance\n      ---\n      duration_ms: 0.214522\n      type: 'test'\n      ...\n    # Subtest: rejects invalid attach display name locally\n    ok 2 - rejects invalid attach display name locally\n      ---\n      duration_ms: 0.048878\n      type: 'test'\n      ...\n    # Subtest: lists instances\n    ok 3 - lists instances\n      ---\n      duration_ms: 0.118665\n      type: 'test'\n      ...\n    # Subtest: detaches an instance\n    ok 4 - detaches an instance\n      ---\n      duration_ms: 0.194767\n      type: 'test'\n      ...\n    # Subtest: rejects invalid detach instance locally\n    ok 5 - rejects invalid detach instance locally\n      ---\n      duration_ms: 0.054536\n      type: 'test'\n      ...\n    1..5\nok 10 - petctl attach/list\n  ---\n  duration_ms: 0.71371\n  type: 'suite'\n  ...\n1..10\n# tests 71\n# suites 10\n# pass 71\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 3510.534141\n"
+      "outputTail": "pe: 'test'\n      ...\n    # Subtest: treats missing instance env and unavailable desktop as warnings\n    ok 2 - treats missing instance env and unavailable desktop as warnings\n      ---\n      duration_ms: 2.266794\n      type: 'test'\n      ...\n    # Subtest: reports strict managed startup diagnostics with stable reason codes\n    ok 3 - reports strict managed startup diagnostics with stable reason codes\n      ---\n      duration_ms: 2.373329\n      type: 'test'\n      ...\n    1..3\nok 7 - petctl codex doctor\n  ---\n  duration_ms: 7.624136\n  type: 'suite'\n  ...\n# Subtest: petctl codex session status\n    # Subtest: returns sanitized managed session status without raw binding id\n    ok 1 - returns sanitized managed session status without raw binding id\n      ---\n      duration_ms: 0.594519\n      type: 'test'\n      ...\n    # Subtest: marks old managed sessions stale\n    ok 2 - marks old managed sessions stale\n      ---\n      duration_ms: 0.314578\n      type: 'test'\n      ...\n    1..2\nok 8 - petctl codex session status\n  ---\n  duration_ms: 0.966874\n  type: 'suite'\n  ...\n# Subtest: petctl notify\n    # Subtest: does not send http when local validation fails\n    ok 1 - does not send http when local validation fails\n      ---\n      duration_ms: 0.16684\n      type: 'test'\n      ...\n    # Subtest: maps accepted bridge response\n    ok 2 - maps accepted bridge response\n      ---\n      duration_ms: 0.411018\n      type: 'test'\n      ...\n    # Subtest: posts to instance endpoint when instance is set\n    ok 3 - posts to instance endpoint when instance is set\n      ---\n      duration_ms: 0.221756\n      type: 'test'\n      ...\n    # Subtest: rejects invalid instance locally\n    ok 4 - rejects invalid instance locally\n      ---\n      duration_ms: 0.077417\n      type: 'test'\n      ...\n    # Subtest: maps unauthorized response\n    ok 5 - maps unauthorized response\n      ---\n      duration_ms: 0.399652\n      type: 'test'\n      ...\n    1..5\nok 9 - petctl notify\n  ---\n  duration_ms: 1.361231\n  type: 'suite'\n  ...\n# Subtest: petctl attach/list\n    # Subtest: attaches a codex instance\n    ok 1 - attaches a codex instance\n      ---\n      duration_ms: 0.208329\n      type: 'test'\n      ...\n    # Subtest: rejects invalid attach display name locally\n    ok 2 - rejects invalid attach display name locally\n      ---\n      duration_ms: 0.053884\n      type: 'test'\n      ...\n    # Subtest: lists instances\n    ok 3 - lists instances\n      ---\n      duration_ms: 0.122924\n      type: 'test'\n      ...\n    # Subtest: detaches an instance\n    ok 4 - detaches an instance\n      ---\n      duration_ms: 0.285362\n      type: 'test'\n      ...\n    # Subtest: rejects invalid detach instance locally\n    ok 5 - rejects invalid detach instance locally\n      ---\n      duration_ms: 0.092476\n      type: 'test'\n      ...\n    1..5\nok 10 - petctl attach/list\n  ---\n  duration_ms: 0.85602\n  type: 'suite'\n  ...\n1..10\n# tests 71\n# suites 10\n# pass 71\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 4305.418988\n"
     },
     {
       "label": "petctl build",
+      "commandLine": "pnpm --filter @agent-desktop-pet/petctl build",
       "status": "passed",
       "exitCode": 0,
-      "durationMs": 6113,
+      "durationMs": 5583,
       "summary": "completed without reported failure; exit 0",
       "outputTail": "\n> @agent-desktop-pet/petctl@0.1.0 prebuild <workspace>/packages/petctl\n> pnpm --filter @agent-desktop-pet/pet-protocol build\n\n\n> @agent-desktop-pet/pet-protocol@0.1.0 build <workspace>/packages/pet-protocol\n> tsc -p tsconfig.build.json && mkdir -p dist/schemas && cp schemas/pet-event.schema.json dist/schemas/pet-event.schema.json\n\n\n> @agent-desktop-pet/petctl@0.1.0 build <workspace>/packages/petctl\n> tsc -p tsconfig.json\n\n"
     },
     {
       "label": "V30 semantic gate",
+      "commandLine": "pnpm --filter desktop exec node --import tsx ../../scripts/v30_semantic_animation_gate_smoke.mjs",
       "status": "passed",
       "exitCode": 0,
-      "durationMs": 1163,
+      "durationMs": 1182,
       "summary": "V30 semantic gate passed; exit 0",
       "outputTail": "rning\": {\n        \"semanticReadable\": false,\n        \"motionBucket\": \"low\",\n        \"keyPoseBucket\": \"low\",\n        \"transformOnly\": true\n      },\n      \"error\": {\n        \"semanticReadable\": false,\n        \"motionBucket\": \"low\",\n        \"keyPoseBucket\": \"low\",\n        \"transformOnly\": true\n      },\n      \"need_input\": {\n        \"semanticReadable\": false,\n        \"motionBucket\": \"low\",\n        \"keyPoseBucket\": \"low\",\n        \"transformOnly\": true\n      },\n      \"sleeping\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"low\",\n        \"keyPoseBucket\": \"low\",\n        \"transformOnly\": true\n      }\n    },\n    \"transformOnlyScore\": \"high\",\n    \"keyPoseDiversityScore\": \"low\",\n    \"semanticChecklistResult\": \"failed\",\n    \"loopClosureResult\": \"passed\",\n    \"adjacentDeltaResult\": \"passed\",\n    \"sameCatResult\": \"passed\"\n  },\n  \"semanticCandidate\": {\n    \"status\": \"passed\",\n    \"candidateId\": \"v30_semantic_candidate\",\n    \"safePackId\": \"flagship-work-cat-v2\",\n    \"routeKind\": \"local_2d_rig\",\n    \"reasonCodes\": [\n      \"semantic_animation_passed\"\n    ],\n    \"actionCoverage\": {\n      \"idle\": true,\n      \"thinking\": true,\n      \"running\": true,\n      \"success\": true,\n      \"warning\": true,\n      \"error\": true,\n      \"need_input\": true,\n      \"sleeping\": true\n    },\n    \"actionScores\": {\n      \"idle\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"low\",\n        \"keyPoseBucket\": \"low\",\n        \"transformOnly\": false\n      },\n      \"thinking\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"medium\",\n        \"keyPoseBucket\": \"medium\",\n        \"transformOnly\": false\n      },\n      \"running\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"medium\",\n        \"keyPoseBucket\": \"medium\",\n        \"transformOnly\": false\n      },\n      \"success\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"medium\",\n        \"keyPoseBucket\": \"medium\",\n        \"transformOnly\": false\n      },\n      \"warning\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"medium\",\n        \"keyPoseBucket\": \"medium\",\n        \"transformOnly\": false\n      },\n      \"error\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"medium\",\n        \"keyPoseBucket\": \"medium\",\n        \"transformOnly\": false\n      },\n      \"need_input\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"medium\",\n        \"keyPoseBucket\": \"medium\",\n        \"transformOnly\": false\n      },\n      \"sleeping\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"low\",\n        \"keyPoseBucket\": \"low\",\n        \"transformOnly\": false\n      }\n    },\n    \"transformOnlyScore\": \"low\",\n    \"keyPoseDiversityScore\": \"medium\",\n    \"semanticChecklistResult\": \"passed\",\n    \"loopClosureResult\": \"passed\",\n    \"adjacentDeltaResult\": \"passed\",\n    \"sameCatResult\": \"passed\"\n  },\n  \"claimScan\": {\n    \"status\": \"passed\",\n    \"scannedFileCount\": 12,\n    \"violations\": []\n  },\n  \"securityScan\": {\n    \"status\": \"passed\",\n    \"forbiddenContentDetected\": false\n  }\n}\n"
     },
     {
       "label": "V39 final gate",
+      "commandLine": "pnpm --filter desktop exec node --import tsx ../../scripts/v39_8_final_gate_smoke.mjs",
       "status": "passed",
       "exitCode": 0,
-      "durationMs": 2275,
+      "durationMs": 2170,
       "summary": "V39 scoped final gate passed; exit 0",
       "outputTail": "{\n  \"ok\": true,\n  \"evidencePath\": \"docs/V39.x/evidence/v39_8-final-gate-2026-06-27.md\",\n  \"final\": {\n    \"decision\": \"passed scoped\",\n    \"passedSampleCount\": 3,\n    \"blockedOrNegativeCount\": 2,\n    \"productStatus\": \"passed\",\n    \"humanPreferenceStatus\": \"passed\",\n    \"routeBStatusSummary\": \"blocked_honestly\",\n    \"narrowClaim\": \"V39 may claim characterized 2D action asset scoped pass for tested public-photo samples only, with Route A2++ local evidence and residual visual taste risk recorded.\",\n    \"remainingRisks\": [\n      \"The scoped pass does not prove arbitrary user-photo automation.\",\n      \"The scoped pass does not prove provider integration or Route B execution.\",\n      \"Human taste can still prefer professional Route B or hybrid art passes.\",\n      \"The generated assets remain local deterministic SVG/frameSequence evidence, not Petdex parity.\"\n    ],\n    \"claimScanStatus\": \"passed\",\n    \"securityScanStatus\": \"passed\",\n    \"reasonCodes\": [\n      \"v39_final_gate_passed_scoped\"\n    ]\n  },\n  \"visual\": {\n    \"htmlRel\": \"docs/V39.x/evidence/v39_6-visual-report-2026-06-27.html\",\n    \"assets\": {\n      \"status\": \"generated\",\n      \"publicRoot\": \"apps/desktop/public/v39\",\n      \"evidenceRoot\": \"docs/V39.x/evidence/assets\",\n      \"sampleCount\": 3\n    }\n  },\n  \"finalReport\": \"docs/V39.x/v39-final-acceptance-report.md\",\n  \"scans\": {\n    \"claimScan\": {\n      \"status\": \"passed\",\n      \"hits\": []\n    },\n    \"securityScan\": {\n      \"status\": \"passed\"\n    },\n    \"markdown\": \"## Claim Scan\\n- Status: passed.\\n- Hits: none.\\n\\n## Security Scan\\n- Status: passed.\\n\"\n  }\n}\n"
     },
     {
       "label": "V40.3R3 candidate source gate",
+      "commandLine": "pnpm --filter desktop exec node --import tsx ../../scripts/v40_3r3_candidate_source_decision_smoke.mjs",
       "status": "passed",
       "exitCode": 0,
-      "durationMs": 960,
+      "durationMs": 975,
       "summary": "V40.3R3 blocked decision recorded; exit 0",
       "outputTail": "{\n  \"phase\": \"V40.3R3\",\n  \"ok\": false,\n  \"decision\": \"blocked\",\n  \"routeDecision\": \"remain_failed_or_blocked\",\n  \"validationStatus\": \"blocked\",\n  \"evidenceRef\": \"docs/V40.x/evidence/v40_3r3-candidate-source-decision-2026-06-30.md\",\n  \"v40_4Gate\": \"no_go\",\n  \"claimScanStatus\": \"passed\",\n  \"securityScanStatus\": \"passed\"\n}\n"
     }
@@ -84,7 +152,7 @@
       "name": "03-v39-fallback-action-assets.png",
       "rel": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/03-v39-fallback-action-assets.png",
       "exists": true,
-      "bytes": 276438
+      "bytes": 268210
     },
     {
       "name": "04-photo-2d-wizard-modal.png",
@@ -96,7 +164,7 @@
       "name": "05-diagnostics-and-boundaries.png",
       "rel": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/05-diagnostics-and-boundaries.png",
       "exists": true,
-      "bytes": 163767
+      "bytes": 163807
     },
     {
       "name": "06-v40-failed-candidates.png",

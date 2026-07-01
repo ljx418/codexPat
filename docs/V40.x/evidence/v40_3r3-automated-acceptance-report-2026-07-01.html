@@ -33,8 +33,28 @@
   </section>
 
   <section>
+    <h2>审计索引与复跑信息</h2>
+    <table>
+      <tr><th>生成时 Git HEAD</th><td><code>a345137f3413</code></td></tr>
+      <tr><th>HTML 报告</th><td><code>docs/V40.x/evidence/v40_3r3-automated-acceptance-report-2026-07-01.html</code></td></tr>
+      <tr><th>Markdown 审计</th><td><code>docs/V40.x/evidence/v40_3r3-stage-audit-2026-07-01.md</code></td></tr>
+      <tr><th>结果 JSON</th><td><code>docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/test-results.json</code></td></tr>
+      <tr><th>截图目录</th><td><code>docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01</code></td></tr>
+    </table>
+    <h3>权威文档与证据输入</h3>
+    <ul><li><code>docs/active/agent_desktop_pet_prd_v40.md</code></li><li><code>docs/V40.x/v40-target-architecture.md</code></li><li><code>docs/V40.x/v40-acceptance-plan.md</code></li><li><code>docs/V40.x/v40_3r3-detailed-development-and-acceptance-plan.md</code></li><li><code>docs/V40.x/evidence/v40_3r3-candidate-source-decision-2026-06-30.md</code></li></ul>
+    <h3>可复跑命令</h3>
+    <ul><li><code>pnpm --filter desktop exec node --import tsx ../../scripts/v40_3r3_stage_audit_report.mjs</code></li><li><code>pnpm --filter desktop test</code></li><li><code>pnpm --filter desktop check</code></li><li><code>pnpm --filter desktop build</code></li><li><code>pnpm --filter @agent-desktop-pet/petctl test</code></li><li><code>pnpm --filter @agent-desktop-pet/petctl build</code></li><li><code>pnpm --filter desktop exec node --import tsx ../../scripts/v40_3r3_candidate_source_decision_smoke.mjs</code></li></ul>
+  </section>
+
+  <section>
     <h2>PRD 阶段状态</h2>
     <table><thead><tr><th>阶段</th><th>状态</th><th>审计说明</th></tr></thead><tbody><tr><td>V40.1A Direct Local Runner</td><td>passed scoped</td><td>只有 runner readiness，不证明视觉质量</td></tr><tr><td>V40.2 no-WebUI contract</td><td>passed scoped</td><td>合同可校验安全摘要和失败原因</td></tr><tr><td>V40.3 prompt-only</td><td>failed</td><td>视觉审查失败</td></tr><tr><td>V40.3R img2img</td><td>failed</td><td>视觉审查失败</td></tr><tr><td>V40.3R2 identity-conditioned</td><td>failed</td><td>真实候选生成完成但视觉审查失败</td></tr><tr><td>V40.3R3 candidate source</td><td>blocked scoped</td><td>没有可信候选来源，V40.4 仍 No-Go</td></tr></tbody></table>
+  </section>
+
+  <section>
+    <h2>审计覆盖矩阵</h2>
+    <table><thead><tr><th>审计项</th><th>覆盖状态</th><th>说明</th></tr></thead><tbody><tr><td>PRD target experience</td><td>covered</td><td>V40 high-quality image-to-action target remains unmet and blocked.</td></tr><tr><td>Architecture state</td><td>covered</td><td>Direct runner/contract exists; normalization/product gates remain locked.</td></tr><tr><td>Code checks</td><td>covered</td><td>desktop test/check/build and petctl test/build recorded.</td></tr><tr><td>Visual evidence</td><td>covered</td><td>8 headless screenshots, including failed candidates and V40.3R3 decision.</td></tr><tr><td>Claim/security scan</td><td>covered</td><td>report and audit scans passed with no hits.</td></tr><tr><td>Native desktop overlay</td><td>not covered</td><td>headless browser preview evidence cannot prove native overlay behavior.</td></tr><tr><td>High-quality V40 assets</td><td>not achieved</td><td>no accepted candidate source and no V40.4 entry.</td></tr></tbody></table>
   </section>
 
   <section>
@@ -43,42 +63,42 @@
     <tr>
       <td><code>desktop test</code></td>
       <td><span class="pill pass">passed</span></td>
-      <td>tests 361, pass 361, fail 0; exit 0</td>
+      <td><code>pnpm --filter desktop test</code><br>tests 361, pass 361, fail 0; exit 0</td>
     </tr>
     <tr>
       <td><code>desktop check</code></td>
       <td><span class="pill pass">passed</span></td>
-      <td>TypeScript check passed; exit 0</td>
+      <td><code>pnpm --filter desktop check</code><br>TypeScript check passed; exit 0</td>
     </tr>
     <tr>
       <td><code>desktop build</code></td>
       <td><span class="pill pass">passed</span></td>
-      <td>TypeScript check passed; frontend bundle built; exit 0</td>
+      <td><code>pnpm --filter desktop build</code><br>TypeScript check passed; frontend bundle built; exit 0</td>
     </tr>
     <tr>
       <td><code>petctl test</code></td>
       <td><span class="pill pass">passed</span></td>
-      <td>tests 71, pass 71, fail 0; exit 0</td>
+      <td><code>pnpm --filter @agent-desktop-pet/petctl test</code><br>tests 71, pass 71, fail 0; exit 0</td>
     </tr>
     <tr>
       <td><code>petctl build</code></td>
       <td><span class="pill pass">passed</span></td>
-      <td>completed without reported failure; exit 0</td>
+      <td><code>pnpm --filter @agent-desktop-pet/petctl build</code><br>completed without reported failure; exit 0</td>
     </tr>
     <tr>
       <td><code>V30 semantic gate</code></td>
       <td><span class="pill pass">passed</span></td>
-      <td>V30 semantic gate passed; exit 0</td>
+      <td><code>pnpm --filter desktop exec node --import tsx ../../scripts/v30_semantic_animation_gate_smoke.mjs</code><br>V30 semantic gate passed; exit 0</td>
     </tr>
     <tr>
       <td><code>V39 final gate</code></td>
       <td><span class="pill pass">passed</span></td>
-      <td>V39 scoped final gate passed; exit 0</td>
+      <td><code>pnpm --filter desktop exec node --import tsx ../../scripts/v39_8_final_gate_smoke.mjs</code><br>V39 scoped final gate passed; exit 0</td>
     </tr>
     <tr>
       <td><code>V40.3R3 candidate source gate</code></td>
       <td><span class="pill pass">passed</span></td>
-      <td>V40.3R3 blocked decision recorded; exit 0</td>
+      <td><code>pnpm --filter desktop exec node --import tsx ../../scripts/v40_3r3_candidate_source_decision_smoke.mjs</code><br>V40.3R3 blocked decision recorded; exit 0</td>
     </tr></tbody></table>
   </section>
 

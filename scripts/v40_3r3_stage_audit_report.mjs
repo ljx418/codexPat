@@ -43,13 +43,14 @@ async function main() {
   const candidatePage = writeCandidateSourcePage();
   const screenshots = await captureScreenshots(candidatePage);
   const checks = await readUiResult(screenshots);
-  const report = renderHtmlReport({ commandResults, screenshots, checks });
-  const audit = renderMarkdownAudit({ commandResults, screenshots, checks });
+  const context = buildAuditContext({ commandResults, screenshots, checks });
+  const report = renderHtmlReport(context);
+  const audit = renderMarkdownAudit(context);
   const reportScan = scanEvidence(report);
   const auditScan = scanEvidence(audit);
   writeFileSync(reportPath, report, "utf8");
   writeFileSync(auditPath, audit, "utf8");
-  writeFileSync(resultPath, `${JSON.stringify({ date, status: "needs_work", commandResults, screenshots, checks, reportScan, auditScan }, null, 2)}\n`, "utf8");
+  writeFileSync(resultPath, `${JSON.stringify({ ...context, reportScan, auditScan }, null, 2)}\n`, "utf8");
   console.log(JSON.stringify({
     ok: reportScan.claimScan.status === "passed" && reportScan.securityScan.status === "passed" && auditScan.claimScan.status === "passed" && auditScan.securityScan.status === "passed",
     status: "needs_work",
@@ -74,6 +75,7 @@ function runCommands() {
       });
       return {
         label,
+        commandLine: sanitizeCommandLine([command, ...args]),
         status: "passed",
         exitCode: 0,
         durationMs: Date.now() - started,
@@ -85,6 +87,7 @@ function runCommands() {
       const output = `${error.stdout ?? ""}\n${error.stderr ?? ""}`;
       return {
         label,
+        commandLine: sanitizeCommandLine([command, ...args]),
         status: "failed",
         exitCode,
         durationMs: Date.now() - started,
@@ -93,6 +96,48 @@ function runCommands() {
       };
     }
   });
+}
+
+function buildAuditContext({ commandResults, screenshots, checks }) {
+  return {
+    date,
+    status: "needs_work",
+    gitHeadAtGeneration: gitHead(),
+    authoritativeDocs: [
+      "docs/active/agent_desktop_pet_prd_v40.md",
+      "docs/V40.x/v40-target-architecture.md",
+      "docs/V40.x/v40-acceptance-plan.md",
+      "docs/V40.x/v40_3r3-detailed-development-and-acceptance-plan.md",
+      "docs/V40.x/evidence/v40_3r3-candidate-source-decision-2026-06-30.md"
+    ],
+    reportRefs: {
+      html: reportRel,
+      markdownAudit: auditRel,
+      resultsJson: `${outDirRel}/test-results.json`,
+      screenshotDir: outDirRel
+    },
+    reproducibility: [
+      "pnpm --filter desktop exec node --import tsx ../../scripts/v40_3r3_stage_audit_report.mjs",
+      "pnpm --filter desktop test",
+      "pnpm --filter desktop check",
+      "pnpm --filter desktop build",
+      "pnpm --filter @agent-desktop-pet/petctl test",
+      "pnpm --filter @agent-desktop-pet/petctl build",
+      "pnpm --filter desktop exec node --import tsx ../../scripts/v40_3r3_candidate_source_decision_smoke.mjs"
+    ],
+    auditCoverage: [
+      ["PRD target experience", "covered", "V40 high-quality image-to-action target remains unmet and blocked."],
+      ["Architecture state", "covered", "Direct runner/contract exists; normalization/product gates remain locked."],
+      ["Code checks", "covered", "desktop test/check/build and petctl test/build recorded."],
+      ["Visual evidence", "covered", "8 headless screenshots, including failed candidates and V40.3R3 decision."],
+      ["Claim/security scan", "covered", "report and audit scans passed with no hits."],
+      ["Native desktop overlay", "not covered", "headless browser preview evidence cannot prove native overlay behavior."],
+      ["High-quality V40 assets", "not achieved", "no accepted candidate source and no V40.4 entry."]
+    ],
+    commandResults,
+    screenshots,
+    checks
+  };
 }
 
 async function captureScreenshots(candidatePage) {
@@ -252,7 +297,7 @@ body{margin:0;padding:24px;font-family:Arial,"Microsoft YaHei",sans-serif;backgr
   return page;
 }
 
-function renderHtmlReport({ commandResults, screenshots, checks }) {
+function renderHtmlReport({ gitHeadAtGeneration, authoritativeDocs, reportRefs, reproducibility, auditCoverage, commandResults, screenshots, checks }) {
   const screenshotCards = screenshots.map((item) => `
     <article class="shot">
       <h3>${escapeHtml(item.name)}</h3>
@@ -262,8 +307,13 @@ function renderHtmlReport({ commandResults, screenshots, checks }) {
     <tr>
       <td><code>${escapeHtml(item.label)}</code></td>
       <td><span class="pill ${item.status === "passed" ? "pass" : "fail"}">${escapeHtml(item.status)}</span></td>
-      <td>${escapeHtml(item.summary)}</td>
+      <td><code>${escapeHtml(item.commandLine)}</code><br>${escapeHtml(item.summary)}</td>
     </tr>`).join("");
+  const docRows = authoritativeDocs.map((ref) => `<li><code>${escapeHtml(ref)}</code></li>`).join("");
+  const coverageRows = auditCoverage
+    .map(([area, status, note]) => `<tr><td>${escapeHtml(area)}</td><td>${escapeHtml(status)}</td><td>${escapeHtml(note)}</td></tr>`)
+    .join("");
+  const reproduceRows = reproducibility.map((command) => `<li><code>${escapeHtml(command)}</code></li>`).join("");
   const statusRows = [
     ["V40.1A Direct Local Runner", "passed scoped", "只有 runner readiness，不证明视觉质量"],
     ["V40.2 no-WebUI contract", "passed scoped", "合同可校验安全摘要和失败原因"],
@@ -314,8 +364,28 @@ function renderHtmlReport({ commandResults, screenshots, checks }) {
   </section>
 
   <section>
+    <h2>审计索引与复跑信息</h2>
+    <table>
+      <tr><th>生成时 Git HEAD</th><td><code>${escapeHtml(gitHeadAtGeneration)}</code></td></tr>
+      <tr><th>HTML 报告</th><td><code>${escapeHtml(reportRefs.html)}</code></td></tr>
+      <tr><th>Markdown 审计</th><td><code>${escapeHtml(reportRefs.markdownAudit)}</code></td></tr>
+      <tr><th>结果 JSON</th><td><code>${escapeHtml(reportRefs.resultsJson)}</code></td></tr>
+      <tr><th>截图目录</th><td><code>${escapeHtml(reportRefs.screenshotDir)}</code></td></tr>
+    </table>
+    <h3>权威文档与证据输入</h3>
+    <ul>${docRows}</ul>
+    <h3>可复跑命令</h3>
+    <ul>${reproduceRows}</ul>
+  </section>
+
+  <section>
     <h2>PRD 阶段状态</h2>
     <table><thead><tr><th>阶段</th><th>状态</th><th>审计说明</th></tr></thead><tbody>${statusRows}</tbody></table>
+  </section>
+
+  <section>
+    <h2>审计覆盖矩阵</h2>
+    <table><thead><tr><th>审计项</th><th>覆盖状态</th><th>说明</th></tr></thead><tbody>${coverageRows}</tbody></table>
   </section>
 
   <section>
@@ -356,12 +426,17 @@ function renderHtmlReport({ commandResults, screenshots, checks }) {
 </html>`;
 }
 
-function renderMarkdownAudit({ commandResults, screenshots, checks }) {
-  const commandRows = commandResults.map((item) => `| ${item.label} | ${item.status} | ${item.summary} |`).join("\n");
+function renderMarkdownAudit({ gitHeadAtGeneration, authoritativeDocs, reportRefs, reproducibility, auditCoverage, commandResults, screenshots, checks }) {
+  const commandRows = commandResults.map((item) => `| ${item.label} | ${item.status} | \`${item.commandLine}\` | ${item.summary} |`).join("\n");
   const shotRows = screenshots.map((item) => `| ${item.name} | ${item.rel} | ${item.exists ? "yes" : "no"} | ${item.bytes} |`).join("\n");
+  const docRows = authoritativeDocs.map((ref) => `- ${ref}`).join("\n");
+  const reproRows = reproducibility.map((command) => `- \`${command}\``).join("\n");
+  const coverageRows = auditCoverage.map(([area, status, note]) => `| ${area} | ${status} | ${note} |`).join("\n");
   return `# V40.3R3 Stage Audit
 
 Date: ${date}
+
+Git HEAD at generation time: ${gitHeadAtGeneration}
 
 ## Decision
 
@@ -370,19 +445,35 @@ V40.3R3 is blocked scoped and V40.4-V40.7 remain No-Go.
 
 ## PRD / Spec Review
 
-- PRD: docs/active/agent_desktop_pet_prd_v40.md
-- Target architecture: docs/V40.x/v40-target-architecture.md
-- Acceptance plan: docs/V40.x/v40-acceptance-plan.md
-- Candidate source decision: docs/V40.x/evidence/v40_3r3-candidate-source-decision-2026-06-30.md
+Authoritative input documents:
+
+${docRows}
 
 Current V40 evidence does not provide two visually accepted same-sample candidates.
 It does not unlock normalization, product apply, or a high-quality image-to-action claim.
 
+## Audit Index
+
+- HTML report: ${reportRefs.html}
+- Markdown audit: ${reportRefs.markdownAudit}
+- Results JSON: ${reportRefs.resultsJson}
+- Screenshot directory: ${reportRefs.screenshotDir}
+
+## Reproduction Commands
+
+${reproRows}
+
 ## Command Results
 
-| Command | Status | Summary |
-| --- | --- | --- |
+| Command | Status | Command line | Summary |
+| --- | --- | --- | --- |
 ${commandRows}
+
+## Audit Coverage Matrix
+
+| Area | Coverage | Notes |
+| --- | --- | --- |
+${coverageRows}
 
 ## Screenshot Evidence
 
@@ -435,6 +526,18 @@ function summarizeCommandOutput(output, status, exitCode) {
   if (!facts.length) facts.push(status === "passed" ? "completed without reported failure" : "completed with failure");
   facts.push(`exit ${exitCode}`);
   return facts.join("; ");
+}
+
+function gitHead() {
+  try {
+    return execFileSync("git", ["rev-parse", "--short=12", "HEAD"], { cwd: root, encoding: "utf8" }).trim();
+  } catch {
+    return "unknown";
+  }
+}
+
+function sanitizeCommandLine(parts) {
+  return parts.map((part) => String(part).replaceAll(root, "<workspace>")).join(" ");
 }
 
 function safeRead(rel) {
