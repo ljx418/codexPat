@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>V40 阶段性自动化验收报告</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #f4f7fb;
+      --paper: #ffffff;
+      --ink: #172033;
+      --muted: #5c697a;
+      --line: #d9e2ee;
+      --green: #127a52;
+      --amber: #9a5b00;
+      --red: #b42318;
+      --blue: #2457c5;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+    }
+    body { margin: 0; padding: 28px; }
+    main { max-width: 1220px; margin: 0 auto; }
+    .hero, section, figure, .finding {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      box-shadow: 0 1px 2px rgba(20, 30, 50, 0.04);
+    }
+    .hero { padding: 28px; margin-bottom: 18px; border-left: 8px solid var(--red); }
+    section { padding: 22px; margin-bottom: 18px; }
+    h1 { margin: 0 0 10px; font-size: 30px; }
+    h2 { margin: 0 0 14px; font-size: 22px; }
+    h3 { margin: 0 0 8px; font-size: 17px; }
+    p { line-height: 1.65; margin: 8px 0; }
+    code { background: #eef4fb; padding: 2px 5px; border-radius: 4px; font-size: 12px; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { padding: 10px 8px; border-bottom: 1px solid #e5edf6; text-align: left; vertical-align: top; }
+    th { color: #334155; background: #f8fbff; }
+    ul { line-height: 1.75; }
+    .muted { color: var(--muted); }
+    .summary { display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 12px; margin-top: 18px; }
+    .metric { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: #fbfdff; }
+    .metric span { display: block; color: var(--muted); font-size: 12px; }
+    .metric strong { display: block; margin-top: 4px; font-size: 19px; }
+    .architecture { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .box { border: 1px solid var(--line); border-radius: 8px; padding: 14px; background: #fbfdff; }
+    .pill { display: inline-block; border-radius: 999px; padding: 4px 9px; font-size: 12px; font-weight: 700; white-space: nowrap; }
+    .pass { background: #e7f7ef; color: var(--green); }
+    .warn { background: #fff3d7; color: var(--amber); }
+    .fail { background: #fdecec; color: var(--red); }
+    .neutral { background: #eef4fb; color: #34516f; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px; }
+    figure { margin: 0; padding: 12px; }
+    figure img { display: block; width: 100%; max-height: 760px; object-fit: contain; background: #fff; border: 1px solid #e0e7f1; border-radius: 6px; }
+    figcaption { margin-top: 9px; color: var(--muted); font-size: 13px; line-height: 1.5; }
+    .finding { padding: 14px; margin-bottom: 10px; border-left: 5px solid var(--amber); }
+    .callout { border-left: 5px solid var(--red); background: #fffafa; padding: 12px 14px; border-radius: 6px; }
+    @media (max-width: 820px) {
+      body { padding: 14px; }
+      .architecture { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header class="hero">
+      <h1>V40 阶段性自动化验收报告</h1>
+      <p><strong>目标验收结论：V40 failed。</strong> 本轮审计完成了命令重跑、文档/代码/功能检查、真实候选图证据和 headless 截图，但 V40.3R6 的两个真实候选均未通过显式视觉审查，acceptedVisualCount = 0。</p>
+      <p class="muted">本报告不声明 V40 passed、不声明任意猫照片自动生成高质量动作资产、不声明 Petdex parity、不声明 provider/WebUI/ComfyUI 路线 ready、不声明 production 或平台 ready。</p>
+      <div class="summary">
+        <div class="metric"><span>审计执行状态</span><strong>passed scoped for audit</strong></div>
+        <div class="metric"><span>V40 目标状态</span><strong>failed</strong></div>
+        <div class="metric"><span>R6 生成候选</span><strong>2</strong></div>
+        <div class="metric"><span>视觉通过候选</span><strong>0</strong></div>
+      </div>
+    </header>
+
+    <section>
+      <h2>验收评价</h2>
+      <div class="callout">
+        <p>当前项目可以证明：V40 的 no-WebUI direct local runner 路线已经进入真实候选生成和失败态闭环，证据链可审计。</p>
+        <p>当前项目不能证明：已经实现“图生高质量 2D 动作资产”或“任意猫照片自动生成高质量动作资产”。V40.4 normalization、V40.5 preview/apply/rollback 和 V40.7 final gate 均未通过。</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>目标架构与当前实现</h2>
+      <div class="architecture">
+        <div class="box">
+          <h3>V40 目标架构</h3>
+          <ul>
+            <li>tested cat sample / safe user photo。</li>
+            <li>PhotoSafetyIntake、SourceAndLicenseRecord、SubjectMaskAndCropPlan。</li>
+            <li>IdentityAnchorPack、ActionPoseConditionPack。</li>
+            <li>DirectLocalImageModelAdapter / DirectDiffusersFrameRunner。</li>
+            <li>CandidateFrameSequence、CandidateQualityReview、V39SameSampleComparison。</li>
+            <li>V40.4 normalization、V40.5 preview/apply/rollback、V40.7 final gate。</li>
+          </ul>
+        </div>
+        <div class="box">
+          <h3>当前实现状态</h3>
+          <ul>
+            <li>R5 predev audit passed scoped：源记录、样本矩阵、动作映射和 runner 边界已审计。</li>
+            <li>R6 generated：两个同样本候选 contact sheet 已生成。</li>
+            <li>R6 visual review failed：候选仍是照片式单帧集合，动作语义弱，不优于同样本 V39。</li>
+            <li>V40.4 blocked：没有两个视觉通过候选。</li>
+            <li>V40.5 blocked：没有 accepted V40 pack 可预览、应用或回滚。</li>
+            <li>V39 仍是当前 fallback 产品路径。</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>命令与端到端验收</h2>
+      <table>
+        <thead><tr><th>审计项</th><th>状态</th><th>退出码</th><th>摘要</th></tr></thead>
+        <tbody>
+    <tr>
+      <td>desktop 单元测试</td>
+      <td><span class="pill pass">passed</span></td>
+      <td>0</td>
+      <td>Node test summary: pass 363, fail 0.</td>
+    </tr>
+
+    <tr>
+      <td>desktop TypeScript 检查</td>
+      <td><span class="pill pass">passed</span></td>
+      <td>0</td>
+      <td>命令完成，退出码为 0。</td>
+    </tr>
+
+    <tr>
+      <td>petctl 单元测试</td>
+      <td><span class="pill pass">passed</span></td>
+      <td>0</td>
+      <td>Node test summary: pass 71, fail 0.</td>
+    </tr>
+
+    <tr>
+      <td>V30 语义动作质量门禁</td>
+      <td><span class="pill pass">passed</span></td>
+      <td>0</td>
+      <td>命令完成且退出码为 0。</td>
+    </tr>
+
+    <tr>
+      <td>V39 fallback final gate</td>
+      <td><span class="pill pass">passed</span></td>
+      <td>0</td>
+      <td>命令完成且退出码为 0。</td>
+    </tr>
+
+    <tr>
+      <td>V40.3R5 direct runner predev audit</td>
+      <td><span class="pill pass">passed</span></td>
+      <td>0</td>
+      <td>命令完成且退出码为 0。</td>
+    </tr>
+
+    <tr>
+      <td>V40.3R6 controlled candidate generation</td>
+      <td><span class="pill pass">passed_expected_failed_gate</span></td>
+      <td>1</td>
+      <td>非零退出符合预期：该阶段脚本用失败退出码表达 V40 目标验收未通过。</td>
+    </tr>
+
+    <tr>
+      <td>V40.4-V40.7 failed gate</td>
+      <td><span class="pill pass">passed_expected_failed_gate</span></td>
+      <td>1</td>
+      <td>非零退出符合预期：该阶段脚本用失败退出码表达 V40 目标验收未通过。</td>
+    </tr>
+  </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>PRD / 文档 / 代码一致性检查</h2>
+      <table>
+        <thead><tr><th>检查项</th><th>状态</th><th>编号</th></tr></thead>
+        <tbody>
+    <tr>
+      <td>PRD 限定 no-WebUI direct local route</td>
+      <td><span class="pill pass">passed</span></td>
+      <td>prd_no_webui_direct_route</td>
+    </tr>
+
+    <tr>
+      <td>目标架构包含具体代码/门禁实体</td>
+      <td><span class="pill pass">passed</span></td>
+      <td>architecture_specific_entities</td>
+    </tr>
+
+    <tr>
+      <td>R5/R6 相关实现文件存在</td>
+      <td><span class="pill pass">passed</span></td>
+      <td>implementation_files_exist</td>
+    </tr>
+
+    <tr>
+      <td>V40.3R5 predev audit passed scoped</td>
+      <td><span class="pill pass">passed</span></td>
+      <td>r5_passed</td>
+    </tr>
+
+    <tr>
+      <td>V40.3R6 真实候选生成后失败</td>
+      <td><span class="pill pass">passed</span></td>
+      <td>r6_failed_truthfully</td>
+    </tr>
+
+    <tr>
+      <td>V40.7 final gate 保持 failed</td>
+      <td><span class="pill pass">passed</span></td>
+      <td>final_gate_failed</td>
+    </tr>
+
+    <tr>
+      <td>V40.4/V40.5 未被错误解锁</td>
+      <td><span class="pill pass">passed</span></td>
+      <td>no_product_unlock</td>
+    </tr>
+  </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>功能覆盖矩阵</h2>
+      <table>
+        <thead><tr><th>PRD 功能点</th><th>当前覆盖</th><th>证据</th></tr></thead>
+        <tbody>
+    <tr>
+      <td>至少两个 tested cat samples 和一个 negative/blocked sample</td>
+      <td><span class="pill pass">covered</span></td>
+      <td>R5 sample matrix / R6 generatedCount</td>
+    </tr>
+
+    <tr>
+      <td>真实候选生成</td>
+      <td><span class="pill pass">covered_failed_quality</span></td>
+      <td>R6 manifest and contact sheets</td>
+    </tr>
+
+    <tr>
+      <td>显式视觉审查</td>
+      <td><span class="pill pass">covered_failed_quality</span></td>
+      <td>R6 visualReviews</td>
+    </tr>
+
+    <tr>
+      <td>V40.4 normalization</td>
+      <td><span class="pill warn">blocked</span></td>
+      <td>acceptedVisualCount = 0</td>
+    </tr>
+
+    <tr>
+      <td>V40.5 preview/apply/rollback</td>
+      <td><span class="pill warn">blocked</span></td>
+      <td>no accepted V40 pack</td>
+    </tr>
+
+    <tr>
+      <td>V40 final scoped quality claim</td>
+      <td><span class="pill fail">failed</span></td>
+      <td>V40.7 final gate</td>
+    </tr>
+  </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>截图与视觉证据</h2>
+      <p>自动化截图使用 Chrome headless 本地文件模式采集；未启动桌面宠物 GUI，未打开可见浏览器窗口，截图后删除临时浏览器 profile。</p>
+      <div class="grid">
+    <figure>
+      <img src="visual-evidence/v38-a-cat-public-contact-sheet.png" alt="V40.3R6 tabby candidate contact sheet" />
+      <figcaption>V40.3R6 tabby candidate contact sheet。来源：docs/V40.x/evidence/assets/v40-3r6-controlled-candidates/v38-a-cat-public-contact-sheet.png。结论：真实候选存在，但视觉验收失败。</figcaption>
+    </figure>
+
+    <figure>
+      <img src="visual-evidence/v38-tuxedo-public-contact-sheet.png" alt="V40.3R6 tuxedo candidate contact sheet" />
+      <figcaption>V40.3R6 tuxedo candidate contact sheet。来源：docs/V40.x/evidence/assets/v40-3r6-controlled-candidates/v38-tuxedo-public-contact-sheet.png。结论：真实候选存在，但视觉验收失败。</figcaption>
+    </figure>
+
+    <figure>
+      <img src="screenshots/v40_6_failed_visual_report.png" alt="V40.6 失败态视觉报告 headless 截图" />
+      <figcaption>V40.6 失败态视觉报告 headless 截图：passed</figcaption>
+    </figure>
+
+    <figure>
+      <img src="screenshots/v40_stage_audit_report.png" alt="本阶段审计报告 headless 截图" />
+      <figcaption>本阶段审计报告 headless 截图：passed</figcaption>
+    </figure>
+  </div>
+    </section>
+
+    <section>
+      <h2>代码审计发现</h2>
+
+    <article class="finding">
+      <strong>Critical · V40 尚未实现高质量图生动作资产出门目标。</strong>
+      <p>R6 acceptedVisualCount = 0，V40.4/V40.5 blocked，V40.7 failed。</p>
+    </article>
+
+    <article class="finding">
+      <strong>Medium · R6 候选是单帧 contact sheet 证据，不是可应用到桌宠的多帧 action pack。</strong>
+      <p>R6 visual review states single still images and weak action semantics.</p>
+    </article>
+
+    <article class="finding">
+      <strong>Medium · 当前产品体验仍应回退到 V39，不应向用户展示 V40 已可应用。</strong>
+      <p>V40.5 blocked because no accepted V40 pack exists.</p>
+    </article>
+
+    </section>
+
+    <section>
+      <h2>Claim / Security Scan</h2>
+      <table>
+        <thead><tr><th>扫描项</th><th>状态</th><th>命中</th></tr></thead>
+        <tbody>
+          <tr><td>Claim scan</td><td><span class="pill pass">passed</span></td><td>none</td></tr>
+          <tr><td>Security scan</td><td><span class="pill pass">passed</span></td><td>none</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>最终结论</h2>
+      <p><strong>阶段性审计可以通过：证据完整、失败态诚实、没有扩大声明。</strong></p>
+      <p><strong>V40 产品目标没有通过：</strong>当前不能进入“图生高质量动作资产已完成”的人工详细体验审查；只能审查流程、证据链和失败原因。</p>
+    </section>
+  </main>
+</body>
+</html>

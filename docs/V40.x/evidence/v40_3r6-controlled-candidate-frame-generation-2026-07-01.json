@@ -1,0 +1,164 @@
+{
+  "phase": "V40.3R6",
+  "r5PassRef": "docs/V40.x/evidence/v40_3r5-direct-runner-predev-audit-2026-07-01.json",
+  "boundedRunId": "v40-3r6-direct-runner-2026-07-01",
+  "selectedRoute": "direct_local_runner_no_webui",
+  "generated": true,
+  "generatedCount": 2,
+  "modelLabel": "dreamshaper-8-local-checkpoint",
+  "identityConditionerLabel": "ip-adapter-sd15",
+  "candidateSummaries": [
+    {
+      "candidateId": "v40r-v38-a-cat-public-ip-adapter-candidate",
+      "sampleId": "v38_a_cat_public",
+      "status": "generated",
+      "route": "direct_local_runner_no_webui",
+      "characterRef": "docs/V40.x/evidence/assets/v40-3r6-controlled-candidates/v38-a-cat-public/idle.png",
+      "contactSheetRef": "docs/V40.x/evidence/assets/v40-3r6-controlled-candidates/v38-a-cat-public-contact-sheet.png",
+      "animatedPreviewRef": null,
+      "actionCoverage": {
+        "idle": true,
+        "walk": true,
+        "jump": true,
+        "sleep": true,
+        "eat": true,
+        "play": true,
+        "alert": true,
+        "celebrate": true
+      },
+      "identityScore": "warn",
+      "visualPreference": "not_reviewed",
+      "reasonCodes": [
+        "controlled_candidate_generated",
+        "not_accepted_before_visual_review"
+      ]
+    },
+    {
+      "candidateId": "v40r-v38-tuxedo-public-ip-adapter-candidate",
+      "sampleId": "v38_tuxedo_public",
+      "status": "generated",
+      "route": "direct_local_runner_no_webui",
+      "characterRef": "docs/V40.x/evidence/assets/v40-3r6-controlled-candidates/v38-tuxedo-public/idle.png",
+      "contactSheetRef": "docs/V40.x/evidence/assets/v40-3r6-controlled-candidates/v38-tuxedo-public-contact-sheet.png",
+      "animatedPreviewRef": null,
+      "actionCoverage": {
+        "idle": true,
+        "walk": true,
+        "jump": true,
+        "sleep": true,
+        "eat": true,
+        "play": true,
+        "alert": true,
+        "celebrate": true
+      },
+      "identityScore": "warn",
+      "visualPreference": "not_reviewed",
+      "reasonCodes": [
+        "controlled_candidate_generated",
+        "not_accepted_before_visual_review"
+      ]
+    }
+  ],
+  "candidateValidations": [
+    {
+      "status": "accepted",
+      "reasonCodes": [
+        "v40_no_webui_contract_passed"
+      ]
+    },
+    {
+      "status": "accepted",
+      "reasonCodes": [
+        "v40_no_webui_contract_passed"
+      ]
+    }
+  ],
+  "visualReviews": [
+    {
+      "candidateId": "v40r-v38-a-cat-public-ip-adapter-candidate",
+      "status": "failed",
+      "observations": [
+        "Generated same-sample action images are present as review candidates.",
+        "The tabby candidate remains photo-like, includes scene/background content, and shows visible style/artifact drift across actions.",
+        "Each action is represented as a single still image rather than a reviewable multi-frame action sequence.",
+        "The output is not preferred over the same-sample V39 baseline for desktop-pet target use.",
+        "Candidate is kept out of V40.4 normalization."
+      ],
+      "reasonCodes": [
+        "action_semantics_unclear",
+        "target_experience_quality_failed"
+      ]
+    },
+    {
+      "candidateId": "v40r-v38-tuxedo-public-ip-adapter-candidate",
+      "status": "failed",
+      "observations": [
+        "Generated same-sample action images are present as review candidates.",
+        "The tuxedo candidate uses complex indoor photo backgrounds and does not present clean desktop-pet transparent or sprite-like frames.",
+        "Each action is represented as a single still image rather than a reviewable multi-frame action sequence.",
+        "The output is not preferred over the same-sample V39 baseline for desktop-pet target use.",
+        "Candidate is kept out of V40.4 normalization."
+      ],
+      "reasonCodes": [
+        "action_semantics_unclear",
+        "target_experience_quality_failed"
+      ]
+    }
+  ],
+  "visualReviewValidations": [
+    {
+      "status": "failed",
+      "reasonCodes": [
+        "action_semantics_unclear",
+        "target_experience_quality_failed",
+        "visual_review_failed"
+      ]
+    },
+    {
+      "status": "failed",
+      "reasonCodes": [
+        "action_semantics_unclear",
+        "target_experience_quality_failed",
+        "visual_review_failed"
+      ]
+    }
+  ],
+  "acceptedVisualCount": 0,
+  "negativeSampleResult": {
+    "sampleId": "v38_negative_dog_public",
+    "status": "blocked",
+    "reasonCodes": [
+      "negative_non_cat_rejected"
+    ]
+  },
+  "v39Comparison": [
+    {
+      "sampleId": "v38_a_cat_public",
+      "baselineRef": "/v39/v38_a_cat_public/contact-sheet.svg",
+      "preference": "not_better_than_v39",
+      "reasonCodes": [
+        "visual_preference_not_better_than_v39"
+      ]
+    },
+    {
+      "sampleId": "v38_tuxedo_public",
+      "baselineRef": "/v39/v38_tuxedo_public/contact-sheet.svg",
+      "preference": "not_better_than_v39",
+      "reasonCodes": [
+        "visual_preference_not_better_than_v39"
+      ]
+    }
+  ],
+  "v40_4Entry": "no_go",
+  "claimScan": {
+    "status": "passed",
+    "hits": []
+  },
+  "securityScan": {
+    "status": "passed",
+    "hits": []
+  },
+  "decision": "failed",
+  "evidencePath": "docs/V40.x/evidence/v40_3r6-controlled-candidate-frame-generation-2026-07-01.md",
+  "prePhasePlanPath": "docs/V40.x/evidence/v40_3r6-pre-phase-development-and-acceptance-plan-2026-07-01.md"
+}

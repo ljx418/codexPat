@@ -278,11 +278,153 @@ Fail:
 - the decision repeats V40.3R2 failed outputs as accepted inputs;
 - the decision hides visual failure or presents tool readiness as asset quality.
 
+Current result:
+
+- V40.3R3 recorded `remain_failed_or_blocked`; V40.4 remains No-Go.
+
+## V40.3R4 Candidate Source Replan
+
+Entry criteria:
+
+- V40.3R3 is blocked scoped with `remain_failed_or_blocked`;
+- the 2026-07-01 host synthetic template GIF probe exists only as
+  process-evidence and is not accepted V40 quality evidence;
+- V40.4 remains No-Go.
+
+Required actions:
+
+- update PRD, target architecture, active gap, active development plan,
+  acceptance plan, milestones, risk matrix, evidence checklist, phase specs,
+  and drawio;
+- compare materially different direct-runner, source-bound manual/professional
+  import, and hybrid assisted routes;
+- record `new_direct_runner_route_allowed` as the selected route for the current
+  V40.3R4 documentation set;
+- define pre-development audit, sample matrix, source/license/sample-binding
+  rules, visual acceptance rules, and evidence paths for the selected route;
+- keep V39 fallback and keep V40.4-V40.7 locked until two same-sample candidates
+  pass explicit visual review.
+
+Pass:
+
+- documents consistently identify V40.3R4 as the next documentation-only gate;
+- documents consistently identify the selected route as constrained direct local
+  runner with source/license records, subject mask/crop planning, identity
+  anchors, action pose conditions, candidate quality review, and V39 comparison;
+- drawio is Chinese, parses as XML, has no more than eight pages, and shows
+  concrete code/document/evidence entities;
+- claim/security scans pass.
+
+Block:
+
+- no credible route can be specified without high false-pass risk.
+
+Fail:
+
+- any document treats host template GIFs, process-only UI checks, or failed
+  prior candidates as accepted V40 assets;
+- any document lets the selected direct runner route start without predev audit
+  for model/control availability, sample binding, identity controls, action
+  controls, safe runner invocation, and visual review;
+- any document unlocks V40.4 without two explicit visual-review passes.
+
+## V40.3R5 Direct Runner Predev Audit
+
+Entry criteria:
+
+- V40.3R4 documentation readiness passed scoped;
+- V40.3R4 selected constrained `new_direct_runner_route_allowed`;
+- V40.4 remains No-Go.
+
+Required actions:
+
+- identify at least two tested cat samples and one blocked/negative sample with
+  sanitized sample IDs;
+- create source/license records or stable blocked reasons for all samples;
+- prove direct local model/checkpoint/control component availability without
+  WebUI or ComfyUI;
+- define subject mask/crop plans for each tested sample;
+- define identity anchor packs for visible same-cat traits;
+- define action pose condition packs for at least eight desktop-pet actions;
+- define the action-name mapping boundary between V40 asset actions and product
+  runtime state actions;
+- define safe direct-runner invocation and redaction boundaries;
+- define explicit visual review rubric before generation starts.
+
+Pass:
+
+- every required pre-generation artifact exists as a safe summary or safe
+  relative reference;
+- V40 asset action names are fixed as `idle`, `walk`, `jump`, `sleep`, `eat`,
+  `play`, `alert`, `celebrate`, and product state actions are mapped onto them
+  before generation;
+- no raw prompt, raw payload, raw image bytes, raw photo bytes, full local path,
+  credential path, token, or Authorization value is written to evidence;
+- the next bounded generation attempt can be audited from sample ID through
+  identity/action controls.
+
+Block:
+
+- local model/control components are unavailable;
+- sample source/license evidence is unavailable;
+- safe runner invocation cannot be proven in the current environment.
+
+Fail:
+
+- the audit downgrades the route to prompt-only, template GIF, whole-image
+  transform, WebUI/ComfyUI, provider output, or untracked manual edits;
+- the audit starts generation before source, mask/crop, identity, action, and
+  visual-review controls exist.
+- the audit mixes product state action names into the V40 asset action set
+  without an explicit mapping decision.
+
+## V40.3R6 Controlled Candidate Frame Generation
+
+Entry criteria:
+
+- V40.3R5 passed scoped;
+- V40.4 remains No-Go;
+- sample matrix, identity anchors, action pose controls, and visual rubric are
+  available as safe evidence.
+
+Required actions:
+
+- run a bounded direct-runner candidate generation attempt using only the
+  V40.3R5-approved route;
+- generate or block candidate frame sequences for at least two tested samples
+  and one blocked/negative sample;
+- store only safe relative candidate refs, thumbnails, manifest summaries, and
+  redacted review notes;
+- run candidate quality review for identity, action readability, artifacts,
+  desktop-pet scale, and safety;
+- compare every reviewable V40 candidate with same-sample V39 baseline.
+
+Pass:
+
+- at least two same-sample candidates pass explicit visual review and are
+  eligible for V40.4 normalization;
+- blocked/negative samples have stable reason codes;
+- evidence is visual, reviewable, and sanitized.
+
+Block:
+
+- the audited runner cannot execute in the current environment;
+- generation produces no reviewable outputs despite valid predev audit.
+
+Fail:
+
+- candidates are photo cards, whole-image transforms, template GIFs, weak action
+  sequences, unsafe outputs, identity-drifted, artifact-prone, or not better
+  than same-sample V39;
+- generated outputs leak unsafe data or bypass the V40.3R5 controls.
+
 ## V40.4 Normalization And Action Packaging
 
 Entry criteria:
 
-- V40.3R3 has selected a credible candidate source;
+- V40.3R5 direct-runner predev audit passed scoped or produced a documented
+  accepted-source fallback with equivalent source/license/sample-binding proof;
+- V40.3R6 controlled candidate frame generation produced accepted candidates;
 - at least two same-sample candidates from that source passed explicit visual
   review.
 

@@ -1,0 +1,82 @@
+{
+  "phase": "V40.4-V40.7",
+  "decision": "failed",
+  "r5": {
+    "decision": "passed scoped"
+  },
+  "r6": {
+    "decision": "failed",
+    "generatedCount": 2,
+    "acceptedVisualCount": 0
+  },
+  "v40_4": {
+    "phase": "V40.4",
+    "decision": "blocked",
+    "entryAllowed": false,
+    "acceptedVisualCount": 0,
+    "reasonCodes": [
+      "v40_4_no_go",
+      "v40_3r6_visual_review_failed",
+      "accepted_candidate_count_insufficient"
+    ]
+  },
+  "v40_5": {
+    "phase": "V40.5",
+    "decision": "blocked",
+    "previewReady": false,
+    "targetOnlyApplyReady": false,
+    "rollbackReady": true,
+    "reasonCodes": [
+      "v40_4_no_accepted_candidates",
+      "product_preview_not_ready",
+      "target_apply_blocked"
+    ]
+  },
+  "productGate": {
+    "status": "blocked",
+    "reasonCodes": [
+      "product_preview_not_ready",
+      "target_apply_failed"
+    ]
+  },
+  "v40_6": {
+    "phase": "V40.6",
+    "decision": "passed scoped",
+    "reportRef": "docs/V40.x/evidence/v40_6-visual-report-2026-07-01.html",
+    "visualArtifactCount": 2,
+    "reasonCodes": [
+      "failed_visual_report_generated",
+      "v40_4_no_go_recorded"
+    ]
+  },
+  "v40_7": {
+    "phase": "V40.7",
+    "decision": "failed",
+    "reasonCodes": [
+      "v40_3r5_predev_audit_passed_scoped",
+      "v40_3r6_candidates_generated",
+      "v40_3r6_visual_review_failed",
+      "v40_4_no_go",
+      "v40_final_gate_failed"
+    ]
+  },
+  "refs": {
+    "v40_4Plan": "docs/V40.x/evidence/v40_4-pre-phase-development-and-acceptance-plan-2026-07-01.md",
+    "v40_4Evidence": "docs/V40.x/evidence/v40_4-normalization-action-packaging-2026-07-01.md",
+    "v40_5Plan": "docs/V40.x/evidence/v40_5-pre-phase-development-and-acceptance-plan-2026-07-01.md",
+    "v40_5Evidence": "docs/V40.x/evidence/v40_5-product-preview-apply-rollback-2026-07-01.md",
+    "v40_6Plan": "docs/V40.x/evidence/v40_6-pre-phase-development-and-acceptance-plan-2026-07-01.md",
+    "v40_6Report": "docs/V40.x/evidence/v40_6-visual-report-2026-07-01.html",
+    "v40_7Plan": "docs/V40.x/evidence/v40_7-pre-phase-development-and-acceptance-plan-2026-07-01.md",
+    "v40_7Evidence": "docs/V40.x/evidence/v40_7-final-gate-2026-07-01.md",
+    "summary": "docs/V40.x/evidence/v40_4_to_v40_7-final-failed-gate-2026-07-01.json"
+  },
+  "claimScan": {
+    "status": "passed",
+    "hits": []
+  },
+  "securityScan": {
+    "status": "passed",
+    "hits": []
+  }
+}

@@ -1,0 +1,272 @@
+{
+  "phase": "V40 stage audit",
+  "date": "2026-07-01",
+  "startedAt": "2026-07-01T15:43:19.082Z",
+  "completedAt": "2026-07-01T15:44:57.161Z",
+  "auditStatus": "passed scoped for audit",
+  "targetStatus": "failed",
+  "targetReason": "V40.3R6 generated two real same-sample candidates, but acceptedVisualCount is 0; V40.4 and V40.5 remain blocked.",
+  "preflight": {
+    "branch": "main",
+    "head": "1558768",
+    "chromeMode": "headless local-file screenshots only; no desktop pet GUI launch and no visible browser window for capture",
+    "chromeAvailable": true,
+    "dirtyFileCount": 53
+  },
+  "refs": {
+    "prd": "docs/active/agent_desktop_pet_prd_v40.md",
+    "targetArchitecture": "docs/V40.x/v40-target-architecture.md",
+    "developmentPlan": "docs/V40.x/v40-development-and-acceptance-plan.md",
+    "acceptancePlan": "docs/V40.x/v40-acceptance-plan.md",
+    "phaseSpecs": "docs/V40.x/v40-phase-specs.md",
+    "implementationContract": "docs/V40.x/v40-implementation-contract.md",
+    "r5Json": "docs/V40.x/evidence/v40_3r5-direct-runner-predev-audit-2026-07-01.json",
+    "r5Md": "docs/V40.x/evidence/v40_3r5-direct-runner-predev-audit-2026-07-01.md",
+    "r6Json": "docs/V40.x/evidence/v40_3r6-controlled-candidate-frame-generation-2026-07-01.json",
+    "r6Md": "docs/V40.x/evidence/v40_3r6-controlled-candidate-frame-generation-2026-07-01.md",
+    "v40_4": "docs/V40.x/evidence/v40_4-normalization-action-packaging-2026-07-01.md",
+    "v40_5": "docs/V40.x/evidence/v40_5-product-preview-apply-rollback-2026-07-01.md",
+    "v40_6": "docs/V40.x/evidence/v40_6-visual-report-2026-07-01.html",
+    "v40_7": "docs/V40.x/evidence/v40_7-final-gate-2026-07-01.md",
+    "finalJson": "docs/V40.x/evidence/v40_4_to_v40_7-final-failed-gate-2026-07-01.json",
+    "candidateManifest": "docs/V40.x/evidence/assets/v40-3r6-controlled-candidates/manifest.json"
+  },
+  "commandResults": [
+    {
+      "id": "desktop_test",
+      "label": "desktop 单元测试",
+      "auditStatus": "passed",
+      "exitCode": 0,
+      "durationMs": 7019,
+      "timedOut": false,
+      "expectedBehavior": "zero",
+      "summary": "Node test summary: pass 363, fail 0."
+    },
+    {
+      "id": "desktop_check",
+      "label": "desktop TypeScript 检查",
+      "auditStatus": "passed",
+      "exitCode": 0,
+      "durationMs": 12957,
+      "timedOut": false,
+      "expectedBehavior": "zero",
+      "summary": "命令完成，退出码为 0。"
+    },
+    {
+      "id": "petctl_test",
+      "label": "petctl 单元测试",
+      "auditStatus": "passed",
+      "exitCode": 0,
+      "durationMs": 9409,
+      "timedOut": false,
+      "expectedBehavior": "zero",
+      "summary": "Node test summary: pass 71, fail 0."
+    },
+    {
+      "id": "v30_semantic_gate",
+      "label": "V30 语义动作质量门禁",
+      "auditStatus": "passed",
+      "exitCode": 0,
+      "durationMs": 1813,
+      "timedOut": false,
+      "expectedBehavior": "zero",
+      "summary": "命令完成且退出码为 0。"
+    },
+    {
+      "id": "v39_final_gate",
+      "label": "V39 fallback final gate",
+      "auditStatus": "passed",
+      "exitCode": 0,
+      "durationMs": 3367,
+      "timedOut": false,
+      "expectedBehavior": "zero",
+      "summary": "命令完成且退出码为 0。"
+    },
+    {
+      "id": "v40_r5_predev_audit",
+      "label": "V40.3R5 direct runner predev audit",
+      "auditStatus": "passed",
+      "exitCode": 0,
+      "durationMs": 49492,
+      "timedOut": false,
+      "expectedBehavior": "zero",
+      "summary": "命令完成且退出码为 0。"
+    },
+    {
+      "id": "v40_r6_controlled_generation",
+      "label": "V40.3R6 controlled candidate generation",
+      "auditStatus": "passed_expected_failed_gate",
+      "exitCode": 1,
+      "durationMs": 1702,
+      "timedOut": false,
+      "expectedBehavior": "nonzero_failed_gate",
+      "summary": "非零退出符合预期：该阶段脚本用失败退出码表达 V40 目标验收未通过。"
+    },
+    {
+      "id": "v40_final_failed_gate",
+      "label": "V40.4-V40.7 failed gate",
+      "auditStatus": "passed_expected_failed_gate",
+      "exitCode": 1,
+      "durationMs": 1555,
+      "timedOut": false,
+      "expectedBehavior": "nonzero_failed_gate",
+      "summary": "非零退出符合预期：该阶段脚本用失败退出码表达 V40 目标验收未通过。"
+    }
+  ],
+  "staticAudit": {
+    "checks": [
+      {
+        "id": "prd_no_webui_direct_route",
+        "label": "PRD 限定 no-WebUI direct local route",
+        "status": "passed"
+      },
+      {
+        "id": "architecture_specific_entities",
+        "label": "目标架构包含具体代码/门禁实体",
+        "status": "passed"
+      },
+      {
+        "id": "implementation_files_exist",
+        "label": "R5/R6 相关实现文件存在",
+        "status": "passed"
+      },
+      {
+        "id": "r5_passed",
+        "label": "V40.3R5 predev audit passed scoped",
+        "status": "passed"
+      },
+      {
+        "id": "r6_failed_truthfully",
+        "label": "V40.3R6 真实候选生成后失败",
+        "status": "passed"
+      },
+      {
+        "id": "final_gate_failed",
+        "label": "V40.7 final gate 保持 failed",
+        "status": "passed"
+      },
+      {
+        "id": "no_product_unlock",
+        "label": "V40.4/V40.5 未被错误解锁",
+        "status": "passed"
+      }
+    ],
+    "coverage": [
+      {
+        "requirement": "至少两个 tested cat samples 和一个 negative/blocked sample",
+        "status": "covered",
+        "evidence": "R5 sample matrix / R6 generatedCount"
+      },
+      {
+        "requirement": "真实候选生成",
+        "status": "covered_failed_quality",
+        "evidence": "R6 manifest and contact sheets"
+      },
+      {
+        "requirement": "显式视觉审查",
+        "status": "covered_failed_quality",
+        "evidence": "R6 visualReviews"
+      },
+      {
+        "requirement": "V40.4 normalization",
+        "status": "blocked",
+        "evidence": "acceptedVisualCount = 0"
+      },
+      {
+        "requirement": "V40.5 preview/apply/rollback",
+        "status": "blocked",
+        "evidence": "no accepted V40 pack"
+      },
+      {
+        "requirement": "V40 final scoped quality claim",
+        "status": "failed",
+        "evidence": "V40.7 final gate"
+      }
+    ],
+    "codeReviewFindings": [
+      {
+        "priority": "Critical",
+        "finding": "V40 尚未实现高质量图生动作资产出门目标。",
+        "evidence": "R6 acceptedVisualCount = 0，V40.4/V40.5 blocked，V40.7 failed。"
+      },
+      {
+        "priority": "Medium",
+        "finding": "R6 候选是单帧 contact sheet 证据，不是可应用到桌宠的多帧 action pack。",
+        "evidence": "R6 visual review states single still images and weak action semantics."
+      },
+      {
+        "priority": "Medium",
+        "finding": "当前产品体验仍应回退到 V39，不应向用户展示 V40 已可应用。",
+        "evidence": "V40.5 blocked because no accepted V40 pack exists."
+      }
+    ],
+    "status": "passed"
+  },
+  "copiedVisuals": [
+    {
+      "title": "V40.3R6 tabby candidate contact sheet",
+      "sourceRef": "docs/V40.x/evidence/assets/v40-3r6-controlled-candidates/v38-a-cat-public-contact-sheet.png",
+      "ref": "docs/V40.x/evidence/v40-stage-audit-2026-07-01/visual-evidence/v38-a-cat-public-contact-sheet.png",
+      "exists": true
+    },
+    {
+      "title": "V40.3R6 tuxedo candidate contact sheet",
+      "sourceRef": "docs/V40.x/evidence/assets/v40-3r6-controlled-candidates/v38-tuxedo-public-contact-sheet.png",
+      "ref": "docs/V40.x/evidence/v40-stage-audit-2026-07-01/visual-evidence/v38-tuxedo-public-contact-sheet.png",
+      "exists": true
+    }
+  ],
+  "browserScreenshots": [
+    {
+      "id": "v40_6_failed_visual_report",
+      "title": "V40.6 失败态视觉报告 headless 截图",
+      "htmlRef": "docs/V40.x/evidence/v40_6-visual-report-2026-07-01.html",
+      "screenshotName": "v40_6_failed_visual_report.png",
+      "status": "passed",
+      "ref": "docs/V40.x/evidence/v40-stage-audit-2026-07-01/screenshots/v40_6_failed_visual_report.png",
+      "reason": null
+    },
+    {
+      "id": "v40_stage_audit_report",
+      "title": "本阶段审计报告 headless 截图",
+      "htmlRef": "docs/V40.x/evidence/v40-stage-audit-2026-07-01/v40-stage-audit-acceptance-report-2026-07-01.html",
+      "screenshotName": "v40_stage_audit_report.png",
+      "status": "passed",
+      "ref": "docs/V40.x/evidence/v40-stage-audit-2026-07-01/screenshots/v40_stage_audit_report.png",
+      "reason": null
+    }
+  ],
+  "evidence": {
+    "r5Decision": "passed scoped",
+    "r6Decision": "failed",
+    "r6Generated": true,
+    "r6GeneratedCount": 2,
+    "r6AcceptedVisualCount": 0,
+    "r6V40_4Entry": "no_go",
+    "candidateRefs": [
+      {
+        "candidateId": "v40r-v38-a-cat-public-ip-adapter-candidate",
+        "sampleId": "v38_a_cat_public",
+        "contactSheetRef": "docs/V40.x/evidence/assets/v40-3r6-controlled-candidates/v38-a-cat-public-contact-sheet.png",
+        "status": "generated"
+      },
+      {
+        "candidateId": "v40r-v38-tuxedo-public-ip-adapter-candidate",
+        "sampleId": "v38_tuxedo_public",
+        "contactSheetRef": "docs/V40.x/evidence/assets/v40-3r6-controlled-candidates/v38-tuxedo-public-contact-sheet.png",
+        "status": "generated"
+      }
+    ],
+    "finalGateDecision": "failed"
+  },
+  "claimScan": {
+    "status": "passed",
+    "hits": []
+  },
+  "securityScan": {
+    "status": "passed",
+    "hits": []
+  },
+  "reportRef": "docs/V40.x/evidence/v40-stage-audit-2026-07-01/v40-stage-audit-acceptance-report-2026-07-01.html",
+  "resultRef": "docs/V40.x/evidence/v40-stage-audit-2026-07-01/test-results.json"
+}

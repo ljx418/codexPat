@@ -44,6 +44,9 @@ V40 should evaluate whether a no-WebUI direct local route can reduce this gap:
   backgrounds, artifacts, and weak eight-action semantics.
 - Current runtime: desktop pet can launch and show the built-in orange cartoon
   pet with a healthy local bridge; this is not V40 image-to-action evidence.
+- Host-process synthetic template probe: generated three local synthetic cat
+  images and 24 deterministic GIF actions on 2026-07-01; this is process
+  evidence only and is not accepted V40 high-quality image-to-action evidence.
 
 ## Remaining Gap
 
@@ -57,12 +60,23 @@ product apply, V40.6 report, and V40.7 final gate cannot start until a future
 approved route creates or imports at least two same-sample candidates that pass
 explicit visual review.
 
-The immediate remaining gap is V40.3R3 candidate-source decision. It must decide
-whether there are already acceptable source-bound manual/import assets, whether
-a materially different Direct Local Runner route is credible, or whether V40
-should remain failed/blocked with V39 fallback. This decision is required because
-more generation against the same failed route would not reduce target-experience
-risk.
+V40.3R3 has now made that candidate-source decision and recorded
+`remain_failed_or_blocked`: there are no acceptable source-bound manual/import
+assets, no source/license/sample-binding/visual acceptance evidence, and no
+materially different Direct Local Runner route. The immediate remaining gap is
+V40.3R4 candidate-source replan. It now selects a constrained
+`new_direct_runner_route_allowed` path and requires pre-development audit before
+any implementation resumes.
+
+The remaining development gap after V40.3R4 is intentionally split into two
+gates before V40.4:
+
+- V40.3R5 must prove source/license records, sample matrix, local model/control
+  availability, mask/crop plans, identity anchors, action pose controls, safe
+  runner invocation, and visual review rubric before generation.
+- V40.3R6 must generate bounded candidate frame sequences and record explicit
+  visual review against same-sample V39. Without two visual passes, V40.4
+  remains No-Go.
 
 ## Required Documentation Closure
 
@@ -75,9 +89,17 @@ contract must all use the same current-state wording:
 - V40.3R identity-conditioned route was blocked.
 - V40.3R2 identity-conditioned repair generated real candidates but failed
   explicit visual review, including the bounded stylized retry.
-- V40.3R3 candidate-source decision is the next required gate before any more
-  implementation.
+- V40.3R3 candidate-source decision is blocked scoped with
+  `remain_failed_or_blocked`.
+- V40.3R4 candidate-source replan is the next required documentation gate before
+  any more implementation, and it constrains that implementation to direct local
+  runner source records, subject mask/crop planning, identity anchors, action
+  pose conditions, candidate quality review, and V39 same-sample comparison.
+- V40.3R5 and V40.3R6 are required before V40.4: predev audit first, controlled
+  frame generation and explicit visual review second.
 - V40.4-V40.7 remain No-Go.
-- The only next V40 work is a new approved candidate-source decision under the
-  same no-WebUI/no-ComfyUI boundary; it must not silently reinterpret V40.3R2
-  failed evidence as readiness.
+- The only next V40 work is the selected constrained direct local runner
+  pre-development audit under the same no-WebUI/no-ComfyUI boundary; it must not
+  silently reinterpret V40.3R2 failed evidence as readiness.
+- Host synthetic template GIFs must stay labeled as `generated_not_accepted` and
+  cannot unlock V40.4.

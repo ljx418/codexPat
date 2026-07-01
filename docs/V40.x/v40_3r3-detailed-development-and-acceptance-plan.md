@@ -100,6 +100,12 @@ The evidence must include:
 
 ## Next-Phase Gate
 
-V40.4 may start only if V40.3R3 records a credible candidate source and at least
-two same-sample candidates pass explicit visual review. If that condition is not
-met, V40 must stay failed/blocked with V39 fallback.
+This historical V40.3R3 plan has been superseded by V40.3R4/R5/R6 for current
+execution. V40.4 may start only after:
+
+- V40.3R4 records the constrained selected route;
+- V40.3R5 direct-runner predev audit passes scoped;
+- V40.3R6 controlled candidate frame generation produces at least two
+  same-sample candidates that pass explicit visual review.
+
+If those conditions are not met, V40 must stay failed/blocked with V39 fallback.

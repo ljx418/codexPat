@@ -4,25 +4,25 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="p1-title" value="V40 当前事实与目标体验：桌宠可见，但图生高质量 2D 动作资产未完成" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=22;fontStyle=1;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p1-title" value="V40 当前事实与目标体验：流程性检查可审，图生高质量 2D 动作资产未完成" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=22;fontStyle=1;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="70" y="40" width="1560" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="p1-v39" value="已实现基线（绿色）&#xa;V39 Route A2++ scoped passed：tested public-photo samples -&gt; 角色化 SVG/frameSequence -&gt; 8 动作帧表 -&gt; 产品门槛证据。&#xa;问题：仍像确定性原型，不够可爱和专业。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p1-v39" value="已实现基线（绿色）&#10;V39 Route A2++ scoped passed：tested public-photo samples -&gt; 角色化 SVG/frameSequence -&gt; 8 动作帧表 -&gt; 产品门槛证据。&#10;问题：仍像确定性原型，不够可爱和专业。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="90" y="160" width="430" height="240" as="geometry" />
         </mxCell>
-        <mxCell id="p1-target" value="V40 目标体验（蓝色）&#xa;同样本照片先通过 V40.3R3 候选来源决策，再产出更有设计感的猫角色和 8 动作候选。&#xa;只有两个候选显式视觉通过后，才能做 V40.4 包装、预览、目标应用、回滚。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p1-target" value="V40 目标体验（蓝色）&#10;同样本照片先进入 V40.3R4 受限 direct runner 预审：来源记录、主体裁切/遮罩、身份锚点、动作姿态条件。&#10;只有后续两个候选显式视觉通过，才能做 V40.4 包装、预览、目标应用、回滚。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="620" y="160" width="470" height="240" as="geometry" />
         </mxCell>
-        <mxCell id="p1-tools" value="当前工具事实（黄色/红色）&#xa;RTX 4090：可见。&#xa;Ollama：可摘要，advisory only。&#xa;Direct Runner smoke：passed scoped。&#xa;Prompt-only / img2img：视觉失败。&#xa;V40.3R2 identity-conditioned：已生成但视觉失败。&#xa;WebUI/ComfyUI：历史 blocked。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p1-tools" value="当前工具事实（黄色/红色）&#10;RTX 4090：可见。&#10;Ollama：advisory only，不生成图。&#10;Direct Runner smoke：passed scoped。&#10;prompt-only / img2img / V40.3R2：视觉失败。&#10;V40.3R3：remain_failed_or_blocked。&#10;V40.3R4：选择受限 direct runner 预审。&#10;宿主模板 GIF：generated_not_accepted。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="1190" y="160" width="390" height="240" as="geometry" />
         </mxCell>
-        <mxCell id="p1-no" value="禁止声明（红色）&#xa;任意猫自动生成 ready&#xa;Petdex parity&#xa;provider integration verified&#xa;Route B verified&#xa;3D / production / Windows / cross-platform ready&#xa;ComfyUI ready" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p1-no" value="禁止声明（红色）&#10;任意猫自动生成 ready&#10;Petdex parity&#10;provider integration verified&#10;Route B verified&#10;3D / production / Windows / cross-platform ready&#10;ComfyUI ready" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="90" y="500" width="430" height="260" as="geometry" />
         </mxCell>
-        <mxCell id="p1-pass" value="V40 scoped pass 含义&#xa;仅允许声明：tested local/public cat samples 在 No-WebUI 路线下，通过 Direct Local Runner 生成或显式导入、项目归一化、V39 对比、产品路径和扫描。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccfbf1;strokeColor=#0f766e;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p1-pass" value="V40 scoped pass 含义&#10;仅允许声明：tested local/public cat samples 在 No-WebUI 路线下，通过 Direct Local Runner 生成或显式导入、项目归一化、V39 对比、产品路径和扫描。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccfbf1;strokeColor=#0f766e;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="620" y="500" width="470" height="260" as="geometry" />
         </mxCell>
-        <mxCell id="p1-user" value="当前用户可见体验&#xa;桌面右下角可看到内置橙色卡通猫，bridge 健康。&#xa;这只证明 runtime 可见，不证明 V40 图生动作资产。&#xa;如果仍是内置猫或原型感强，必须 fail/block。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p1-user" value="当前用户可见体验&#10;桌面右下角可看到内置橙色卡通猫，bridge 健康。&#10;这只证明 runtime 可见，不证明 V40 图生动作资产。&#10;如果仍是内置猫或原型感强，必须 fail/block。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="1190" y="500" width="390" height="260" as="geometry" />
         </mxCell>
         <mxCell id="p1-e1" value="同样本提升目标" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#334155;fontSize=12;endArrow=block;endFill=1;" edge="1" parent="1" source="p1-v39" target="p1-target">
@@ -42,19 +42,19 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="p2-title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=22;fontStyle=1;spacing=10;" value="当前架构与 V40.3R3 候选来源决策差异" vertex="1">
+        <mxCell id="p2-title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=22;fontStyle=1;spacing=10;" value="当前架构与 V40.3R4 受限 direct runner 差异" vertex="1">
           <mxGeometry height="70" width="1560" x="70" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="p2-current" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=15;spacing=10;" value="已实现/已通过（绿色）&#xa;v39-characterized-action-assets.ts：V39 fallback。&#xa;v40-direct-local-runner.ts：V40.1A runner readiness passed scoped。&#xa;v40-no-webui-workflow-contract.ts：V40.2 safe contract passed scoped。" vertex="1">
+        <mxCell id="p2-current" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=15;spacing=10;" value="已实现/已通过（绿色）&#10;v39-characterized-action-assets.ts：V39 fallback。&#10;v40-direct-local-runner.ts：V40.1A runner readiness passed scoped。&#10;v40-no-webui-workflow-contract.ts：V40.2 safe contract passed scoped。" vertex="1">
           <mxGeometry height="260" width="440" x="90" y="160" as="geometry" />
         </mxCell>
-        <mxCell id="p2-blocked" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;fontSize=15;spacing=10;" value="已失败/阻塞（红色）&#xa;v40_3_candidate_generation_smoke：prompt-only 视觉失败。&#xa;v40_3r_img2img_recovery_smoke：img2img 视觉失败。&#xa;v40_3r2_identity_conditioned_repair_smoke：生成候选但视觉失败。&#xa;V40.4-V40.7 No-Go。" vertex="1">
+        <mxCell id="p2-blocked" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;fontSize=15;spacing=10;" value="已失败/阻塞（红色）&#10;v40_3_candidate_generation_smoke：prompt-only 视觉失败。&#10;v40_3r_img2img_recovery_smoke：img2img 视觉失败。&#10;v40_3r2_identity_conditioned_repair_smoke：生成候选但视觉失败。&#10;V40.4-V40.7 No-Go。" vertex="1">
           <mxGeometry height="260" width="440" x="620" y="160" as="geometry" />
         </mxCell>
-        <mxCell id="p2-target" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=15;spacing=10;" value="V40.3R3 待闭环（蓝色）&#xa;先决定候选来源：accepted manual/import、materially different direct runner，或 failed/blocked。&#xa;导入必须已有同样本来源、授权、视觉验收证据。&#xa;仍需编排、候选适配、质量门槛和产品门槛。" vertex="1">
+        <mxCell id="p2-target" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=15;spacing=10;" value="V40.3R4 待闭环（蓝色）&#10;已选择 new_direct_runner_route_allowed。&#10;必须先证明：SourceAndLicenseRecord、SubjectMaskAndCropPlan、IdentityAnchorPack、ActionPoseConditionPack、DirectDiffusersFrameRunner、CandidateQualityReview。&#10;任一缺失则 blocked/failed。" vertex="1">
           <mxGeometry height="260" width="430" x="360" y="500" as="geometry" />
         </mxCell>
-        <mxCell id="p2-gates" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccfbf1;strokeColor=#0f766e;fontSize=15;spacing=10;" value="项目内验收边界（青色）&#xa;所有 direct-runner/导入候选都必须进入项目内安全引用、8 动作覆盖、非 transform-only、同样本 V39 对比、产品 preview/apply/rollback、claim/security scan。" vertex="1">
+        <mxCell id="p2-gates" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccfbf1;strokeColor=#0f766e;fontSize=15;spacing=10;" value="项目内验收边界（青色）&#10;所有 direct-runner/导入候选都必须进入项目内安全引用、8 动作覆盖、非 transform-only、同样本 V39 对比、产品 preview/apply/rollback、claim/security scan。" vertex="1">
           <mxGeometry height="210" width="980" x="350" y="820" as="geometry" />
         </mxCell>
         <mxCell id="p2-e1" edge="1" parent="1" source="p2-current" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#334155;fontSize=12;endArrow=block;endFill=1;" target="p2-target" value="基线复用">
@@ -74,25 +74,25 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="p3-title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=22;fontStyle=1;spacing=10;" value="V40.3R3 目标架构：失败路线隔离，候选来源先决策再进入质量门槛" vertex="1">
+        <mxCell id="p3-title" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=22;fontStyle=1;spacing=10;" value="V40 目标架构：R4 冻结路线，R5/R6 通过后才进入 V40.4" vertex="1">
           <mxGeometry height="70" width="1560" x="70" y="40" as="geometry" />
         </mxCell>
-        <mxCell id="p3-source" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=15;spacing=10;" value="输入层&#xa;PhotoSafetyIntake&#xa;- tested sample id&#xa;- safe sourceRef&#xa;- consent boundary&#xa;- no raw photo in evidence" vertex="1">
+        <mxCell id="p3-source" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=15;spacing=10;" value="输入层&#10;PhotoSafetyIntake&#10;- tested sample id&#10;- safe sourceRef&#10;- consent boundary&#10;- no raw photo in evidence" vertex="1">
           <mxGeometry height="230" width="300" x="90" y="170" as="geometry" />
         </mxCell>
-        <mxCell id="p3-webui" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontSize=15;spacing=10;" value="工具层（部分通过）&#xa;DirectLocalModelRunner&#xa;- readiness passed scoped&#xa;- prompt-only failed&#xa;- img2img failed&#xa;- V40.3R2 generated but failed visual review&#xa;V40.3R3 必须先决定下一候选来源。" vertex="1">
+        <mxCell id="p3-webui" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontSize=15;spacing=10;" value="工具层（部分通过/失败隔离）&#10;DirectLocalModelRunner readiness passed scoped。&#10;prompt-only、img2img、V40.3R2 均视觉失败。&#10;V40.3R4 已选受限 direct runner。&#10;V40.3R5 先预审模型/控制/样本。&#10;V40.3R6 再生成候选帧并人审。" vertex="1">
           <mxGeometry height="230" width="300" x="470" y="170" as="geometry" />
         </mxCell>
-        <mxCell id="p3-ollama" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontSize=15;spacing=10;" value="辅助层（advisory）&#xa;OllamaPromptReviewAdapter&#xa;- prompt suggestions&#xa;- rubric notes&#xa;- review summary&#xa;- never approves alone&#xa;- 不替代视觉证据" vertex="1">
+        <mxCell id="p3-ollama" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontSize=15;spacing=10;" value="辅助层（advisory）&#10;OllamaPromptReviewAdapter&#10;- prompt suggestions&#10;- rubric notes&#10;- review summary&#10;- never approves alone&#10;- 不替代视觉证据" vertex="1">
           <mxGeometry height="230" width="300" x="1320" y="170" as="geometry" />
         </mxCell>
-        <mxCell id="p3-project" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=15;spacing=10;" value="项目质量层（No-Go 前置）&#xa;HybridAssetNormalizationGate&#xa;HybridVisualPreferenceGate&#xa;只有两个 visually accepted same-sample candidates 才能进入。&#xa;检查 8 actions、identity、V39/V40 compare。" vertex="1">
+        <mxCell id="p3-project" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=15;spacing=10;" value="项目质量层（No-Go 前置）&#10;CandidateSourceReplanGate&#10;HybridAssetNormalizationGate&#10;HybridVisualPreferenceGate&#10;只有两个 visually accepted same-sample candidates 才能进入 V40.4。&#10;检查 8 actions、identity、V39/V40 compare。" vertex="1">
           <mxGeometry height="230" width="300" x="910" y="170" as="geometry" />
         </mxCell>
-        <mxCell id="p3-product" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccfbf1;strokeColor=#0f766e;fontSize=15;spacing=10;" value="产品层（待解锁）&#xa;HybridPreviewApplyRollbackGate&#xa;- preview&#xa;- target-only apply&#xa;- rollback&#xa;- preserve active pack&#xa;当前未接入 V40 accepted assets。" vertex="1">
+        <mxCell id="p3-product" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccfbf1;strokeColor=#0f766e;fontSize=15;spacing=10;" value="产品层（待解锁）&#10;HybridPreviewApplyRollbackGate&#10;- preview&#10;- target-only apply&#10;- rollback&#10;- preserve active pack&#10;当前未接入 V40 accepted assets。" vertex="1">
           <mxGeometry height="220" width="300" x="910" y="510" as="geometry" />
         </mxCell>
-        <mxCell id="p3-evidence" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontSize=15;spacing=10;" value="证据层（紫色）&#xa;scripts/v40_*.mjs + docs/V40.x/evidence&#xa;- command results&#xa;- screenshots/report&#xa;- scans&#xa;- scoped decision" vertex="1">
+        <mxCell id="p3-evidence" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontSize=15;spacing=10;" value="证据层（紫色）&#10;scripts/v40_*.mjs + docs/V40.x/evidence&#10;- command results&#10;- screenshots/report&#10;- scans&#10;- scoped decision" vertex="1">
           <mxGeometry height="220" width="300" x="480" y="510" as="geometry" />
         </mxCell>
         <mxCell id="p3-e1" edge="1" parent="1" source="p3-source" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#334155;fontSize=12;endArrow=block;endFill=1;" target="p3-webui" value="样本绑定">
@@ -118,31 +118,31 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="p4-title" value="单照片到 2D 动作资产：当前失败链路与 V40.3R3 候选来源路径" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=22;fontStyle=1;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p4-title" value="单照片到 2D 动作资产：不是整图变形，而是先理解猫再生成动作帧" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=22;fontStyle=1;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="70" y="40" width="1560" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="p4-s1" value="1 安全输入&#xa;tested sample 或 explicit local user sample。&#xa;只记录 sampleId / safe sourceRef。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p4-s1" value="1 输入照片 / 样本&#10;输入：真实 tested cat photo 或已授权本地样本。&#10;输出：sampleId + safe sourceRef。&#10;失败：来源/授权不清楚则 blocked。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="90" y="160" width="260" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="p4-s2" value="2 V39 基线&#xa;读取同样本 V39 character/contact sheet/preview refs。&#xa;作为比较对象，不作 V40 通过证据。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p4-s2" value="2 同样本 V39 基线&#10;输入：sampleId。&#10;输出：V39 character/contact sheet/preview refs。&#10;用途：后续 V40 必须比它更好；V39 不是 V40 通过证据。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="420" y="160" width="260" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="p4-s3" value="3 Direct Local Runner&#xa;V40.1A readiness passed scoped。&#xa;它只证明依赖、GPU、模型摘要和安全输出目录，不证明动作资产质量。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p4-s3" value="3 猫主体理解&#10;输入：照片。&#10;输出：SubjectMaskAndCropPlan。&#10;目的：隔离猫身体和轮廓，避免把整张背景图当贴纸扭动。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="750" y="160" width="260" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="p4-s4" value="4 已尝试候选生成&#xa;prompt-only：失败。&#xa;img2img：失败。&#xa;identity-conditioned：V40.3R2 修复后生成，但视觉失败。&#xa;V40.3R3 只能选择可信新来源或保持 failed/blocked。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p4-s4" value="4 身份锚点 + 动作姿态&#10;输出：IdentityAnchorPack（花色/脸型/比例/尾巴/耳朵）&#10;输出：ActionPoseConditionPack。&#10;V40 资产动作固定：idle/walk/jump/sleep/eat/play/alert/celebrate。&#10;产品状态动作必须映射到这些资产动作。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="1080" y="160" width="260" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="p4-s5" value="5 Ollama 辅助&#xa;生成 prompt/rubric/review 摘要。&#xa;不能审批资产，不能替代截图或人审。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p4-s5" value="5 本地直接生成&#10;DirectDiffusersFrameRunner 使用本地模型组件。&#10;禁止：WebUI、ComfyUI、云 provider、Ollama 生成图。&#10;Ollama 只可生成 prompt/rubric/review 摘要。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="1410" y="160" width="220" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="p4-s6" value="6 归一化包装（No-Go）&#xa;HybridAssetNormalizationGate 输出安全 manifest / frameSequence。&#xa;当前无 visually accepted V40 candidates，不能启动。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p4-s6" value="6 候选帧序列&#10;输出：CandidateFrameSequence，按动作保存安全 refs/thumbnails/manifest summary。&#10;不是：单张漂亮图、整图 transform、模板 GIF。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="260" y="510" width="300" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="p4-s7" value="7 同样本质量比较&#xa;HybridVisualPreferenceGate 比较 V40 vs V39：身份、可爱度、动作语义、小尺寸可读性。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p4-s7" value="7 质量审查 + V39 对比&#10;CandidateQualityReview 检查：同猫身份、动作可读、小尺寸可爱度、伪影、安全。&#10;V39SameSampleComparison：必须优于同样本 V39。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="700" y="510" width="300" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="p4-s8" value="8 产品与报告&#xa;HybridPreviewApplyRollbackGate + 中文 HTML。&#xa;通过才可 scoped；否则 blocked/failed。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccfbf1;strokeColor=#0f766e;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p4-s8" value="8 产品包装（仍 No-Go）&#10;V40.3R5 预审通过 + V40.3R6 两个同样本候选视觉通过后，才能进入 V40.4 包装、preview/apply/rollback、中文 HTML。&#10;否则 failed/blocked。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccfbf1;strokeColor=#0f766e;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="1140" y="510" width="300" height="190" as="geometry" />
         </mxCell>
       </root>
@@ -153,40 +153,40 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="p5-title" value="V40 代码实体与数据流：已通过合同、失败候选、待修复门槛" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=22;fontStyle=1;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p5-title" value="V40 代码实体与数据流：从照片到候选动作帧的审计链路" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=22;fontStyle=1;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="70" y="40" width="1560" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="p5-v39" value="已实现复用&#xa;v39-characterized-action-assets.ts&#xa;V39 same-sample baseline / fallback。&#xa;不得把 V39 当成 V40 高质量图生结果。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p5-v39" value="已实现复用&#10;v39-characterized-action-assets.ts&#10;提供 same-sample V39 baseline / fallback。&#10;角色：比较对象和回退，不是 V40 生成结果。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="90" y="150" width="350" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="p5-orch" value="已实现合同 / 待编排&#xa;v40-no-webui-workflow-contract.ts passed scoped。&#xa;仍需 LocalImageCandidateOrchestrator 绑定 sampleId、baselineV39Ref、route、runId、reasonCodes。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p5-orch" value="待编排控制器&#10;LocalImageCandidateOrchestrator&#10;绑定 sampleId、baselineV39Ref、route、runId、reasonCodes。&#10;拒绝无 source/mask/identity/action 预审的运行。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="500" y="150" width="350" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="p5-webui" value="部分已实现 / 当前失败&#xa;v40-direct-local-runner.ts：readiness passed。&#xa;scripts/v40_direct_runner_generate_candidates.py：prompt-only failed。&#xa;scripts/v40_direct_runner_img2img_candidates.py：img2img failed。&#xa;scripts/v40_direct_runner_ip_adapter_candidates.py：V40.3R2 generated but visual failed。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p5-webui" value="输入与预审实体&#10;PhotoSafetyIntake&#10;SourceAndLicenseRecord&#10;SubjectMaskAndCropPlan&#10;IdentityAnchorPack&#10;ActionPoseConditionPack&#10;作用：让模型知道是哪只猫、做什么动作。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="910" y="150" width="350" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="p5-ollama" value="待新增&#xa;v40-ollama-prompt-review.ts&#xa;OllamaPromptReviewAdapter&#xa;只输出 advisory summary，不能设置 accepted。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p5-ollama" value="生成与文本辅助&#10;DirectDiffusersFrameRunner：本地模型帧生成。&#10;OllamaPromptReviewAdapter：advisory only，只给文本建议。&#10;禁止：WebUI/ComfyUI/云 provider/Ollama 生图。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="1320" y="150" width="280" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="p5-gates" value="待解锁&#xa;v40-hybrid-normalization.ts + v40-hybrid-visual-preference.ts&#xa;进入条件：两个 same-sample candidates 视觉通过。&#xa;检查 safe refs、8 actions、identity、not transform-only、better_than_v39。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p5-gates" value="输出与质量门&#10;CandidateFrameSequence：动作帧候选。&#10;CandidateQualityReview：拒绝身份漂移、照片卡、动作弱、伪影。&#10;V39SameSampleComparison：必须优于 V39。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="300" y="510" width="470" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="p5-product" value="待解锁&#xa;v40-product-preview-apply-rollback.ts + settings UI anchors&#xa;只接收 accepted candidates。&#xa;当前桌宠可运行但仍是内置橙色猫，不是 V40 应用结果。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccfbf1;strokeColor=#0f766e;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p5-product" value="产品路径（待解锁）&#10;HybridAssetNormalizationGate + preview/apply/rollback。&#10;进入条件：V40.3R5 预审通过，V40.3R6 至少两个 same-sample 候选显式视觉通过。&#10;当前内置橙色猫只证明 runtime 可见。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccfbf1;strokeColor=#0f766e;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="910" y="510" width="470" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="p5-e1" value="baseline refs" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#334155;fontSize=12;endArrow=block;endFill=1;" edge="1" parent="1" source="p5-v39" target="p5-orch">
+        <mxCell id="p5-e1" value="safe source + sampleId" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#334155;fontSize=12;endArrow=block;endFill=1;" edge="1" parent="1" source="p5-v39" target="p5-orch">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="p5-e2" value="run request" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#334155;fontSize=12;endArrow=block;endFill=1;" edge="1" parent="1" source="p5-orch" target="p5-webui">
+        <mxCell id="p5-e2" value="mask + identity + action controls" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#334155;fontSize=12;endArrow=block;endFill=1;" edge="1" parent="1" source="p5-orch" target="p5-webui">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="p5-e3" value="advisory review" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#d97706;fontSize=12;endArrow=block;endFill=1;" edge="1" parent="1" source="p5-ollama" target="p5-gates">
+        <mxCell id="p5-e3" value="local generated frame refs" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#d97706;fontSize=12;endArrow=block;endFill=1;" edge="1" parent="1" source="p5-ollama" target="p5-gates">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="p5-e4" value="candidate refs" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#334155;fontSize=12;endArrow=block;endFill=1;" edge="1" parent="1" source="p5-webui" target="p5-gates">
+        <mxCell id="p5-e4" value="quality review + V39 comparison" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#334155;fontSize=12;endArrow=block;endFill=1;" edge="1" parent="1" source="p5-webui" target="p5-gates">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="p5-e5" value="accepted only" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#334155;fontSize=12;endArrow=block;endFill=1;" edge="1" parent="1" source="p5-gates" target="p5-product">
+        <mxCell id="p5-e5" value="only accepted candidates enter product gate" style="edgeStyle=orthogonalEdgeStyle;html=1;strokeColor=#334155;fontSize=12;endArrow=block;endFill=1;" edge="1" parent="1" source="p5-gates" target="p5-product">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
       </root>
@@ -197,31 +197,31 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="p6-title" value="V40 开发及阶段验收计划：当前进入 V40.3R3 候选来源决策门槛" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=22;fontStyle=1;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p6-title" value="V40 开发及阶段验收计划：R4 文档路线 -&gt; R5 预审 -&gt; R6 候选生成 -&gt; V40.4" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=22;fontStyle=1;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="70" y="40" width="1560" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="p6-1" value="V40.1 已完成&#xa;ComfyUI blocked baseline。&#xa;出门：保留 evidence，不作为 readiness。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;fontSize=14;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p6-1" value="V40.1 已完成&#10;ComfyUI blocked baseline。&#10;出门：保留 evidence，不作为 readiness。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;fontSize=14;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="80" y="150" width="250" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="p6-1a" value="V40.1A Direct Runner smoke&#xa;passed scoped：验证项目自有 runner、GPU、依赖、模型摘要、安全输出目录。&#xa;不证明生成质量。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=14;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p6-1a" value="V40.1A Direct Runner smoke&#10;passed scoped：验证项目自有 runner、GPU、依赖、模型摘要、安全输出目录。&#10;不证明生成质量。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=14;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="390" y="150" width="250" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="p6-2" value="V40.2 合同&#xa;passed scoped：No-WebUI run request、candidate summary、reason codes、safe refs。&#xa;出门：安全单测。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=14;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p6-2" value="V40.2 合同&#10;passed scoped：No-WebUI run request、candidate summary、reason codes、safe refs。&#10;出门：安全单测。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=14;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="700" y="150" width="250" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="p6-3" value="V40.3 / V40.3R / V40.3R2&#xa;failed/blocked：prompt-only failed；img2img failed；identity-conditioned generated but visual failed。&#xa;不能进入 V40.4。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;fontSize=14;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p6-3" value="V40.3 / V40.3R / V40.3R2&#10;failed/blocked：prompt-only failed；img2img failed；identity-conditioned generated but visual failed。&#10;不能进入 V40.4。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;fontSize=14;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="1010" y="150" width="250" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="p6-4" value="V40.3R3 当前门槛&#xa;文档先闭环：accepted manual/import、materially different runner，或 failed/blocked。&#xa;import fallback 只有在来源/授权/视觉验收证据齐全时启用。&#xa;出门：PRD/架构/drawio/scans 一致，且不虚假解锁 V40.4。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontSize=14;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p6-4" value="V40.3R4 当前门槛&#10;文档已选择受限 direct runner。&#10;出门：PRD/架构/drawio/scans 一致。&#10;不能生成资产，不能解锁 V40.4。&#10;下一步必须进入 V40.3R5 预开发审计。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontSize=14;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="1320" y="150" width="250" height="160" as="geometry" />
         </mxCell>
-        <mxCell id="p6-5" value="V40.4 包装与质量（No-Go）&#xa;安全 manifest / 8 actions / V39 comparison / non-transform-only。&#xa;进入条件：两个视觉通过候选。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=14;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p6-5" value="V40.3R5 预开发审计&#10;证明：source/license、sample matrix、local model/control、mask/crop、identity anchors、action pose controls、安全 runner、visual rubric。&#10;还必须记录动作映射：product states -&gt; V40 asset actions。&#10;缺一项即 blocked/failed。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=14;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="390" y="500" width="280" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="p6-6" value="V40.5 产品路径（No-Go）&#xa;preview、target-only apply、rollback；失败不污染 active pack。&#xa;进入条件：V40.4 passed。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccfbf1;strokeColor=#0f766e;fontSize=14;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p6-6" value="V40.3R6 候选帧生成&#10;只在 R5 passed 后执行。&#10;输出 CandidateFrameSequence + CandidateQualityReview + V39SameSampleComparison。&#10;两个同样本视觉通过才允许 V40.4。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccfbf1;strokeColor=#0f766e;fontSize=14;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="710" y="500" width="280" height="170" as="geometry" />
         </mxCell>
-        <mxCell id="p6-7" value="V40.6 / V40.7（No-Go）&#xa;中文 HTML、截图、V39/V40 对比、全量 baseline、PRD/spec review、claim/security scan。&#xa;进入条件：V40.5 passed。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontSize=14;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p6-7" value="V40.4-V40.7（No-Go）&#10;V40.4 包装与 8 动作覆盖；V40.5 preview/apply/rollback；V40.6 中文 HTML；V40.7 final gate。&#10;进入条件：R6 两个视觉通过候选。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontSize=14;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="1030" y="500" width="280" height="170" as="geometry" />
         </mxCell>
       </root>
@@ -235,19 +235,19 @@
         <mxCell id="p7-title" value="V40 项目里程碑与风险闭环：已失败路线不能被当成通过路线" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=22;fontStyle=1;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="70" y="40" width="1560" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="p7-m1" value="M1 已完成/需同步&#xa;PRD/架构/计划/验收/drawio 全部指向 V40 no-WebUI。&#xa;本轮修订重点：同步 V40.3R2 failed 与 V40.3R3 候选来源门槛。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p7-m1" value="M1 已完成/需同步&#10;PRD/架构/计划/验收/drawio 全部指向 V40 no-WebUI。&#10;本轮修订重点：同步 V40.3R2 failed 与 V40.3R4 候选来源门槛。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="90" y="160" width="340" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="p7-m2" value="M2 Direct Runner readiness&#xa;passed scoped。&#xa;风险已暴露：模型/路线不适合动作资产，不能把 readiness 当质量通过。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p7-m2" value="M2 Direct Runner readiness&#10;passed scoped。&#10;风险已暴露：模型/路线不适合动作资产，不能把 readiness 当质量通过。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dcfce7;strokeColor=#16a34a;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="500" y="160" width="340" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="p7-m3" value="M3 候选质量提升&#xa;当前 failed/blocked。&#xa;prompt-only 与 img2img 未达目标体验；identity-conditioned 修复后仍视觉失败。&#xa;下一步是 V40.3R3 选择可信候选来源。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p7-m3" value="M3 候选质量提升&#10;当前 failed/blocked。&#10;prompt-only、img2img、V40.3R2 均未达目标体验。&#10;V40.3R4 选择受限 direct runner，但只能先做预审，不能声明资产 ready。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="910" y="160" width="340" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="p7-m4" value="M4 产品闭环&#xa;当前 No-Go。&#xa;只有 accepted candidates 才能 preview/apply/rollback；当前桌面猫仍是内置资产。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccfbf1;strokeColor=#0f766e;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p7-m4" value="M4 产品闭环&#10;当前 No-Go。&#10;只有 accepted candidates 才能 preview/apply/rollback；当前桌面猫仍是内置资产。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccfbf1;strokeColor=#0f766e;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="1320" y="160" width="260" height="190" as="geometry" />
         </mxCell>
-        <mxCell id="p7-risk" value="高风险闭环&#xa;1 Prompt-only / img2img / V40.3R2 已失败：不得重写成通过。&#xa;2 V40.3R3 必须先选可信候选来源。&#xa;3 导入路线：仅在来源/授权/同样本/视觉验收证据齐全时启用。&#xa;4 Ollama 被过度信任：advisory only。&#xa;5 没有两个视觉通过候选：V40.4-V40.7 No-Go。&#xa;6 证据泄露路径/提示词/图片：security fail。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p7-risk" value="高风险闭环&#10;1 已失败路线不得重写成通过。&#10;2 V40.3R4 只冻结受限 direct runner。&#10;3 V40.3R5 缺少来源、遮罩、身份锚点、动作姿态或本地控制组件即 blocked/failed。&#10;4 V40.3R6 不得产出整图 transform / 模板 GIF / photo-card。&#10;5 没有两个视觉通过候选：V40.4-V40.7 No-Go。&#10;6 证据泄露路径/提示词/图片：security fail。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fee2e2;strokeColor=#dc2626;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="250" y="520" width="1200" height="240" as="geometry" />
         </mxCell>
       </root>
@@ -261,16 +261,16 @@
         <mxCell id="p8-title" value="V40 No-WebUI 验收门槛与出门条件：体验可见、证据真实、声明收窄" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=22;fontStyle=1;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="70" y="40" width="1560" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="p8-user" value="用户体验门槛（青色）&#xa;- 能看到源样本、V39 对照和 V40 候选&#xa;- 8 动作在桌宠尺寸可读&#xa;- 角色比 V39 更有设计感&#xa;- 可预览、可目标应用、可回滚&#xa;- 当前内置橙色猫只算 runtime 可见，不算 V40 资产通过" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccfbf1;strokeColor=#0f766e;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p8-user" value="用户体验门槛（青色）&#10;- 能看到源样本、V39 对照和 V40 候选&#10;- 8 动作在桌宠尺寸可读&#10;- 角色比 V39 更有设计感&#10;- 可预览、可目标应用、可回滚&#10;- 当前内置橙色猫只算 runtime 可见，不算 V40 资产通过" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ccfbf1;strokeColor=#0f766e;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="90" y="170" width="430" height="280" as="geometry" />
         </mxCell>
-        <mxCell id="p8-tech" value="技术门槛（蓝色）&#xa;- Direct Runner/model smoke 已通过但不是质量通过&#xa;- Ollama 仅辅助 prompt/rubric&#xa;- V40.3R3 先做候选来源决策&#xa;- accepted import 只在证据齐全时启用&#xa;- 输出归一化为安全 manifest&#xa;- 拒绝 raw path/prompt/payload/image&#xa;- 不污染 active pack" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p8-tech" value="技术门槛（蓝色）&#10;- Direct Runner smoke 不是质量通过&#10;- Ollama 仅辅助文本审查&#10;- V40.3R4 已选受限 direct runner&#10;- V40.3R5 必须有 source/license、mask/crop、identity anchors、action pose controls、动作映射&#10;- 输出归一化为安全 manifest&#10;- 拒绝 raw path/prompt/payload/image&#10;- 不污染 active pack" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dbeafe;strokeColor=#2563eb;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="630" y="170" width="430" height="280" as="geometry" />
         </mxCell>
-        <mxCell id="p8-quality" value="质量门槛（黄色）&#xa;- same-sample V39/V40 对比&#xa;- 身份一致性&#xa;- 非 transform-only&#xa;- 动作语义明确&#xa;- human preference gate&#xa;- 视觉不佳必须 fail/block" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p8-quality" value="质量门槛（黄色）&#10;- same-sample V39/V40 对比&#10;- 身份一致性&#10;- 非 transform-only&#10;- 动作语义明确&#10;- human preference gate&#10;- 视觉不佳必须 fail/block" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fef3c7;strokeColor=#d97706;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="1170" y="170" width="430" height="280" as="geometry" />
         </mxCell>
-        <mxCell id="p8-exit" value="Final gate 出门条件（紫色）&#xa;1 V40.3R3 选定可信候选来源：accepted import 或 materially different runner。&#xa;2 两个候选均显式视觉通过，并优于同样本 V39。&#xa;3 V40.4 安全包装和动作覆盖通过。&#xa;4 产品 preview/apply/rollback 通过。&#xa;5 HTML 报告可读且证据非空。&#xa;6 claim/security scan 通过。&#xa;7 只给 scoped claim；否则 failed/blocked。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontSize=15;spacing=10;" vertex="1" parent="1">
+        <mxCell id="p8-exit" value="Final gate 出门条件（紫色）&#10;1 V40.3R4 文档路线一致。&#10;2 V40.3R5 受限 direct runner 预审通过。&#10;3 V40.3R6 两个同样本候选显式视觉通过，并优于 V39。&#10;4 V40.4 安全包装和 8 动作覆盖通过。&#10;5 产品 preview/apply/rollback 通过。&#10;6 HTML 报告可读且证据非空。&#10;7 claim/security scan 通过；否则 failed/blocked。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ede9fe;strokeColor=#7c3aed;fontSize=15;spacing=10;" vertex="1" parent="1">
           <mxGeometry x="260" y="570" width="1180" height="250" as="geometry" />
         </mxCell>
       </root>

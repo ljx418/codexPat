@@ -80,6 +80,29 @@ Required fields:
 - `actionSet`: exactly idle, walk, jump, sleep, eat, play, alert, celebrate.
 - `consentBoundary`: `public_sample | explicit_local_user_sample`.
 
+Action naming boundary:
+
+- V40 asset action names are fixed as `idle`, `walk`, `jump`, `sleep`, `eat`,
+  `play`, `alert`, and `celebrate`. These names are used for generated frame
+  candidates, manifests, contact sheets, visual review, and V40.4 packaging.
+- Product state action names such as `thinking`, `running`, `success`,
+  `warning`, `error`, `need_input`, and `sleeping` belong to runtime state
+  mapping. They must not replace the V40 asset action names inside candidate
+  generation or V40.4 normalization.
+- V40.3R5 evidence must decide and record the mapping from product states to V40
+  asset actions before generation. The default mapping is:
+
+| Product state | V40 asset action |
+| --- | --- |
+| `idle` | `idle` |
+| `thinking` | `alert` |
+| `running` | `walk` |
+| `success` | `celebrate` |
+| `warning` | `alert` |
+| `error` | `alert` |
+| `need_input` | `alert` |
+| `sleeping` | `sleep` |
+
 Forbidden fields:
 
 - raw photo bytes;

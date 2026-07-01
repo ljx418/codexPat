@@ -1,7 +1,7 @@
 # Active Development Plan
 
 文档状态：active index；V40 no-WebUI high-quality 2D action asset documentation line opened on 2026-06-29 by revising the existing V40 plan in place；V39.0-V39.8 characterized 2D action asset Route A2++ scoped evidence generated on 2026-06-27 and is the immediate quality baseline；V38 public-photo action asset scoped evidence generated on 2026-06-26 and is the input baseline；V37 tested photo-to-action product-path scoped evidence generated on 2026-06-26；V36 risk closure and target-experience hardening executed with partial scoped final decision on 2026-06-26；V35 target-experience route assessment passed scoped for tested named samples only；V34 photo-to-character-to-actions generation core evidence-matched scoped passed through V34.8；V33 scoped local sample-to-frameSequence loop passed but remains partial for true generation；V32 quality rescue passed scoped；V31 partial scoped with continuation execution blocked scoped；V30 scoped passed；Post-V30 architecture/runtime remediation passed scoped；V29/V23-V28 scoped baselines 是输入基线。
-当前日期：2026-06-29。
+当前日期：2026-07-01。
 
 ## Current Active Line
 
@@ -29,12 +29,15 @@ compatibility before candidate generation. V40.3R2 repaired that runner path
 enough to generate real same-sample candidates and one stylized retry on
 2026-06-30, but explicit visual review failed both sets. Therefore
 V40.4-V40.7 remain No-Go until a future route produces at least two visually
-reviewed candidates safe to normalize. The next document-supported step is
-V40.3R3 candidate-source decision inside the existing V40 stage. It must decide
-whether to use accepted same-sample manual/import assets, allow a materially
-different Direct Local Runner route, or keep V40 failed/blocked with V39
-fallback. Accepted same-sample manual/import assets are a fallback only when
-source, license, sample binding, and visual acceptance evidence already exist.
+reviewed candidates safe to normalize. V40.3R3 candidate-source decision is now
+blocked scoped with `remain_failed_or_blocked`: no accepted manual/import assets
+and no materially different direct-runner route were available at that gate. The
+next document-supported step is V40.3R4 candidate-source replan inside the
+existing V40 stage. It selects a constrained `new_direct_runner_route_allowed`
+path and requires pre-development audit before any implementation resumes.
+Accepted same-sample manual/import assets are a
+fallback only when source, license, sample binding, and visual acceptance
+evidence already exist.
 
 Concrete V40 design docs:
 
@@ -50,6 +53,8 @@ Concrete V40 design docs:
 - `docs/V40.x/v40-evidence-and-scan-checklist.md`
 - `docs/V40.x/v40-doc-audit.md`
 - `docs/V40.x/v40_3r3-detailed-development-and-acceptance-plan.md`
+- `docs/V40.x/v40_3r4-detailed-development-and-acceptance-plan.md`
+- `docs/V40.x/v40_3r4-route-decision-and-predev-audit.md`
 
 V40 target flow:
 
@@ -80,7 +85,10 @@ V40 phases:
 - V40.3 candidate generation/import: failed on 2026-06-29; real local candidates were generated for two tested cat samples and one negative sample, but visual review rejected them for identity/action inconsistency.
 - V40.3R recovery: executed on 2026-06-29; direct img2img failed visual review, identity-conditioned Direct Runner was blocked by runner-stack compatibility, and no accepted manual/import same-sample assets were available.
 - V40.3R2 recovery execution: failed visual target-experience review on 2026-06-30 after identity-conditioned runner repair and stylized retry; no new stage is created.
-- V40.3R3 candidate-source decision: next planned documentation and audit gate inside V40; choose accepted manual/import first, a materially different direct-runner route, or failed/blocked with V39 fallback.
+- V40.3R3 candidate-source decision: blocked scoped with `remain_failed_or_blocked`; it does not unlock V40.4.
+- V40.3R4 candidate-source replan: next documentation and audit gate inside V40; selected constrained direct local runner route, with predev audit required before implementation.
+- V40.3R5 direct-runner predev audit: next implementation gate after document acceptance; proves source/license records, sample matrix, local model/control availability, mask/crop plans, identity anchors, action pose controls, safe runner invocation, and visual rubric.
+- V40.3R6 controlled candidate frame generation: bounded generation and explicit visual review; V40.4 remains No-Go unless two same-sample candidates pass.
 - V40.4 normalization and action packaging: No-Go until a future accepted route or accepted import assets have at least two visually reviewed candidates.
 - V40.5 product preview/apply/rollback: No-Go until V40.4 passes.
 - V40.6 visual report: No-Go until accepted candidates and product evidence exist.

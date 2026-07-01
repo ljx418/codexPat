@@ -7,6 +7,7 @@
   <style>
     :root{color-scheme:light;--bg:#f4f7fb;--paper:#fff;--ink:#172033;--muted:#5d6b80;--line:#d9e2ee;--green:#127a52;--red:#a83434;--amber:#9a5b00;font-family:Arial,"Microsoft YaHei",sans-serif;color:var(--ink);background:var(--bg)}
     body{margin:0;padding:28px}main{max-width:1220px;margin:0 auto}.hero,section,.shot{background:var(--paper);border:1px solid var(--line);border-radius:8px;box-shadow:0 1px 2px rgba(20,30,50,.04)}.hero,section{padding:24px;margin-bottom:18px}h1{margin:0 0 10px;font-size:30px;letter-spacing:0}h2{margin:0 0 14px;font-size:22px;letter-spacing:0}h3{margin:0 0 8px;font-size:16px;letter-spacing:0}p,li{line-height:1.65}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}.metric{padding:14px;background:#fbfdff;border:1px solid var(--line);border-radius:8px}.metric span{display:block;color:var(--muted);font-size:12px}.metric strong{display:block;margin-top:4px;font-size:19px}table{width:100%;border-collapse:collapse}th,td{padding:10px 8px;border-bottom:1px solid #e5edf6;text-align:left;vertical-align:top}th{color:#334155;background:#f8fbff}code{background:#eef4fb;padding:2px 5px;border-radius:4px;font-size:12px}.pill{display:inline-block;border-radius:999px;padding:4px 9px;font-size:12px;font-weight:700}.pass{background:#e7f7ef;color:var(--green)}.fail{background:#fee2e2;color:var(--red)}.warn{background:#fff3d7;color:var(--amber)}.shot{padding:12px}.shot img{display:block;width:100%;max-height:720px;object-fit:contain;border:1px solid #e5e7eb;border-radius:6px;background:#fff}.issue{border-left:5px solid #f0b429;padding-left:12px}@media(max-width:820px){body{padding:14px}}
+    .sample-pair{display:grid;grid-template-columns:220px 1fr;gap:12px}.sample-pair figure{margin:0}.sample-pair figcaption,.gif-grid figcaption{margin-top:6px;color:var(--muted);font-size:13px}.gif-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:12px}.gif-grid figure{margin:0}.gif-grid img{max-height:180px}@media(max-width:820px){.sample-pair,.gif-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -35,7 +36,7 @@
   <section>
     <h2>审计索引与复跑信息</h2>
     <table>
-      <tr><th>生成时 Git HEAD</th><td><code>a345137f3413</code></td></tr>
+      <tr><th>生成时 Git HEAD</th><td><code>1558768888a0</code></td></tr>
       <tr><th>HTML 报告</th><td><code>docs/V40.x/evidence/v40_3r3-automated-acceptance-report-2026-07-01.html</code></td></tr>
       <tr><th>Markdown 审计</th><td><code>docs/V40.x/evidence/v40_3r3-stage-audit-2026-07-01.md</code></td></tr>
       <tr><th>结果 JSON</th><td><code>docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/test-results.json</code></td></tr>
@@ -54,7 +55,7 @@
 
   <section>
     <h2>审计覆盖矩阵</h2>
-    <table><thead><tr><th>审计项</th><th>覆盖状态</th><th>说明</th></tr></thead><tbody><tr><td>PRD target experience</td><td>covered</td><td>V40 high-quality image-to-action target remains unmet and blocked.</td></tr><tr><td>Architecture state</td><td>covered</td><td>Direct runner/contract exists; normalization/product gates remain locked.</td></tr><tr><td>Code checks</td><td>covered</td><td>desktop test/check/build and petctl test/build recorded.</td></tr><tr><td>Visual evidence</td><td>covered</td><td>8 headless screenshots, including failed candidates and V40.3R3 decision.</td></tr><tr><td>Claim/security scan</td><td>covered</td><td>report and audit scans passed with no hits.</td></tr><tr><td>Native desktop overlay</td><td>not covered</td><td>headless browser preview evidence cannot prove native overlay behavior.</td></tr><tr><td>High-quality V40 assets</td><td>not achieved</td><td>no accepted candidate source and no V40.4 entry.</td></tr></tbody></table>
+    <table><thead><tr><th>审计项</th><th>覆盖状态</th><th>说明</th></tr></thead><tbody><tr><td>PRD target experience</td><td>covered</td><td>V40 high-quality image-to-action target remains unmet and blocked.</td></tr><tr><td>Architecture state</td><td>covered</td><td>Direct runner/contract exists; normalization/product gates remain locked.</td></tr><tr><td>Code checks</td><td>covered</td><td>desktop test/check/build and petctl test/build recorded.</td></tr><tr><td>Visual evidence</td><td>covered</td><td>8 headless screenshots, including failed candidates and V40.3R3 decision.</td></tr><tr><td>Host sample probe</td><td>covered-not-accepted</td><td>3 synthetic host cat images generated local template GIF assets; this is not accepted as V40 image-to-action readiness.</td></tr><tr><td>Claim/security scan</td><td>covered</td><td>report and audit scans passed with no hits.</td></tr><tr><td>Native desktop overlay</td><td>not covered</td><td>headless browser preview evidence cannot prove native overlay behavior.</td></tr><tr><td>High-quality V40 assets</td><td>not achieved</td><td>no accepted candidate source and no V40.4 entry.</td></tr></tbody></table>
   </section>
 
   <section>
@@ -137,6 +138,43 @@
     <article class="shot">
       <h3>08-mobile-settings-overview.png</h3>
       <img src="v40_3r3-automated-acceptance-2026-07-01/08-mobile-settings-overview.png" alt="08-mobile-settings-overview.png 截图证据">
+    </article></div>
+  </section>
+
+  <section>
+    <h2>宿主进程图片到动作资产探针</h2>
+    <p>本节按用户要求使用宿主本地进程生成不同花色猫图，并生成对应动作 GIF/contact sheet。审计结论必须收窄：这些资产来自合成输入图和确定性模板，不是模型从任意真实猫照片理解并生成的高质量动作资产。</p>
+    <table>
+      <tr><th>探针状态</th><td>generated_not_accepted</td></tr>
+      <tr><th>manifest</th><td><code>docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/manifest.json</code></td></tr>
+      <tr><th>样本数</th><td>3</td></tr>
+      <tr><th>每样本动作数</th><td>8</td></tr>
+      <tr><th>边界</th><td>This host-process probe is evidence of local controlled asset generation only. It is not V40 high-quality image-to-action acceptance.</td></tr>
+    </table>
+    <div class="grid"><article class="shot">
+      <h3>Orange tabby host sample <code>host-orange-tabby</code></h3>
+      <p class="muted">coat: tabby · route: host_synthetic_template_probe · decision: not_accepted_for_v40_target</p>
+      <div class="sample-pair">
+        <figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/source.png" alt="host-orange-tabby source host cat image"><figcaption>宿主进程生成的输入猫图</figcaption></figure>
+        <figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/contact-sheet.png" alt="host-orange-tabby generated action contact sheet"><figcaption>模板生成的 8 动作总览</figcaption></figure>
+      </div>
+      <div class="gif-grid"><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/idle.gif" alt="host-orange-tabby idle animated GIF"><figcaption>idle · 7 frames</figcaption></figure><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/thinking.gif" alt="host-orange-tabby thinking animated GIF"><figcaption>thinking · 7 frames</figcaption></figure><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/running.gif" alt="host-orange-tabby running animated GIF"><figcaption>running · 7 frames</figcaption></figure><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/success.gif" alt="host-orange-tabby success animated GIF"><figcaption>success · 5 frames</figcaption></figure><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/warning.gif" alt="host-orange-tabby warning animated GIF"><figcaption>warning · 5 frames</figcaption></figure><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/error.gif" alt="host-orange-tabby error animated GIF"><figcaption>error · 5 frames</figcaption></figure><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/need_input.gif" alt="host-orange-tabby need_input animated GIF"><figcaption>need_input · 5 frames</figcaption></figure><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/sleeping.gif" alt="host-orange-tabby sleeping animated GIF"><figcaption>sleeping · 7 frames</figcaption></figure></div>
+    </article><article class="shot">
+      <h3>Tuxedo host sample <code>host-tuxedo</code></h3>
+      <p class="muted">coat: tuxedo · route: host_synthetic_template_probe · decision: not_accepted_for_v40_target</p>
+      <div class="sample-pair">
+        <figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/source.png" alt="host-tuxedo source host cat image"><figcaption>宿主进程生成的输入猫图</figcaption></figure>
+        <figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/contact-sheet.png" alt="host-tuxedo generated action contact sheet"><figcaption>模板生成的 8 动作总览</figcaption></figure>
+      </div>
+      <div class="gif-grid"><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/idle.gif" alt="host-tuxedo idle animated GIF"><figcaption>idle · 7 frames</figcaption></figure><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/thinking.gif" alt="host-tuxedo thinking animated GIF"><figcaption>thinking · 7 frames</figcaption></figure><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/running.gif" alt="host-tuxedo running animated GIF"><figcaption>running · 7 frames</figcaption></figure><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/success.gif" alt="host-tuxedo success animated GIF"><figcaption>success · 5 frames</figcaption></figure><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/warning.gif" alt="host-tuxedo warning animated GIF"><figcaption>warning · 5 frames</figcaption></figure><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/error.gif" alt="host-tuxedo error animated GIF"><figcaption>error · 5 frames</figcaption></figure><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/need_input.gif" alt="host-tuxedo need_input animated GIF"><figcaption>need_input · 5 frames</figcaption></figure><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/sleeping.gif" alt="host-tuxedo sleeping animated GIF"><figcaption>sleeping · 7 frames</figcaption></figure></div>
+    </article><article class="shot">
+      <h3>Calico host sample <code>host-calico</code></h3>
+      <p class="muted">coat: calico · route: host_synthetic_template_probe · decision: not_accepted_for_v40_target</p>
+      <div class="sample-pair">
+        <figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/source.png" alt="host-calico source host cat image"><figcaption>宿主进程生成的输入猫图</figcaption></figure>
+        <figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/contact-sheet.png" alt="host-calico generated action contact sheet"><figcaption>模板生成的 8 动作总览</figcaption></figure>
+      </div>
+      <div class="gif-grid"><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/idle.gif" alt="host-calico idle animated GIF"><figcaption>idle · 7 frames</figcaption></figure><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/thinking.gif" alt="host-calico thinking animated GIF"><figcaption>thinking · 7 frames</figcaption></figure><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/running.gif" alt="host-calico running animated GIF"><figcaption>running · 7 frames</figcaption></figure><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/success.gif" alt="host-calico success animated GIF"><figcaption>success · 5 frames</figcaption></figure><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/warning.gif" alt="host-calico warning animated GIF"><figcaption>warning · 5 frames</figcaption></figure><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/error.gif" alt="host-calico error animated GIF"><figcaption>error · 5 frames</figcaption></figure><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/need_input.gif" alt="host-calico need_input animated GIF"><figcaption>need_input · 5 frames</figcaption></figure><figure><img src="v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/sleeping.gif" alt="host-calico sleeping animated GIF"><figcaption>sleeping · 7 frames</figcaption></figure></div>
     </article></div>
   </section>
 

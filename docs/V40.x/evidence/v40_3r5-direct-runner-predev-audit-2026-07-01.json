@@ -1,0 +1,293 @@
+{
+  "phase": "V40.3R5",
+  "decision": "passed scoped",
+  "selectedRoute": "new_direct_runner_route_allowed",
+  "sampleMatrix": [
+    {
+      "sampleId": "v38_a_cat_public",
+      "sampleKind": "tested_cat",
+      "sourceRef": "docs/V38.x/evidence/assets/v38_a_cat_public/sanitized.png",
+      "baselineV39Ref": "/v39/v38_a_cat_public/contact-sheet.svg",
+      "consentBoundary": "public_sample",
+      "licenseStatus": "usable",
+      "retentionRule": "safe_relative_refs_only",
+      "reasonCodes": [
+        "v38_public_sanitized_derivative_ready",
+        "source_ref_exists_or_not_required",
+        "baseline_ref_exists_or_not_required"
+      ]
+    },
+    {
+      "sampleId": "v38_tuxedo_public",
+      "sampleKind": "tested_cat",
+      "sourceRef": "docs/V38.x/evidence/assets/v38_tuxedo_public/sanitized.png",
+      "baselineV39Ref": "/v39/v38_tuxedo_public/contact-sheet.svg",
+      "consentBoundary": "public_sample",
+      "licenseStatus": "usable",
+      "retentionRule": "safe_relative_refs_only",
+      "reasonCodes": [
+        "v38_public_sanitized_derivative_ready",
+        "source_ref_exists_or_not_required",
+        "baseline_ref_exists_or_not_required"
+      ]
+    },
+    {
+      "sampleId": "v38_negative_dog_public",
+      "sampleKind": "negative_or_blocked",
+      "sourceRef": null,
+      "baselineV39Ref": null,
+      "consentBoundary": "public_sample",
+      "licenseStatus": "blocked",
+      "retentionRule": "safe_relative_refs_only",
+      "reasonCodes": [
+        "negative_non_cat_rejected",
+        "source_ref_exists_or_not_required",
+        "baseline_ref_exists_or_not_required"
+      ]
+    }
+  ],
+  "sourceLicenseRecords": [
+    {
+      "sampleId": "v38_a_cat_public",
+      "sourceLicenseSummary": "v38_public_sanitized_derivative_ready",
+      "licenseStatus": "usable",
+      "retentionRule": "safe_relative_refs_only"
+    },
+    {
+      "sampleId": "v38_tuxedo_public",
+      "sourceLicenseSummary": "v38_public_sanitized_derivative_ready",
+      "licenseStatus": "usable",
+      "retentionRule": "safe_relative_refs_only"
+    },
+    {
+      "sampleId": "v38_negative_dog_public",
+      "sourceLicenseSummary": "negative_non_cat_rejected",
+      "licenseStatus": "blocked",
+      "retentionRule": "safe_relative_refs_only"
+    }
+  ],
+  "modelControlInventory": {
+    "modelLabel": "dreamshaper-8-local-checkpoint",
+    "components": [
+      {
+        "componentId": "python_wrapper",
+        "status": "available",
+        "safeLabel": "v40-runner-venv-python",
+        "reasonCodes": [
+          "python_wrapper_available"
+        ]
+      },
+      {
+        "componentId": "torch",
+        "status": "available",
+        "safeLabel": "torch",
+        "reasonCodes": [
+          "torch_available"
+        ]
+      },
+      {
+        "componentId": "diffusers",
+        "status": "available",
+        "safeLabel": "diffusers",
+        "reasonCodes": [
+          "diffusers_available"
+        ]
+      },
+      {
+        "componentId": "local_checkpoint",
+        "status": "available",
+        "safeLabel": "dreamshaper-8-local-checkpoint",
+        "reasonCodes": [
+          "local_checkpoint_available"
+        ]
+      },
+      {
+        "componentId": "identity_conditioner",
+        "status": "available",
+        "safeLabel": "ip-adapter-sd15",
+        "reasonCodes": [
+          "identity_conditioner_available"
+        ]
+      },
+      {
+        "componentId": "image_io",
+        "status": "available",
+        "safeLabel": "PIL",
+        "reasonCodes": [
+          "image_io_available"
+        ]
+      }
+    ]
+  },
+  "maskCropPlans": [
+    {
+      "sampleId": "v38_a_cat_public",
+      "cropStrategy": "subject_centered_square_crop",
+      "maskStrategy": "subject_silhouette_or_alpha_hint",
+      "safePreviewRef": "docs/V38.x/evidence/assets/v38_a_cat_public/sanitized.png",
+      "reasonCodes": [
+        "subject_mask_crop_plan_defined",
+        "raw_photo_bytes_not_recorded"
+      ]
+    },
+    {
+      "sampleId": "v38_tuxedo_public",
+      "cropStrategy": "subject_centered_square_crop",
+      "maskStrategy": "subject_silhouette_or_alpha_hint",
+      "safePreviewRef": "docs/V38.x/evidence/assets/v38_tuxedo_public/sanitized.png",
+      "reasonCodes": [
+        "subject_mask_crop_plan_defined",
+        "raw_photo_bytes_not_recorded"
+      ]
+    }
+  ],
+  "identityAnchorPacks": [
+    {
+      "sampleId": "v38_a_cat_public",
+      "anchors": [
+        "soft gray brown coat",
+        "subtle tabby mask",
+        "medium striped tail",
+        "green eyes"
+      ],
+      "sameCatRequirement": true,
+      "reasonCodes": [
+        "identity_anchor_pack_defined",
+        "same_cat_requirement_defined"
+      ]
+    },
+    {
+      "sampleId": "v38_tuxedo_public",
+      "anchors": [
+        "black and white tuxedo coat",
+        "white muzzle",
+        "white chest",
+        "dark curved tail"
+      ],
+      "sameCatRequirement": true,
+      "reasonCodes": [
+        "identity_anchor_pack_defined",
+        "same_cat_requirement_defined"
+      ]
+    }
+  ],
+  "actionPoseConditionPacks": [
+    {
+      "actionId": "idle",
+      "poseIntent": "centered full-body cat, relaxed standing or sitting, tiny breathing-ready pose",
+      "forbiddenFallback": "whole_image_transform",
+      "reasonCodes": [
+        "action_pose_condition_defined",
+        "transform_only_motion_forbidden"
+      ]
+    },
+    {
+      "actionId": "walk",
+      "poseIntent": "side-readable full-body cat, alternating paw intent, tail counter-balance",
+      "forbiddenFallback": "whole_image_transform",
+      "reasonCodes": [
+        "action_pose_condition_defined",
+        "transform_only_motion_forbidden"
+      ]
+    },
+    {
+      "actionId": "jump",
+      "poseIntent": "crouch-to-airborne full-body cat, clear vertical motion intent",
+      "forbiddenFallback": "whole_image_transform",
+      "reasonCodes": [
+        "action_pose_condition_defined",
+        "transform_only_motion_forbidden"
+      ]
+    },
+    {
+      "actionId": "sleep",
+      "poseIntent": "curled single cat, closed-eye sleeping silhouette, no duplicate subject",
+      "forbiddenFallback": "whole_image_transform",
+      "reasonCodes": [
+        "action_pose_condition_defined",
+        "transform_only_motion_forbidden"
+      ]
+    },
+    {
+      "actionId": "eat",
+      "poseIntent": "head dip toward small bowl, front paws braced, body remains cat-like",
+      "forbiddenFallback": "whole_image_transform",
+      "reasonCodes": [
+        "action_pose_condition_defined",
+        "transform_only_motion_forbidden"
+      ]
+    },
+    {
+      "actionId": "play",
+      "poseIntent": "front paw raised, playful tail curve, readable toy/play energy without extra subjects",
+      "forbiddenFallback": "whole_image_transform",
+      "reasonCodes": [
+        "action_pose_condition_defined",
+        "transform_only_motion_forbidden"
+      ]
+    },
+    {
+      "actionId": "alert",
+      "poseIntent": "ears up, wide eyes, tense body, readable surprise pose",
+      "forbiddenFallback": "whole_image_transform",
+      "reasonCodes": [
+        "action_pose_condition_defined",
+        "transform_only_motion_forbidden"
+      ]
+    },
+    {
+      "actionId": "celebrate",
+      "poseIntent": "happy upright or lifted expression, tail arc, positive completion pose",
+      "forbiddenFallback": "whole_image_transform",
+      "reasonCodes": [
+        "action_pose_condition_defined",
+        "transform_only_motion_forbidden"
+      ]
+    }
+  ],
+  "actionNameMapping": {
+    "idle": "idle",
+    "thinking": "alert",
+    "running": "walk",
+    "success": "celebrate",
+    "warning": "alert",
+    "error": "alert",
+    "need_input": "alert",
+    "sleeping": "sleep"
+  },
+  "safeRunnerInvocation": {
+    "runnerId": "v40_direct_diffusers_frame_runner",
+    "route": "direct_local_runner_no_webui",
+    "outputDirRef": "docs/V40.x/evidence/assets/v40-3r6-controlled-candidates",
+    "generationAllowed": true,
+    "redactionBoundary": {
+      "allowSafeRelativeRefs": true,
+      "forbidRawPrompts": true,
+      "forbidRawPayloads": true,
+      "forbidRawImageBytes": true,
+      "forbidAbsolutePaths": true
+    }
+  },
+  "visualReviewRubric": {
+    "rejectPhotoCardOutput": true,
+    "rejectIdentityDrift": true,
+    "rejectWeakActionSemantics": true,
+    "rejectUnsafeArtifacts": true,
+    "requireDesktopScaleReadability": true,
+    "requirePreferenceOverV39": true
+  },
+  "generationMayStart": true,
+  "reasonCodes": [
+    "v40_3r5_predev_audit_passed_scoped"
+  ],
+  "claimScan": {
+    "status": "passed",
+    "hits": []
+  },
+  "securityScan": {
+    "status": "passed",
+    "hits": []
+  },
+  "evidencePath": "docs/V40.x/evidence/v40_3r5-direct-runner-predev-audit-2026-07-01.md",
+  "prePhasePlanPath": "docs/V40.x/evidence/v40_3r5-pre-phase-development-and-acceptance-plan-2026-07-01.md"
+}

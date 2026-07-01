@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <title>V40.6 视觉验收报告 - failed scoped evidence</title>
+  <style>
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; margin: 32px; color: #162033; background: #f7f8fb; }
+    main { max-width: 1180px; margin: 0 auto; }
+    h1, h2, h3 { color: #14213d; }
+    .summary, .candidate, .gate { background: white; border: 1px solid #d9dee8; border-radius: 8px; padding: 18px; margin: 16px 0; }
+    .status-failed { color: #b42318; font-weight: 700; }
+    img { width: 100%; max-width: 1040px; border: 1px solid #cfd6e4; background: #fff; display: block; margin-top: 12px; }
+    code { background: #eef2f7; padding: 2px 5px; border-radius: 4px; }
+    ul { line-height: 1.7; }
+  </style>
+</head>
+<body>
+<main>
+  <h1>V40.6 自动化视觉验收报告</h1>
+  <section class="summary">
+    <h2>结论</h2>
+    <p class="status-failed">V40 当前未通过。R6 生成了真实候选，但 0 个候选通过显式视觉审查，V40.4-V40.5 保持 No-Go / blocked。</p>
+    <p>本报告只证明本轮失败状态可审计，不证明图生高质量动作资产完成。</p>
+  </section>
+  <section class="gate">
+    <h2>目标架构与当前实现</h2>
+    <ul>
+      <li>目标链路：真实样本 -> source/license -> mask/crop -> identity anchors -> action pose controls -> direct local runner -> candidate frame sequence -> visual review -> V39 same-sample comparison。</li>
+      <li>当前已实现：R5 predev audit passed scoped；R6 direct local runner 生成了 2 个同样本候选。</li>
+      <li>当前未达成：候选仍是照片式单帧集合，背景复杂，动作语义弱，不是可进入 V40.4 的高质量桌宠动作资产。</li>
+    </ul>
+  </section>
+  <section class="gate">
+    <h2>阶段门禁</h2>
+    <ul>
+      <li>V40.3R5：passed scoped。</li>
+      <li>V40.3R6：failed，acceptedVisualCount = 0。</li>
+      <li>V40.4：blocked，原因是没有两个视觉通过候选。</li>
+      <li>V40.5：blocked，原因是没有 accepted V40 pack 可预览或应用。</li>
+      <li>V40.7：final failed。</li>
+    </ul>
+  </section>
+
+    <section class="candidate">
+      <h3>v38_a_cat_public</h3>
+      <p><strong>候选状态：</strong>generated，但未通过视觉验收。</p>
+      <p><strong>V40 contact sheet：</strong>docs/V40.x/evidence/assets/v40-3r6-controlled-candidates/v38-a-cat-public-contact-sheet.png</p>
+      <img src="assets/v40-3r6-controlled-candidates/v38-a-cat-public-contact-sheet.png" alt="v38_a_cat_public V40 failed candidate contact sheet" />
+      <p><strong>视觉审查：</strong>failed；原因：action_semantics_unclear, target_experience_quality_failed</p>
+      <p><strong>观察：</strong>Generated same-sample action images are present as review candidates. The tabby candidate remains photo-like, includes scene/background content, and shows visible style/artifact drift across actions. Each action is represented as a single still image rather than a reviewable multi-frame action sequence. The output is not preferred over the same-sample V39 baseline for desktop-pet target use. Candidate is kept out of V40.4 normalization.</p>
+      <p><strong>V39 对比：</strong>not_better_than_v39；基线：/v39/v38_a_cat_public/contact-sheet.svg</p>
+    </section>
+
+    <section class="candidate">
+      <h3>v38_tuxedo_public</h3>
+      <p><strong>候选状态：</strong>generated，但未通过视觉验收。</p>
+      <p><strong>V40 contact sheet：</strong>docs/V40.x/evidence/assets/v40-3r6-controlled-candidates/v38-tuxedo-public-contact-sheet.png</p>
+      <img src="assets/v40-3r6-controlled-candidates/v38-tuxedo-public-contact-sheet.png" alt="v38_tuxedo_public V40 failed candidate contact sheet" />
+      <p><strong>视觉审查：</strong>failed；原因：action_semantics_unclear, target_experience_quality_failed</p>
+      <p><strong>观察：</strong>Generated same-sample action images are present as review candidates. The tuxedo candidate uses complex indoor photo backgrounds and does not present clean desktop-pet transparent or sprite-like frames. Each action is represented as a single still image rather than a reviewable multi-frame action sequence. The output is not preferred over the same-sample V39 baseline for desktop-pet target use. Candidate is kept out of V40.4 normalization.</p>
+      <p><strong>V39 对比：</strong>not_better_than_v39；基线：/v39/v38_tuxedo_public/contact-sheet.svg</p>
+    </section>
+  <section class="gate">
+    <h2>禁止声明</h2>
+    <p>不能声明 V40 passed、任意猫图生动作 ready、Petdex parity、provider verified、WebUI/ComfyUI route verified、production ready、Windows/cross-platform ready。</p>
+  </section>
+</main>
+</body>
+</html>

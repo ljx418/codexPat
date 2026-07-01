@@ -1,0 +1,212 @@
+{
+  "status": "probe_generated_not_v40_passed",
+  "sampleCount": 3,
+  "actionCountPerSample": 8,
+  "samples": [
+    {
+      "sampleId": "host-orange-tabby",
+      "label": "Orange tabby host sample",
+      "coatPattern": "tabby",
+      "sourceImage": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/source.png",
+      "contactSheet": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/contact-sheet.png",
+      "actions": [
+        {
+          "actionId": "idle",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/idle.gif",
+          "frameCount": 7,
+          "firstFinalClosed": true,
+          "motionClass": "medium"
+        },
+        {
+          "actionId": "thinking",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/thinking.gif",
+          "frameCount": 7,
+          "firstFinalClosed": true,
+          "motionClass": "medium"
+        },
+        {
+          "actionId": "running",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/running.gif",
+          "frameCount": 7,
+          "firstFinalClosed": true,
+          "motionClass": "large"
+        },
+        {
+          "actionId": "success",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/success.gif",
+          "frameCount": 5,
+          "firstFinalClosed": true,
+          "motionClass": "large"
+        },
+        {
+          "actionId": "warning",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/warning.gif",
+          "frameCount": 5,
+          "firstFinalClosed": true,
+          "motionClass": "medium"
+        },
+        {
+          "actionId": "error",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/error.gif",
+          "frameCount": 5,
+          "firstFinalClosed": true,
+          "motionClass": "medium"
+        },
+        {
+          "actionId": "need_input",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/need_input.gif",
+          "frameCount": 5,
+          "firstFinalClosed": true,
+          "motionClass": "large"
+        },
+        {
+          "actionId": "sleeping",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/sleeping.gif",
+          "frameCount": 7,
+          "firstFinalClosed": true,
+          "motionClass": "medium"
+        }
+      ],
+      "generationRoute": "host_synthetic_template_probe",
+      "auditDecision": "not_accepted_for_v40_target",
+      "boundary": "synthetic host image plus deterministic template animation; does not prove image understanding or arbitrary-cat high-quality photo-to-animation readiness"
+    },
+    {
+      "sampleId": "host-tuxedo",
+      "label": "Tuxedo host sample",
+      "coatPattern": "tuxedo",
+      "sourceImage": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/source.png",
+      "contactSheet": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/contact-sheet.png",
+      "actions": [
+        {
+          "actionId": "idle",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/idle.gif",
+          "frameCount": 7,
+          "firstFinalClosed": true,
+          "motionClass": "medium"
+        },
+        {
+          "actionId": "thinking",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/thinking.gif",
+          "frameCount": 7,
+          "firstFinalClosed": true,
+          "motionClass": "medium"
+        },
+        {
+          "actionId": "running",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/running.gif",
+          "frameCount": 7,
+          "firstFinalClosed": true,
+          "motionClass": "large"
+        },
+        {
+          "actionId": "success",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/success.gif",
+          "frameCount": 5,
+          "firstFinalClosed": true,
+          "motionClass": "large"
+        },
+        {
+          "actionId": "warning",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/warning.gif",
+          "frameCount": 5,
+          "firstFinalClosed": true,
+          "motionClass": "medium"
+        },
+        {
+          "actionId": "error",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/error.gif",
+          "frameCount": 5,
+          "firstFinalClosed": true,
+          "motionClass": "medium"
+        },
+        {
+          "actionId": "need_input",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/need_input.gif",
+          "frameCount": 5,
+          "firstFinalClosed": true,
+          "motionClass": "large"
+        },
+        {
+          "actionId": "sleeping",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/sleeping.gif",
+          "frameCount": 7,
+          "firstFinalClosed": true,
+          "motionClass": "medium"
+        }
+      ],
+      "generationRoute": "host_synthetic_template_probe",
+      "auditDecision": "not_accepted_for_v40_target",
+      "boundary": "synthetic host image plus deterministic template animation; does not prove image understanding or arbitrary-cat high-quality photo-to-animation readiness"
+    },
+    {
+      "sampleId": "host-calico",
+      "label": "Calico host sample",
+      "coatPattern": "calico",
+      "sourceImage": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/source.png",
+      "contactSheet": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/contact-sheet.png",
+      "actions": [
+        {
+          "actionId": "idle",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/idle.gif",
+          "frameCount": 7,
+          "firstFinalClosed": true,
+          "motionClass": "medium"
+        },
+        {
+          "actionId": "thinking",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/thinking.gif",
+          "frameCount": 7,
+          "firstFinalClosed": true,
+          "motionClass": "medium"
+        },
+        {
+          "actionId": "running",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/running.gif",
+          "frameCount": 7,
+          "firstFinalClosed": true,
+          "motionClass": "large"
+        },
+        {
+          "actionId": "success",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/success.gif",
+          "frameCount": 5,
+          "firstFinalClosed": true,
+          "motionClass": "large"
+        },
+        {
+          "actionId": "warning",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/warning.gif",
+          "frameCount": 5,
+          "firstFinalClosed": true,
+          "motionClass": "medium"
+        },
+        {
+          "actionId": "error",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/error.gif",
+          "frameCount": 5,
+          "firstFinalClosed": true,
+          "motionClass": "medium"
+        },
+        {
+          "actionId": "need_input",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/need_input.gif",
+          "frameCount": 5,
+          "firstFinalClosed": true,
+          "motionClass": "large"
+        },
+        {
+          "actionId": "sleeping",
+          "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/sleeping.gif",
+          "frameCount": 7,
+          "firstFinalClosed": true,
+          "motionClass": "medium"
+        }
+      ],
+      "generationRoute": "host_synthetic_template_probe",
+      "auditDecision": "not_accepted_for_v40_target",
+      "boundary": "synthetic host image plus deterministic template animation; does not prove image understanding or arbitrary-cat high-quality photo-to-animation readiness"
+    }
+  ],
+  "claimBoundary": "This host-process probe is evidence of local controlled asset generation only. It is not V40 high-quality image-to-action acceptance."
+}

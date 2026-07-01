@@ -1,7 +1,7 @@
 # Active Acceptance Plan
 
 文档状态：active acceptance index；V40 no-WebUI high-quality 2D action asset documentation line opened on 2026-06-29 by revising the existing V40 plan in place；V39.0-V39.8 characterized 2D action asset Route A2++ scoped evidence generated on 2026-06-27 and remains the immediate quality baseline；V38 public-photo action asset scoped evidence generated on 2026-06-26 and is the input baseline；V37 tested photo-to-action product-path scoped evidence generated on 2026-06-26；V36 risk closure and target-experience hardening executed with partial scoped final decision on 2026-06-26；V35 target-experience route assessment passed scoped for tested named samples only；V34 photo-to-character-to-actions generation core evidence-matched scoped passed through V34.8；V33 scoped local sample-to-frameSequence loop passed but does not prove true photo-generated action assets；V32 quality rescue passed scoped；V31 partial scoped with continuation execution blocked scoped；V30 scoped passed；Post-V30 architecture/runtime remediation gates passed scoped；V29/V23-V28 scoped baselines 是输入基线。
-当前日期：2026-06-29。
+当前日期：2026-07-01。
 
 ## V40 No-WebUI High-Quality 2D Action Asset Acceptance
 
@@ -24,7 +24,10 @@ scans.
 | V40.3 | candidate generation/import | at least two tested cat samples and one blocked/negative sample with visual artifacts and explicit visual review | failed: generated candidates did not preserve same-cat identity/action consistency |
 | V40.3R | recovery subphase | direct img2img or identity-conditioned runner recovery, or accepted manual/import same-sample assets; visual review JSON required | failed/blocked: img2img failed visual target-experience review; identity-conditioned runner blocked by stack compatibility |
 | V40.3R2 | recovery execution | identity-conditioned runner repaired enough to generate real candidates and a stylized retry; explicit visual review failed both sets | failed |
-| V40.3R3 | candidate-source decision | PRD/spec review, route audit, source/license/sample-binding rules, visual acceptance preconditions, and claim/security scan before further code | next planned; not a success claim; V40.4 remains No-Go until two candidates pass explicit visual review |
+| V40.3R3 | candidate-source decision | PRD/spec review, route audit, source/license/sample-binding rules, visual acceptance preconditions, and claim/security scan before further code | blocked scoped with `remain_failed_or_blocked`; V40.4 remains No-Go |
+| V40.3R4 | candidate-source replan | documentation-only route comparison, selected constrained direct local runner route, predev audit requirements, drawio sync, sample/source/license/visual acceptance rules, claim/security scan | next documentation gate; cannot approve assets or start V40.4 |
+| V40.3R5 | direct-runner predev audit | source/license records, sample matrix, model/control availability, mask/crop plans, identity anchors, action pose controls, action-name mapping, safe runner invocation, visual rubric | planned; cannot approve assets |
+| V40.3R6 | controlled candidate frame generation | bounded same-sample frame candidates, blocked/negative sample reason, explicit visual review, V39 comparison, sanitized refs | planned; cannot unlock V40.4 unless two same-sample candidates pass |
 | V40.4 | normalization/action packaging | accepted outputs normalized to safe asset pack shape and compared to V39 baseline | No-Go until a future route or accepted imports produce two visually accepted candidates |
 | V40.5 | product preview/apply/rollback | accepted candidate preview, target-only apply, rollback, failed-candidate block | No-Go until V40.4 passes |
 | V40.6 | visual report | Chinese HTML with screenshots, V39/V40 same-sample comparison, failures and risks | No-Go until product evidence exists |

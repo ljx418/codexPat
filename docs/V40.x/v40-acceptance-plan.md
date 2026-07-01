@@ -53,6 +53,14 @@ The user should be able to inspect a V40 report and answer:
 - V40.3R3 may only decide the next candidate source. It cannot approve V40
   asset quality, cannot start V40.4 by itself, and cannot repeat failed V40.3R2
   outputs as accepted inputs.
+- V40.3R4 may only replan candidate-source strategy after V40.3R3 blocked. It
+  cannot approve host synthetic template GIFs, process-only UI checks, or failed
+  prior candidates as accepted V40 assets.
+- V40.3R5 may only audit the selected direct-runner route before generation. It
+  cannot approve generated assets.
+- V40.3R6 may only generate bounded candidate frame sequences after V40.3R5
+  passes. It cannot unlock V40.4 unless at least two same-sample candidates pass
+  explicit visual review.
 
 ## Current Go / No-Go
 
@@ -64,7 +72,10 @@ The user should be able to inspect a V40 report and answer:
 | V40.3R img2img | failed | img2img candidates cannot enter normalization |
 | V40.3R identity-conditioned | blocked | superseded by V40.3R2 repair attempt |
 | V40.3R2 identity-conditioned repair | failed | generated candidates cannot enter normalization |
-| V40.3R3 candidate-source decision | next planned | choose accepted manual/import, materially different direct-runner route, or failed/blocked with V39 fallback |
+| V40.3R3 candidate-source decision | blocked scoped | recorded `remain_failed_or_blocked`; no credible source yet |
+| V40.3R4 candidate-source replan | next documentation gate | selected constrained `new_direct_runner_route_allowed`; predev audit required before implementation resumes |
+| V40.3R5 direct-runner predev audit | planned | proves source/license, sample matrix, model/control availability, mask/crop, identity anchors, action pose controls, safe runner invocation, visual rubric |
+| V40.3R6 controlled candidate frame generation | planned | generates bounded frame candidates and explicit visual review; no V40.4 entry unless two same-sample candidates pass |
 | V40.4-V40.7 | No-Go | blocked until a future approved route has at least two candidates pass explicit visual review |
 
 ## Security And Claim Gates

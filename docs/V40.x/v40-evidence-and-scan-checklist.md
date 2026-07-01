@@ -41,6 +41,55 @@ V40.3R3 candidate-source decision evidence must additionally include:
   explicit visual review;
 - claim scan and security scan results.
 
+V40.3R4 candidate-source replan evidence must additionally include:
+
+- statement that V40.3R3 is blocked scoped with `remain_failed_or_blocked`;
+- route comparison for materially different direct-runner, source-bound
+  manual/professional import, and hybrid assisted route;
+- selected route or stable blocked reason. Current V40.3R4 docs select
+  constrained `new_direct_runner_route_allowed`;
+- pre-development audit requirements before code resumes;
+- proof requirements for source/license records, subject mask/crop planning,
+  identity anchors, action pose conditions, direct local runner availability,
+  candidate quality review, and V39 same-sample comparison;
+- sample matrix, source/license/sample-binding rules, visual acceptance rules,
+  and evidence paths;
+- drawio page-count and Chinese page sync result;
+- explicit statement that host synthetic template GIFs are process-only and do
+  not prove V40 image-to-action readiness;
+- claim scan and security scan results.
+
+V40.3R5 direct-runner predev audit evidence must additionally include:
+
+- statement that V40.3R4 selected constrained `new_direct_runner_route_allowed`;
+- sample matrix for at least two tested cat samples and one blocked/negative
+  sample;
+- source/license record or stable blocked reason for every sample;
+- local model/checkpoint/control component inventory without WebUI/ComfyUI;
+- subject mask/crop plan summaries;
+- identity anchor pack summaries;
+- action pose condition pack summaries for at least eight desktop-pet actions;
+- action-name mapping decision: V40 asset actions are `idle`, `walk`, `jump`,
+  `sleep`, `eat`, `play`, `alert`, `celebrate`; product state actions map onto
+  those asset actions and must not rename candidate assets;
+- safe direct-runner invocation and redaction boundary;
+- explicit visual review rubric before generation;
+- claim scan and security scan results.
+
+V40.3R6 controlled candidate frame generation evidence must additionally
+include:
+
+- V40.3R5 pass reference;
+- bounded run ID and selected route label;
+- candidate frame sequence safe refs or stable blocked reason;
+- explicit visual review for identity, action readability, artifacts,
+  desktop-pet scale, safety, and preference over V39;
+- blocked/negative sample result;
+- same-sample V39 comparison;
+- V40.4 entry decision that remains No-Go unless at least two same-sample
+  candidates pass;
+- claim scan and security scan results.
+
 ## Required Scans
 
 Claim scan must reject positive ready claims for:
@@ -52,6 +101,8 @@ Claim scan must reject positive ready claims for:
 - Route B verified without real same-sample source-bound assets;
 - 3D ready;
 - production signed release ready;
+- the following platform/release readiness claims are also forbidden ready
+  claims:
 - Windows ready;
 - cross-platform ready;
 - MCP ready;
@@ -87,6 +138,7 @@ V40.6 and V40.7 must include:
 - final scoped claim text.
 
 V40.4 may not start, and V40.6/V40.7 visual evidence may not claim success,
-until at least two same-sample V40 candidates have explicit visual-review pass
-records. V40.3R2 failed candidates and stylized retry outputs do not satisfy
-this condition.
+until V40.3R5 has passed scoped and V40.3R6 has produced at least two
+same-sample V40 candidates with explicit visual-review pass records. V40.3R2
+failed candidates and stylized retry outputs do not satisfy this condition.
+Host-process synthetic template GIF probes also do not satisfy this condition.

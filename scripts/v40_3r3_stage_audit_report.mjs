@@ -40,10 +40,11 @@ const commandPlan = [
 
 async function main() {
   const commandResults = runCommands();
+  const hostSampleProbe = runHostSampleAnimationProbe();
   const candidatePage = writeCandidateSourcePage();
   const screenshots = await captureScreenshots(candidatePage);
   const checks = await readUiResult(screenshots);
-  const context = buildAuditContext({ commandResults, screenshots, checks });
+  const context = buildAuditContext({ commandResults, screenshots, checks, hostSampleProbe });
   const report = renderHtmlReport(context);
   const audit = renderMarkdownAudit(context);
   const reportScan = scanEvidence(report);
@@ -98,7 +99,7 @@ function runCommands() {
   });
 }
 
-function buildAuditContext({ commandResults, screenshots, checks }) {
+function buildAuditContext({ commandResults, screenshots, checks, hostSampleProbe }) {
   return {
     date,
     status: "needs_work",
@@ -130,14 +131,51 @@ function buildAuditContext({ commandResults, screenshots, checks }) {
       ["Architecture state", "covered", "Direct runner/contract exists; normalization/product gates remain locked."],
       ["Code checks", "covered", "desktop test/check/build and petctl test/build recorded."],
       ["Visual evidence", "covered", "8 headless screenshots, including failed candidates and V40.3R3 decision."],
+      ["Host sample probe", "covered-not-accepted", "3 synthetic host cat images generated local template GIF assets; this is not accepted as V40 image-to-action readiness."],
       ["Claim/security scan", "covered", "report and audit scans passed with no hits."],
       ["Native desktop overlay", "not covered", "headless browser preview evidence cannot prove native overlay behavior."],
       ["High-quality V40 assets", "not achieved", "no accepted candidate source and no V40.4 entry."]
     ],
     commandResults,
     screenshots,
-    checks
+    checks,
+    hostSampleProbe
   };
+}
+
+function runHostSampleAnimationProbe() {
+  const probeOutRel = `${outDirRel}/host-synthetic-image-to-animation-probe`;
+  const started = Date.now();
+  try {
+    const output = execFileSync("/usr/bin/python3", ["scripts/v40_host_sample_animation_probe.py", root, probeOutRel], {
+      cwd: root,
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "pipe"],
+      maxBuffer: 8 * 1024 * 1024
+    });
+    const parsed = JSON.parse(output);
+    return {
+      status: "generated_not_accepted",
+      durationMs: Date.now() - started,
+      manifest: parsed.manifest,
+      sampleCount: parsed.sampleCount,
+      actionCountPerSample: parsed.actionCountPerSample,
+      samples: parsed.samples,
+      claimBoundary: parsed.claimBoundary
+    };
+  } catch (error) {
+    const output = `${error.stdout ?? ""}\n${error.stderr ?? ""}`;
+    return {
+      status: "blocked",
+      durationMs: Date.now() - started,
+      manifest: `${probeOutRel}/manifest.json`,
+      sampleCount: 0,
+      actionCountPerSample: 0,
+      samples: [],
+      claimBoundary: "host sample animation probe did not complete",
+      outputTail: sanitizeText(output).slice(-1200)
+    };
+  }
 }
 
 async function captureScreenshots(candidatePage) {
@@ -297,12 +335,29 @@ body{margin:0;padding:24px;font-family:Arial,"Microsoft YaHei",sans-serif;backgr
   return page;
 }
 
-function renderHtmlReport({ gitHeadAtGeneration, authoritativeDocs, reportRefs, reproducibility, auditCoverage, commandResults, screenshots, checks }) {
+function renderHtmlReport({ gitHeadAtGeneration, authoritativeDocs, reportRefs, reproducibility, auditCoverage, commandResults, screenshots, checks, hostSampleProbe }) {
   const screenshotCards = screenshots.map((item) => `
     <article class="shot">
       <h3>${escapeHtml(item.name)}</h3>
       <img src="${escapeHtml(relative(dirname(reportPath), resolve(root, item.rel)).replaceAll("\\", "/"))}" alt="${escapeHtml(item.name)} 截图证据">
     </article>`).join("");
+  const hostProbeCards = (hostSampleProbe.samples ?? []).map((sample) => {
+    const sourceRel = relative(dirname(reportPath), resolve(root, sample.sourceImage)).replaceAll("\\", "/");
+    const sheetRel = relative(dirname(reportPath), resolve(root, sample.contactSheet)).replaceAll("\\", "/");
+    const actionGifs = sample.actions.map((action) => {
+      const gifRel = relative(dirname(reportPath), resolve(root, action.gif)).replaceAll("\\", "/");
+      return `<figure><img src="${escapeHtml(gifRel)}" alt="${escapeHtml(sample.sampleId)} ${escapeHtml(action.actionId)} animated GIF"><figcaption>${escapeHtml(action.actionId)} · ${Number(action.frameCount)} frames</figcaption></figure>`;
+    }).join("");
+    return `<article class="shot">
+      <h3>${escapeHtml(sample.label)} <code>${escapeHtml(sample.sampleId)}</code></h3>
+      <p class="muted">coat: ${escapeHtml(sample.coatPattern)} · route: ${escapeHtml(sample.generationRoute)} · decision: ${escapeHtml(sample.auditDecision)}</p>
+      <div class="sample-pair">
+        <figure><img src="${escapeHtml(sourceRel)}" alt="${escapeHtml(sample.sampleId)} source host cat image"><figcaption>宿主进程生成的输入猫图</figcaption></figure>
+        <figure><img src="${escapeHtml(sheetRel)}" alt="${escapeHtml(sample.sampleId)} generated action contact sheet"><figcaption>模板生成的 8 动作总览</figcaption></figure>
+      </div>
+      <div class="gif-grid">${actionGifs}</div>
+    </article>`;
+  }).join("");
   const commandRows = commandResults.map((item) => `
     <tr>
       <td><code>${escapeHtml(item.label)}</code></td>
@@ -338,6 +393,7 @@ function renderHtmlReport({ gitHeadAtGeneration, authoritativeDocs, reportRefs, 
   <style>
     :root{color-scheme:light;--bg:#f4f7fb;--paper:#fff;--ink:#172033;--muted:#5d6b80;--line:#d9e2ee;--green:#127a52;--red:#a83434;--amber:#9a5b00;font-family:Arial,"Microsoft YaHei",sans-serif;color:var(--ink);background:var(--bg)}
     body{margin:0;padding:28px}main{max-width:1220px;margin:0 auto}.hero,section,.shot{background:var(--paper);border:1px solid var(--line);border-radius:8px;box-shadow:0 1px 2px rgba(20,30,50,.04)}.hero,section{padding:24px;margin-bottom:18px}h1{margin:0 0 10px;font-size:30px;letter-spacing:0}h2{margin:0 0 14px;font-size:22px;letter-spacing:0}h3{margin:0 0 8px;font-size:16px;letter-spacing:0}p,li{line-height:1.65}.muted{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:14px}.metric{padding:14px;background:#fbfdff;border:1px solid var(--line);border-radius:8px}.metric span{display:block;color:var(--muted);font-size:12px}.metric strong{display:block;margin-top:4px;font-size:19px}table{width:100%;border-collapse:collapse}th,td{padding:10px 8px;border-bottom:1px solid #e5edf6;text-align:left;vertical-align:top}th{color:#334155;background:#f8fbff}code{background:#eef4fb;padding:2px 5px;border-radius:4px;font-size:12px}.pill{display:inline-block;border-radius:999px;padding:4px 9px;font-size:12px;font-weight:700}.pass{background:#e7f7ef;color:var(--green)}.fail{background:#fee2e2;color:var(--red)}.warn{background:#fff3d7;color:var(--amber)}.shot{padding:12px}.shot img{display:block;width:100%;max-height:720px;object-fit:contain;border:1px solid #e5e7eb;border-radius:6px;background:#fff}.issue{border-left:5px solid #f0b429;padding-left:12px}@media(max-width:820px){body{padding:14px}}
+    .sample-pair{display:grid;grid-template-columns:220px 1fr;gap:12px}.sample-pair figure{margin:0}.sample-pair figcaption,.gif-grid figcaption{margin-top:6px;color:var(--muted);font-size:13px}.gif-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px;margin-top:12px}.gif-grid figure{margin:0}.gif-grid img{max-height:180px}@media(max-width:820px){.sample-pair,.gif-grid{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -400,6 +456,19 @@ function renderHtmlReport({ gitHeadAtGeneration, authoritativeDocs, reportRefs, 
   </section>
 
   <section>
+    <h2>宿主进程图片到动作资产探针</h2>
+    <p>本节按用户要求使用宿主本地进程生成不同花色猫图，并生成对应动作 GIF/contact sheet。审计结论必须收窄：这些资产来自合成输入图和确定性模板，不是模型从任意真实猫照片理解并生成的高质量动作资产。</p>
+    <table>
+      <tr><th>探针状态</th><td>${escapeHtml(hostSampleProbe.status)}</td></tr>
+      <tr><th>manifest</th><td><code>${escapeHtml(hostSampleProbe.manifest)}</code></td></tr>
+      <tr><th>样本数</th><td>${Number(hostSampleProbe.sampleCount ?? 0)}</td></tr>
+      <tr><th>每样本动作数</th><td>${Number(hostSampleProbe.actionCountPerSample ?? 0)}</td></tr>
+      <tr><th>边界</th><td>${escapeHtml(hostSampleProbe.claimBoundary ?? "")}</td></tr>
+    </table>
+    <div class="grid">${hostProbeCards || "<p>宿主样本探针未生成可展示资产。</p>"}</div>
+  </section>
+
+  <section>
     <h2>自动检查摘要</h2>
     <table>
       <tr><th>检查项</th><th>结果</th></tr>
@@ -426,12 +495,15 @@ function renderHtmlReport({ gitHeadAtGeneration, authoritativeDocs, reportRefs, 
 </html>`;
 }
 
-function renderMarkdownAudit({ gitHeadAtGeneration, authoritativeDocs, reportRefs, reproducibility, auditCoverage, commandResults, screenshots, checks }) {
+function renderMarkdownAudit({ gitHeadAtGeneration, authoritativeDocs, reportRefs, reproducibility, auditCoverage, commandResults, screenshots, checks, hostSampleProbe }) {
   const commandRows = commandResults.map((item) => `| ${item.label} | ${item.status} | \`${item.commandLine}\` | ${item.summary} |`).join("\n");
   const shotRows = screenshots.map((item) => `| ${item.name} | ${item.rel} | ${item.exists ? "yes" : "no"} | ${item.bytes} |`).join("\n");
   const docRows = authoritativeDocs.map((ref) => `- ${ref}`).join("\n");
   const reproRows = reproducibility.map((command) => `- \`${command}\``).join("\n");
   const coverageRows = auditCoverage.map(([area, status, note]) => `| ${area} | ${status} | ${note} |`).join("\n");
+  const hostRows = (hostSampleProbe.samples ?? [])
+    .map((sample) => `| ${sample.sampleId} | ${sample.coatPattern} | ${sample.sourceImage} | ${sample.contactSheet} | ${sample.actions.length} | ${sample.auditDecision} |`)
+    .join("\n");
   return `# V40.3R3 Stage Audit
 
 Date: ${date}
@@ -480,6 +552,18 @@ ${coverageRows}
 | Screenshot | Relative ref | Exists | Bytes |
 | --- | --- | --- | ---: |
 ${shotRows}
+
+## Host Process Image-To-Animation Probe
+
+Status: ${hostSampleProbe.status}
+
+Manifest: ${hostSampleProbe.manifest}
+
+Boundary: ${hostSampleProbe.claimBoundary ?? ""}
+
+| Sample | Coat | Source image | Generated action sheet | Actions | Decision |
+| --- | --- | --- | --- | ---: | --- |
+${hostRows || "| none | none | none | none | 0 | blocked |"}
 
 ## UI Checks
 

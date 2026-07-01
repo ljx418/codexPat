@@ -111,10 +111,12 @@ conclusion is intentionally narrow: the documents are sufficient for the next
 candidate-source decision, but they cannot guarantee final high-quality asset
 success without real accepted candidates.
 
-The detailed V40.3R3 execution and acceptance outline is recorded at
-`docs/V40.x/v40_3r3-detailed-development-and-acceptance-plan.md`. It is the
-handoff plan for the next automated development phase and keeps V40.4 locked
-until the route decision and visual acceptance prerequisites are satisfied.
+The historical V40.3R3 execution and acceptance outline is recorded at
+`docs/V40.x/v40_3r3-detailed-development-and-acceptance-plan.md`. Current
+execution is controlled by V40.3R4/R5/R6: route freeze, direct-runner predev
+audit, then controlled candidate frame generation and explicit visual review.
+V40.4 remains locked until V40.3R5 passes and V40.3R6 has at least two
+same-sample visual-review passes.
 
 ## External Audit Recommendation
 

@@ -19,7 +19,10 @@ quality claims. Development remains phase-by-phase and evidence-first.
 | V40.3 Candidate generation/import | generate via Direct Local Runner or explicitly import high-quality candidates for at least two tested cat samples and one blocked/negative sample | evidence includes sanitized thumbnails and stable failure reasons | `v40_3-candidate-generation-YYYY-MM-DD.md` |
 | V40.3R Recovery | after V40.3 failure, test direct img2img and identity-conditioned recovery inside V40 | explicit visual review or stable blocked reason | `v40_3r-*-2026-06-29.md` |
 | V40.3R2 Identity repair result | repair identity-runner compatibility and run one bounded stylized retry | real candidates generated, but explicit visual review failed; V40.4 remains No-Go | `v40_3r2-identity-conditioned-repair-YYYY-MM-DD.md` |
-| V40.3R3 Candidate source decision | choose accepted manual/import first, a materially different direct-runner route, or failed/blocked with V39 fallback | PRD/spec review, route audit, source/license/sample-binding rules, visual acceptance preconditions, claim/security scan | `v40_3r3-candidate-source-decision-YYYY-MM-DD.md` |
+| V40.3R3 Candidate source decision | choose accepted manual/import first, a materially different direct-runner route, or failed/blocked with V39 fallback | blocked scoped with `remain_failed_or_blocked`; no V40.4 entry | `v40_3r3-candidate-source-decision-YYYY-MM-DD.md` |
+| V40.3R4 Candidate source replan | documentation-only route replan after V40.3R3 blocked; select constrained direct local runner route and predev audit before code resumes | PRD/spec review, route decision, sample/evidence requirements, drawio sync, claim/security scan | `v40_3r4-documentation-readiness-YYYY-MM-DD.md`; `v40_3r4-route-decision-and-predev-audit.md` |
+| V40.3R5 Direct runner predev audit | prove or block source/license records, sample matrix, model/control inventory, mask/crop, identity anchors, action pose controls, and safe runner invocation before generation | audit evidence either allows one bounded generation attempt or records stable blocked/failed reason | `v40_3r5-direct-runner-predev-audit-YYYY-MM-DD.md` |
+| V40.3R6 Controlled candidate frame generation | generate bounded same-sample action-frame candidates through the selected route only after V40.3R5 passes | explicit visual review for at least two tested samples and one blocked/negative sample; no V40.4 entry unless two pass | `v40_3r6-controlled-candidate-frame-generation-YYYY-MM-DD.md` |
 | V40.4 Normalization and action packaging | normalize accepted outputs to frameSequence/sprite manifest and action coverage | reject malformed/missing/unsafe outputs; compare against V39 baseline | `v40_4-normalization-action-packaging-YYYY-MM-DD.md` |
 | V40.5 Product preview/apply/rollback | expose accepted candidate in settings/product path | target-only apply and rollback preserve previous active pack on failure | `v40_5-product-preview-apply-rollback-YYYY-MM-DD.md` |
 | V40.6 Visual report | create Chinese HTML report with screenshots and same-sample V39/V40 comparison | report is not blank, shows accepted/blocked candidates, lists risks | `v40_6-visual-report-YYYY-MM-DD.html` |
@@ -55,6 +58,13 @@ Implementation details are controlled by:
   bounded stylized retry, but both failed explicit visual review.
 - Go to V40.3R3 only as an in-place candidate-source decision after V40.3R2
   failure; it must not start product code or claim asset success.
+- Go to V40.3R4 because V40.3R3 recorded `remain_failed_or_blocked`; V40.3R4 is
+  documentation-only and must not start product code.
+- Go to V40.3R5 only after V40.3R4 documentation records the constrained
+  `new_direct_runner_route_allowed` path.
+- Go to V40.3R6 only after V40.3R5 proves local model/control availability,
+  sample binding, identity controls, action controls, safe runner invocation,
+  and visual review rules.
 - Go to V40.4 only after a future approved route produces at least two
   same-sample candidates that pass explicit visual review.
 - Go to V40.5 only after candidate assets pass normalization and visual gates.
@@ -202,6 +212,111 @@ Acceptance plan:
 Evidence:
 
 - `docs/V40.x/evidence/v40_3r3-candidate-source-decision-YYYY-MM-DD.md`.
+
+Current result:
+
+- V40.3R3 is blocked scoped. It recorded `remain_failed_or_blocked` because no
+  accepted manual/import assets and no materially different direct-runner route
+  were available. The 2026-07-01 host-process synthetic cat and template GIF
+  probe is process evidence only and is not accepted V40 image-to-action
+  evidence.
+
+### V40.3R4 Candidate Source Replan
+
+Development plan:
+
+- stay inside V40 and do not create V41;
+- update PRD, target architecture, active gap, active plan, acceptance plan,
+  milestones, risk matrix, evidence checklist, phase specs, and drawio;
+- explicitly compare route options: materially different direct-runner route,
+  source-bound manual/professional import, and hybrid assisted route;
+- select `new_direct_runner_route_allowed` as the only documented next route,
+  constrained by `PhotoSafetyIntake`, `SourceAndLicenseRecord`,
+  `SubjectMaskAndCropPlan`, `IdentityAnchorPack`, `ActionPoseConditionPack`,
+  `DirectDiffusersFrameRunner`, `CandidateFrameSequence`,
+  `CandidateQualityReview`, and `V39SameSampleComparison`;
+- define sample requirements, source/license requirements, visual acceptance
+  requirements, and evidence paths for the selected next route;
+- keep V40.4 locked until at least two same-sample candidates pass explicit
+  visual review.
+
+Acceptance plan:
+
+- pass documentation only if all V40/active docs agree that V40.3R3 is blocked
+  scoped, V40.3R4 is the next documentation gate, and V40.4-V40.7 remain No-Go;
+- pass only if the selected direct-runner route still requires predev audit for
+  local model/control availability, sample binding, identity controls, action
+  controls, safe runner invocation, and visual review before implementation;
+- block if no credible route can be specified without high false-pass risk;
+- fail if any document implies host template GIFs, failed V40.3/V40.3R/V40.3R2
+  outputs, or process-only checks are accepted high-quality assets.
+  Also fail if documents let the selected direct runner route bypass predev
+  audit or enter V40.4 directly.
+
+Evidence:
+
+- `docs/V40.x/evidence/v40_3r4-documentation-readiness-YYYY-MM-DD.md`.
+- `docs/V40.x/v40_3r4-route-decision-and-predev-audit.md`.
+
+### V40.3R5 Direct Runner Predev Audit
+
+Development plan:
+
+- stay inside V40 and use the V40.3R4 selected `new_direct_runner_route_allowed`
+  route only;
+- produce a sanitized sample matrix with at least two tested cat samples and one
+  blocked/negative sample;
+- create or record source/license records for each sample;
+- prove local model/checkpoint/control component availability without WebUI or
+  ComfyUI;
+- define subject mask/crop, identity anchor, and action pose control artifacts
+  before any generation run;
+- record the action-name mapping boundary before generation: V40 asset actions
+  are `idle`, `walk`, `jump`, `sleep`, `eat`, `play`, `alert`, `celebrate`;
+  product runtime states map onto those actions and must not rename candidate
+  assets;
+- define safe runner invocation and evidence redaction rules;
+- define the visual review rubric and stable blocked/failed reason codes before
+  generation starts.
+
+Acceptance plan:
+
+- pass only if all required pre-generation artifacts are available, safely
+  referenced, and the action-name mapping decision is recorded;
+- block if local model/control components, sample permissions, or safe runner
+  invocation are unavailable;
+- fail if the audit tries to proceed with prompt-only, template GIF,
+  whole-image transform, WebUI/ComfyUI, provider output, or unsanitized evidence.
+
+Evidence:
+
+- `docs/V40.x/evidence/v40_3r5-direct-runner-predev-audit-YYYY-MM-DD.md`.
+
+### V40.3R6 Controlled Candidate Frame Generation
+
+Development plan:
+
+- run one bounded generation attempt only after V40.3R5 passes;
+- use the audited sample matrix, identity anchors, and action pose controls;
+- produce `CandidateFrameSequence` outputs for at least two tested samples and
+  one blocked/negative sample or stable blocked reasons;
+- store only safe relative refs, thumbnails, manifest summaries, and redacted
+  review notes;
+- run `CandidateQualityReview` and `V39SameSampleComparison` before any
+  normalization attempt.
+
+Acceptance plan:
+
+- pass only if at least two same-sample candidates pass explicit visual review
+  for identity, action readability, artifact safety, desktop-pet scale, and
+  preference over V39;
+- block if the audited runner cannot execute or produces no reviewable output;
+- fail if generated candidates are photo cards, whole-image transforms, weak
+  action sequences, identity drift, unsafe artifacts, or not better than V39.
+
+Evidence:
+
+- `docs/V40.x/evidence/v40_3r6-controlled-candidate-frame-generation-YYYY-MM-DD.md`.
 
 ### V40.4 Normalization And Action Packaging
 

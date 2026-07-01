@@ -1,7 +1,7 @@
 {
   "date": "2026-07-01",
   "status": "needs_work",
-  "gitHeadAtGeneration": "a345137f3413",
+  "gitHeadAtGeneration": "1558768888a0",
   "authoritativeDocs": [
     "docs/active/agent_desktop_pet_prd_v40.md",
     "docs/V40.x/v40-target-architecture.md",
@@ -46,6 +46,11 @@
       "8 headless screenshots, including failed candidates and V40.3R3 decision."
     ],
     [
+      "Host sample probe",
+      "covered-not-accepted",
+      "3 synthetic host cat images generated local template GIF assets; this is not accepted as V40 image-to-action readiness."
+    ],
+    [
       "Claim/security scan",
       "covered",
       "report and audit scans passed with no hits."
@@ -67,16 +72,16 @@
       "commandLine": "pnpm --filter desktop test",
       "status": "passed",
       "exitCode": 0,
-      "durationMs": 4823,
+      "durationMs": 3730,
       "summary": "tests 361, pass 361, fail 0; exit 0",
-      "outputTail": "alues to safe action ids\n    ok 1 - maps core CatState values to safe action ids\n      ---\n      duration_ms: 0.458459\n      type: 'test'\n      ...\n    # Subtest: falls missing optional action back to idle with sanitized warning\n    ok 2 - falls missing optional action back to idle with sanitized warning\n      ---\n      duration_ms: 0.679884\n      type: 'test'\n      ...\n    # Subtest: uses V11 optional micro-interaction action when the active manifest supports it\n    ok 3 - uses V11 optional micro-interaction action when the active manifest supports it\n      ---\n      duration_ms: 0.061019\n      type: 'test'\n      ...\n    # Subtest: does not let transient success overwrite active error\n    ok 4 - does not let transient success overwrite active error\n      ---\n      duration_ms: 0.079018\n      type: 'test'\n      ...\n    # Subtest: does not let transient success overwrite active need_input\n    ok 5 - does not let transient success overwrite active need_input\n      ---\n      duration_ms: 0.179836\n      type: 'test'\n      ...\n    1..5\nok 74 - V5.0 cat action resolver\n  ---\n  duration_ms: 1.989339\n  type: 'suite'\n  ...\n# Subtest: V11.3 emotion resolver\n    # Subtest: maps all core states to distinct emotion profiles without state mutation\n    ok 1 - maps all core states to distinct emotion profiles without state mutation\n      ---\n      duration_ms: 1.378609\n      type: 'test'\n      ...\n    # Subtest: produces safe renderer input fields only\n    ok 2 - produces safe renderer input fields only\n      ---\n      duration_ms: 0.249951\n      type: 'test'\n      ...\n    1..2\nok 75 - V11.3 emotion resolver\n  ---\n  duration_ms: 2.175383\n  type: 'suite'\n  ...\n# Subtest: V11.4 action composer\n    # Subtest: holds error and need_input above lower-priority visual actions\n    ok 1 - holds error and need_input above lower-priority visual actions\n      ---\n      duration_ms: 0.282418\n      type: 'test'\n      ...\n    # Subtest: treats success and click feedback as transients\n    ok 2 - treats success and click feedback as transients\n      ---\n      duration_ms: 0.265305\n      type: 'test'\n      ...\n    # Subtest: applies higher-priority interrupts and stable rapid-event final states\n    ok 3 - applies higher-priority interrupts and stable rapid-event final states\n      ---\n      duration_ms: 0.138653\n      type: 'test'\n      ...\n    # Subtest: maps pointer and drag micro-interactions to safe action fallbacks\n    ok 4 - maps pointer and drag micro-interactions to safe action fallbacks\n      ---\n      duration_ms: 0.099298\n      type: 'test'\n      ...\n    # Subtest: keeps working states clear when lower-priority ambience is active\n    ok 5 - keeps working states clear when lower-priority ambience is active\n      ---\n      duration_ms: 0.074601\n      type: 'test'\n      ...\n    1..5\nok 76 - V11.4 action composer\n  ---\n  duration_ms: 1.089739\n  type: 'suite'\n  ...\n1..76\n# tests 361\n# suites 76\n# pass 361\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 4607.442415\n"
+      "outputTail": "values to safe action ids\n    ok 1 - maps core CatState values to safe action ids\n      ---\n      duration_ms: 0.971831\n      type: 'test'\n      ...\n    # Subtest: falls missing optional action back to idle with sanitized warning\n    ok 2 - falls missing optional action back to idle with sanitized warning\n      ---\n      duration_ms: 0.115193\n      type: 'test'\n      ...\n    # Subtest: uses V11 optional micro-interaction action when the active manifest supports it\n    ok 3 - uses V11 optional micro-interaction action when the active manifest supports it\n      ---\n      duration_ms: 0.054872\n      type: 'test'\n      ...\n    # Subtest: does not let transient success overwrite active error\n    ok 4 - does not let transient success overwrite active error\n      ---\n      duration_ms: 0.059715\n      type: 'test'\n      ...\n    # Subtest: does not let transient success overwrite active need_input\n    ok 5 - does not let transient success overwrite active need_input\n      ---\n      duration_ms: 0.040358\n      type: 'test'\n      ...\n    1..5\nok 74 - V5.0 cat action resolver\n  ---\n  duration_ms: 1.709361\n  type: 'suite'\n  ...\n# Subtest: V11.3 emotion resolver\n    # Subtest: maps all core states to distinct emotion profiles without state mutation\n    ok 1 - maps all core states to distinct emotion profiles without state mutation\n      ---\n      duration_ms: 0.602039\n      type: 'test'\n      ...\n    # Subtest: produces safe renderer input fields only\n    ok 2 - produces safe renderer input fields only\n      ---\n      duration_ms: 0.199732\n      type: 'test'\n      ...\n    1..2\nok 75 - V11.3 emotion resolver\n  ---\n  duration_ms: 1.264331\n  type: 'suite'\n  ...\n# Subtest: V11.4 action composer\n    # Subtest: holds error and need_input above lower-priority visual actions\n    ok 1 - holds error and need_input above lower-priority visual actions\n      ---\n      duration_ms: 0.13824\n      type: 'test'\n      ...\n    # Subtest: treats success and click feedback as transients\n    ok 2 - treats success and click feedback as transients\n      ---\n      duration_ms: 0.088135\n      type: 'test'\n      ...\n    # Subtest: applies higher-priority interrupts and stable rapid-event final states\n    ok 3 - applies higher-priority interrupts and stable rapid-event final states\n      ---\n      duration_ms: 0.088281\n      type: 'test'\n      ...\n    # Subtest: maps pointer and drag micro-interactions to safe action fallbacks\n    ok 4 - maps pointer and drag micro-interactions to safe action fallbacks\n      ---\n      duration_ms: 0.082013\n      type: 'test'\n      ...\n    # Subtest: keeps working states clear when lower-priority ambience is active\n    ok 5 - keeps working states clear when lower-priority ambience is active\n      ---\n      duration_ms: 0.099374\n      type: 'test'\n      ...\n    1..5\nok 76 - V11.4 action composer\n  ---\n  duration_ms: 0.690128\n  type: 'suite'\n  ...\n1..76\n# tests 361\n# suites 76\n# pass 361\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 3517.794009\n"
     },
     {
       "label": "desktop check",
       "commandLine": "pnpm --filter desktop check",
       "status": "passed",
       "exitCode": 0,
-      "durationMs": 9030,
+      "durationMs": 7428,
       "summary": "TypeScript check passed; exit 0",
       "outputTail": "\n> desktop@0.1.0 check <workspace>/apps/desktop\n> tsc --noEmit\n\n"
     },
@@ -85,25 +90,25 @@
       "commandLine": "pnpm --filter desktop build",
       "status": "passed",
       "exitCode": 0,
-      "durationMs": 15483,
+      "durationMs": 12066,
       "summary": "TypeScript check passed; frontend bundle built; exit 0",
-      "outputTail": "\n> desktop@0.1.0 build <workspace>/apps/desktop\n> tsc --noEmit && vite build\n\nvite v5.4.21 building for production...\ntransforming...\n✓ 77 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                     0.40 kB │ gzip:   0.27 kB\ndist/assets/index-BeqHwn5r.css     68.84 kB │ gzip:  10.23 kB\ndist/assets/index-12R_UKsZ.js   1,987.22 kB │ gzip: 381.67 kB\n✓ built in 5.86s\n"
+      "outputTail": "\n> desktop@0.1.0 build <workspace>/apps/desktop\n> tsc --noEmit && vite build\n\nvite v5.4.21 building for production...\ntransforming...\n✓ 77 modules transformed.\nrendering chunks...\ncomputing gzip size...\ndist/index.html                     0.40 kB │ gzip:   0.27 kB\ndist/assets/index-BeqHwn5r.css     68.84 kB │ gzip:  10.23 kB\ndist/assets/index-12R_UKsZ.js   1,987.22 kB │ gzip: 381.67 kB\n✓ built in 3.86s\n"
     },
     {
       "label": "petctl test",
       "commandLine": "pnpm --filter @agent-desktop-pet/petctl test",
       "status": "passed",
       "exitCode": 0,
-      "durationMs": 7548,
+      "durationMs": 5250,
       "summary": "tests 71, pass 71, fail 0; exit 0",
-      "outputTail": "pe: 'test'\n      ...\n    # Subtest: treats missing instance env and unavailable desktop as warnings\n    ok 2 - treats missing instance env and unavailable desktop as warnings\n      ---\n      duration_ms: 2.266794\n      type: 'test'\n      ...\n    # Subtest: reports strict managed startup diagnostics with stable reason codes\n    ok 3 - reports strict managed startup diagnostics with stable reason codes\n      ---\n      duration_ms: 2.373329\n      type: 'test'\n      ...\n    1..3\nok 7 - petctl codex doctor\n  ---\n  duration_ms: 7.624136\n  type: 'suite'\n  ...\n# Subtest: petctl codex session status\n    # Subtest: returns sanitized managed session status without raw binding id\n    ok 1 - returns sanitized managed session status without raw binding id\n      ---\n      duration_ms: 0.594519\n      type: 'test'\n      ...\n    # Subtest: marks old managed sessions stale\n    ok 2 - marks old managed sessions stale\n      ---\n      duration_ms: 0.314578\n      type: 'test'\n      ...\n    1..2\nok 8 - petctl codex session status\n  ---\n  duration_ms: 0.966874\n  type: 'suite'\n  ...\n# Subtest: petctl notify\n    # Subtest: does not send http when local validation fails\n    ok 1 - does not send http when local validation fails\n      ---\n      duration_ms: 0.16684\n      type: 'test'\n      ...\n    # Subtest: maps accepted bridge response\n    ok 2 - maps accepted bridge response\n      ---\n      duration_ms: 0.411018\n      type: 'test'\n      ...\n    # Subtest: posts to instance endpoint when instance is set\n    ok 3 - posts to instance endpoint when instance is set\n      ---\n      duration_ms: 0.221756\n      type: 'test'\n      ...\n    # Subtest: rejects invalid instance locally\n    ok 4 - rejects invalid instance locally\n      ---\n      duration_ms: 0.077417\n      type: 'test'\n      ...\n    # Subtest: maps unauthorized response\n    ok 5 - maps unauthorized response\n      ---\n      duration_ms: 0.399652\n      type: 'test'\n      ...\n    1..5\nok 9 - petctl notify\n  ---\n  duration_ms: 1.361231\n  type: 'suite'\n  ...\n# Subtest: petctl attach/list\n    # Subtest: attaches a codex instance\n    ok 1 - attaches a codex instance\n      ---\n      duration_ms: 0.208329\n      type: 'test'\n      ...\n    # Subtest: rejects invalid attach display name locally\n    ok 2 - rejects invalid attach display name locally\n      ---\n      duration_ms: 0.053884\n      type: 'test'\n      ...\n    # Subtest: lists instances\n    ok 3 - lists instances\n      ---\n      duration_ms: 0.122924\n      type: 'test'\n      ...\n    # Subtest: detaches an instance\n    ok 4 - detaches an instance\n      ---\n      duration_ms: 0.285362\n      type: 'test'\n      ...\n    # Subtest: rejects invalid detach instance locally\n    ok 5 - rejects invalid detach instance locally\n      ---\n      duration_ms: 0.092476\n      type: 'test'\n      ...\n    1..5\nok 10 - petctl attach/list\n  ---\n  duration_ms: 0.85602\n  type: 'suite'\n  ...\n1..10\n# tests 71\n# suites 10\n# pass 71\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 4305.418988\n"
+      "outputTail": "ype: 'test'\n      ...\n    # Subtest: treats missing instance env and unavailable desktop as warnings\n    ok 2 - treats missing instance env and unavailable desktop as warnings\n      ---\n      duration_ms: 2.005542\n      type: 'test'\n      ...\n    # Subtest: reports strict managed startup diagnostics with stable reason codes\n    ok 3 - reports strict managed startup diagnostics with stable reason codes\n      ---\n      duration_ms: 1.804991\n      type: 'test'\n      ...\n    1..3\nok 7 - petctl codex doctor\n  ---\n  duration_ms: 7.056434\n  type: 'suite'\n  ...\n# Subtest: petctl codex session status\n    # Subtest: returns sanitized managed session status without raw binding id\n    ok 1 - returns sanitized managed session status without raw binding id\n      ---\n      duration_ms: 0.574925\n      type: 'test'\n      ...\n    # Subtest: marks old managed sessions stale\n    ok 2 - marks old managed sessions stale\n      ---\n      duration_ms: 0.294657\n      type: 'test'\n      ...\n    1..2\nok 8 - petctl codex session status\n  ---\n  duration_ms: 0.919845\n  type: 'suite'\n  ...\n# Subtest: petctl notify\n    # Subtest: does not send http when local validation fails\n    ok 1 - does not send http when local validation fails\n      ---\n      duration_ms: 0.169168\n      type: 'test'\n      ...\n    # Subtest: maps accepted bridge response\n    ok 2 - maps accepted bridge response\n      ---\n      duration_ms: 0.334722\n      type: 'test'\n      ...\n    # Subtest: posts to instance endpoint when instance is set\n    ok 3 - posts to instance endpoint when instance is set\n      ---\n      duration_ms: 0.191951\n      type: 'test'\n      ...\n    # Subtest: rejects invalid instance locally\n    ok 4 - rejects invalid instance locally\n      ---\n      duration_ms: 0.065436\n      type: 'test'\n      ...\n    # Subtest: maps unauthorized response\n    ok 5 - maps unauthorized response\n      ---\n      duration_ms: 0.344617\n      type: 'test'\n      ...\n    1..5\nok 9 - petctl notify\n  ---\n  duration_ms: 1.18439\n  type: 'suite'\n  ...\n# Subtest: petctl attach/list\n    # Subtest: attaches a codex instance\n    ok 1 - attaches a codex instance\n      ---\n      duration_ms: 0.174059\n      type: 'test'\n      ...\n    # Subtest: rejects invalid attach display name locally\n    ok 2 - rejects invalid attach display name locally\n      ---\n      duration_ms: 0.049428\n      type: 'test'\n      ...\n    # Subtest: lists instances\n    ok 3 - lists instances\n      ---\n      duration_ms: 0.114836\n      type: 'test'\n      ...\n    # Subtest: detaches an instance\n    ok 4 - detaches an instance\n      ---\n      duration_ms: 0.16392\n      type: 'test'\n      ...\n    # Subtest: rejects invalid detach instance locally\n    ok 5 - rejects invalid detach instance locally\n      ---\n      duration_ms: 0.047222\n      type: 'test'\n      ...\n    1..5\nok 10 - petctl attach/list\n  ---\n  duration_ms: 0.62018\n  type: 'suite'\n  ...\n1..10\n# tests 71\n# suites 10\n# pass 71\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 2789.912832\n"
     },
     {
       "label": "petctl build",
       "commandLine": "pnpm --filter @agent-desktop-pet/petctl build",
       "status": "passed",
       "exitCode": 0,
-      "durationMs": 5583,
+      "durationMs": 5998,
       "summary": "completed without reported failure; exit 0",
       "outputTail": "\n> @agent-desktop-pet/petctl@0.1.0 prebuild <workspace>/packages/petctl\n> pnpm --filter @agent-desktop-pet/pet-protocol build\n\n\n> @agent-desktop-pet/pet-protocol@0.1.0 build <workspace>/packages/pet-protocol\n> tsc -p tsconfig.build.json && mkdir -p dist/schemas && cp schemas/pet-event.schema.json dist/schemas/pet-event.schema.json\n\n\n> @agent-desktop-pet/petctl@0.1.0 build <workspace>/packages/petctl\n> tsc -p tsconfig.json\n\n"
     },
@@ -112,7 +117,7 @@
       "commandLine": "pnpm --filter desktop exec node --import tsx ../../scripts/v30_semantic_animation_gate_smoke.mjs",
       "status": "passed",
       "exitCode": 0,
-      "durationMs": 1182,
+      "durationMs": 1107,
       "summary": "V30 semantic gate passed; exit 0",
       "outputTail": "rning\": {\n        \"semanticReadable\": false,\n        \"motionBucket\": \"low\",\n        \"keyPoseBucket\": \"low\",\n        \"transformOnly\": true\n      },\n      \"error\": {\n        \"semanticReadable\": false,\n        \"motionBucket\": \"low\",\n        \"keyPoseBucket\": \"low\",\n        \"transformOnly\": true\n      },\n      \"need_input\": {\n        \"semanticReadable\": false,\n        \"motionBucket\": \"low\",\n        \"keyPoseBucket\": \"low\",\n        \"transformOnly\": true\n      },\n      \"sleeping\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"low\",\n        \"keyPoseBucket\": \"low\",\n        \"transformOnly\": true\n      }\n    },\n    \"transformOnlyScore\": \"high\",\n    \"keyPoseDiversityScore\": \"low\",\n    \"semanticChecklistResult\": \"failed\",\n    \"loopClosureResult\": \"passed\",\n    \"adjacentDeltaResult\": \"passed\",\n    \"sameCatResult\": \"passed\"\n  },\n  \"semanticCandidate\": {\n    \"status\": \"passed\",\n    \"candidateId\": \"v30_semantic_candidate\",\n    \"safePackId\": \"flagship-work-cat-v2\",\n    \"routeKind\": \"local_2d_rig\",\n    \"reasonCodes\": [\n      \"semantic_animation_passed\"\n    ],\n    \"actionCoverage\": {\n      \"idle\": true,\n      \"thinking\": true,\n      \"running\": true,\n      \"success\": true,\n      \"warning\": true,\n      \"error\": true,\n      \"need_input\": true,\n      \"sleeping\": true\n    },\n    \"actionScores\": {\n      \"idle\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"low\",\n        \"keyPoseBucket\": \"low\",\n        \"transformOnly\": false\n      },\n      \"thinking\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"medium\",\n        \"keyPoseBucket\": \"medium\",\n        \"transformOnly\": false\n      },\n      \"running\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"medium\",\n        \"keyPoseBucket\": \"medium\",\n        \"transformOnly\": false\n      },\n      \"success\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"medium\",\n        \"keyPoseBucket\": \"medium\",\n        \"transformOnly\": false\n      },\n      \"warning\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"medium\",\n        \"keyPoseBucket\": \"medium\",\n        \"transformOnly\": false\n      },\n      \"error\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"medium\",\n        \"keyPoseBucket\": \"medium\",\n        \"transformOnly\": false\n      },\n      \"need_input\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"medium\",\n        \"keyPoseBucket\": \"medium\",\n        \"transformOnly\": false\n      },\n      \"sleeping\": {\n        \"semanticReadable\": true,\n        \"motionBucket\": \"low\",\n        \"keyPoseBucket\": \"low\",\n        \"transformOnly\": false\n      }\n    },\n    \"transformOnlyScore\": \"low\",\n    \"keyPoseDiversityScore\": \"medium\",\n    \"semanticChecklistResult\": \"passed\",\n    \"loopClosureResult\": \"passed\",\n    \"adjacentDeltaResult\": \"passed\",\n    \"sameCatResult\": \"passed\"\n  },\n  \"claimScan\": {\n    \"status\": \"passed\",\n    \"scannedFileCount\": 12,\n    \"violations\": []\n  },\n  \"securityScan\": {\n    \"status\": \"passed\",\n    \"forbiddenContentDetected\": false\n  }\n}\n"
     },
@@ -121,7 +126,7 @@
       "commandLine": "pnpm --filter desktop exec node --import tsx ../../scripts/v39_8_final_gate_smoke.mjs",
       "status": "passed",
       "exitCode": 0,
-      "durationMs": 2170,
+      "durationMs": 1823,
       "summary": "V39 scoped final gate passed; exit 0",
       "outputTail": "{\n  \"ok\": true,\n  \"evidencePath\": \"docs/V39.x/evidence/v39_8-final-gate-2026-06-27.md\",\n  \"final\": {\n    \"decision\": \"passed scoped\",\n    \"passedSampleCount\": 3,\n    \"blockedOrNegativeCount\": 2,\n    \"productStatus\": \"passed\",\n    \"humanPreferenceStatus\": \"passed\",\n    \"routeBStatusSummary\": \"blocked_honestly\",\n    \"narrowClaim\": \"V39 may claim characterized 2D action asset scoped pass for tested public-photo samples only, with Route A2++ local evidence and residual visual taste risk recorded.\",\n    \"remainingRisks\": [\n      \"The scoped pass does not prove arbitrary user-photo automation.\",\n      \"The scoped pass does not prove provider integration or Route B execution.\",\n      \"Human taste can still prefer professional Route B or hybrid art passes.\",\n      \"The generated assets remain local deterministic SVG/frameSequence evidence, not Petdex parity.\"\n    ],\n    \"claimScanStatus\": \"passed\",\n    \"securityScanStatus\": \"passed\",\n    \"reasonCodes\": [\n      \"v39_final_gate_passed_scoped\"\n    ]\n  },\n  \"visual\": {\n    \"htmlRel\": \"docs/V39.x/evidence/v39_6-visual-report-2026-06-27.html\",\n    \"assets\": {\n      \"status\": \"generated\",\n      \"publicRoot\": \"apps/desktop/public/v39\",\n      \"evidenceRoot\": \"docs/V39.x/evidence/assets\",\n      \"sampleCount\": 3\n    }\n  },\n  \"finalReport\": \"docs/V39.x/v39-final-acceptance-report.md\",\n  \"scans\": {\n    \"claimScan\": {\n      \"status\": \"passed\",\n      \"hits\": []\n    },\n    \"securityScan\": {\n      \"status\": \"passed\"\n    },\n    \"markdown\": \"## Claim Scan\\n- Status: passed.\\n- Hits: none.\\n\\n## Security Scan\\n- Status: passed.\\n\"\n  }\n}\n"
     },
@@ -130,7 +135,7 @@
       "commandLine": "pnpm --filter desktop exec node --import tsx ../../scripts/v40_3r3_candidate_source_decision_smoke.mjs",
       "status": "passed",
       "exitCode": 0,
-      "durationMs": 975,
+      "durationMs": 879,
       "summary": "V40.3R3 blocked decision recorded; exit 0",
       "outputTail": "{\n  \"phase\": \"V40.3R3\",\n  \"ok\": false,\n  \"decision\": \"blocked\",\n  \"routeDecision\": \"remain_failed_or_blocked\",\n  \"validationStatus\": \"blocked\",\n  \"evidenceRef\": \"docs/V40.x/evidence/v40_3r3-candidate-source-decision-2026-06-30.md\",\n  \"v40_4Gate\": \"no_go\",\n  \"claimScanStatus\": \"passed\",\n  \"securityScanStatus\": \"passed\"\n}\n"
     }
@@ -152,7 +157,7 @@
       "name": "03-v39-fallback-action-assets.png",
       "rel": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/03-v39-fallback-action-assets.png",
       "exists": true,
-      "bytes": 268210
+      "bytes": 276438
     },
     {
       "name": "04-photo-2d-wizard-modal.png",
@@ -164,7 +169,7 @@
       "name": "05-diagnostics-and-boundaries.png",
       "rel": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/05-diagnostics-and-boundaries.png",
       "exists": true,
-      "bytes": 163807
+      "bytes": 163790
     },
     {
       "name": "06-v40-failed-candidates.png",
@@ -199,6 +204,220 @@
     "v40_3r3DecisionBlocked": true,
     "manualImportEvidenceFound": false,
     "materiallyDifferentRouteFound": false
+  },
+  "hostSampleProbe": {
+    "status": "generated_not_accepted",
+    "durationMs": 647,
+    "manifest": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/manifest.json",
+    "sampleCount": 3,
+    "actionCountPerSample": 8,
+    "samples": [
+      {
+        "sampleId": "host-orange-tabby",
+        "label": "Orange tabby host sample",
+        "coatPattern": "tabby",
+        "sourceImage": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/source.png",
+        "contactSheet": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/contact-sheet.png",
+        "actions": [
+          {
+            "actionId": "idle",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/idle.gif",
+            "frameCount": 7,
+            "firstFinalClosed": true,
+            "motionClass": "medium"
+          },
+          {
+            "actionId": "thinking",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/thinking.gif",
+            "frameCount": 7,
+            "firstFinalClosed": true,
+            "motionClass": "medium"
+          },
+          {
+            "actionId": "running",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/running.gif",
+            "frameCount": 7,
+            "firstFinalClosed": true,
+            "motionClass": "large"
+          },
+          {
+            "actionId": "success",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/success.gif",
+            "frameCount": 5,
+            "firstFinalClosed": true,
+            "motionClass": "large"
+          },
+          {
+            "actionId": "warning",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/warning.gif",
+            "frameCount": 5,
+            "firstFinalClosed": true,
+            "motionClass": "medium"
+          },
+          {
+            "actionId": "error",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/error.gif",
+            "frameCount": 5,
+            "firstFinalClosed": true,
+            "motionClass": "medium"
+          },
+          {
+            "actionId": "need_input",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/need_input.gif",
+            "frameCount": 5,
+            "firstFinalClosed": true,
+            "motionClass": "large"
+          },
+          {
+            "actionId": "sleeping",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-orange-tabby/sleeping.gif",
+            "frameCount": 7,
+            "firstFinalClosed": true,
+            "motionClass": "medium"
+          }
+        ],
+        "generationRoute": "host_synthetic_template_probe",
+        "auditDecision": "not_accepted_for_v40_target",
+        "boundary": "synthetic host image plus deterministic template animation; does not prove image understanding or arbitrary-cat high-quality photo-to-animation readiness"
+      },
+      {
+        "sampleId": "host-tuxedo",
+        "label": "Tuxedo host sample",
+        "coatPattern": "tuxedo",
+        "sourceImage": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/source.png",
+        "contactSheet": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/contact-sheet.png",
+        "actions": [
+          {
+            "actionId": "idle",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/idle.gif",
+            "frameCount": 7,
+            "firstFinalClosed": true,
+            "motionClass": "medium"
+          },
+          {
+            "actionId": "thinking",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/thinking.gif",
+            "frameCount": 7,
+            "firstFinalClosed": true,
+            "motionClass": "medium"
+          },
+          {
+            "actionId": "running",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/running.gif",
+            "frameCount": 7,
+            "firstFinalClosed": true,
+            "motionClass": "large"
+          },
+          {
+            "actionId": "success",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/success.gif",
+            "frameCount": 5,
+            "firstFinalClosed": true,
+            "motionClass": "large"
+          },
+          {
+            "actionId": "warning",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/warning.gif",
+            "frameCount": 5,
+            "firstFinalClosed": true,
+            "motionClass": "medium"
+          },
+          {
+            "actionId": "error",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/error.gif",
+            "frameCount": 5,
+            "firstFinalClosed": true,
+            "motionClass": "medium"
+          },
+          {
+            "actionId": "need_input",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/need_input.gif",
+            "frameCount": 5,
+            "firstFinalClosed": true,
+            "motionClass": "large"
+          },
+          {
+            "actionId": "sleeping",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-tuxedo/sleeping.gif",
+            "frameCount": 7,
+            "firstFinalClosed": true,
+            "motionClass": "medium"
+          }
+        ],
+        "generationRoute": "host_synthetic_template_probe",
+        "auditDecision": "not_accepted_for_v40_target",
+        "boundary": "synthetic host image plus deterministic template animation; does not prove image understanding or arbitrary-cat high-quality photo-to-animation readiness"
+      },
+      {
+        "sampleId": "host-calico",
+        "label": "Calico host sample",
+        "coatPattern": "calico",
+        "sourceImage": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/source.png",
+        "contactSheet": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/contact-sheet.png",
+        "actions": [
+          {
+            "actionId": "idle",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/idle.gif",
+            "frameCount": 7,
+            "firstFinalClosed": true,
+            "motionClass": "medium"
+          },
+          {
+            "actionId": "thinking",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/thinking.gif",
+            "frameCount": 7,
+            "firstFinalClosed": true,
+            "motionClass": "medium"
+          },
+          {
+            "actionId": "running",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/running.gif",
+            "frameCount": 7,
+            "firstFinalClosed": true,
+            "motionClass": "large"
+          },
+          {
+            "actionId": "success",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/success.gif",
+            "frameCount": 5,
+            "firstFinalClosed": true,
+            "motionClass": "large"
+          },
+          {
+            "actionId": "warning",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/warning.gif",
+            "frameCount": 5,
+            "firstFinalClosed": true,
+            "motionClass": "medium"
+          },
+          {
+            "actionId": "error",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/error.gif",
+            "frameCount": 5,
+            "firstFinalClosed": true,
+            "motionClass": "medium"
+          },
+          {
+            "actionId": "need_input",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/need_input.gif",
+            "frameCount": 5,
+            "firstFinalClosed": true,
+            "motionClass": "large"
+          },
+          {
+            "actionId": "sleeping",
+            "gif": "docs/V40.x/evidence/v40_3r3-automated-acceptance-2026-07-01/host-synthetic-image-to-animation-probe/host-calico/sleeping.gif",
+            "frameCount": 7,
+            "firstFinalClosed": true,
+            "motionClass": "medium"
+          }
+        ],
+        "generationRoute": "host_synthetic_template_probe",
+        "auditDecision": "not_accepted_for_v40_target",
+        "boundary": "synthetic host image plus deterministic template animation; does not prove image understanding or arbitrary-cat high-quality photo-to-animation readiness"
+      }
+    ],
+    "claimBoundary": "This host-process probe is evidence of local controlled asset generation only. It is not V40 high-quality image-to-action acceptance."
   },
   "reportScan": {
     "claimScan": {
